@@ -1,0 +1,43 @@
+.venv/# 
+==========================================
+# Entornos Virtuales (Cualquier nivel/subcarpeta)
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+target/
+htmlcov/
+**/.venv/
+**/venv/
+
+# ==========================================
+# Temporales y Caché de Python
+# ==========================================
+# Ignora carpetas __pycache__ en cualquier subcarpeta
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches de herramientas de desarrollo (Testing, Linters)
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.black/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.mo
+*.pot
+
+# ==========================================
+# Archivos de Sistema y Editores (Opcional pero recomendado)
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.bak
+*.log

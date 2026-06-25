@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0",
+  "description": "Mapa de actividad/tarjeta -> grupo de vocabulario esperado. null significa conversación libre o sin entrada de voz.",
+  "default_rules": {
+    "micro_input_activities_use_expected_vocabulary": true,
+    "fallback_group": "short",
+    "reject_long_answers_for_closed_groups": true,
+    "ask_repeat_message": "No lo he entendido bien. Repite solo la palabra o escríbela."
+  },
+  "activities": {
+    "saludo_corto": {
+      "groups": [
+        "saludos"
+      ],
+      "mode": "short_phrase",
+      "prompt": "Responde con un saludo corto."
+    },
+    "si_corto": {
+      "groups": [
+        "si_no"
+      ],
+      "mode": "closed_choice",
+      "prompt": "Responde solo sí o no."
+    },
+    "no_corto": {
+      "groups": [
+        "si_no"
+      ],
+      "mode": "closed_choice",
+      "prompt": "Responde solo sí o no."
+    },
+    "turno_corto": {
+      "groups": [
+        "pedir_turno"
+      ],
+      "mode": "short_phrase",
+      "prompt": "Pide turno con una frase corta."
+    },
+    "ayuda_corta": {
+      "groups": [
+        "pedir_ayuda"
+      ],
+      "mode": "short_phrase",
+      "prompt": "Pide ayuda con una frase corta."
+    },
+    "despedida_corta": {
+      "groups": [
+        "despedidas"
+      ],
+      "mode": "short_phrase",
+      "prompt": "Responde con una despedida corta."
+    },
+    "animal_corto": {
+      "groups": [
+        "animales",
+        "sonidos_animales"
+      ],
+      "mode": "single_word",
+      "prompt": "Di solo el animal."
+    },
+    "palabra_corta": {
+      "groups": [
+        "palabras_basicas"
+      ],
+      "mode": "single_word",
+      "prompt": "Di solo una palabra."
+    },
+    "calma_corta": {
+      "groups": [
+        "regulacion"
+      ],
+      "mode": "short_phrase",
+      "prompt": "Di una frase corta para pedir calma."
+    },
+    "presentacion": {
+      "groups": [
+        "presentacion",
+        "saludos"
+      ],
+      "mode": "short_phrase"
+    },
+    "preguntar_nombre": {
+      "groups": [
+        "presentacion"
+      ],
+      "mode": "short_phrase"
+    },
+    "pedir_turno": {
+      "groups": [
+        "pedir_turno"
+      ],
+      "mode": "short_phrase"
+    },
+    "pedir_ayuda": {
+      "groups": [
+        "pedir_ayuda"
+      ],
+      "mode": "short_phrase"
+    },
+    "pedir_ayuda_dinamico": {
+      "groups": [
+        "pedir_ayuda"
+      ],
+      "mode": "short_phrase"
+    },
+    "respetar_turno_dinamico": {
+      "groups": [
+        "pedir_turno",
+        "escucha_activa"
+      ],
+      "mode": "short_phrase"
+    },
+    "despedida_guiada": {
+      "groups": [
+        "despedidas",
+        "cortesia"
+      ],
+      "mode": "short_phrase"
+    },
+    "buscar_palabra": {
+      "groups": [
+        "buscar_palabra"
+      ],
+      "mode": "single_word",
+      "prompt": "Responde con una palabra."
+    },
+    "sinonimos": {
+      "groups": [
+        "sinonimos_contento"
+      ],
+      "mode": "single_word",
+      "prompt": "Di un sinónimo de contento."
+    },
+    "sinonimos_dinamico": {
+      "groups": [
+        "sinonimos_contento"
+      ],
+      "mode": "single_word",
+      "prompt": "Di un sinónimo."
+    },
+    "opuestos": {
+      "groups": [
+        "opuestos_grande"
+      ],
+      "mode": "single_word",
+      "prompt": "Di el opuesto de grande."
+    },
+    "completar_frase": {
+      "groups": [
+        "completar_frase_ayuda"
+      ],
+      "mode": "short_phrase",
+      "prompt": "Completa la frase."
+    },
+    "frase_corta": {
+      "groups": [
+        "frases_cortas"
+      ],
+      "mode": "short_phrase",
+      "prompt": "Di una frase corta."
+    },
+    "explicar_imagen": {
+      "groups": [
+        "frases_cortas",
+        "emociones_basicas"
+      ],
+      "mode": "short_phrase"
+    },
+    "historia_turnos": {
+      "groups": [
+        "frases_cortas",
+        "emociones_basicas"
+      ],
+      "mode": "open_short",
+      "prompt": "Di una frase corta para continuar."
+    },
+    "cuento_interactivo": {
+      "groups": [
+        "frases_cortas",
+        "emociones_basicas"
+      ],
+      "mode": "open_short"
+    },
+    "elegir_opcion": {
+      "groups": [
+        "si_no",
+        "palabras_basicas"
+      ],
+      "mode": "closed_choice"
+    },
+    "animal_perro": {
+      "groups": [
+        "animal_perro",
+        "animales"
+      ],
+      "mode": "single_word"
+    },
+    "animal_gato": {
+      "groups": [
+        "animal_gato",
+        "animales"
+      ],
+      "mode": "single_word"
+    },
+    "animal_vaca": {
+      "groups": [
+        "animal_vaca",
+        "animales"
+      ],
+      "mode": "single_word"
+    },
+    "juego_animales": {
+      "groups": [
+        "animales",
+        "sonidos_animales"
+      ],
+      "mode": "single_word"
+    },
+    "emocion_nombre": {
+      "groups": [
+        "emociones_basicas"
+      ],
+      "mode": "single_word"
+    },
+    "emociones_caras": {
+      "groups": [
+        "emociones_basicas"
+      ],
+      "mode": "single_word"
+    },
+    "validar_emocion": {
+      "groups": [
+        "emociones_basicas",
+        "regulacion"
+      ],
+      "mode": "short_phrase"
+    },
+    "calmar": {
+      "groups": [
+        "regulacion"
+      ],
+      "mode": "short_phrase"
+    },
+    "respira": {
+      "groups": [
+        "regulacion"
+      ],
+      "mode": "short_phrase"
+    },
+    "respiracion_guiada": {
+      "groups": [
+        "regulacion"
+      ],
+      "mode": "short_phrase"
+    },
+    "ritmo_palmas": {
+      "groups": [
+        "ritmo"
+      ],
+      "mode": "short_phrase"
+    },
+    "palmas_lentas": {
+      "groups": [
+        "ritmo"
+      ],
+      "mode": "short_phrase"
+    },
+    "palmas_rapidas": {
+      "groups": [
+        "ritmo"
+      ],
+      "mode": "short_phrase"
+    },
+    "instrumento_tambor": {
+      "groups": [
+        "sonidos_entorno"
+      ],
+      "mode": "single_word"
+    },
+    "instrumento_campana": {
+      "groups": [
+        "sonidos_entorno"
+      ],
+      "mode": "single_word"
+    },
+    "sonido_lluvia": {
+      "groups": [
+        "sonidos_entorno"
+      ],
+      "mode": "single_word"
+    },
+    "imitame": {
+      "groups": [
+        "imitacion"
+      ],
+      "mode": "short_phrase"
+    }
+  },
+  "non_input_actions": [
+    "wake_up",
+    "cheerful1",
+    "enthusiastic1",
+    "gasp1",
+    "amazed1",
+    "curious1",
+    "attentive1",
+    "calming1",
+    "boredom1",
+    "confused1",
+    "yes1",
+    "no1",
+    "sad1",
+    "anxiety1",
+    "angry1",
+    "sleep1",
+    "dance1",
+    "dance2",
+    "dance3",
+    "baile_divertido",
+    "fiesta",
+    "electric1",
+    "baile_suave",
+    "saludo_alegre",
+    "come1",
+    "pulgar_arriba",
+    "no_suave",
+    "corazon",
+    "despedida",
+    "escucha_activa",
+    "gracias",
+    "buen_trabajo",
+    "vamos_hablar",
+    "relajate",
+    "repetir_despacio",
+    "no_hay_prisa",
+    "cuento_corto",
+    "final_historia",
+    "personajes",
+    "recordar_historia",
+    "cantar_saludo",
+    "estirar",
+    "reforzar",
+    "celebrar_intento",
+    "chiste"
+  ]
+}

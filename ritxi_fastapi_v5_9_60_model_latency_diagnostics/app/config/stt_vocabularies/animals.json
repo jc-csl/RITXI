@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "description": "Grupos de animales y sonidos para juegos de adivinanza.",
+  "groups": {
+    "animales": {
+      "max_words": 3,
+      "expected": [
+        "perro",
+        "gato",
+        "vaca",
+        "oveja",
+        "caballo",
+        "burro",
+        "cerdo",
+        "gallina",
+        "pollo",
+        "pato",
+        "rana",
+        "león",
+        "tigre",
+        "mono",
+        "elefante",
+        "jirafa",
+        "cebra",
+        "oso",
+        "lobo",
+        "zorro",
+        "conejo",
+        "ratón",
+        "pájaro",
+        "pez",
+        "serpiente",
+        "cocodrilo"
+      ],
+      "aliases": {
+        "pero": "perro",
+        "perros": "perro",
+        "gatos": "gato",
+        "gata": "gato",
+        "gado": "gato",
+        "baca": "vaca",
+        "bakas": "vaca",
+        "vacas": "vaca",
+        "obeja": "oveja",
+        "ovejas": "oveja",
+        "cabayo": "caballo",
+        "caballos": "caballo",
+        "leon": "león",
+        "lion": "león",
+        "mona": "mono",
+        "pajaro": "pájaro",
+        "pajaros": "pájaro",
+        "raton": "ratón"
+      }
+    },
+    "animal_perro": {
+      "max_words": 3,
+      "expected": [
+        "perro"
+      ],
+      "aliases": {
+        "pero": "perro",
+        "perros": "perro"
+      }
+    },
+    "animal_gato": {
+      "max_words": 3,
+      "expected": [
+        "gato"
+      ],
+      "aliases": {
+        "gata": "gato",
+        "gatos": "gato",
+        "gado": "gato"
+      }
+    },
+    "animal_vaca": {
+      "max_words": 3,
+      "expected": [
+        "vaca"
+      ],
+      "aliases": {
+        "baca": "vaca",
+        "vacas": "vaca",
+        "bakas": "vaca"
+      }
+    },
+    "sonidos_animales": {
+      "max_words": 5,
+      "expected": [
+        "guau",
+        "miau",
+        "mu",
+        "be",
+        "bee",
+        "oink",
+        "cuac",
+        "croac",
+        "kikiriki",
+        "relincho"
+      ],
+      "aliases": {
+        "guau guau": "guau",
+        "miau miau": "miau",
+        "muu": "mu",
+        "muuuu": "mu",
+        "beee": "be",
+        "cuak": "cuac",
+        "croack": "croac"
+      }
+    }
+  }
+}

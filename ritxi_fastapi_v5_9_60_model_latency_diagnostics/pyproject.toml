@@ -1,0 +1,33 @@
+[project]
+name = "ritxi-fastapi-v5"
+version = "0.5.0"
+description = "Ritxi FastAPI v5: panel profesional de acciones, Ollama, audio PC, Reachy Mini, checkboxes por modulos y logs"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.7.0",
+  "pydantic-settings>=2.3.0",
+  "httpx>=0.27.0",
+  "python-multipart>=0.0.9",
+  "reachy-mini[mujoco]",
+  "pygame>=2.5.0",
+  "numpy",
+  "pyttsx3>=2.90",
+  "faster-whisper>=1.1.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.23.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["asyncio: mark async tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 120

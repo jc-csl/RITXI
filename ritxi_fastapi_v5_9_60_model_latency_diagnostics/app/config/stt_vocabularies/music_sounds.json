@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "description": "Ritmo, sonidos e imitación.",
+  "groups": {
+    "ritmo": {
+      "max_words": 5,
+      "expected": [
+        "palmas",
+        "lento",
+        "rápido",
+        "otra vez",
+        "sigue",
+        "para",
+        "más"
+      ],
+      "aliases": {
+        "rapido": "rápido",
+        "mas": "más"
+      }
+    },
+    "sonidos_entorno": {
+      "max_words": 5,
+      "expected": [
+        "lluvia",
+        "tambor",
+        "campana",
+        "música",
+        "silencio",
+        "ruido"
+      ],
+      "aliases": {
+        "musica": "música"
+      }
+    },
+    "imitacion": {
+      "max_words": 5,
+      "expected": [
+        "lo hago",
+        "otra vez",
+        "así",
+        "igual",
+        "más lento",
+        "más rápido"
+      ],
+      "aliases": {
+        "asi": "así",
+        "mas lento": "más lento",
+        "mas rapido": "más rápido"
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Tu Web (JS) ➡️ Petición HTTP POST inmediata ➡️ FastAPI Backend ➡️ Llamada nativa al SDK ➡️ Simulador.

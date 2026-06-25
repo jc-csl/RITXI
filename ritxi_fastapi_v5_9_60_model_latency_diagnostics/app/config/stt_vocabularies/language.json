@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "description": "Vocabulario guiado para actividades de lenguaje: sinónimos, opuestos, completar frases y palabras.",
+  "groups": {
+    "buscar_palabra": {
+      "description": "Buscar una palabra por pista. En la actividad actual la pista es: sirve para beber agua.",
+      "max_words": 5,
+      "expected": [
+        "vaso",
+        "botella",
+        "agua",
+        "taza",
+        "jarra"
+      ],
+      "aliases": {
+        "baso": "vaso",
+        "bazo": "vaso",
+        "vazo": "vaso",
+        "boteya": "botella"
+      }
+    },
+    "sinonimos_contento": {
+      "description": "Sinónimos de contento.",
+      "max_words": 4,
+      "expected": [
+        "alegre",
+        "feliz",
+        "animado",
+        "contento",
+        "satisfecho"
+      ],
+      "aliases": {
+        "alegrete": "alegre",
+        "felis": "feliz",
+        "felíz": "feliz",
+        "animada": "animado",
+        "contenta": "contento"
+      }
+    },
+    "opuestos_grande": {
+      "description": "Opuestos de grande.",
+      "max_words": 4,
+      "expected": [
+        "pequeño",
+        "pequeña",
+        "chico",
+        "chica",
+        "diminuto",
+        "mini"
+      ],
+      "aliases": {
+        "pequenio": "pequeño",
+        "pequeñito": "pequeño",
+        "pequeñita": "pequeña",
+        "peque": "pequeño",
+        "txiki": "pequeño",
+        "chiquito": "chico",
+        "chiquita": "chica"
+      }
+    },
+    "completar_frase_ayuda": {
+      "description": "Completar: Por favor, ¿me puedes...?",
+      "max_words": 8,
+      "expected": [
+        "ayudar",
+        "ayudar por favor",
+        "me puedes ayudar",
+        "dar agua",
+        "explicar",
+        "repetir",
+        "ayudas",
+        "ayudarme"
+      ],
+      "aliases": {
+        "alludar": "ayudar",
+        "ayura": "ayudar",
+        "me alludas": "me puedes ayudar",
+        "repetilo": "repetir"
+      }
+    },
+    "frases_cortas": {
+      "description": "Frases funcionales cortas.",
+      "max_words": 8,
+      "expected": [
+        "quiero agua",
+        "quiero descansar",
+        "necesito ayuda",
+        "me ayudas por favor",
+        "no entiendo",
+        "repítelo por favor",
+        "quiero hablar",
+        "puedo hablar"
+      ],
+      "aliases": {
+        "quiero aua": "quiero agua",
+        "nesecito ayuda": "necesito ayuda",
+        "no lo entiendo": "no entiendo",
+        "repitelo por favor": "repítelo por favor"
+      }
+    },
+    "palabras_basicas": {
+      "description": "Palabras sueltas para actividades rápidas.",
+      "max_words": 3,
+      "expected": [
+        "casa",
+        "mesa",
+        "silla",
+        "agua",
+        "pan",
+        "sol",
+        "luna",
+        "mano",
+        "pie",
+        "ojos",
+        "rojo",
+        "azul",
+        "verde",
+        "amarillo"
+      ],
+      "aliases": {
+        "asul": "azul",
+        "berde": "verde",
+        "amarío": "amarillo"
+      }
+    }
+  }
+}

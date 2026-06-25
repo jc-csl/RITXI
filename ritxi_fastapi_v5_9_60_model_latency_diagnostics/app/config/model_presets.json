@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "default_model": "gemma3:1b",
+  "description": "Modelos Ollama recomendados para Ritxi: comunicación, lenguaje y turnos cortos.",
+  "presets": [
+    {
+      "id": "fast",
+      "label": "Rápido",
+      "model": "qwen3:0.6b",
+      "max_tokens": 32,
+      "timeout_s": 10,
+      "num_ctx": 512,
+      "temperature": 0.2,
+      "description": "Muy rápido para respuestas cerradas, sinónimos, opuestos, sí/no y turnos cortos."
+    },
+    {
+      "id": "balanced",
+      "label": "Equilibrado",
+      "model": "gemma3:1b",
+      "max_tokens": 40,
+      "timeout_s": 12,
+      "num_ctx": 640,
+      "temperature": 0.25,
+      "description": "Recomendado por defecto para competencias de comunicación y lenguaje sencillo."
+    },
+    {
+      "id": "quality",
+      "label": "Mejor calidad",
+      "model": "llama3.2:3b",
+      "max_tokens": 55,
+      "timeout_s": 18,
+      "num_ctx": 768,
+      "temperature": 0.25,
+      "description": "Más calidad, pero más lento. Útil para cuento, conversación o explicación breve."
+    }
+  ],
+  "install_commands": [
+    "ollama pull qwen3:0.6b",
+    "ollama pull gemma3:1b",
+    "ollama pull llama3.2:3b"
+  ],
+  "prompt_policy": {
+    "short_response": "Responde en 1 o 2 frases.",
+    "one_question": "Haz una sola pregunta por turno.",
+    "easy_language": "Lenguaje claro y concreto.",
+    "communication_training": "Prioriza saludar, pedir ayuda, expresar emociones, turnos, sinónimos, opuestos y frases cortas."
+  }
+}

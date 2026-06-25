@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "description": "Vocabulario común para respuestas cortas de Ritxi. Se usa para mejorar STT en actividades guiadas.",
+  "normalization": {
+    "lowercase": true,
+    "remove_accents_for_matching": true,
+    "remove_punctuation": true,
+    "trim_fillers": true,
+    "max_words_default": 5
+  },
+  "filler_words": [
+    "eh",
+    "em",
+    "mmm",
+    "vale",
+    "pues",
+    "bueno",
+    "a ver",
+    "creo que",
+    "yo digo",
+    "ritxi",
+    "ritxi,",
+    "por favor",
+    "gracias"
+  ],
+  "reject_patterns": [
+    "la idea de que es la idea de que",
+    "los que los que",
+    "que es la que es",
+    "subtítulos realizados por"
+  ],
+  "groups": {
+    "si_no": {
+      "description": "Respuestas cerradas de sí/no. No debe aplicarse a frases largas.",
+      "max_words": 4,
+      "expected": [
+        "sí",
+        "no"
+      ],
+      "aliases": {
+        "si": "sí",
+        "vale": "sí",
+        "ok": "sí",
+        "okay": "sí",
+        "claro": "sí",
+        "afirmativo": "sí",
+        "de acuerdo": "sí",
+        "negativo": "no",
+        "nunca": "no",
+        "no quiero": "no"
+      },
+      "reject_if_more_words": true
+    },
+    "saludos": {
+      "description": "Saludar de forma breve.",
+      "max_words": 5,
+      "expected": [
+        "hola",
+        "buenos días",
+        "buenas tardes",
+        "buenas noches",
+        "qué tal",
+        "hola Ritxi"
+      ],
+      "aliases": {
+        "ola": "hola",
+        "holas": "hola",
+        "buen día": "buenos días",
+        "buenas": "buenas tardes"
+      }
+    },
+    "despedidas": {
+      "description": "Despedidas cortas.",
+      "max_words": 6,
+      "expected": [
+        "adiós",
+        "hasta luego",
+        "hasta mañana",
+        "nos vemos",
+        "chao",
+        "agur"
+      ],
+      "aliases": {
+        "adios": "adiós",
+        "chau": "chao",
+        "hasta lego": "hasta luego"
+      }
+    },
+    "cortesia": {
+      "description": "Cortesía social básica.",
+      "max_words": 6,
+      "expected": [
+        "gracias",
+        "por favor",
+        "de nada",
+        "perdón",
+        "lo siento",
+        "me ayudas por favor"
+      ],
+      "aliases": {
+        "grasias": "gracias",
+        "porfabor": "por favor",
+        "perdon": "perdón"
+      }
+    }
+  }
+}

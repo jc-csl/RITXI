@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "description": "Comunicación social, pedir ayuda, pedir turno, escucha y despedida.",
+  "groups": {
+    "pedir_ayuda": {
+      "max_words": 8,
+      "expected": [
+        "ayuda",
+        "necesito ayuda",
+        "me ayudas",
+        "me puedes ayudar",
+        "ayúdame por favor",
+        "no entiendo",
+        "puedes repetir"
+      ],
+      "aliases": {
+        "alluda": "ayuda",
+        "ayudame por favor": "ayúdame por favor",
+        "me alludas": "me ayudas",
+        "puedes repetirlo": "puedes repetir"
+      }
+    },
+    "pedir_turno": {
+      "max_words": 8,
+      "expected": [
+        "¿puedo hablar?",
+        "puedo hablar",
+        "ahora me toca",
+        "es mi turno",
+        "quiero hablar",
+        "me toca a mí"
+      ],
+      "aliases": {
+        "puedo ablar": "puedo hablar",
+        "me toca ami": "me toca a mí",
+        "mi turno": "es mi turno"
+      }
+    },
+    "escucha_activa": {
+      "max_words": 6,
+      "expected": [
+        "te escucho",
+        "entiendo",
+        "vale",
+        "sí",
+        "estoy escuchando",
+        "cuéntame"
+      ],
+      "aliases": {
+        "si": "sí",
+        "oyendo": "estoy escuchando"
+      }
+    },
+    "presentacion": {
+      "max_words": 8,
+      "expected": [
+        "me llamo",
+        "soy",
+        "hola soy",
+        "mi nombre es"
+      ],
+      "aliases": {
+        "me yamo": "me llamo",
+        "mi nombre": "mi nombre es"
+      }
+    }
+  }
+}

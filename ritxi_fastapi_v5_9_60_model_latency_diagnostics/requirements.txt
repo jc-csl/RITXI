@@ -1,0 +1,31 @@
+# Requirements únicos para Ritxi FastAPI
+# Instalación recomendada:
+#   uv pip install -r requirements.txt
+#
+# Incluye dependencias base, desarrollo, robot/audio opcional y STT local Whisper.
+
+# Base FastAPI
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+httpx>=0.27.0
+python-multipart>=0.0.9
+
+# Desarrollo / pruebas
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+
+# Robot / simulación / audio
+reachy-mini[mujoco]
+pygame>=2.5.0
+numpy
+pyttsx3>=2.90
+
+# STT local Whisper
+faster-whisper>=1.1.1
+
+# Opcionales avanzados, dejar comentados si no hacen falta:
+# sounddevice
+# soundfile
+# kokoro-onnx

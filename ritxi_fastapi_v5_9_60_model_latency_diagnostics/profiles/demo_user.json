@@ -1,0 +1,8 @@
+{
+  "user_id": "demo",
+  "display_name": "Usuario de prueba",
+  "language": "es",
+  "style": "frases cortas, tono amable, una pregunta cada vez",
+  "interests": ["robots", "actividades sencillas", "conversación guiada"],
+  "support_needs": ["claridad", "ritmo tranquilo", "refuerzo positivo"]
+}

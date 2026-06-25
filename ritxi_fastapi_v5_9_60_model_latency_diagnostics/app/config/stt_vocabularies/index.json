@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "folder": "app/config/stt_vocabularies",
+  "description": "Carpeta de vocabularios esperados para actividades de Ritxi. Pensada para STT guiado por actividad.",
+  "files": [
+    "common.json",
+    "animals.json",
+    "language.json",
+    "social_communication.json",
+    "emotions.json",
+    "music_sounds.json",
+    "activity_mapping.json"
+  ],
+  "matching_strategy": {
+    "steps": [
+      "normalizar texto",
+      "eliminar muletillas",
+      "detectar repeticiones/alucinaciones",
+      "consultar activity_mapping.json",
+      "comparar con grupos esperados",
+      "aplicar aliases exactos",
+      "aplicar fuzzy matching solo si la respuesta es corta",
+      "rechazar si la frase es demasiado larga para grupo cerrado"
+    ],
+    "suggested_thresholds": {
+      "single_word": 0.78,
+      "short_phrase": 0.72,
+      "closed_choice": 0.84
+    }
+  }
+}

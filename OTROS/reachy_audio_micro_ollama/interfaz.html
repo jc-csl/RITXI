@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reachy Mini - Panel de Control Científico</title>
+    <style>
+        :root {
+            --bg-main: #0d0e15;
+            --bg-panel: #161722;
+            --bg-sub: #1f2132;
+            --accent: #ff9800; 
+            --accent-hover: #e68a00;
+            --text-main: #f1f1f1;
+            --text-muted: #8b8eaf;
+            --green: #4caf50;
+            --red: #f44336;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .dashboard {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media(max-width: 900px) { .dashboard { grid-template-columns: 1fr; } }
+        
+        .card {
+            background-color: var(--bg-panel);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #2d314a;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        h2, h3 { color: var(--accent); margin-top: 0; margin-bottom: 10px; }
+        
+        /* Modificadores de Casillas de Funcionalidad */
+        .panel-funcionalidades {
+            background-color: var(--bg-sub);
+            border: 1px solid #3d4264;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .check-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .check-item input {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: #0d0e15;
+            border: none;
+            padding: 14px 20px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .btn:hover { background-color: var(--accent-hover); transform: translateY(-1px); }
+        .btn-mic.recording { background-color: var(--red); color: white; }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            background-color: var(--bg-sub);
+            color: var(--accent);
+            margin-bottom: 15px;
+            border: 1px solid #3d4264;
+        }
+        
+        .box-texto {
+            background-color: var(--bg-main);
+            border: 1px solid #2d314a;
+            border-radius: 8px;
+            padding: 15px;
+            min-height: 80px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            font-size: 15px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        
+        .grid-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn-manual {
+            background-color: var(--bg-sub);
+            color: var(--text-main);
+            border: 1px solid #2d314a;
+            padding: 12px;
+            font-size: 13px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .btn-manual:hover { border-color: var(--accent); color: var(--accent); }
+        
+        .motor-control {
+            margin: 15px 0;
+            background-color: var(--bg-sub);
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: 1px solid #2d314a;
+        }
+        .motor-control label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+        .motor-control input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent);
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--bg-sub);
+            padding: 14px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border: 1px solid #2d314a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="card">
+        <h2>🎙️ Canal de Voz e Interacción Continua</h2>
+        
+        <div class="panel-funcionalidades">
+            <h3 style="color: var(--text-main); font-size: 14px; margin-bottom: 10px; text-transform: uppercase;">⚙️ Funcionalidades del Ecosistema</h3>
+            <label class="check-item">
+                <input type="checkbox" id="chkMicro" checked>
+                <span>🎙️ Habilitar Entrada por Micrófono (Reconocimiento)</span>
+            </label>
+            <label class="check-item">
+                <input type="checkbox" id="chkTags" checked>
+                <span>🏷️ Procesar y Filtrar Etiquetas de Emoción (<code>[ALEGRE]</code>)</span>
+            </label>
+            <label class="check-item">
+                <input type="checkbox" id="chkMotores" checked>
+                <span>🤖 Habilitar Movimientos de Motores (Físico / Sim)</span>
+            </label>
+            <label class="check-item">
+                <input type="checkbox" id="chkVoz" checked>
+                <span>🔊 Habilitar Salida de Audio (TTS Voz Robot)</span>
+            </label>
+        </div>
+
+        <div id="statusTxt" class="status-badge">SISTEMA LISTO</div>
+        
+        <button id="btnMic" class="btn btn-mic">Activar Manos Libres</button>
+        
+        <h3>Transcripción del Micrófono (Entrada):</h3>
+        <div id="userText" class="box-texto">Ninguna entrada detectada...</div>
+
+        <h3>Respuesta del Robot (Salida limpia):</h3>
+        <div id="robotResponse" class="box-texto">Esperando interacción...</div>
+    </div>
+
+    <div class="card">
+        <h2>⚙️ Control de Hardware Avanzado</h2>
+        
+        <div class="toggle-switch">
+            <span><strong>Movimiento Autónomo Idle (Impaciencia)</strong></span>
+            <input type="checkbox" id="switchIdle" style="width: 22px; height: 22px; cursor: pointer; accent-color: var(--accent);">
+        </div>
+
+        <h3>Gesticulación Manual Inmediata:</h3>
+        <div class="grid-buttons">
+            <button class="btn-manual" onclick="enviarComandoManual('saludo')">👋 Saludo</button>
+            <button class="btn-manual" onclick="enviarComandoManual('alegre')">🎉 Alegre</button>
+            <button class="btn-manual" onclick="enviarComandoManual('pensando')">🤔 Pensando</button>
+            <button class="btn-manual" onclick="enviarComandoManual('sorprendido')">😲 Sorprendido</button>
+            <button class="btn-manual" onclick="enviarComandoManual('curioso')">👀 Curioso</button>
+            <button class="btn-manual" onclick="enviarComandoManual('asentir')">✔️ Asentir</button>
+            <button class="btn-manual" onclick="enviarComandoManual('negar')">❌ Negar</button>
+            <button class="btn-manual" onclick="enviarComandoManual('triste')">😢 Triste</button>
+            <button class="btn-manual" onclick="enviarComandoManual('neutral')">😐 Neutral</button>
+        </div>
+
+        <h3>Telemetría y Posición de Motores:</h3>
+        <div class="motor-control">
+            <label><span>Cabeza (Yaw)</span><span id="v1">0°</span></label>
+            <input type="range" min="-45" max="45" value="0" oninput="document.getElementById('v1').innerText=this.value+'°'">
+        </div>
+        <div class="motor-control">
+            <label><span>Cabeza (Pitch)</span><span id="v2">0°</span></label>
+            <input type="range" min="-30" max="30" value="0" oninput="document.getElementById('v2').innerText=this.value+'°'">
+        </div>
+
+        <button class="btn" id="btnShutdown" style="background-color: var(--red); color: white; margin-top: 25px;">Apagar Ecosistema Robot</button>
+    </div>
+</div>
+
+<script>
+    const btnMic = document.getElementById('btnMic');
+    const statusTxt = document.getElementById('statusTxt');
+    const userText = document.getElementById('userText');
+    const robotResponse = document.getElementById('robotResponse');
+    const switchIdle = document.getElementById('switchIdle');
+    const btnShutdown = document.getElementById('btnShutdown');
+    
+    const chkMicro = document.getElementById('chkMicro');
+    const chkTags = document.getElementById('chkTags');
+    const chkMotores = document.getElementById('chkMotores');
+    const chkVoz = document.getElementById('chkVoz');
+
+    let esGrabando = false;
+    let silencioTimer = null;
+    let transcripcionAcumulada = "";
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    
+    if (!SpeechRecognition) {
+        statusTxt.innerText = "ERROR: USA GOOGLE CHROME";
+        btnMic.disabled = true;
+    } else {
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'es-ES';
+        recognition.continuous = true;
+        recognition.interimResults = true;
+
+        btnMic.addEventListener('click', () => {
+            if (!chkMicro.checked) {
+                statusTxt.innerText = "⚠️ EL MICRÓFONO ESTÁ DESACTIVADO EN LAS CASILLAS";
+                return;
+            }
+            if (!esGrabando) {
+                transcripcionAcumulada = "";
+                userText.innerText = "Escuchando flujo de audio activo...";
+                recognition.start();
+            } else {
+                clearTimeout(silencioTimer);
+                recognition.stop();
+            }
+        });
+
+        recognition.onstart = () => {
+            esGrabando = true;
+            statusTxt.innerText = "🎙️ ESCUCHANDO FRASE EN TIEMPO REAL...";
+            btnMic.innerText = "Terminar y Enviar";
+            btnMic.classList.add('recording');
+        };
+
+        recognition.onresult = (event) => {
+            if (!chkMicro.checked) return;
+            clearTimeout(silencioTimer);
+            let textoIntermedio = "";
+            for (let i = event.resultIndex; i < event.results.length; ++i) {
+                textoIntermedio += event.results[i][0].transcript;
+            }
+
+            if (textoIntermedio.trim().length > 0) {
+                transcripcionAcumulada = textoIntermedio;
+                userText.innerText = transcripcionAcumulada;
+            }
+
+            silencioTimer = setTimeout(() => {
+                if (transcripcionAcumulada.trim().length > 0) {
+                    recognition.stop();
+                    enviarAlBackend(transcripcionAcumulada);
+                }
+            }, 1800);
+        };
+
+        recognition.onend = () => { resetInterfaz(); };
+    }
+
+    function resetInterfaz() {
+        esGrabando = false;
+        statusTxt.innerText = "SISTEMA LISTO";
+        btnMic.innerText = "Activar Manos Libres";
+        btnMic.classList.remove('recording');
+    }
+
+    async function enviarAlBackend(texto) {
+        statusTxt.innerText = "🤖 PROCESANDO CON OLLAMA...";
+        robotResponse.innerText = "Calculando respuesta...";
+        
+        try {
+            const respuesta = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    text: texto,
+                    procesar_etiquetas: chkTags.checked,
+                    motores_enabled: chkMotores.checked,
+                    audio_enabled: chkVoz.checked
+                })
+            });
+
+            const data = await respuesta.json();
+            robotResponse.innerText = data.robot_response + "\n\n[Movimiento: " + data.emotion_executed.toUpperCase() + "]";
+            statusTxt.innerText = "✓ SINCRONIZADO";
+        } catch (err) {
+            robotResponse.innerText = "Error al conectar con el backend.";
+            statusTxt.innerText = "❌ ERROR DE CONEXIÓN";
+        }
+    }
+
+    async function enviarComandoManual(emocion) {
+        if (!chkMotores.checked) {
+            statusTxt.innerText = "⚠️ CASILLA MOTORES DESACTIVADA";
+            return;
+        }
+        try {
+            await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    text: "COMANDO_MANUAL:" + emocion,
+                    procesar_etiquetas: false, motores_enabled: true, audio_enabled: false
+                })
+            });
+            statusTxt.innerText = "POSTURA FORZADA: " + emocion.toUpperCase();
+        } catch (e) { console.error(e); }
+    }
+
+    switchIdle.addEventListener('change', async () => {
+        try {
+            await fetch('/api/config/idle', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ habilitado: switchIdle.checked })
+            });
+        } catch (e) { console.error(e); }
+    });
+
+    btnShutdown.addEventListener('click', async () => {
+        if(confirm("¿Apagar el ecosistema completo?")) {
+            try { await fetch('/api/shutdown', { method: 'POST' }); } catch(e){}
+        }
+    });
+</script>
+
+</body>
+</html>

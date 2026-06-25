@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "description": "Palabras para nombrar emociones y estado emocional.",
+  "groups": {
+    "emociones_basicas": {
+      "max_words": 4,
+      "expected": [
+        "alegre",
+        "feliz",
+        "triste",
+        "enfadado",
+        "enfadada",
+        "calmado",
+        "calmada",
+        "nervioso",
+        "nerviosa",
+        "asustado",
+        "asustada",
+        "sorprendido",
+        "cansado",
+        "cansada"
+      ],
+      "aliases": {
+        "felis": "feliz",
+        "trizte": "triste",
+        "enfadao": "enfadado",
+        "nerviosa": "nerviosa",
+        "asustao": "asustado"
+      }
+    },
+    "regulacion": {
+      "max_words": 6,
+      "expected": [
+        "quiero respirar",
+        "necesito calma",
+        "estoy nervioso",
+        "estoy nerviosa",
+        "quiero descansar",
+        "vamos despacio",
+        "no hay prisa"
+      ],
+      "aliases": {
+        "estoy nerbioso": "estoy nervioso",
+        "vamos despasio": "vamos despacio"
+      }
+    }
+  }
+}
