@@ -1,0 +1,72 @@
+{
+  "version": "5.9.95",
+  "description": "Política editable de animaciones visibles de inicio/final para fichas, juegos, actividades y emociones.",
+  "activity_start_end_enabled": true,
+  "only_text_chat_without_animations": true,
+  "visible_start_wait_ms": 850,
+  "visible_end_wait_ms": 450,
+  "validated_visible_emotions": [
+    "dance1",
+    "dance2",
+    "dance3",
+    "cheerful1",
+    "enthusiastic1",
+    "amazed1",
+    "electric1",
+    "success1",
+    "yes1",
+    "no1",
+    "attentive1",
+    "thoughtful1"
+  ],
+  "start_positive": [
+    "cheerful1",
+    "enthusiastic1",
+    "amazed1",
+    "success1",
+    "yes1"
+  ],
+  "end_positive": [
+    "cheerful1",
+    "enthusiastic1",
+    "success1",
+    "yes1",
+    "amazed1"
+  ],
+  "dance_positive": [
+    "dance1",
+    "dance2",
+    "dance3"
+  ],
+  "emotion_positive": [
+    "cheerful1",
+    "enthusiastic1",
+    "amazed1",
+    "electric1",
+    "success1",
+    "yes1",
+    "no1",
+    "attentive1",
+    "thoughtful1"
+  ],
+  "fallback_start": "dance1",
+  "fallback_end": "success1",
+  "avoid_for_principal_emotion": true,
+  "prefer_visible_dances": true,
+  "notes": [
+    "Esta lista se carga desde la pestaña Config mediante app/config/robot_motion_policy.json.",
+    "Si añades un movimiento que existe en la librería Pollen, funcionará sin tocar app.js.",
+    "Si añades un id que no existe, el backend puede resolverlo por alias o caer a fallback_pose; por eso conviene revisar los logs.",
+    "Ids comprobados en logs recientes: dance1, dance2, dance3, cheerful1, enthusiastic1, amazed1, electric1, success1, yes1, no1, attentive1, thoughtful1.",
+    "No usar ids no encontrados en la librería Pollen.",
+    "v5.9.95: las animaciones positivas de inicio/final reproducen también el audio oficial desde navegador.",
+    "play_audio_on_positive_start y play_audio_on_positive_end controlan ese audio.",
+    "Los bailes largos se mantienen disponibles, pero no se usan por defecto en inicio/final para no retrasar la actividad."
+  ],
+  "play_audio_on_positive_start": true,
+  "play_audio_on_positive_end": true,
+  "positive_audio_force": true,
+  "positive_audio_wait_until_end": false,
+  "positive_action_wait_start": false,
+  "positive_action_wait_end": false
+}

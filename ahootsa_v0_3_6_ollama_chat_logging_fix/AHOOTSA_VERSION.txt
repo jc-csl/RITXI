@@ -1,0 +1,46 @@
+Ahootsa v0.3.6 - Ollama chat logging fix
+
+NO CONTROLA EL ROBOT NI EL AUDIO SOLO CHATBOT LOCAL
+
+Ahootsa Reachy Mini Desktop Local - v0.3.6
+
+Cambios principales:
+- Corrige /api/chat para aceptar JSON {"message":"..."}.
+- Corrige el error FastAPI de campo requerido query req.
+- Añade log por sesión con todos los pasos principales.
+- Añade botón Ver log en la interfaz.
+- Mantiene Ollama en http://127.0.0.1:11434.
+- Mantiene Ahootsa Ollama Local en http://127.0.0.1:7862.
+- Modelo por defecto: ahootsa-local:latest.
+
+Instalar
+--------
+Cierra primero Reachy Mini Desktop App.
+
+Descomprime el ZIP y ejecuta:
+
+cd D:\RITXI\ahootsa_v0_3_6_ollama_chat_logging_fix
+.\scripts\windows\08_liberar_puertos_ahootsa.ps1
+.\scripts\windows\00_crear_modelo_ollama_ahootsa.ps1
+.\scripts\windows\01_instalar_ahootsa_en_desktop_python.ps1
+.\scripts\windows\05_instalar_metadata_ahootsa_desktop.ps1
+
+Después abre Reachy Mini Desktop App, pulsa Start en Ahootsa Ollama Local y entra en:
+
+http://127.0.0.1:7862
+
+Prueba API
+----------
+Invoke-RestMethod `
+  -Uri "http://127.0.0.1:7862/api/chat" `
+  -Method Post `
+  -ContentType "application/json" `
+  -Body '{"message":"Hola, ¿cómo te llamas?"}'
+
+Log
+---
+El log se guarda en:
+%LOCALAPPDATA%\Reachy Mini Control\ahootsa_logs\
+
+También se puede abrir desde:
+http://127.0.0.1:7862/api/log

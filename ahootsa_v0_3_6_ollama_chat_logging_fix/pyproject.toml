@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahootsa-reachy-mini-desktop-app"
+version = "0.3.6"
+description = "Ahootsa local apps for Reachy Mini Desktop: Spanish profile and Ollama local text chat mode with standalone Desktop fallback, fixed app routes, Ollama :latest model resolution, JSON body chat endpoint and session logs"
+readme = "README_AHOOTSA_DESKTOP_LOCAL.md"
+requires-python = ">=3.10"
+authors = [{ name = "Ahootsa / Centro San Luis" }]
+
+[project.entry-points."reachy_mini_apps"]
+ahootsa_reachy_mini_conversation_app = "ahootsa_reachy_mini_desktop_app.main:AhootsaReachyMiniConversationApp"
+ahootsa_ollama_local_app = "ahootsa_reachy_mini_desktop_app.ollama_app:AhootsaOllamaLocalApp"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ahootsa_reachy_mini_desktop_app = [
+  "profiles/**/*.txt",
+  "profiles/**/*.py",
+  "assets/*.png",
+]

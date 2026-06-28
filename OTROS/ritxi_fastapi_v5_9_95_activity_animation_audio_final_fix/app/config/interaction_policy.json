@@ -1,0 +1,56 @@
+{
+  "version": "5.9.71",
+  "defaults": {
+    "model": "qwen3:0.6b",
+    "temperature": 0.25,
+    "chat_timeout_ms": 60000,
+    "ollama_timeout_s": 60
+  },
+  "local_activity_ids": [
+    "saludo_corto",
+    "si_corto",
+    "no_corto",
+    "turno_corto",
+    "ayuda_corta",
+    "despedida_corta",
+    "animal_corto",
+    "palabra_corta",
+    "calma_corta",
+    "ritmo_palmas",
+    "palmas_lentas",
+    "palmas_rapidas",
+    "eco_ritxi",
+    "instrumento_campana",
+    "chiste",
+    "fiesta"
+  ],
+  "ollama_activity_ids": [
+    "escucha_activa",
+    "escuchar",
+    "vamos_hablar",
+    "presentacion",
+    "validar_emocion",
+    "emocion_nombre",
+    "emociones_caras",
+    "elegir_emocion",
+    "historia_turnos",
+    "cuento_interactivo",
+    "final_historia",
+    "explicar_imagen",
+    "frase_corta",
+    "completar_frase",
+    "buscar_palabra",
+    "sinonimos",
+    "opuestos",
+    "pedir_ayuda",
+    "pedir_turno",
+    "cuento_corto",
+    "personajes",
+    "recordar_historia",
+    "ensayo_decidir"
+  ],
+  "notes": {
+    "local": "Solo fichas muy cerradas y breves pueden responder sin Ollama.",
+    "ollama": "Toda conversación abierta, explicación o actividad que requiera pensar debe usar IA local."
+  }
+}

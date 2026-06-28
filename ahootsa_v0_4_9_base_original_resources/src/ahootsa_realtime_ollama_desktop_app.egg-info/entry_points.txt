@@ -1,0 +1,2 @@
+[reachy_mini_apps]
+ahootsa_realtime_ollama_app = ahootsa_realtime_ollama_desktop_app.main:AhootsaRealtimeOllamaApp

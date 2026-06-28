@@ -1,0 +1,88 @@
+{
+  "version": "5.9.89",
+  "description": "Política de conversación: evita respuestas repetidas y obliga a priorizar el último mensaje del usuario.",
+  "limitations": [
+    "qwen3:0.6b es muy rápido, pero puede repetir respuestas o quedarse anclado al tema anterior.",
+    "Con creatividad baja, las respuestas son más estables y menos variadas.",
+    "Si Ollama devuelve texto vacío, solo una etiqueta de emoción o una respuesta repetida, se usa fallback seguro.",
+    "Para más calidad conversacional se recomienda gemma3:1b o llama3.2:1b, asumiendo más latencia.",
+    "El modo qwen3:0.6b no debe usar historial de conversación por defecto."
+  ],
+  "repetition_guard": {
+    "enabled": true,
+    "replace_exact_repetition": true,
+    "replace_when_user_topic_changes": true,
+    "min_repeated_chars": 25
+  },
+  "current_topic_guard": {
+    "enabled": true,
+    "instruction": "Responde al último mensaje exacto del usuario. No reutilices la respuesta anterior si el usuario cambia de tema."
+  },
+  "topic_fallbacks": {
+    "jugar": {
+      "precise": "Jugar sirve para divertirse y aprender.",
+      "balanced": "Jugar sirve para divertirse, aprender reglas y compartir tiempo con otras personas.",
+      "creative": "Jugar es como abrir una puerta a la imaginación: pruebas, ríes y aprendes sin darte cuenta."
+    },
+    "juego": {
+      "precise": "Un juego tiene reglas y sirve para divertirse.",
+      "balanced": "Un juego sirve para divertirse. También ayuda a practicar turnos, atención y memoria.",
+      "creative": "Un juego es una pequeña aventura con reglas: participas, pruebas y descubres algo nuevo."
+    },
+    "vida": {
+      "precise": "La vida incluye aprender, cuidar, descansar y disfrutar.",
+      "balanced": "La vida tiene muchas cosas importantes: aprender, cuidar a otros, descansar, jugar y disfrutar poco a poco.",
+      "creative": "La vida es como un camino con muchas paradas: aprender, equivocarse, reír, cuidar y descubrir cosas nuevas."
+    },
+    "amor": {
+      "precise": "El amor es cariño y cuidado hacia alguien.",
+      "balanced": "El amor es sentir cariño, cuidar a alguien y querer que esté bien.",
+      "creative": "El amor es como una luz suave: ayuda a cuidar, acompañar y sentirse cerca de otra persona."
+    },
+    "gato": {
+      "precise": "Un gato es un animal tranquilo y curioso.",
+      "balanced": "Un gato es un animal tranquilo y curioso. Suele moverse con cuidado y le gusta explorar.",
+      "creative": "Un gato es como un pequeño explorador silencioso: mira, investiga y busca un sitio cómodo para descansar."
+    },
+    "perro": {
+      "precise": "Un perro es un animal sociable.",
+      "balanced": "Un perro es un animal sociable. Le gusta jugar, aprender órdenes sencillas y acompañar a las personas.",
+      "creative": "Un perro puede ser como un amigo con mucha energía: corre, juega y se alegra cuando estás cerca."
+    },
+    "ayuda": {
+      "precise": "Puedes decir: “Por favor, ¿me puedes ayudar?”",
+      "balanced": "Claro. Para pedir ayuda puedes decir: “Por favor, ¿me puedes ayudar?”",
+      "creative": "Puedes levantar la mano con calma y decir: “Por favor, ¿me puedes ayudar?” Es una frase clara y amable."
+    },
+    "hola": {
+      "precise": "Hola. Te escucho.",
+      "balanced": "Hola. ¿De qué quieres hablar hoy?",
+      "creative": "Hola. Me alegra verte. Dime un tema y lo exploramos juntos."
+    },
+    "chiste": {
+      "precise": "Un chiste es una frase corta para hacer reír.",
+      "balanced": "Un chiste es una pequeña broma para hacer reír. Puede ser de animales, robots o situaciones divertidas.",
+      "creative": "Un chiste es como una sorpresa pequeña: empieza normal y termina con algo que hace reír."
+    },
+    "naturaleza": {
+      "precise": "La naturaleza incluye plantas, animales, agua, aire y paisajes.",
+      "balanced": "La naturaleza es el conjunto de seres vivos y paisajes: plantas, animales, ríos, montañas, aire y agua.",
+      "creative": "La naturaleza es como una casa grande compartida: árboles, animales, ríos, montañas y personas vivimos dentro de ella."
+    },
+    "bosque": {
+      "precise": "Un bosque es un lugar con muchos árboles.",
+      "balanced": "Un bosque es un espacio con muchos árboles, plantas y animales. También ayuda a limpiar el aire.",
+      "creative": "Un bosque es como una ciudad verde: los árboles, pájaros e insectos viven juntos y se ayudan."
+    },
+    "mar": {
+      "precise": "El mar es una gran masa de agua salada.",
+      "balanced": "El mar es una gran masa de agua salada donde viven peces, algas y muchos animales.",
+      "creative": "El mar es como un mundo azul enorme: se mueve con olas y guarda mucha vida dentro."
+    }
+  },
+  "default_fallbacks": {
+    "precise": "Te escucho. Dime una palabra o tema concreto.",
+    "balanced": "Te escucho. Dime un tema concreto y te respondo con una frase clara.",
+    "creative": "Dime un tema y lo convertimos en una explicación sencilla."
+  }
+}

@@ -1,0 +1,3 @@
+[reachy_mini_apps]
+ahootsa_ollama_local_app = ahootsa_reachy_mini_desktop_app.ollama_app:AhootsaOllamaLocalApp
+ahootsa_reachy_mini_conversation_app = ahootsa_reachy_mini_desktop_app.main:AhootsaReachyMiniConversationApp
