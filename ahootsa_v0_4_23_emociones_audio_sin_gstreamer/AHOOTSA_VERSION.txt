@@ -1,0 +1,15 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.23_emociones_audio_sin_gstreamer
+
+Motivo:
+- En Windows aparece error GStreamer/WASAPI:
+  Failed to write to device / GstWasapi2Sink.
+- La versión anterior intentaba reproducir el .ogg con reachy_mini.media.play_sound,
+  que usa el pipeline GStreamer de Reachy Mini.
+- Esta versión mantiene el movimiento oficial, pero reproduce el sonido OGG oficial
+  con pygame/SDL para evitar GStreamer en las emociones de Ahootsa.
+
+Base:
+- No modifica el código original de Reachy Mini Conversation App.
+- No modifica reachy_mini.media.audio_gstreamer.
+- Solo sustituye play_emotion dentro del perfil Ahootsa.

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ahootsa — Memory</title>
+<style>
+:root{
+  --table:#eef2f7;
+  --card-back:#1763c8;
+  --card-back-dark:#0f4d9f;
+  --card-back-border:#0c3f82;
+  --ink:#203048;
+  --white:#ffffff;
+  --shadow:0 18px 38px rgba(25,45,80,.18);
+  --matched:#fff7c9;
+  --matched-border:#f0c63c;
+}
+*{box-sizing:border-box}
+html,body{width:100%;height:100%}
+body{
+  margin:0;
+  background:var(--table);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  overflow:hidden;
+}
+.screen{
+  width:100vw;
+  height:100vh;
+  padding:clamp(14px,2.5vw,30px);
+  display:grid;
+  place-items:center;
+}
+.board{
+  width:min(96vw,1120px);
+  height:min(94vh,760px);
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:repeat(2,1fr);
+  gap:clamp(14px,2.4vw,26px);
+}
+.card{
+  position:relative;
+  width:100%;
+  height:100%;
+  border:0;
+  padding:0;
+  background:transparent;
+  perspective:1200px;
+  cursor:pointer;
+}
+.card:disabled{cursor:default}
+.inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
+  transition:transform .52s ease;
+}
+.card.visible .inner,
+.card.matched .inner{transform:rotateY(180deg)}
+.face{
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  backface-visibility:hidden;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.back{
+  display:grid;
+  place-items:center;
+  background:linear-gradient(180deg,var(--card-back),var(--card-back-dark));
+  border:8px solid var(--card-back-border);
+}
+.back::before{
+  content:'';
+  position:absolute;
+  inset:10px;
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));
+  border:4px solid rgba(255,255,255,.92);
+}
+.num{
+  position:relative;
+  z-index:1;
+  font-weight:1000;
+  color:var(--white);
+  font-size:clamp(6rem,15vw,12rem);
+  line-height:.9;
+  letter-spacing:-.08em;
+  text-shadow:0 8px 24px rgba(0,0,0,.24);
+}
+.front{
+  transform:rotateY(180deg);
+  background:linear-gradient(180deg,var(--front,#ffe5b8),var(--front2,#ffd18a));
+  border:8px solid rgba(255,255,255,.96);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px;
+}
+.front::before{
+  content:'';
+  position:absolute;
+  inset:10px;
+  border-radius:14px;
+  border:3px solid rgba(255,255,255,.55);
+  pointer-events:none;
+}
+.card.matched .front{
+  background:linear-gradient(180deg,var(--matched),#ffe58f);
+  border-color:var(--matched-border);
+}
+.content{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  text-align:center;
+}
+.icon{
+  font-size:clamp(4.8rem,10.8vw,8.2rem);
+  line-height:1;
+  filter:drop-shadow(0 3px 3px rgba(0,0,0,.10));
+}
+.label{
+  font-size:clamp(1.55rem,3.9vw,2.6rem);
+  line-height:1;
+  font-weight:1000;
+  color:var(--ink);
+  text-transform:capitalize;
+}
+.kind{
+  font-size:clamp(.85rem,1.6vw,1.1rem);
+  line-height:1.1;
+  font-weight:900;
+  color:rgba(32,48,72,.68);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.card.temporary .front{
+  animation:shake .32s linear 2;
+  outline:6px solid rgba(84,167,255,.92);
+  outline-offset:-12px;
+}
+.card.matched .icon{animation:bounce .85s ease 2}
+.burst{
+  position:fixed;
+  inset:0;
+  display:none;
+  place-items:center;
+  pointer-events:none;
+  font-size:clamp(5.4rem,15vw,12rem);
+  z-index:10;
+}
+.burst.show{display:grid;animation:pop .95s ease both}
+@keyframes bounce{
+  0%,100%{transform:translateY(0) scale(1)}
+  30%{transform:translateY(-12px) scale(1.05)}
+  60%{transform:translateY(0) scale(.98)}
+}
+@keyframes shake{
+  0%,100%{transform:translateX(0)}
+  20%{transform:translateX(-6px)}
+  40%{transform:translateX(6px)}
+  60%{transform:translateX(-5px)}
+  80%{transform:translateX(5px)}
+}
+@keyframes pop{
+  0%{opacity:0;transform:scale(.38) rotate(-8deg)}
+  35%{opacity:1;transform:scale(1.08) rotate(4deg)}
+  100%{opacity:0;transform:scale(.9) rotate(0)}
+}
+@media(max-width:900px){
+  .board{height:min(94vh,900px);grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(4,1fr)}
+  .num{font-size:clamp(5rem,24vw,9.2rem)}
+  .icon{font-size:clamp(4rem,18vw,7rem)}
+  .label{font-size:clamp(1.4rem,6vw,2.2rem)}
+}
+</style>
+</head>
+<body>
+<div class="screen">
+  <main id="board" class="board" aria-label="cartas de memory"></main>
+</div>
+<div id="burst" class="burst">🎉</div>
+<script>
+const board = document.getElementById('board');
+const burst = document.getElementById('burst');
+let selected = [];
+let lastMoveId = null;
+const palette = [
+  ['#ffd7a7','#ffbf8d'],
+  ['#cdecc7','#b7e0ad'],
+  ['#ffd1dd','#ffbfd2'],
+  ['#d8dcff','#c9cdfa'],
+  ['#ffe7a6','#ffd882'],
+  ['#d4f3ef','#bce9e0'],
+  ['#f6d2ff','#eabcf5'],
+  ['#ffe0c9','#ffd2b3']
+];
+function faceColors(card){
+  const idx = ((card.number || 1) - 1) % palette.length;
+  const pair = palette[idx];
+  return '--front:' + pair[0] + ';--front2:' + pair[1] + ';';
+}
+async function api(path){
+  const r = await fetch(path,{cache:'no-store'});
+  if(!r.ok) throw new Error(await r.text());
+  return await r.json();
+}
+function showBurst(text){
+  burst.textContent = text || '🎉';
+  burst.classList.remove('show');
+  void burst.offsetWidth;
+  burst.classList.add('show');
+  setTimeout(()=>burst.classList.remove('show'),950);
+}
+function escapeHtml(value){
+  return String(value || '').replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function cardHtml(card){
+  const visible = card.visible || card.matched;
+  const cls = ['card'];
+  if(visible) cls.push('visible');
+  if(card.matched) cls.push('matched');
+  if(card.temporary) cls.push('temporary');
+  const icon = visible ? escapeHtml(card.icon) : '';
+  const label = visible ? escapeHtml(card.label) : '';
+  const kind = visible ? escapeHtml(card.kind_label) : '';
+  return `
+    <button class="${cls.join(' ')}" data-number="${card.number}" ${card.matched?'disabled':''} aria-label="carta ${card.number}">
+      <div class="inner">
+        <div class="face back"><div class="num">${card.number}</div></div>
+        <div class="face front" style="${faceColors(card)}">
+          <div class="content">
+            <div class="icon">${icon}</div>
+            <div class="label">${label}</div>
+            <div class="kind">${kind}</div>
+          </div>
+        </div>
+      </div>
+    </button>`;
+}
+function render(state){
+  board.innerHTML = state.cards.map(cardHtml).join('');
+  for(const btn of board.querySelectorAll('button.card')){
+    btn.addEventListener('click',()=>selectCard(Number(btn.dataset.number)));
+  }
+  if(state.last_move_id !== lastMoveId){
+    lastMoveId = state.last_move_id;
+    if(state.last_result === 'match') showBurst(state.last_animation || '🎉');
+    if(state.finished) showBurst('🏆');
+  }
+}
+async function refresh(){
+  try{ render(await api('/state')); }
+  catch(e){
+    board.innerHTML = '<div style="font-weight:800;color:#203048;font-size:2rem">No se pudo cargar el juego.</div>';
+  }
+}
+async function selectCard(n){
+  const state = await api('/state');
+  const card = state.cards.find(c=>c.number===n);
+  if(!card || card.matched) return;
+  selected.push(n);
+  if(selected.length===2){
+    const a = selected[0];
+    const b = selected[1];
+    selected=[];
+    await api('/choose?first=' + encodeURIComponent(a) + '&second=' + encodeURIComponent(b));
+    await refresh();
+  }
+}
+refresh();
+setInterval(refresh,450);
+</script>
+</body>
+</html>

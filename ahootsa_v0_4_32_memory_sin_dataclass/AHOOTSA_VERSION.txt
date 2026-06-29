@@ -1,0 +1,10 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.32_memory_sin_dataclass
+
+Corrección crítica:
+- Elimina @dataclass de memory_pairs_game_server.py.
+- Corrige el error:
+  AttributeError: 'NoneType' object has no attribute '__dict__'
+  producido al importar el módulo con importlib.
+- Mantiene start_server().
+- Mantiene diseño Memory con cartas azules y números blancos.

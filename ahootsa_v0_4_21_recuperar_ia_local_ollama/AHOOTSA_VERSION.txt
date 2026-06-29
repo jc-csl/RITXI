@@ -1,0 +1,10 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.21_recuperar_ia_local_ollama
+
+Base estable:
+- App oficial intacta.
+- Voz natural conservada.
+- Herramientas originales intactas.
+- ask_ollama operativo y reforzado.
+- Instrucciones críticas para no negar la IA local.
+- Evita error de autocopia de perfil.

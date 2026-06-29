@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "facts": [
+    {
+      "id": "m_1782668764231_z58ium",
+      "text": "Para despedirse, el usuario quiere que el asistente diga Agur.",
+      "createdAt": 1782668764231
+    },
+    {
+      "id": "m_1782668764211_1945vk",
+      "text": "Para saludar, el usuario quiere que el asistente diga Kaiser.",
+      "createdAt": 1782668764211
+    },
+    {
+      "id": "m_1782668761592_mkvo56",
+      "text": "El usuario quiere que el asistente use “Agur” para despedirse.",
+      "createdAt": 1782668761592
+    },
+    {
+      "id": "m_1782668761566_ri49e5",
+      "text": "El usuario quiere que el asistente use “Kaiser” para saludar.",
+      "createdAt": 1782668761566
+    },
+    {
+      "id": "m_1782668710064_ssxopd",
+      "text": "El usuario pronuncia el nombre del asistente como Aocha.",
+      "createdAt": 1782668710064
+    },
+    {
+      "id": "m_1782668707745_5x977k",
+      "text": "El nombre del asistente se pronuncia Aocha.",
+      "createdAt": 1782668707745
+    },
+    {
+      "id": "m_1782668694769_sptdlt",
+      "text": "El asistente se pronuncia Aocha.",
+      "createdAt": 1782668694769
+    },
+    {
+      "id": "m_1782668302331_9djim4",
+      "text": "The user prefers to be called Laura.",
+      "createdAt": 1782668302331
+    },
+    {
+      "id": "m_1782668291668_2zzy59",
+      "text": "La usuaria prefiere que la llamen Laura.",
+      "createdAt": 1782668291668
+    },
+    {
+      "id": "m_1782667152387_gth8g6",
+      "text": "Prefiere que el nombre Ahootsa se pronuncie 'a ocho'.",
+      "createdAt": 1782667152387
+    },
+    {
+      "id": "m_1782667143017_wuu7vb",
+      "text": "Prefers the assistant's name to be pronounced as \"a ocho\".",
+      "createdAt": 1782667143017
+    },
+    {
+      "id": "m_1782667135845_h6732n",
+      "text": "Prefers the assistant's name pronounced as \"A Ocho\".",
+      "createdAt": 1782667135845
+    },
+    {
+      "id": "m_1782667127526_9lco6l",
+      "text": "Prefers the assistant's name to be pronounced 'A ocho'.",
+      "createdAt": 1782667127526
+    },
+    {
+      "id": "m_1782667106571_0y3lvh",
+      "text": "Prefiere pronunciar el nombre del asistente como 'A ocho'.",
+      "createdAt": 1782667106571
+    }
+  ]
+}

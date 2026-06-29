@@ -1,0 +1,12 @@
+dance
+stop_dance
+play_emotion
+stop_emotion
+camera
+camera_pc
+idle_do_nothing
+move_head
+sweep_look
+remember
+forget
+ask_ollama
