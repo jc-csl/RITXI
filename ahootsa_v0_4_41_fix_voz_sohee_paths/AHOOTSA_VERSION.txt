@@ -1,0 +1,8 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.41_fix_voz_sohee_paths
+
+Cambios:
+- Corrige caracteres no válidos en FORZAR_VOZ_SOHEE_TOTAL.ps1.
+- Corrige rutas de DIAGNOSTICAR_BAILES_PANEL_AHOOTSA.ps1.
+- Revisa todos los .ps1 para eliminar caracteres de control.
+- Mantiene voz Sohee, recordatorio idle y herramientas de bailes panel.

@@ -1,0 +1,49 @@
+{
+  "id": "alimentos",
+  "title": "Memory de alimentos",
+  "subtitle": "Busca parejas: alimento + grupo alimentario.",
+  "theme": "Alimentos",
+  "left_title": "alimento",
+  "right_title": "grupo",
+  "start_message": "Vamos a jugar con alimentos. Di dos números.",
+  "finish_title": "¡Menú completado!",
+  "facts_title": "Pistas de alimentos",
+  "pairs": [
+    {
+      "id": "apple",
+      "left": "manzana",
+      "left_icon": "🍎",
+      "right": "fruta",
+      "right_icon": "🌳",
+      "hint": "La manzana suele crecer en un árbol.",
+      "fact": "Las frutas aportan vitaminas, agua y fibra."
+    },
+    {
+      "id": "carrot",
+      "left": "zanahoria",
+      "left_icon": "🥕",
+      "right": "hortaliza",
+      "right_icon": "🥗",
+      "hint": "La zanahoria suele estar en ensaladas y guisos.",
+      "fact": "Las hortalizas ayudan a hacer comidas variadas y coloridas."
+    },
+    {
+      "id": "bread",
+      "left": "pan",
+      "left_icon": "🍞",
+      "right": "cereal",
+      "right_icon": "🌾",
+      "hint": "El pan se hace con harina de cereales.",
+      "fact": "Los cereales aportan energía, sobre todo si son integrales."
+    },
+    {
+      "id": "lentils",
+      "left": "lentejas",
+      "left_icon": "🫘",
+      "right": "legumbre",
+      "right_icon": "🌱",
+      "hint": "Las lentejas son semillas que se comen en plato de cuchara.",
+      "fact": "Las legumbres aportan fibra y proteína vegetal."
+    }
+  ]
+}

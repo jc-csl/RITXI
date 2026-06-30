@@ -1,0 +1,10 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.44_memory_reaccion_unica_secuencia
+
+Cambios:
+- Corrige doble movimiento/doble sonido en fallos del juego Memory.
+- Añade protección anti-duplicado en choose_memory_cards.
+- El modelo queda instruido para no llamar a otra emoción después de choose_memory_cards.
+- start_memory_pairs_game ya no lanza saludo con emoción automáticamente.
+- Mantiene cartas visibles 4 segundos tras fallo.
+- Mantiene perfil Ahootsa, audio de emociones, bailes del panel y voz Windows idle desactivada.

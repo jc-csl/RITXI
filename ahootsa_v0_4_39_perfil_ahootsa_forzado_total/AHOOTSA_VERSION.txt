@@ -1,0 +1,10 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.39_perfil_ahootsa_forzado_total
+
+Cambios:
+- Corrige casos donde la app arranca como Reachy Mini en lugar de Ahootsa.
+- Fuerza perfil Ahootsa en rutas nombradas y default/starter.
+- Copia herramientas del juego Memory a perfiles fallback.
+- Añade FORZAR_PERFIL_AHOOTSA_TOTAL.ps1.
+- Añade test/DIAGNOSTICAR_PERFIL_AHOOTSA_TOTAL.ps1.
+- Mantiene Memory estable tipo v0.34 y audio de emociones reforzado.

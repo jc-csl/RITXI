@@ -1,0 +1,10 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.36_docs_limpieza_tests
+
+Cambios:
+- Documentación actualizada y simplificada en /docs.
+- Manuales nuevos para estructura, flujos de datos, configuración, herramientas y tests.
+- Scripts de prueba movidos a /test.
+- Scripts de instalación, reparación y configuración se mantienen en la raíz.
+- Se revisa y elimina .egg-info si aparece.
+- Se eliminan documentos .md históricos que ya no ayudan a entender la versión actual.

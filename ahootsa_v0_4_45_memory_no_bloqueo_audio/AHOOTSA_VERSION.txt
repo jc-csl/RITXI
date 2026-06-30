@@ -1,0 +1,10 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.45_memory_no_bloqueo_audio
+
+Cambios:
+- Corrige bloqueo del juego Memory y de la respuesta por audio.
+- Desactiva copia de perfiles durante el arranque runtime.
+- choose_memory_cards ya no ejecuta movimiento/audio interno.
+- Añade REPARAR_MEMORY_ESTABLE_SIN_BLOQUEO.ps1.
+- Añade test/DIAGNOSTICAR_MEMORY_NO_BLOQUEO.ps1.
+- Mantiene emociones y bailes fuera del juego.

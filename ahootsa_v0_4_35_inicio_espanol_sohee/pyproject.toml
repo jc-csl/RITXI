@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahootsa-realtime-ollama-desktop-app"
+version = "0.4.35"
+description = "Ahootsa Realtime Ollama v0.4.34: juego de parejas de animales con control por robot"
+readme = "README_AHOOTSA_REALTIME_OLLAMA.md"
+requires-python = ">=3.10"
+authors = [{ name = "Ahootsa / Centro San Luis" }]
+
+[project.entry-points."reachy_mini_apps"]
+ahootsa_realtime_ollama_app = "ahootsa_realtime_ollama_desktop_app.main:AhootsaRealtimeOllamaApp"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ahootsa_realtime_ollama_desktop_app = [
+  "profiles/**/*.txt",
+  "profiles/**/*.py",
+  "assets/*.png",
+  "games/*.html",
+  "games/*.json",
+]

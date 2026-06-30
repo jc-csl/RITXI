@@ -1,0 +1,8 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.42_fix_diagnostico_voz_bailes_ok
+
+Cambios:
+- Corrige DIAGNOSTICAR_VOZ_SOHEE_TOTAL.ps1.
+- Corrige FORZAR_VOZ_SOHEE_TOTAL.ps1.
+- El diagnóstico ya no interpreta Aiden dentro de instructions.txt como configuración activa.
+- Se mantiene el diagnóstico de bailes del panel, que ya lista correctamente dance1, dance2, dance3 y otros movimientos.

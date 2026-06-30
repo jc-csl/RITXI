@@ -1,0 +1,8 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.34_memory_secuencia_final_sohee
+
+Cambios:
+- Secuencia del Memory más ordenada: primero habla, después gira cartas, después reacciona.
+- Al terminar el juego, espera, felicita, resetea y pregunta si quiere jugar otra vez o hacer otra actividad.
+- Mantiene reacción única por fallo.
+- Voz por defecto del perfil Ahootsa: Sohee.

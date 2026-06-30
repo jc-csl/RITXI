@@ -1,0 +1,49 @@
+{
+  "id": "animales",
+  "title": "Memory de animales",
+  "subtitle": "Busca parejas: animal + grupo.",
+  "theme": "Animales",
+  "left_title": "animal",
+  "right_title": "grupo",
+  "start_message": "Vamos a jugar. Di dos números.",
+  "finish_title": "¡Memory de animales terminado!",
+  "facts_title": "Pistas de animales",
+  "pairs": [
+    {
+      "id": "frog",
+      "left": "rana",
+      "left_icon": "🐸",
+      "right": "anfibio",
+      "right_icon": "💧",
+      "hint": "La rana vive entre agua y tierra.",
+      "fact": "Los anfibios suelen vivir una parte de su vida en el agua y otra en tierra."
+    },
+    {
+      "id": "eagle",
+      "left": "águila",
+      "left_icon": "🦅",
+      "right": "ave",
+      "right_icon": "🪶",
+      "hint": "El águila tiene plumas.",
+      "fact": "Las aves tienen plumas y muchas pueden volar."
+    },
+    {
+      "id": "salmon",
+      "left": "salmón",
+      "left_icon": "🐟",
+      "right": "pez",
+      "right_icon": "🌊",
+      "hint": "El salmón vive en el agua.",
+      "fact": "Los peces viven en el agua y respiran con branquias."
+    },
+    {
+      "id": "dolphin",
+      "left": "delfín",
+      "left_icon": "🐬",
+      "right": "mamífero",
+      "right_icon": "🍼",
+      "hint": "El delfín respira aire.",
+      "fact": "Los mamíferos respiran aire y sus crías toman leche."
+    }
+  ]
+}

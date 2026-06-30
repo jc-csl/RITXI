@@ -1,0 +1,9 @@
+Ahootsa Realtime Ollama
+Versión: v0.4.35_inicio_espanol_sohee
+
+Correcciones:
+- El instalador ya no fuerza Coral: fuerza Sohee.
+- Sohee queda primera y por defecto en CAMBIAR_VOZ_AHOOTSA.ps1.
+- greeting.txt queda en castellano: "¡Hola! Soy Ahootsa...".
+- Se añade FORZAR_INICIO_CASTELLANO_SOHEE.ps1 para evitar el saludo inglés de la app original/default.
+- Se añaden variables de entorno de apoyo: REACHY_MINI_CUSTOM_PROFILE, AHOOTSA_VOICE, OPENAI_REALTIME_VOICE, REALTIME_TRANSCRIPTION_LANGUAGE=es.
