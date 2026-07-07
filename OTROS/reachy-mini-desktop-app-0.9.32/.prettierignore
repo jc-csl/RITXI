@@ -1,8 +1,0 @@
-dist
-dist-web
-node_modules
-src-tauri
-*.wasm
-yarn.lock
-package-lock.json
-
