@@ -1,6 +1,0 @@
-venv/
-chroma_db/
-chroma_db_pdf/
-__pycache__/
-*.exe
-~$*.docx
