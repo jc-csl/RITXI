@@ -1,0 +1,31 @@
+{
+  "version": "6.0.0",
+  "clean_branch": true,
+  "does_not_include_5x_scripts": true,
+  "python_compile_errors": [],
+  "main_files": [
+    "CREAR_6_MODELO_AHOOTSA_LOCAL.ps1",
+    "DIAGNOSTICAR_6_FALLBACK_LOCAL.ps1",
+    "INSTALAR_6_FALLBACK_LOCAL.ps1",
+    "LANZAR_6_FALLBACK_LOCAL.ps1",
+    "Modelfile.ahootsa-local.example",
+    "PARAR_6_FALLBACK_LOCAL.ps1",
+    "README.md",
+    "app/__init__.py",
+    "app/__pycache__/__init__.cpython-313.pyc",
+    "app/__pycache__/main.cpython-313.pyc",
+    "app/main.py",
+    "docs/ARQUITECTURA_FUNCIONALIDAD.md",
+    "requirements.txt",
+    "scripts/CREAR_6_MODELO_AHOOTSA_LOCAL.ps1",
+    "scripts/DIAGNOSTICAR_6_FALLBACK_LOCAL.ps1",
+    "scripts/INSTALAR_6_FALLBACK_LOCAL.ps1",
+    "scripts/LANZAR_6_FALLBACK_LOCAL.ps1",
+    "scripts/PARAR_6_FALLBACK_LOCAL.ps1",
+    "static/app.js",
+    "static/favicon.svg",
+    "static/index.html",
+    "static/style.css",
+    "test/DIAGNOSTICAR_6_FALLBACK_LOCAL.ps1"
+  ]
+}

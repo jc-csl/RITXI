@@ -1,0 +1,79 @@
+{
+  "version": "5.0.23",
+  "description": "Memory con efecto/movimiento primero y feedback hablado después.",
+  "problem_seen_in_logs": [
+    "choose_memory_cards se ejecuta",
+    "play_emotion se ejecuta",
+    "audio ok true",
+    "pero el usuario no oye comentario de fallo/acierto"
+  ],
+  "fix": [
+    "devolver message/text/answer/content además de robot_say",
+    "no devolver state completo al LLM",
+    "programar emoción/sonido en segundo plano con retardo",
+    "añadir beep winsound como fallback audible de PC"
+  ],
+  "return_fields": [
+    "message",
+    "text",
+    "answer",
+    "content",
+    "final_response",
+    "spoken_response",
+    "tts_text",
+    "robot_say",
+    "assistant_response",
+    "speak"
+  ],
+  "background_reaction_delay_seconds": 0.0,
+  "winsound_fallback": true,
+  "winsound": {
+    "miss": [
+      [
+        220,
+        130
+      ],
+      [
+        180,
+        160
+      ]
+    ],
+    "match": [
+      [
+        660,
+        100
+      ],
+      [
+        880,
+        120
+      ]
+    ],
+    "final": [
+      [
+        660,
+        100
+      ],
+      [
+        880,
+        120
+      ],
+      [
+        1040,
+        140
+      ]
+    ],
+    "repeat_miss": [
+      [
+        330,
+        120
+      ]
+    ],
+    "invalid": [
+      [
+        300,
+        120
+      ]
+    ]
+  },
+  "effect_then_spoken_feedback": true
+}

@@ -1,0 +1,83 @@
+Metadata-Version: 2.4
+Name: ahootsa-realtime-ollama-desktop-app
+Version: 5.0.23
+Summary: Ahootsa 5.0.23: actividades de comunicacion directas sin bloqueo
+Author: Ahootsa / Centro San Luis
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Ahootsa 5.0.23
+
+# Ahootsa 5.0.23 — Memory hablado y actividades intermedias
+
+Cambios principales:
+
+- El Memory ya no debe quedarse solo en efectos.
+- `choose_memory_cards` ahora marca `needs_response=True`.
+- La reacción de Memory se ejecuta primero y después se devuelve `robot_say` para que Ahootsa hable.
+- El texto de cada jugada confirma acierto o fallo y vuelve a pedir dos números del 1 al 8.
+- Al finalizar se usa `dance3` como celebración y se pregunta si quiere volver a jugar o salir.
+- La ventana visual de Memory incluye fallback de voz del navegador y recordatorio cada 10 segundos.
+- Las actividades de comunicación se ofrecen como: fácil, intermedia y avanzada.
+- Se evita llamar "normal" al nivel intermedio en mensajes visibles.
+
+Prueba sugerida:
+
+1. Iniciar Ahootsa 5.0.23.
+2. Pedir: "Quiero jugar al memory de animales".
+3. Decir dos números.
+4. Verificar que hay efecto y después frase hablada.
+5. Esperar 10 segundos sin hacer nada: debe recordar que hay que elegir dos números del 1 al 8.
+6. Completar el juego: debe bailar `dance3` y preguntar si quiere volver a jugar o salir.
+
+
+---
+
+# Ahootsa 5.0.23 - esperar backend realtime conectado
+
+## Diagnóstico
+
+El diagnóstico muestra:
+
+```text
+/mic -> {"muted":false}
+/status -> backend_connected=false
+/status -> backend_connection_state="connecting"
+```
+
+Eso significa que el micro no está silenciado, pero la sesión realtime todavía no está conectada. En ese estado no escucha/responde correctamente.
+
+## Cambios
+
+Se añade:
+
+```text
+ESPERAR_5_BACKEND_REALTIME_LISTO.ps1
+DIAGNOSTICAR_5_HUGGINGFACE_CONEXION.ps1
+```
+
+El lanzador espera a que `/status` pase a:
+
+```text
+backend_connected=true
+```
+
+antes de considerar que se puede hablar.
+
+## Comandos
+
+```powershell
+cd D:\RITXI\5_0_23_ahootsa_espera_backend_realtime
+powershell -ExecutionPolicy Bypass -File .\COMPROBAR_5_SINTAXIS_PS1.ps1
+powershell -ExecutionPolicy Bypass -File .\VALIDAR_5_SCRIPT_DAEMON_GENERADO.ps1
+powershell -ExecutionPolicy Bypass -File .\COMPROBAR_5_LOGS_AHOOTSA.ps1
+powershell -ExecutionPolicy Bypass -File .\INSTALAR_5_AHOOTSA_MUJOCO_WEB.ps1
+powershell -ExecutionPolicy Bypass -File .\LANZAR_5_AHOOTSA_MUJOCO_WEB.ps1
+```
+
+Si se queda en connecting:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\DIAGNOSTICAR_5_HUGGINGFACE_CONEXION.ps1
+powershell -ExecutionPolicy Bypass -File .\REINICIAR_5_SESION_CONVERSACION.ps1
+```

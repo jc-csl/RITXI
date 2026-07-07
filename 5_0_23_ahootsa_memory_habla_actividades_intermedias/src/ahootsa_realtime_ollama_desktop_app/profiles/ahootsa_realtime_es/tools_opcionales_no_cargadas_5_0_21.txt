@@ -1,0 +1,18 @@
+# Herramientas opcionales no cargadas por defecto en 5.0.21 para mejorar fluidez.
+# Se mantienen los .py en el paquete por si se quieren reactivar manualmente.
+ask_ollama
+dance
+stop_dance
+play_panel_dance_activity
+list_panel_dances_activities
+list_community_dances
+play_community_dance
+list_emotions
+list_all_activities
+actividades_comunicacion
+listar_actividades_comunicacion
+iniciar_actividad_comunicacion
+remember
+forget
+idle_do_nothing
+sweep_look

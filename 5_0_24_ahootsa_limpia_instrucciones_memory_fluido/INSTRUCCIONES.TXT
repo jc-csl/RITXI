@@ -1,0 +1,182 @@
+INSTRUCCIONES.TXT
+Ahootsa 5.0.24 — versión limpia basada en 5.0.23
+
+OBJETIVO DE ESTA VERSIÓN
+------------------------
+Esta versión vuelve a la rama 5.x, basada en la app realtime de Reachy Mini / Hugging Face,
+pero limpia archivos y scripts acumulados de versiones anteriores.
+
+El cambio funcional importante viene de 5.0.23:
+- Memory debe hablar después de los efectos.
+- Memory debe confirmar acierto o fallo.
+- Memory debe repetir: "Debes elegir dos números del 1 al 8".
+- Si no hay interacción, debe recordarlo cada 10 segundos.
+- Al finalizar el juego debe celebrar con dance3.
+- Después debe preguntar: "¿Quieres volver a jugar o salir?"
+- Actividades de comunicación: niveles "fácil", "intermedia" y "avanzada".
+- No debe llamar "normal" al nivel intermedio.
+
+QUÉ SE HA LIMPIADO
+------------------
+Se han eliminado scripts antiguos que ya no tenían sentido para esta versión:
+- scripts de watcher de voz,
+- pruebas manuales de Sohee antiguas,
+- validaciones de versiones anteriores,
+- correcciones ya incorporadas,
+- carpeta scripts duplicada,
+- carpeta test duplicada,
+- documentación larga histórica de versiones 0.4.x y 5.0.x.
+
+Se han dejado solo los scripts necesarios para instalar, lanzar, parar, reiniciar y diagnosticar.
+
+ARCHIVOS IMPORTANTES QUE QUEDAN
+-------------------------------
+Uso principal:
+1. INSTALAR_5_AHOOTSA_MUJOCO_WEB.ps1
+2. LANZAR_5_AHOOTSA_MUJOCO_WEB.ps1
+3. PARAR_5_AHOOTSA_MUJOCO_WEB.ps1
+4. REINICIAR_5_SESION_CONVERSACION.ps1
+
+Scripts usados internamente:
+5. INSTALAR_5_COMPLETO_SOBRE_CONVERSATION_APP.ps1
+6. FORZAR_5_VOZ_SOHEE_COMPLETA.ps1
+7. LIMPIAR_5_VOZ_SOHEE_SIN_BOM.ps1
+8. ESPERAR_5_BACKEND_REALTIME_LISTO.ps1
+
+Diagnóstico:
+9. DIAGNOSTICAR_5_CONVERSACION_FLUIDA.ps1
+10. DIAGNOSTICAR_5_HUGGINGFACE_CONEXION.ps1
+11. DIAGNOSTICAR_5_MEMORY_ACTIVIDADES_FLUIDEZ.ps1
+12. DIAGNOSTICAR_5_TOOLS_FLUIDEZ.ps1
+13. COMPROBAR_5_LOGS_AHOOTSA.ps1
+14. RESUMIR_5_LOGS_AHOOTSA.ps1
+15. COMPROBAR_5_SINTAXIS_PS1.ps1
+16. LANZAR_SOLO_DAEMON_5_MUJOCO.ps1
+
+MODO DE PROCEDER
+----------------
+1. Abrir PowerShell.
+2. Ir a la carpeta:
+
+   cd D:\RITXI\5_0_24_ahootsa_limpia_instrucciones_memory_fluido
+
+3. Comprobar sintaxis:
+
+   powershell -ExecutionPolicy Bypass -File .\COMPROBAR_5_SINTAXIS_PS1.ps1
+
+4. Instalar:
+
+   powershell -ExecutionPolicy Bypass -File .\INSTALAR_5_AHOOTSA_MUJOCO_WEB.ps1
+
+5. Lanzar:
+
+   powershell -ExecutionPolicy Bypass -File .\LANZAR_5_AHOOTSA_MUJOCO_WEB.ps1
+
+INFORMACIÓN DE PANTALLA ESPERADA
+--------------------------------
+Durante el lanzamiento deberían verse mensajes parecidos a:
+
+[OK] voice.txt sin BOM
+[OK] /voices/apply
+[INFO] voices/current = {"voice":"Sohee"}
+[INFO] Esperando backend realtime antes de hablar...
+
+La condición correcta para empezar a hablar es ver:
+
+[OK] Backend realtime listo.
+
+O comprobar en /status:
+
+backend_connected = true
+
+Si aparece:
+
+ConnectionClosedError: received 1013
+No pipeline capacity available
+
+entonces el problema es capacidad remota de Hugging Face. En ese estado no sirve probar micro,
+Memory ni conversación porque el backend realtime no está conectado.
+
+QUÉ CONVIENE COMPROBAR EN ESTA VERSIÓN
+--------------------------------------
+Primero:
+
+powershell -ExecutionPolicy Bypass -File .\DIAGNOSTICAR_5_CONVERSACION_FLUIDA.ps1
+
+Debe confirmar:
+- daemon 8000 responde,
+- app 7860 responde,
+- mic muted = false,
+- backend_connected = true.
+
+Después:
+
+powershell -ExecutionPolicy Bypass -File .\DIAGNOSTICAR_5_MEMORY_ACTIVIDADES_FLUIDEZ.ps1
+
+Debe confirmar:
+- choose_memory_cards needs_response = True,
+- Memory con reacción antes y respuesta hablada después,
+- nivel intermedio visible como "Intermedia",
+- recordatorio de Memory cada 10 segundos.
+
+PRUEBA DE MEMORY
+----------------
+Cuando el backend esté conectado, decir:
+
+"Quiero jugar al memory de animales"
+
+Después decir dos números:
+
+"1 y 3"
+
+Comprobar:
+- hay efecto/movimiento/sonido,
+- después Ahootsa habla,
+- si acierta: confirma que es pareja,
+- si falla: confirma que no son pareja,
+- vuelve a decir: "Debes elegir dos números del 1 al 8".
+
+Esperar 10 segundos sin interacción:
+- debe recordar que hay que elegir dos números del 1 al 8.
+
+Al terminar:
+- debe celebrar con dance3,
+- debe preguntar si quieres volver a jugar o salir.
+
+PRUEBA DE ACTIVIDADES
+---------------------
+Decir:
+
+"Quiero hacer actividades de comunicación"
+
+Ahootsa debe ofrecer:
+
+"fácil, intermedia o avanzada"
+
+No debe decir "normal".
+
+Después probar:
+
+"Intermedia"
+
+Debe listar o iniciar actividades intermedias, no normales.
+
+SI ALGO FALLA
+-------------
+1. Si no habla nada:
+   - comprobar backend_connected.
+   - si backend_connected = false, el problema no es Memory.
+
+2. Si solo hay efectos en Memory pero no voz:
+   - ejecutar DIAGNOSTICAR_5_MEMORY_ACTIVIDADES_FLUIDEZ.ps1.
+   - revisar que choose_memory_cards tenga needs_response = True.
+   - revisar logs con RESUMIR_5_LOGS_AHOOTSA.ps1.
+
+3. Si vuelve a aparecer "normal":
+   - revisar que el perfil instalado sea el de esta versión.
+   - reinstalar con INSTALAR_5_AHOOTSA_MUJOCO_WEB.ps1.
+
+NOTA SOBRE LA RAMA 6.x
+----------------------
+La rama 6.x local/Ollama queda aparcada de momento.
+Esta versión 5.0.24 vuelve a usar la rama realtime de Reachy Mini.
