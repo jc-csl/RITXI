@@ -1,0 +1,1 @@
+# En 5.0.25 se han recuperado en tools.txt: ask_ollama, explorar imagen y opciones de baile.

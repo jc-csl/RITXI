@@ -1,0 +1,63 @@
+﻿# COMPROBAR_5_SINTAXIS_PS1.ps1
+# Ahootsa 5.0.25: comprueba solo scripts necesarios de esta versión limpia.
+
+$ErrorActionPreference = "Continue"
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+
+$Root = Split-Path -Parent $MyInvocation.MyCommand.Path
+
+$Scripts = @(
+  "INSTALAR_5_AHOOTSA_MUJOCO_WEB.ps1",
+  "INSTALAR_5_COMPLETO_SOBRE_CONVERSATION_APP.ps1",
+  "LANZAR_5_AHOOTSA_MUJOCO_WEB.ps1",
+  "PARAR_5_AHOOTSA_MUJOCO_WEB.ps1",
+  "REINICIAR_5_SESION_CONVERSACION.ps1",
+  "FORZAR_5_VOZ_SOHEE_COMPLETA.ps1",
+  "LIMPIAR_5_VOZ_SOHEE_SIN_BOM.ps1",
+  "ESPERAR_5_BACKEND_REALTIME_LISTO.ps1",
+  "DIAGNOSTICAR_5_CONVERSACION_FLUIDA.ps1",
+  "DIAGNOSTICAR_5_HUGGINGFACE_CONEXION.ps1",
+  "DIAGNOSTICAR_5_MEMORY_ACTIVIDADES_FLUIDEZ.ps1",
+  "DIAGNOSTICAR_5_TOOLS_FLUIDEZ.ps1",
+  "DIAGNOSTICAR_5_ACTIVIDADES_RECUPERADAS.ps1",
+  "COMPROBAR_5_LOGS_AHOOTSA.ps1",
+  "RESUMIR_5_LOGS_AHOOTSA.ps1",
+  "LANZAR_SOLO_DAEMON_5_MUJOCO.ps1"
+)
+
+$errors = 0
+
+foreach ($script in $Scripts) {
+  $path = Join-Path $Root $script
+  if (-not (Test-Path $path)) {
+    Write-Host "[ERROR] Falta $script"
+    $errors++
+    continue
+  }
+  try {
+    $tokens = $null
+    $parseErrors = $null
+    [System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$tokens, [ref]$parseErrors) | Out-Null
+    if ($parseErrors.Count -gt 0) {
+      Write-Host "[ERROR] $script"
+      $parseErrors | ForEach-Object { Write-Host "  $($_.Message)" }
+      $errors += $parseErrors.Count
+    } else {
+      Write-Host "[OK] $script"
+    }
+  } catch {
+    Write-Host "[ERROR] $script -> $($_.Exception.Message)"
+    $errors++
+  }
+}
+
+if ($errors -eq 0) {
+  Write-Host ""
+  Write-Host "[OK] Sintaxis PowerShell correcta en los scripts necesarios."
+  exit 0
+}
+
+Write-Host ""
+Write-Host "[ERROR] Errores de sintaxis: $errors"
+exit 1

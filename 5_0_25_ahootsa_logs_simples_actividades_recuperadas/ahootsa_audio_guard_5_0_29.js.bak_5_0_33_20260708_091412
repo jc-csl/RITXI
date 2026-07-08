@@ -1,0 +1,101 @@
+/* ============================================================
+ * Ahootsa 5.0.29 - audio unico Ahootsa
+ *
+ * Regla global:
+ *   - El robot/app Ahootsa es la unica voz de actividades y juegos.
+ *   - Se desactiva la voz del navegador/Windows mediante Web Speech API.
+ *
+ * Corrige casos como el juego de parejas, donde sonaba a la vez:
+ *   1) audio/voz Ahootsa
+ *   2) voz Windows/navegador (`speechSynthesis`)
+ *
+ * No bloquea etiquetas <audio>, porque pueden ser la salida real de Ahootsa.
+ * ============================================================ */
+(function () {
+  try {
+    if (typeof window === "undefined") return;
+
+    var PATCH_MARKER = "__AHOOTSA_5029_AUDIO_UNICO_AHOOTSA__";
+    if (window[PATCH_MARKER]) return;
+    window[PATCH_MARKER] = true;
+
+    window.AHOOTSA_AUDIO_POLICY = window.AHOOTSA_AUDIO_POLICY || {};
+    window.AHOOTSA_AUDIO_POLICY.onlyAhootsaVoice = true;
+    window.AHOOTSA_AUDIO_POLICY.blockWindowsSpeechSynthesis = true;
+    window.AHOOTSA_AUDIO_POLICY.version = "5.0.29";
+
+    function logBlocked(detail) {
+      try {
+        if (window.AHOOTSA_DEBUG_AUDIO === true) {
+          console.info("[Ahootsa 5.0.29] Voz Windows/navegador bloqueada:", detail || "speechSynthesis.speak");
+        }
+      } catch (e) {}
+    }
+
+    function cancelWindowsSpeech() {
+      try {
+        if (window.speechSynthesis && typeof window.speechSynthesis.cancel === "function") {
+          window.speechSynthesis.cancel();
+        }
+      } catch (e) {}
+    }
+
+    function patchSpeechSynthesis() {
+      try {
+        if (!window.speechSynthesis) return;
+        var synth = window.speechSynthesis;
+
+        if (!window.__AHOOTSA_ORIGINAL_SPEECH_SYNTHESIS_SPEAK__) {
+          try { window.__AHOOTSA_ORIGINAL_SPEECH_SYNTHESIS_SPEAK__ = synth.speak ? synth.speak.bind(synth) : null; } catch (e) {}
+        }
+        if (!window.__AHOOTSA_ORIGINAL_SPEECH_SYNTHESIS_CANCEL__) {
+          try { window.__AHOOTSA_ORIGINAL_SPEECH_SYNTHESIS_CANCEL__ = synth.cancel ? synth.cancel.bind(synth) : null; } catch (e) {}
+        }
+
+        var blockedSpeak = function (utterance) {
+          logBlocked(utterance && (utterance.text || utterance.lang || utterance.voice && utterance.voice.name));
+          cancelWindowsSpeech();
+          return undefined;
+        };
+        blockedSpeak.__ahootsaBlockedSpeak5029 = true;
+
+        try {
+          synth.speak = blockedSpeak;
+        } catch (e1) {
+          try {
+            Object.defineProperty(synth, "speak", {
+              value: blockedSpeak,
+              configurable: true,
+              writable: true
+            });
+          } catch (e2) {}
+        }
+
+        cancelWindowsSpeech();
+      } catch (e) {}
+    }
+
+    patchSpeechSynthesis();
+
+    // Algunas librerias reescriben speechSynthesis.speak tras cargar la pantalla.
+    // Reaplicamos durante los primeros segundos y al volver a foco/actividad.
+    var tries = 0;
+    var timer = window.setInterval(function () {
+      tries += 1;
+      patchSpeechSynthesis();
+      if (tries >= 40) window.clearInterval(timer);
+    }, 250);
+
+    try { window.addEventListener("focus", patchSpeechSynthesis, true); } catch (e) {}
+    try { document.addEventListener("visibilitychange", patchSpeechSynthesis, true); } catch (e) {}
+    try { document.addEventListener("DOMContentLoaded", patchSpeechSynthesis, true); } catch (e) {}
+
+    // API explicita por si alguna actividad quiere comprobar la politica.
+    window.ahootsaAudio = window.ahootsaAudio || {};
+    window.ahootsaAudio.isWindowsSpeechBlocked = function () { return true; };
+    window.ahootsaAudio.cancelWindowsSpeech = cancelWindowsSpeech;
+  } catch (e) {}
+})();
+/* ============================================================
+ * Fin Ahootsa 5.0.29 - audio unico Ahootsa
+ * ============================================================ */

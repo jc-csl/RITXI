@@ -1,0 +1,4 @@
+﻿{"ts":"2026-07-08T07:45:38.9129046+02:00","event":"ps.start","session_id":"20260708_074538","pid":16292,"pwd":"D:\\RITXI\\5_0_25_ahootsa_logs_simples_actividades_recuperadas","script":"INSTALAR_5_AHOOTSA_MUJOCO_WEB","user":"Alumno"}
+{"ts":"2026-07-08T07:45:50.9664920+02:00","event":"ps.start","session_id":"20260708_074538","pid":3112,"pwd":"D:\\RITXI\\5_0_25_ahootsa_logs_simples_actividades_recuperadas","script":"INSTALAR_5_COMPLETO_SOBRE_CONVERSATION_APP","user":"Alumno"}
+{"ts":"2026-07-08T07:45:52.2128236+02:00","event":"ps.end","session_id":"20260708_074538","pid":3112,"script":"INSTALAR_5_COMPLETO_SOBRE_CONVERSATION_APP"}
+{"ts":"2026-07-08T07:45:57.7683001+02:00","event":"ps.end","session_id":"20260708_074538","pid":16292,"script":"INSTALAR_5_AHOOTSA_MUJOCO_WEB"}
