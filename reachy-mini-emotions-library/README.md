@@ -7,6 +7,13 @@ language:
 tags:
   - reachy_mini_community_moves
 pretty_name: Reachy Mini Emotions Library
+configs:
+  - config_name: default
+    data_files:
+      - split: train
+        path:
+          - "*.ogg"
+          - "metadata.jsonl"
 ---
 
 # Reachy Mini Emotions Library

@@ -1,0 +1,49 @@
+{
+  "id": "ciudades",
+  "title": "Memory de ciudades",
+  "subtitle": "Busca parejas: ciudad europea + monumento.",
+  "theme": "Ciudades",
+  "left_title": "ciudad",
+  "right_title": "monumento",
+  "start_message": "Vamos a viajar por Europa. Di dos números.",
+  "finish_title": "¡Viaje por Europa completado!",
+  "facts_title": "Pistas de monumentos",
+  "pairs": [
+    {
+      "id": "paris",
+      "left": "París",
+      "left_icon": "🇫🇷",
+      "right": "Torre Eiffel",
+      "right_icon": "🗼",
+      "hint": "En París hay una torre de hierro muy famosa.",
+      "fact": "La Torre Eiffel es uno de los símbolos más conocidos de París."
+    },
+    {
+      "id": "rome",
+      "left": "Roma",
+      "left_icon": "🇮🇹",
+      "right": "Coliseo",
+      "right_icon": "🏛️",
+      "hint": "En Roma hay un anfiteatro antiguo muy famoso.",
+      "fact": "El Coliseo fue un gran anfiteatro de la antigua Roma."
+    },
+    {
+      "id": "london",
+      "left": "Londres",
+      "left_icon": "🇬🇧",
+      "right": "Big Ben",
+      "right_icon": "🕰️",
+      "hint": "En Londres hay un reloj muy conocido.",
+      "fact": "Big Ben es el nombre popular de la gran campana del reloj del Parlamento británico."
+    },
+    {
+      "id": "prague",
+      "left": "Praga",
+      "left_icon": "🇨🇿",
+      "right": "Puente de Carlos",
+      "right_icon": "🌉",
+      "hint": "En Praga hay un puente histórico sobre el río Moldava.",
+      "fact": "El Puente de Carlos es uno de los lugares más visitados de Praga."
+    }
+  ]
+}

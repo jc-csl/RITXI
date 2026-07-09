@@ -1,0 +1,101 @@
+# ESPERAR_5_BACKEND_REALTIME_LISTO.ps1
+# Ahootsa 5.0.22
+# Espera a que /status indique backend_connected=true.
+# Si backend_connected=false y state=connecting, el micro puede estar unmuted pero la app no escucha ni habla.
+
+param(
+    [int]$TimeoutSeconds = 120,
+    [int]$IntervalSeconds = 3
+)
+
+$ErrorActionPreference = "Continue"
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+
+$LogRoot = "D:\RITXI\logs"
+if (-not (Test-Path -LiteralPath $LogRoot)) { New-Item -ItemType Directory -Force -Path $LogRoot | Out-Null }
+if (-not $env:AHOOTSA_SESSION_ID) { $env:AHOOTSA_SESSION_ID = Get-Date -Format "yyyyMMdd_HHmmss" }
+
+$Log = Join-Path $LogRoot ("ahootsa_wait_backend_realtime_" + $env:AHOOTSA_SESSION_ID + ".log")
+$JsonLog = Join-Path $LogRoot ("ahootsa_wait_backend_realtime_events_" + $env:AHOOTSA_SESSION_ID + ".jsonl")
+
+function Log-Line {
+    param([string]$Text)
+    $Line = "$(Get-Date -Format o) $Text"
+    Write-Host $Line
+    try { $Line | Add-Content -Encoding UTF8 -LiteralPath $Log } catch {}
+}
+
+function Write-Event {
+    param([string]$Event, [hashtable]$Data=@{})
+    $Obj = [ordered]@{ ts=(Get-Date).ToString("o"); event=$Event; session_id=$env:AHOOTSA_SESSION_ID; pid=$PID }
+    foreach ($K in $Data.Keys) { $Obj[$K] = $Data[$K] }
+    try { ($Obj | ConvertTo-Json -Depth 12 -Compress) | Add-Content -Encoding UTF8 -LiteralPath $JsonLog } catch {}
+}
+
+function Get-JsonEndpoint {
+    param([string]$Url, [int]$Timeout = 5)
+    try { return Invoke-RestMethod -Uri $Url -Method Get -TimeoutSec $Timeout }
+    catch { return $null }
+}
+
+Write-Event "wait_backend.start" @{ timeout_seconds=$TimeoutSeconds; interval_seconds=$IntervalSeconds }
+Log-Line "Esperando backend realtime conectado. Timeout=$TimeoutSeconds s"
+
+$End = (Get-Date).AddSeconds($TimeoutSeconds)
+$Ready = $false
+$Attempt = 0
+$LastState = ""
+
+while ((Get-Date) -lt $End) {
+    $Attempt++
+    $Status = Get-JsonEndpoint "http://127.0.0.1:7860/status" 5
+    $Mic = Get-JsonEndpoint "http://127.0.0.1:7860/mic" 3
+
+    if ($Status -ne $null) {
+        $Connected = [bool]$Status.backend_connected
+        $State = [string]$Status.backend_connection_state
+        $Provider = [string]$Status.backend_provider
+        $CanProceed = [bool]$Status.can_proceed
+        $Err = [string]$Status.backend_error
+        $Muted = if ($Mic -ne $null) { [bool]$Mic.muted } else { $null }
+
+        Log-Line "intento=$Attempt provider=$Provider connected=$Connected state=$State can_proceed=$CanProceed muted=$Muted error=$Err"
+        Write-Event "wait_backend.probe" @{
+            attempt=$Attempt
+            backend_provider=$Provider
+            backend_connected=$Connected
+            backend_connection_state=$State
+            can_proceed=$CanProceed
+            backend_error=$Err
+            mic_muted=$Muted
+        }
+
+        if ($Connected -eq $true) {
+            $Ready = $true
+            break
+        }
+        $LastState = $State
+    } else {
+        Log-Line "intento=$Attempt /status no disponible"
+        Write-Event "wait_backend.status_unavailable" @{ attempt=$Attempt }
+    }
+
+    Start-Sleep -Seconds $IntervalSeconds
+}
+
+if ($Ready) {
+    Log-Line "[OK] Backend realtime listo."
+    Write-Event "wait_backend.ready" @{ attempt=$Attempt }
+    exit 0
+}
+
+Log-Line "[WARN] Backend realtime NO listo. Ultimo estado=$LastState"
+Write-Event "wait_backend.not_ready" @{ attempt=$Attempt; last_state=$LastState }
+
+Write-Host ""
+Write-Host "Si se queda en backend_connected=false / state=connecting:"
+Write-Host "1) Comprueba conexion a Internet y Hugging Face."
+Write-Host "2) Ejecuta: powershell -ExecutionPolicy Bypass -File .\DIAGNOSTICAR_5_HUGGINGFACE_CONEXION.ps1"
+Write-Host "3) Ejecuta: powershell -ExecutionPolicy Bypass -File .\REINICIAR_5_SESION_CONVERSACION.ps1"
+exit 2

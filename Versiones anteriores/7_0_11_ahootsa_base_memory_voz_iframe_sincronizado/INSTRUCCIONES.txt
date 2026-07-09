@@ -1,0 +1,37 @@
+Ahootsa 7.0.11 - versión completa instalable limpia
+
+Esta versión NO incluye carpetas docs, logs ni fotos dentro del ZIP.
+- Logs externos: D:\RITXI\logs
+- Fotos externas: D:\RITXI\fotos
+
+Instalar y lanzar:
+  powershell -ExecutionPolicy Bypass -File .\LANZAR_AHOOTSA_7_0_11.ps1 -ForceInstall -RestartDaemon
+
+Lanzamiento normal posterior:
+  powershell -ExecutionPolicy Bypass -File .\LANZAR_AHOOTSA_7_0_11.ps1
+
+Perfiles externos Ahootsa 7 sin colisión:
+- ahootsa7_rapido
+- ahootsa7_realtime_es
+- ahootsa7_actividades
+- ahootsa7_completo
+
+La app oficial y su motor Hugging Face Realtime no se modifican. Ahootsa solo añade perfiles/herramientas externas y panel /ahootsa.
+
+
+7.0.11: corrige falsos fallos en bailes/emociones. Si MuJoCo muestra WARNING IK pero el baile se ha visto, se registra como advertencia, no como error de ejecución.
+
+
+Cambios 7.0.11:
+- Juego de parejas integrado en el iframe del panel /ahootsa con mayor altura y mejor visibilidad.
+- Al levantar cartas se muestran inmediatamente icono/imagen y texto; no queda el número durante el giro.
+- Respuestas del juego simplificadas: ya no dice "Vamos a ver la X y la Y". Solo indica acierto/fallo y anima a seguir.
+- Se mantiene el motor conversacional oficial Hugging Face; Ahootsa solo amplía funciones.
+- logs, fotos y docs siguen fuera del ZIP: D:\RITXI\logs y D:\RITXI\fotos.
+
+
+Cambios 7.0.11:
+- Sincroniza el estado del juego de parejas entre iframe/mouse y juego por voz.
+- El iframe ya no reinicia el juego al abrirse salvo que reset=1.
+- Añade selección visual de la primera carta y mensajes claros en pantalla.
+- Las cartas muestran imagen/icono al revelarse y no números durante el resultado.

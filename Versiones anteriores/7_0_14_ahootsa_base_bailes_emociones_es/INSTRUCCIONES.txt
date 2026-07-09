@@ -1,0 +1,47 @@
+Ahootsa 7.0.14 - base estable instalable
+
+Cambios principales sobre 7.0.12:
+- El juego de parejas se carga automáticamente en el iframe del panel /ahootsa.
+- El enlace de pantalla grande usa el mismo estado del juego y no deja vacío el iframe pequeño.
+- Al seleccionar una carta con ratón se muestra su imagen inmediatamente.
+- Se elimina el mensaje oral “Míralas con calma” cuando las cartas ya han vuelto a ocultarse.
+- En fallos se dice “No eran pareja. Inténtalo otra vez...” y puede añadirse una curiosidad breve del animal/alimento/ciudad.
+- El resumen de logs crea siempre un archivo con timestamp y solo analiza la última ejecución.
+- No se incluyen carpetas docs, logs ni fotos en el ZIP.
+
+Instalación recomendada:
+1) Descomprimir en D:\RITXI\7_0_14_ahootsa_base_memory_resumen_timestamp
+2) Ejecutar:
+   powershell -ExecutionPolicy Bypass -File .\LANZAR_AHOOTSA_7_0_14.ps1 -ForceInstall -RestartDaemon
+
+Uso normal:
+   powershell -ExecutionPolicy Bypass -File .\LANZAR_AHOOTSA_7_0_14.ps1
+
+Configurar el tiempo de cartas:
+1) Abrir http://127.0.0.1:7860/ahootsa
+2) Ir a CONFIGURACIÓN DEL SISTEMA
+3) Filtrar por memory_timing
+4) Editar memory_timing_config.json
+5) Cambiar reveal_seconds, por ejemplo 8.0, 10.0 o 12.0
+6) Guardar.
+
+Notas:
+- reveal_seconds controla cuánto tiempo quedan visibles dos cartas falladas.
+- flip_delay_seconds debe quedar en 0.0 para evitar que se vea el número invertido durante el giro.
+- Los cambios de memory_timing_config.json se leen dinámicamente por el motor del juego; si el navegador conserva estado, basta con reiniciar el juego desde el panel.
+- El motor principal conversacional sigue siendo Hugging Face Realtime oficial.
+- Ollama sigue siendo extra independiente de texto desde el panel.
+
+
+Resumen de logs:
+   powershell -ExecutionPolicy Bypass -File .\RESUMIR_LOGS_AHOOTSA_7_0_14.ps1
+
+El resumen se guarda como:
+   D:\RITXI\logs\AHOOTSA7_RESUMEN_YYYYMMDD_HHMMSS.log
+
+No se sobrescribe AHOOTSA7_ULTIMO_RESUMEN.log para evitar bloqueos de archivo. El archivo:
+   D:\RITXI\logs\AHOOTSA7_ULTIMO_RESUMEN_POINTER.txt
+solo contiene la ruta del último resumen generado.
+
+
+7.0.14: bailes y emociones se piden en español. Usa: baile uno, baile dos, baile tres, saludo, celebración, calma, eléctrico. Añadido DIAGNOSTICAR_BAILES_EMOCIONES_7_0_14.ps1.

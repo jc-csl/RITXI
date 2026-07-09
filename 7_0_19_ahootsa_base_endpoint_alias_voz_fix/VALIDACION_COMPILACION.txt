@@ -1,0 +1,8 @@
+Ahootsa 7.0.19
+Validación local realizada en sandbox:
+- python -m compileall -q src: OK
+- eliminado __pycache__ y .pyc
+- ZIP sin carpetas docs/logs/fotos
+- no existe src/.../tools/play_emotion.py
+- existe src/.../profiles/ahootsa7_realtime_es/play_emotion.py
+- añadidos endpoints /ahootsa/resolve_activity, /ahootsa/list_activities y /ahootsa/play_activity

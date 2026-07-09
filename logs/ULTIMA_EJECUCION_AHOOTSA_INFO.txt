@@ -1,7 +1,0 @@
-﻿Ahootsa 5.0.33 - ultima ejecucion
-timestamp=20260708_091406
-fecha=2026-07-08T09:14:06.0900787+02:00
-app_root=D:\RITXI\5_0_25_ahootsa_logs_simples_actividades_recuperadas
-audio_policy=solo_ahootsa_sin_windows_tts
-env_AHOOTSA_DISABLE_WINDOWS_TTS=1
-esperados=ahootsa5_20260708_091406_pantalla.log, ahootsa5_20260708_091406_runtime.log, ahootsa5_20260708_091406_eventos.jsonl

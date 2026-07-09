@@ -1,0 +1,9 @@
+{
+  "version": "7.0.11",
+  "compileall_exit": 0,
+  "changes": [
+    "memory iframe taller",
+    "cards show image immediately",
+    "speech feedback simplified"
+  ]
+}

@@ -1,0 +1,1 @@
+{"ts": "2026-07-09T14:45:55.751", "version": "5.0.25", "event": "memory_reset", "session_id": "20260709_144532", "pid": 7668, "tool": "memory_pairs_game_server", "python": "3.12.13", "data": {"game_id": "animales"}}

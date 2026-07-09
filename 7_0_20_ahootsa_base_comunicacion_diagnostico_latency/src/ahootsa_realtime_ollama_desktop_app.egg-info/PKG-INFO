@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ahootsa-realtime-ollama-desktop-app
+Version: 7.0.20
+Summary: Ahootsa 7.0.20: diagnóstico de latencia en actividades de comunicación
+Author: Ahootsa / Centro San Luis
+Requires-Python: >=3.10

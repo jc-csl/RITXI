@@ -1,0 +1,3 @@
+Version: 5_0_22_ahootsa_espera_backend_realtime
+Fix: esperar backend_connected=true; diagnosticar Hugging Face/realtime connecting.
+Logs: D:\RITXI\logs

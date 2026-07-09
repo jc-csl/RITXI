@@ -1,0 +1,41 @@
+{
+  "version": "5.0.25",
+  "description": "Secuencia guiada del Memory: efecto, sonido, feedback hablado y recordatorio de 10 segundos.",
+  "sequence_mode": "single_robot_phrase_with_delayed_visual_flip",
+  "flip_delay_seconds": 1.2,
+  "result_sound_delay_seconds": 3.2,
+  "idle_prompt_seconds": 10,
+  "idle_prompt_text": "Debes elegir dos números del 1 al 8 para seguir jugando.",
+  "phrases": {
+    "intro": "Vamos a ver la {first} y la {second}.",
+    "match": "¡Muy bien! Es pareja.",
+    "miss": "Casi, no son pareja.",
+    "retry": "Vuelve a intentarlo.",
+    "next_numbers": "Debes elegir dos números del 1 al 8.",
+    "final": "¡Felicidades! Has terminado el juego. ¿Quieres volver a jugar o salir?"
+  },
+  "reactions": {
+    "match": {
+      "emotion": "success",
+      "sound": false
+    },
+    "miss": {
+      "emotion": "calming",
+      "sound": false
+    },
+    "repeat_miss": {
+      "emotion": "thinking",
+      "sound": false
+    },
+    "final": {
+      "emotion": "dance3",
+      "sound": true
+    }
+  },
+  "notes": [
+    "La voz de Ahootsa se devuelve en una sola frase ordenada para evitar que la herramienta hable antes del texto.",
+    "La pantalla del juego retrasa visualmente el giro de cartas para que la frase 'Vamos a ver...' empiece antes.",
+    "El sonido de fallo/acierto de la pantalla se retrasa para sonar después del feedback hablado.",
+    "El aviso de 10 segundos se muestra en la pantalla del juego; para voz real de robot haría falta un detector de silencio en la app oficial."
+  ]
+}

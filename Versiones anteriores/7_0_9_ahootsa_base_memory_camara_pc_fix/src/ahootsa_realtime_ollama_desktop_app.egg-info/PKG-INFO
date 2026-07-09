@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ahootsa-realtime-ollama-desktop-app
+Version: 7.0.9
+Summary: Ahootsa 7.0.9: extension estable de Reachy Mini Conversation App con actividades, emociones, camara PC y Ollama auxiliar
+Author: Ahootsa / Centro San Luis
+Requires-Python: >=3.10

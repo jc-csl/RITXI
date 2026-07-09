@@ -1,0 +1,26 @@
+{
+  "version": "0.4.57",
+  "assistant_name": "Ahootsa",
+  "preferred_voice": "Sohee",
+  "fallback_voice": "Sohee",
+  "avoid_voices": [
+    "Aiden"
+  ],
+  "applies_to": [
+    "voice.txt",
+    "greeting.txt",
+    "environment variables",
+    "installed profiles",
+    "default/starter fallback profiles"
+  ],
+  "environment_variables": {
+    "AHOOTSA_VOICE": "Sohee",
+    "OPENAI_REALTIME_VOICE": "Sohee",
+    "REACHY_MINI_VOICE": "Sohee",
+    "VOICE": "Sohee",
+    "REALTIME_VOICE": "Sohee",
+    "TTS_VOICE": "Sohee",
+    "AUDIO_VOICE": "Sohee"
+  },
+  "note": "Si Desktop ignora voice.txt y usa el primer elemento visual de la lista, ejecutar FORZAR_VOZ_INICIO_SOHEE_AHOOTSA.ps1 con Desktop cerrado."
+}

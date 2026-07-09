@@ -1,0 +1,5 @@
+{"ts": "2026-07-09T13:52:18.234", "version": "5.0.25", "event": "memory_reset", "session_id": "20260709_135136", "pid": 13300, "tool": "memory_pairs_game_server", "python": "3.12.13", "data": {"game_id": "animales"}}
+{"ts": "2026-07-09T13:52:27.843", "version": "5.0.25", "event": "memory_reset", "session_id": "20260709_135136", "pid": 13300, "tool": "memory_pairs_game_server", "python": "3.12.13", "data": {"game_id": "animales"}}
+{"ts": "2026-07-09T13:52:27.919", "version": "5.0.25", "event": "memory_reset", "session_id": "20260709_135136", "pid": 13300, "tool": "memory_pairs_game_server", "python": "3.12.13", "data": {"game_id": "animales"}}
+{"ts": "2026-07-09T13:54:22.703", "version": "5.0.25", "event": "memory_reset", "session_id": "20260709_135136", "pid": 13300, "tool": "memory_pairs_game_server", "python": "3.12.13", "data": {"game_id": "animales"}}
+{"ts": "2026-07-09T13:54:22.806", "version": "5.0.25", "event": "memory_reset", "session_id": "20260709_135136", "pid": 13300, "tool": "memory_pairs_game_server", "python": "3.12.13", "data": {"game_id": "animales"}}

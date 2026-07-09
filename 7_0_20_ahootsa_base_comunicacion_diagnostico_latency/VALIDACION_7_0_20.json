@@ -1,0 +1,19 @@
+{
+  "version": "7.0.20",
+  "status": "validado",
+  "compileall": "OK",
+  "zip_policy": {
+    "include_docs": false,
+    "include_logs": false,
+    "include_fotos": false
+  },
+  "main_changes": [
+    "Diagnóstico específico de latencia en actividades de comunicación",
+    "Endpoints /communication/levels, /communication/activities, /communication/start y /communication/diagnose",
+    "Panel /ahootsa con sección COMUNICACIÓN · DIAGNÓSTICO DE LATENCIA",
+    "list_communication_activity_levels/list_communication_activities/start_communication_activity con needs_response=false",
+    "Eventos communication_tool_start y communication_tool_result con duration_ms",
+    "Scripts DIAGNOSTICAR_COMUNICACION_7_0_20.ps1 y TRAZAR_COMUNICACION_VOZ_AHOOTSA_7_0_20.ps1",
+    "Escritura UTF-8 para evitar logs con NUL en diagnósticos nuevos"
+  ]
+}

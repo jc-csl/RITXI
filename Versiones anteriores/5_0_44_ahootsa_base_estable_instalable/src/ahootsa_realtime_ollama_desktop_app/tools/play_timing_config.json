@@ -1,0 +1,16 @@
+{
+  "version": "5.0.25",
+  "description": "Configuración de secuencia de emociones/dances. Peticiones directas hacen play sin respuesta hablada; Memory controla su propia narración.",
+  "sequence_mode": "silent_direct_play_memory_controls_speech",
+  "action_play_delay_seconds": 0,
+  "post_play_wait_seconds": 0.6,
+  "disable_emotion_audio": true,
+  "idle_reminder_enabled": false,
+  "memory_reaction_enabled": true,
+  "applies_to": [
+    "play_emotion",
+    "play_emotion_with_audio",
+    "play_panel_dance_activity",
+    "play_community_dance"
+  ]
+}

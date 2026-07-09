@@ -1,0 +1,486 @@
+{
+  "version": "0.4.48",
+  "dataset": "pollen-robotics/reachy-mini-emotions-library",
+  "description": "Catálogo en español de emociones, reacciones, saludos y pequeños bailes de la librería oficial de emociones Reachy Mini.",
+  "default_local_dir": "D:\\RITXI\\reachy-mini-emotions-library",
+  "notes": [
+    "La disponibilidad real se comprueba en tiempo de ejecución buscando JSON/OGG en la carpeta local.",
+    "El campo id es el nombre de invocación semántica; technical_id es el JSON/OGG más probable.",
+    "Si un technical_id no existe, play_emotion.py puede resolver aliases o fallar con diagnóstico."
+  ],
+  "categories": {
+    "saludos": "Saludar, invitar a acercarse, iniciar interacción.",
+    "positivas": "Alegría, éxito, risa, orgullo, agradecimiento.",
+    "calma_apoyo": "Calma, ayuda, acompañamiento, tranquilidad.",
+    "cognitivas": "Pensar, curiosidad, atención, duda.",
+    "sorpresa": "Sorpresa, asombro, reacción llamativa.",
+    "negativas_suaves": "Tristeza, aburrimiento, disgusto o confusión, tratadas de forma educativa.",
+    "bailes_emociones": "Movimientos tipo baile incluidos en la librería de emociones."
+  },
+  "emotions": [
+    {
+      "id": "saludo",
+      "technical_id": "welcoming2",
+      "name_es": "saludo amable",
+      "category": "saludos",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "hola",
+        "saluda",
+        "saludo",
+        "saluda con emoción",
+        "di hola",
+        "saludo amable",
+        "bienvenida"
+      ],
+      "example_user_requests": [
+        "saluda",
+        "saluda con emoción",
+        "di hola"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "ven",
+      "technical_id": "come1",
+      "name_es": "ven hacia aquí",
+      "category": "saludos",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "ven",
+        "ven aquí",
+        "acércate",
+        "llámame",
+        "come"
+      ],
+      "example_user_requests": [
+        "haz ven aquí",
+        "pide que me acerque"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "celebracion",
+      "technical_id": "success1",
+      "name_es": "celebración",
+      "category": "positivas",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "celebra",
+        "celebración",
+        "bravo",
+        "bien hecho",
+        "victoria",
+        "éxito",
+        "success"
+      ],
+      "example_user_requests": [
+        "celebra",
+        "haz una celebración",
+        "hemos acertado"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "orgullo",
+      "technical_id": "proud1",
+      "name_es": "orgullo",
+      "category": "positivas",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "orgulloso",
+        "orgullosa",
+        "proud",
+        "muy orgullosa",
+        "estás orgullosa"
+      ],
+      "example_user_requests": [
+        "ponte orgullosa",
+        "haz gesto de orgullo"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "agradecimiento",
+      "technical_id": "grateful1",
+      "name_es": "agradecimiento",
+      "category": "positivas",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "gracias",
+        "agradece",
+        "agradecimiento",
+        "grateful"
+      ],
+      "example_user_requests": [
+        "da las gracias",
+        "haz un gesto de agradecimiento"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "alegria",
+      "technical_id": "laughing2",
+      "name_es": "alegría",
+      "category": "positivas",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "alegre",
+        "alegría",
+        "ríe",
+        "risa",
+        "contento",
+        "contenta",
+        "feliz",
+        "happy",
+        "laughing"
+      ],
+      "example_user_requests": [
+        "ponte alegre",
+        "ríe un poco",
+        "haz una emoción feliz"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "animada",
+      "technical_id": "cheerful1",
+      "name_es": "ánimo alegre",
+      "category": "positivas",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "anímate",
+        "animada",
+        "cheerful",
+        "alegre y activa",
+        "con energía"
+      ],
+      "example_user_requests": [
+        "haz algo animado",
+        "ponte con energía"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "calma",
+      "technical_id": "calming1",
+      "name_es": "calma",
+      "category": "calma_apoyo",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "calma",
+        "tranquila",
+        "tranquilo",
+        "relájate",
+        "calming",
+        "pausa",
+        "despacio"
+      ],
+      "example_user_requests": [
+        "haz una emoción de calma",
+        "ponte tranquila",
+        "vamos despacio"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "pensar",
+      "technical_id": "thoughtful1",
+      "name_es": "pensar",
+      "category": "cognitivas",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "piensa",
+        "pensar",
+        "pensativa",
+        "pensativo",
+        "thoughtful",
+        "estoy pensando"
+      ],
+      "example_user_requests": [
+        "haz cara de pensar",
+        "piensa un momento"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "atencion",
+      "technical_id": "attentive1",
+      "name_es": "atención",
+      "category": "cognitivas",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "atenta",
+        "atento",
+        "atención",
+        "escucha",
+        "attentive",
+        "presta atención"
+      ],
+      "example_user_requests": [
+        "pon atención",
+        "haz gesto de escuchar"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "curiosidad",
+      "technical_id": "curious1",
+      "name_es": "curiosidad",
+      "category": "cognitivas",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "curiosa",
+        "curioso",
+        "curiosidad",
+        "curious",
+        "tengo curiosidad"
+      ],
+      "example_user_requests": [
+        "ponte curiosa",
+        "haz gesto de curiosidad"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "sorpresa",
+      "technical_id": "amazed1",
+      "name_es": "sorpresa",
+      "category": "sorpresa",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "sorpresa",
+        "sorpréndete",
+        "asombro",
+        "amazed",
+        "wow",
+        "impresionada"
+      ],
+      "example_user_requests": [
+        "haz una sorpresa",
+        "pon cara de asombro"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "confusion",
+      "technical_id": "confused1",
+      "name_es": "confusión",
+      "category": "negativas_suaves",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "confundida",
+        "confundido",
+        "confusión",
+        "no entiendo",
+        "confused",
+        "duda"
+      ],
+      "example_user_requests": [
+        "pon cara de confusión",
+        "haz como que no entiendes"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "aburrimiento",
+      "technical_id": "boredom1",
+      "name_es": "aburrimiento",
+      "category": "negativas_suaves",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "aburrida",
+        "aburrido",
+        "aburrimiento",
+        "boredom",
+        "me aburro"
+      ],
+      "example_user_requests": [
+        "haz gesto de aburrimiento",
+        "ponte aburrida"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "ansiedad",
+      "technical_id": "anxiety1",
+      "name_es": "nervios",
+      "category": "negativas_suaves",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "nerviosa",
+        "nervioso",
+        "ansiedad",
+        "anxiety",
+        "inquieta",
+        "preocupada"
+      ],
+      "example_user_requests": [
+        "haz gesto de nervios",
+        "ponte inquieta"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "tristeza",
+      "technical_id": "downcast1",
+      "name_es": "tristeza suave",
+      "category": "negativas_suaves",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "triste",
+        "tristeza",
+        "downcast",
+        "apagada",
+        "desanimada"
+      ],
+      "example_user_requests": [
+        "ponte triste",
+        "haz gesto triste"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "disgusto",
+      "technical_id": "disgusted1",
+      "name_es": "disgusto",
+      "category": "negativas_suaves",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "asco",
+        "disgusto",
+        "disgusted",
+        "no me gusta"
+      ],
+      "example_user_requests": [
+        "haz gesto de disgusto",
+        "pon cara de asco"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "descontento",
+      "technical_id": "displeased1",
+      "name_es": "descontento",
+      "category": "negativas_suaves",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "descontenta",
+        "descontento",
+        "displeased",
+        "molesta",
+        "no conforme"
+      ],
+      "example_user_requests": [
+        "haz gesto de descontento"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "electrico",
+      "technical_id": "electric1",
+      "name_es": "eléctrico",
+      "category": "sorpresa",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "eléctrico",
+        "electric",
+        "chispa",
+        "descarga",
+        "energía eléctrica"
+      ],
+      "example_user_requests": [
+        "haz algo eléctrico",
+        "ponte eléctrica"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "dormir",
+      "technical_id": "sleep1",
+      "name_es": "sueño",
+      "category": "calma_apoyo",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "duerme",
+        "sueño",
+        "dormida",
+        "sleep",
+        "tengo sueño"
+      ],
+      "example_user_requests": [
+        "haz como que duermes",
+        "ponte con sueño"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "baile_1",
+      "technical_id": "dance1",
+      "name_es": "baile uno",
+      "category": "bailes_emociones",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "baile uno",
+        "dance1",
+        "primer baile",
+        "baila uno"
+      ],
+      "example_user_requests": [
+        "haz el baile uno"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "baile_2",
+      "technical_id": "dance2",
+      "name_es": "baile dos",
+      "category": "bailes_emociones",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "baile dos",
+        "dance2",
+        "segundo baile",
+        "baila dos"
+      ],
+      "example_user_requests": [
+        "haz el baile dos"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "baile_3",
+      "technical_id": "dance3",
+      "name_es": "baile tres",
+      "category": "bailes_emociones",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "baile tres",
+        "dance3",
+        "tercer baile",
+        "baila tres"
+      ],
+      "example_user_requests": [
+        "haz el baile tres"
+      ],
+      "has_audio_expected": true
+    },
+    {
+      "id": "muerte_teatral",
+      "technical_id": "dying1",
+      "name_es": "caída teatral",
+      "category": "sorpresa",
+      "tool": "play_emotion_with_audio",
+      "aliases": [
+        "dramática",
+        "caída teatral",
+        "dying",
+        "me desmayo"
+      ],
+      "example_user_requests": [
+        "haz una caída teatral"
+      ],
+      "has_audio_expected": true
+    }
+  ]
+}

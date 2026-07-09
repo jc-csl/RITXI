@@ -1,0 +1,15 @@
+{
+  "version": "7.0.16",
+  "root": "7_0_16_ahootsa_base_bailes_emociones_memory_fix",
+  "file_count": 88,
+  "contains_docs": false,
+  "contains_logs": false,
+  "contains_fotos": false,
+  "has_profile_play_emotion": true,
+  "has_tools_play_emotion": false,
+  "has_direct_diagnostic": true,
+  "notes": [
+    "tools/play_emotion.py debe permanecer ausente para evitar colisión con herramienta oficial",
+    "choose_memory_cards carga play_emotion desde profiles"
+  ]
+}

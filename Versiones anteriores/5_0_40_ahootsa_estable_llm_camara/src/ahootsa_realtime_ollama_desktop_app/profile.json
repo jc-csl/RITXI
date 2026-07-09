@@ -1,0 +1,12 @@
+{
+  "name": "ahootsa_realtime_es",
+  "display_name": "Ahootsa",
+  "assistant_name": "Ahootsa",
+  "robot_name": "Ahootsa",
+  "language": "es",
+  "locale": "es-ES",
+  "voice": "Sohee",
+  "greeting": "¡Hola! Soy Ahootsa. Estoy lista para ayudarte. ¿Qué quieres hacer?",
+  "instructions_file": "instructions.txt",
+  "tools_file": "tools.txt"
+}

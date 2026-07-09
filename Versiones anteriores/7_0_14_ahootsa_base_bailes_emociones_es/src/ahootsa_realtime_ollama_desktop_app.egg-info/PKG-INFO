@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ahootsa-realtime-ollama-desktop-app
+Version: 7.0.14
+Summary: Ahootsa 7.0.14: base estable con bailes y emociones en español, aliases robustos y diagnóstico de recursos
+Author: Ahootsa / Centro San Luis
+Requires-Python: >=3.10

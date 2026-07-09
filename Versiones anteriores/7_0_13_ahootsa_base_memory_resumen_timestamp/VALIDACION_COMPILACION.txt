@@ -1,0 +1,5 @@
+Validación 7.0.13:
+- JSON de configuración validado.
+- Sintaxis Python validada con compileall durante generación.
+- __pycache__ y .pyc eliminados del ZIP final.
+- ZIP final no incluye carpetas docs, logs ni fotos.

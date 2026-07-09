@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ahootsa-realtime-ollama-desktop-app
+Version: 7.0.13
+Summary: Ahootsa 7.0.13: base estable con Memory sincronizado, resumen de logs con timestamp, cámara PC, emociones y Ollama auxiliar
+Author: Ahootsa / Centro San Luis
+Requires-Python: >=3.10

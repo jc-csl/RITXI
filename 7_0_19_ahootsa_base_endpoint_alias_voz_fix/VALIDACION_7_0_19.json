@@ -1,0 +1,21 @@
+{
+  "version": "7.0.19",
+  "created_from": "7.0.18",
+  "checks": {
+    "compileall": "ok",
+    "no_docs_logs_fotos_in_zip": true,
+    "no_tools_play_emotion_collision": true,
+    "profile_play_emotion_exists": true,
+    "resolve_activity_endpoint_added": true,
+    "list_activities_endpoint_added": true,
+    "panel_play_activity_diagnostic_endpoint_added": true,
+    "double_mojibake_aliases_repaired": true
+  },
+  "notes": [
+    "Ahootsa sigue usando Hugging Face Realtime oficial como motor principal.",
+    "Ollama sigue siendo auxiliar de texto/visión.",
+    "No se añade tools/play_emotion.py para evitar colisiones con la app oficial.",
+    "El endpoint /ahootsa/resolve_activity queda montado y visible para el panel.",
+    "El endpoint /ahootsa/play_activity es diagnóstico de panel; la ruta preferente sigue siendo llamada de herramienta por voz."
+  ]
+}

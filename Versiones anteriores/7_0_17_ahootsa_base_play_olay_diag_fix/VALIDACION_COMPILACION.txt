@@ -1,0 +1,5 @@
+Validación 7.0.17
+- python compileall src: OK
+- sin __pycache__ ni .pyc
+- no incluye carpetas docs, logs ni fotos
+- corrección de diagnóstico UTF-8 y alias play/olay para bailes

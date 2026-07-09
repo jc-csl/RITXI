@@ -1,0 +1,11 @@
+Validación Ahootsa 7.0.20
+
+Resultado: python -m compileall -q src -> OK
+
+Validaciones incluidas:
+- No se incluye carpeta docs.
+- No se incluye carpeta logs.
+- No se incluye carpeta fotos.
+- Se añaden endpoints /communication/* para medir latencia local.
+- Las herramientas de comunicación separadas usan needs_response=False.
+- Los scripts nuevos escriben logs UTF-8 con timestamp para evitar NUL.
