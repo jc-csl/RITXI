@@ -1,0 +1,13 @@
+{
+  "descripcion": "Configuración visual del juego de parejas Ahootsa. Editable desde el panel /ahootsa > Configuración del sistema.",
+  "reveal_seconds": 8.0,
+  "flip_delay_seconds": 0.0,
+  "refresh_interval_ms": 700,
+  "iframe_height_px": 620,
+  "notas": {
+    "reveal_seconds": "Tiempo que permanecen visibles dos cartas no emparejadas antes de ocultarse. Recomendado: 8 para sincronizar con audio/voz.",
+    "flip_delay_seconds": "Debe permanecer en 0 para que no se vea el número invertido durante el giro.",
+    "refresh_interval_ms": "Frecuencia de refresco del iframe. Valores muy bajos consumen más CPU.",
+    "iframe_height_px": "Altura del iframe del juego dentro del panel /ahootsa. Cambios en HTML pueden requerir reiniciar."
+  }
+}

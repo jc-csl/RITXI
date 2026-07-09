@@ -1,0 +1,12 @@
+{
+  "version": "7.0.23",
+  "compileall": "OK",
+  "no_docs_logs_fotos": true,
+  "changes": [
+    "quiet uvicorn access logs for repetitive /memory/state and status polling",
+    "memory iframe idle polling reduced to 3000 ms, immediate refresh after clicks",
+    "button Salir in /ahootsa that calls /ahootsa/exit and sets stop_event",
+    "stop_event passed from main.py to Ahootsa routes",
+    "AHOOTSA_VERBOSE_HTTP_ACCESS=1 can restore full HTTP access logs"
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "version": "7.0.23",
+  "title": "Actividades de comunicación Ahootsa: 3 niveles",
+  "intro_question": "¿Qué nivel quieres trabajar: fácil, intermedio o avanzado? Podemos practicar saludar, pedir comida, mantener turnos y conversar.",
+  "short_description": "Catálogo principal de actividades funcionales de comunicación. Todas existen en tres niveles: fácil, intermedio y avanzado.",
+  "activity_families": [
+    {
+      "id": "saludar",
+      "title": "Saludar",
+      "description": "Practicar saludo, despedida, mirar al interlocutor y responder a un saludo."
+    },
+    {
+      "id": "pedir_comida",
+      "title": "Pedir comida",
+      "description": "Practicar pedir comida o bebida de forma clara y educada."
+    },
+    {
+      "id": "mantener_turnos",
+      "title": "Mantener turnos",
+      "description": "Practicar escuchar, esperar, responder y respetar el turno de palabra."
+    },
+    {
+      "id": "conversar",
+      "title": "Conversar",
+      "description": "Practicar conversación sencilla, preguntas, respuestas y continuidad del tema."
+    }
+  ],
+  "target_profiles": [
+    "personas que necesitan apoyo en comunicación oral",
+    "personas que necesitan apoyo en interacción social",
+    "personas que necesitan practicar situaciones cotidianas",
+    "personas con ritmos de procesamiento diferentes",
+    "personas que necesitan guías paso a paso para iniciar o mantener una conversación"
+  ],
+  "global_rules": [
+    "Una actividad cada vez.",
+    "Una pregunta cada vez.",
+    "Dar dos opciones si la persona se bloquea.",
+    "Usar ejemplos cotidianos: clase, casa, cafetería, comedor, tienda, familia o amigos.",
+    "No corregir de forma dura.",
+    "Celebrar cada intento.",
+    "Mantener siempre el nivel elegido: fácil, intermedio o avanzado."
+  ],
+  "levels": {
+    "facil": {
+      "label": "Fácil",
+      "description": "Actividades muy guiadas. El robot ofrece dos opciones, frases modelo y una respuesta corta.",
+      "opening": "Empezamos con nivel fácil. Puedes elegir: saludar, pedir comida, mantener turnos o conversar. Yo te doy opciones sencillas.",
+      "activities": [
+        {
+          "id": "facil_saludar",
+          "family": "saludar",
+          "title": "Saludar",
+          "goal": "Responder a un saludo con una frase corta.",
+          "prompt": "Yo te digo: hola. ¿Qué puedes responder: hola o adiós?",
+          "support": "Puedes decir: hola. También puedes añadir: ¿qué tal?",
+          "expected_skill": "interacción social básica",
+          "aliases": ["saludar", "saludo", "hola", "buenos días", "buenos dias"],
+          "examples": ["Hola", "Buenos días", "Hola, ¿qué tal?"]
+        },
+        {
+          "id": "facil_pedir_comida",
+          "family": "pedir_comida",
+          "title": "Pedir comida",
+          "goal": "Pedir una comida o bebida con una frase sencilla.",
+          "prompt": "Quieres agua. ¿Qué puedes decir: quiero agua, por favor o quiero dormir?",
+          "support": "Puedes decir: quiero agua, por favor.",
+          "expected_skill": "comunicación funcional",
+          "aliases": ["pedir comida", "comida", "pedir agua", "pedir bebida", "restaurante", "cafetería", "cafeteria"],
+          "examples": ["Quiero agua, por favor", "Quiero un bocadillo", "¿Me das pan?"]
+        },
+        {
+          "id": "facil_mantener_turnos",
+          "family": "mantener_turnos",
+          "title": "Mantener turnos",
+          "goal": "Aprender a esperar y responder cuando toca.",
+          "prompt": "Ahora hablo yo. Después hablas tú. Cuando yo termine, ¿qué puedes hacer: esperar tu turno o interrumpir?",
+          "support": "La respuesta es esperar tu turno. Puedes decir: ahora me toca a mí.",
+          "expected_skill": "turnos de conversación",
+          "aliases": ["turnos", "mantener turnos", "esperar turno", "mi turno", "tu turno", "no interrumpir"],
+          "examples": ["Espero mi turno", "Ahora te escucho", "Ahora me toca a mí"]
+        },
+        {
+          "id": "facil_conversar",
+          "family": "conversar",
+          "title": "Conversar",
+          "goal": "Responder una pregunta sencilla y hacer otra pregunta.",
+          "prompt": "Yo te pregunto: ¿qué comida te gusta? Responde con una comida y luego pregúntame a mí.",
+          "support": "Puedes decir: me gusta la pizza. ¿Y a ti?",
+          "expected_skill": "conversación básica",
+          "aliases": ["conversar", "charlar", "hablar", "conversación", "conversacion", "preguntar"],
+          "examples": ["Me gusta la pizza. ¿Y a ti?", "Estoy bien. ¿Y tú?", "Quiero jugar. ¿Quieres jugar?"]
+        }
+      ]
+    },
+    "normal": {
+      "label": "Intermedia",
+      "description": "Actividades con frases completas, pequeñas decisiones y una explicación breve.",
+      "opening": "Vamos con nivel intermedio. Practicamos saludar, pedir comida, mantener turnos o conversar con frases un poco más completas.",
+      "activities": [
+        {
+          "id": "intermedia_saludar",
+          "family": "saludar",
+          "title": "Saludar y preguntar cómo está",
+          "goal": "Iniciar una interacción social breve.",
+          "prompt": "Entras en clase y ves a una compañera. Saluda y pregúntale cómo está.",
+          "support": "Puedes decir: hola, buenos días. ¿Qué tal estás?",
+          "expected_skill": "interacción social",
+          "aliases": ["saludar", "saludo", "preguntar qué tal", "que tal", "cómo estás", "como estas"],
+          "examples": ["Hola, buenos días. ¿Qué tal estás?", "Hola, me alegro de verte"]
+        },
+        {
+          "id": "intermedia_pedir_comida",
+          "family": "pedir_comida",
+          "title": "Pedir comida en una cafetería",
+          "goal": "Pedir comida indicando producto y cortesía.",
+          "prompt": "Estás en una cafetería. Pide un bocadillo y una bebida de forma educada.",
+          "support": "Puedes empezar así: hola, quiero un bocadillo y un agua, por favor.",
+          "expected_skill": "comunicación funcional en entorno real",
+          "aliases": ["pedir comida", "comida", "cafetería", "cafeteria", "restaurante", "bar", "menú", "menu"],
+          "examples": ["Hola, quiero un bocadillo y un agua, por favor", "¿Me pones una tortilla y un zumo?"]
+        },
+        {
+          "id": "intermedia_mantener_turnos",
+          "family": "mantener_turnos",
+          "title": "Mantener turnos en una conversación",
+          "goal": "Escuchar, responder y ceder el turno.",
+          "prompt": "Estamos hablando de animales. Yo digo una frase. Después tú respondes y me haces una pregunta.",
+          "support": "Puedes usar: ahora te escucho. O: ¿qué opinas tú?",
+          "expected_skill": "turnos conversacionales",
+          "aliases": ["turnos", "mantener turnos", "escuchar", "ceder turno", "responder", "no interrumpir"],
+          "examples": ["Yo pienso que sí. ¿Qué opinas tú?", "Te escucho. Después respondo"]
+        },
+        {
+          "id": "intermedia_conversar",
+          "family": "conversar",
+          "title": "Conversar sobre un tema cotidiano",
+          "goal": "Mantener una conversación de dos o tres turnos.",
+          "prompt": "Vamos a hablar de tu comida favorita. Di qué comida te gusta, por qué te gusta y hazme una pregunta.",
+          "support": "Puedes decir: me gusta... porque... ¿y a ti qué te gusta?",
+          "expected_skill": "conversación funcional",
+          "aliases": ["conversar", "charlar", "hablar", "tema cotidiano", "comida favorita", "conversación", "conversacion"],
+          "examples": ["Me gusta la pasta porque está rica. ¿Y a ti qué te gusta?"]
+        }
+      ]
+    },
+    "avanzada": {
+      "label": "Avanzada",
+      "description": "Actividades con situación social, matices, conversación más larga y adaptación del mensaje.",
+      "opening": "Vamos con nivel avanzado. Practicamos situaciones más reales: saludar según el contexto, pedir comida con detalles, mantener turnos y conversar más tiempo.",
+      "activities": [
+        {
+          "id": "avanzada_saludar",
+          "family": "saludar",
+          "title": "Saludar según la situación",
+          "goal": "Elegir un saludo adecuado según la persona y el contexto.",
+          "prompt": "Saluda de forma diferente a una profesora, a una amiga y a una persona que no conoces mucho.",
+          "support": "Piensa si conviene decir: buenos días, hola, encantado o ¿qué tal?",
+          "expected_skill": "adaptación social del lenguaje",
+          "aliases": ["saludar", "saludo avanzado", "contexto", "profesora", "amiga", "desconocido"],
+          "examples": ["Buenos días", "Hola, ¿qué tal?", "Encantado de conocerte"]
+        },
+        {
+          "id": "avanzada_pedir_comida",
+          "family": "pedir_comida",
+          "title": "Pedir comida con cambios o preferencias",
+          "goal": "Pedir comida explicando una preferencia o una necesidad.",
+          "prompt": "Pide una comida, pero explica que no quieres tomate y que prefieres agua.",
+          "support": "Puedes decir: hola, quiero un bocadillo sin tomate y un agua, por favor.",
+          "expected_skill": "petición funcional con detalles",
+          "aliases": ["pedir comida", "comida", "sin tomate", "preferencias", "alergia", "menú", "menu", "restaurante"],
+          "examples": ["Quiero un bocadillo sin tomate y un agua, por favor", "¿Puede ser sin queso?"]
+        },
+        {
+          "id": "avanzada_mantener_turnos",
+          "family": "mantener_turnos",
+          "title": "Mantener turnos en grupo",
+          "goal": "Participar sin interrumpir y recuperar el turno con respeto.",
+          "prompt": "Hay tres personas hablando. Quieres participar. ¿Qué puedes decir para entrar en la conversación sin interrumpir?",
+          "support": "Puedes decir: cuando terminéis, me gustaría decir algo. O: ¿puedo añadir una idea?",
+          "expected_skill": "habilidades sociales conversacionales",
+          "aliases": ["turnos", "mantener turnos", "grupo", "participar", "interrumpir", "pedir turno"],
+          "examples": ["¿Puedo añadir una idea?", "Cuando terminéis, me gustaría hablar"]
+        },
+        {
+          "id": "avanzada_conversar",
+          "family": "conversar",
+          "title": "Conversar manteniendo el tema",
+          "goal": "Mantener una conversación con opinión, razón y pregunta final.",
+          "prompt": "Elige un tema: comida, juegos o animales. Di tu opinión, explica una razón y haz una pregunta para continuar.",
+          "support": "Puedes usar: yo pienso que... porque... ¿tú qué opinas?",
+          "expected_skill": "conversación avanzada",
+          "aliases": ["conversar", "charlar", "mantener tema", "opinión", "opinion", "pregunta final", "conversación", "conversacion"],
+          "examples": ["Yo pienso que los perros son buenos compañeros porque ayudan mucho. ¿Tú qué opinas?"]
+        }
+      ]
+    }
+  },
+  "diagnostic_markers": {
+    "AHOOTSA_COMM_THREE_LEVELS": true,
+    "AHOOTSA_COMM_LEVEL_FACIL": true,
+    "AHOOTSA_COMM_LEVEL_INTERMEDIA": true,
+    "AHOOTSA_COMM_LEVEL_AVANZADA": true,
+    "AHOOTSA_COMM_ACTIVITY_SALUDAR": true,
+    "AHOOTSA_COMM_ACTIVITY_PEDIR_COMIDA": true,
+    "AHOOTSA_COMM_ACTIVITY_MANTENER_TURNOS": true,
+    "AHOOTSA_COMM_ACTIVITY_CONVERSAR": true,
+    "AHOOTSA_COMM_NO_OLLAMA": true,
+    "AHOOTSA_COMM_DIRECT_LATENCY": true,
+    "AHOOTSA_COMM_PANEL_ENDPOINTS": true
+  },
+  "package_version": "7_0_23"
+}

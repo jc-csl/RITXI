@@ -1,0 +1,279 @@
+{
+  "version": "0.4.48",
+  "dataset": "pollen-robotics/reachy-mini-dances-library",
+  "description": "Catálogo en español de dances comunitarios Reachy Mini. Son movimientos JSON sin audio.",
+  "default_local_dir": "D:\\RITXI\\reachy-mini-dances-library",
+  "dances": [
+    {
+      "id": "chicken_peck",
+      "name_es": "picoteo de gallina",
+      "category": "animal",
+      "aliases": [
+        "gallina",
+        "picoteo",
+        "baile de gallina",
+        "chicken",
+        "chicken peck"
+      ],
+      "example_user_requests": [
+        "haz el baile de gallina",
+        "haz picoteo de gallina"
+      ]
+    },
+    {
+      "id": "chin_lead",
+      "name_es": "mentón al frente",
+      "category": "cabeza",
+      "aliases": [
+        "mentón",
+        "barbilla",
+        "menton al frente",
+        "chin",
+        "chin lead"
+      ],
+      "example_user_requests": [
+        "haz mentón al frente"
+      ]
+    },
+    {
+      "id": "dizzy_spin",
+      "name_es": "giro mareado",
+      "category": "giro",
+      "aliases": [
+        "mareado",
+        "giro mareado",
+        "dizzy",
+        "dizzy spin"
+      ],
+      "example_user_requests": [
+        "haz un giro mareado"
+      ]
+    },
+    {
+      "id": "grid_snap",
+      "name_es": "cuadrícula marcada",
+      "category": "ritmo",
+      "aliases": [
+        "cuadrícula",
+        "grid",
+        "snap",
+        "movimiento de cuadrícula"
+      ],
+      "example_user_requests": [
+        "haz cuadrícula marcada"
+      ]
+    },
+    {
+      "id": "groovy_sway_and_roll",
+      "name_es": "balanceo groovy",
+      "category": "baile",
+      "aliases": [
+        "groovy",
+        "balanceo groovy",
+        "baile groovy",
+        "sway",
+        "roll"
+      ],
+      "example_user_requests": [
+        "haz un baile groovy"
+      ]
+    },
+    {
+      "id": "head_tilt_roll",
+      "name_es": "inclinación y giro de cabeza",
+      "category": "cabeza",
+      "aliases": [
+        "inclina la cabeza",
+        "gira la cabeza",
+        "head tilt",
+        "head roll"
+      ],
+      "example_user_requests": [
+        "inclina y gira la cabeza"
+      ]
+    },
+    {
+      "id": "interwoven_spirals",
+      "name_es": "espirales entrelazadas",
+      "category": "baile",
+      "aliases": [
+        "espirales",
+        "espiral",
+        "interwoven",
+        "spirals"
+      ],
+      "example_user_requests": [
+        "haz espirales entrelazadas"
+      ]
+    },
+    {
+      "id": "jackson_square",
+      "name_es": "jackson square",
+      "category": "baile",
+      "aliases": [
+        "jackson",
+        "square",
+        "baile jackson"
+      ],
+      "example_user_requests": [
+        "haz jackson square"
+      ]
+    },
+    {
+      "id": "neck_recoil",
+      "name_es": "retroceso de cuello",
+      "category": "cabeza",
+      "aliases": [
+        "cuello",
+        "retroceso",
+        "recoil",
+        "neck recoil"
+      ],
+      "example_user_requests": [
+        "haz retroceso de cuello"
+      ]
+    },
+    {
+      "id": "pendulum_swing",
+      "name_es": "balanceo de péndulo",
+      "category": "balanceo",
+      "aliases": [
+        "péndulo",
+        "pendulo",
+        "balanceo pendular",
+        "pendulum"
+      ],
+      "example_user_requests": [
+        "haz movimiento de péndulo"
+      ]
+    },
+    {
+      "id": "polyrhythm_combo",
+      "name_es": "combo polirrítmico",
+      "category": "ritmo",
+      "aliases": [
+        "polirritmo",
+        "polirrítmico",
+        "combo",
+        "polyrhythm"
+      ],
+      "example_user_requests": [
+        "haz combo polirrítmico"
+      ]
+    },
+    {
+      "id": "sharp_side_tilt",
+      "name_es": "inclinación lateral marcada",
+      "category": "cabeza",
+      "aliases": [
+        "inclinación lateral",
+        "lateral marcada",
+        "sharp side",
+        "side tilt"
+      ],
+      "example_user_requests": [
+        "haz inclinación lateral marcada"
+      ]
+    },
+    {
+      "id": "side_glance_flick",
+      "name_es": "mirada lateral rápida",
+      "category": "mirada",
+      "aliases": [
+        "mirada lateral",
+        "mirada rápida",
+        "glance",
+        "flick"
+      ],
+      "example_user_requests": [
+        "haz una mirada lateral rápida"
+      ]
+    },
+    {
+      "id": "side_peekaboo",
+      "name_es": "cucú lateral",
+      "category": "juego",
+      "aliases": [
+        "cucú",
+        "peekaboo",
+        "escondite",
+        "cucu lateral"
+      ],
+      "example_user_requests": [
+        "haz cucú lateral"
+      ]
+    },
+    {
+      "id": "side_to_side_sway",
+      "name_es": "balanceo lado a lado",
+      "category": "balanceo",
+      "aliases": [
+        "lado a lado",
+        "balanceo lateral",
+        "side to side"
+      ],
+      "example_user_requests": [
+        "haz balanceo lado a lado"
+      ]
+    },
+    {
+      "id": "simple_nod",
+      "name_es": "asentir simple",
+      "category": "cabeza",
+      "aliases": [
+        "asiente",
+        "asentir",
+        "sí con cabeza",
+        "simple nod",
+        "nod"
+      ],
+      "example_user_requests": [
+        "asiente con la cabeza"
+      ]
+    },
+    {
+      "id": "stumble_and_recover",
+      "name_es": "tropiezo y recuperación",
+      "category": "teatral",
+      "aliases": [
+        "tropiezo",
+        "recuperación",
+        "stumble",
+        "me tropiezo"
+      ],
+      "example_user_requests": [
+        "haz tropiezo y recuperación"
+      ]
+    },
+    {
+      "id": "uh_huh_tilt",
+      "name_es": "ajá con inclinación",
+      "category": "cabeza",
+      "aliases": [
+        "ajá",
+        "aja",
+        "uh huh",
+        "inclinación ajá"
+      ],
+      "example_user_requests": [
+        "haz ajá con la cabeza"
+      ]
+    },
+    {
+      "id": "yeah_nod",
+      "name_es": "sí con cabeza",
+      "category": "cabeza",
+      "aliases": [
+        "sí",
+        "si",
+        "di que sí",
+        "yeah",
+        "yeah nod",
+        "asiente fuerte"
+      ],
+      "example_user_requests": [
+        "di que sí con la cabeza"
+      ]
+    }
+  ]
+}
