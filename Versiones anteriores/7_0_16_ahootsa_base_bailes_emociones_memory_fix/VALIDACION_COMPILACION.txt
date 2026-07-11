@@ -1,3 +1,0 @@
-python compileall OK
-Sin __pycache__ ni pyc
-7.0.16: fix play_emotion profile loader para Memory/bailes.

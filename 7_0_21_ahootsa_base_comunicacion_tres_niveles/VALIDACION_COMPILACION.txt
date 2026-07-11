@@ -1,7 +1,0 @@
-Ahootsa 7.0.21
-Validación local:
-- python -m compileall -q src: OK
-- Sin carpetas docs, logs ni fotos dentro del ZIP de versión.
-- Actividades de comunicación actualizadas a 3 niveles: fácil, intermedio y avanzado.
-- Actividades principales: saludar, pedir comida, mantener turnos y conversar.
-- Herramientas de comunicación locales: no usan Ollama.

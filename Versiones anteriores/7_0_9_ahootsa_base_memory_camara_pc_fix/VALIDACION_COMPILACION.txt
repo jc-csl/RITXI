@@ -1,3 +1,0 @@
-Validado: python -m compileall -q src => OK
-Versión: 7.0.9
-Notas: no incluye docs/logs/fotos dentro del ZIP; usa D:\RITXI\logs y D:\RITXI\fotos.

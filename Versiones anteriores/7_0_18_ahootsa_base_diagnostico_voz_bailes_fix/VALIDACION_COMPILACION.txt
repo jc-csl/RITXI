@@ -1,5 +1,0 @@
-compileall exitcode=0
-STDOUT:
-
-STDERR:
-
