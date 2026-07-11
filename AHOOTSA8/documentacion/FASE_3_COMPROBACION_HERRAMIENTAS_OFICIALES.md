@@ -1037,8 +1037,6 @@ En el arranque manual, normalmente se encuentra bajo el directorio personal del 
 
 El comando anterior es la referencia válida.
 
-C:\Users\Alumno\.local\share\reachy_mini_conversation_app\memory.v1.json
-
 ### 15.3. Proteger memorias existentes
 
 ```powershell
@@ -1744,21 +1742,7 @@ Después de validar las herramientas oficiales:
 
 ```text
 Fase 4
-└── incorporación progresiva de funciones de Ahootsa
+└── instalación en el sistema de bibliotecas de danzas y bailes adicionales
 ```
 
-Orden recomendado para la Fase 4:
-
-```text
-1. herramienta externa mínima de prueba
-2. ask_ollama
-3. cámara del ordenador, si sigue siendo necesaria
-4. exploración de imágenes
-5. actividades de comunicación
-6. juego de parejas
-7. actividades y bailes propios
-8. gestión de tareas largas con task_status y task_cancel
-9. paneles o interfaz ampliada
-```
-
-Cada función se incorporará como herramienta externa o como actividad compatible con la arquitectura oficial, evitando modificar el núcleo mientras no sea imprescindible.
+La Fase 4 utilizará el daemon manual, descargará datasets oficiales y comunitarios, comprobará movimientos con y sin audio y generará el inventario funcional. No incorporará todavía nuevas actividades conversacionales.
