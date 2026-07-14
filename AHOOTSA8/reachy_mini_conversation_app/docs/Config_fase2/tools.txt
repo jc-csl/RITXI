@@ -1,0 +1,16 @@
+# Movimiento sencillo de cabeza
+move_head
+
+# Emociones del robot
+play_emotion
+stop_emotion
+
+# Permite permanecer quieto cuando corresponda
+idle_do_nothing
+
+# Dormir únicamente cuando la persona lo pida expresamente
+go_to_sleep
+
+move_head
+play_emotion
+stop_emotion

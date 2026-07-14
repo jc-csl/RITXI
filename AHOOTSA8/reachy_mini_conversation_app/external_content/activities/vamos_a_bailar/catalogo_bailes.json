@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "activity_id": "vamos_a_bailar",
+  "display_order_is_significant": true,
+  "moves": [
+    {
+      "id": "dance1",
+      "name": "Baile 1",
+      "short_name": "Baile 1",
+      "group": "Bailes cortos",
+      "aliases": [
+        "dance 1",
+        "baile uno",
+        "primer baile"
+      ],
+      "dataset_repo": "pollen-robotics/reachy-mini-emotions-library",
+      "dataset_folder": "pollen-robotics__reachy-mini-emotions-library",
+      "source_json": "dance1.json",
+      "source_audio": "dance1.ogg",
+      "order": 1,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/dance1.json",
+      "local_audio": "dataset/data/dance1.ogg"
+    },
+    {
+      "id": "dance2",
+      "name": "Baile 2",
+      "short_name": "Baile 2",
+      "group": "Bailes cortos",
+      "aliases": [
+        "dance 2",
+        "baile dos",
+        "segundo baile"
+      ],
+      "dataset_repo": "pollen-robotics/reachy-mini-emotions-library",
+      "dataset_folder": "pollen-robotics__reachy-mini-emotions-library",
+      "source_json": "dance2.json",
+      "source_audio": "dance2.ogg",
+      "order": 2,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/dance2.json",
+      "local_audio": "dataset/data/dance2.ogg"
+    },
+    {
+      "id": "dance3",
+      "name": "Baile 3",
+      "short_name": "Baile 3",
+      "group": "Bailes cortos",
+      "aliases": [
+        "dance 3",
+        "baile tres",
+        "tercer baile"
+      ],
+      "dataset_repo": "pollen-robotics/reachy-mini-emotions-library",
+      "dataset_folder": "pollen-robotics__reachy-mini-emotions-library",
+      "source_json": "dance3.json",
+      "source_audio": "dance3.ogg",
+      "order": 3,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/dance3.json",
+      "local_audio": "dataset/data/dance3.ogg"
+    },
+    {
+      "id": "las-ketchup",
+      "name": "Las Ketchup",
+      "short_name": "Las Ketchup",
+      "group": "Música y fiesta",
+      "aliases": [
+        "aserejé",
+        "asereje",
+        "ketchup"
+      ],
+      "dataset_repo": "Anne-Charlotte/music",
+      "dataset_folder": "Anne-Charlotte__music",
+      "source_json": "data/las-ketchup.json",
+      "source_audio": "data/las-ketchup.ogg",
+      "order": 4,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/las-ketchup.json",
+      "local_audio": "dataset/data/las-ketchup.ogg"
+    },
+    {
+      "id": "michael-jackson-thriller",
+      "name": "Michael Jackson — Thriller",
+      "short_name": "Thriller",
+      "group": "Música y fiesta",
+      "aliases": [
+        "michael jackson",
+        "thriller"
+      ],
+      "dataset_repo": "Anne-Charlotte/music",
+      "dataset_folder": "Anne-Charlotte__music",
+      "source_json": "data/michael-jackson-thriller.json",
+      "source_audio": "data/michael-jackson-thriller.ogg",
+      "order": 5,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/michael-jackson-thriller.json",
+      "local_audio": "dataset/data/michael-jackson-thriller.ogg"
+    },
+    {
+      "id": "spice-girls",
+      "name": "Spice Girls",
+      "short_name": "Spice Girls",
+      "group": "Música y fiesta",
+      "aliases": [
+        "spice girls"
+      ],
+      "dataset_repo": "Anne-Charlotte/music",
+      "dataset_folder": "Anne-Charlotte__music",
+      "source_json": "data/spice-girls.json",
+      "source_audio": "data/spice-girls.ogg",
+      "order": 6,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/spice-girls.json",
+      "local_audio": "dataset/data/spice-girls.ogg"
+    },
+    {
+      "id": "pharrell-williams-happy",
+      "name": "Pharrell Williams — Happy",
+      "short_name": "Happy",
+      "group": "Música y fiesta",
+      "aliases": [
+        "happy",
+        "pharrell",
+        "pharrell williams"
+      ],
+      "dataset_repo": "Anne-Charlotte/music",
+      "dataset_folder": "Anne-Charlotte__music",
+      "source_json": "data/pharrell-williams-happy.json",
+      "source_audio": "data/pharrell-williams-happy.ogg",
+      "order": 7,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/pharrell-williams-happy.json",
+      "local_audio": "dataset/data/pharrell-williams-happy.ogg"
+    },
+    {
+      "id": "queen-we-will-rock-you",
+      "name": "Queen — We Will Rock You",
+      "short_name": "We Will Rock You",
+      "group": "Rock",
+      "aliases": [
+        "queen",
+        "we will rock you"
+      ],
+      "dataset_repo": "Anne-Charlotte/music",
+      "dataset_folder": "Anne-Charlotte__music",
+      "source_json": "data/queen-we-will-rock-you.json",
+      "source_audio": "data/queen-we-will-rock-you.ogg",
+      "order": 8,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/queen-we-will-rock-you.json",
+      "local_audio": "dataset/data/queen-we-will-rock-you.ogg"
+    },
+    {
+      "id": "the-white-stripes-seven-nation-army",
+      "name": "The White Stripes — Seven Nation Army",
+      "short_name": "Seven Nation Army",
+      "group": "Rock",
+      "aliases": [
+        "seven nation army",
+        "white stripes"
+      ],
+      "dataset_repo": "Anne-Charlotte/music",
+      "dataset_folder": "Anne-Charlotte__music",
+      "source_json": "data/the-white-stripes-seven-nation-army.json",
+      "source_audio": "data/the-white-stripes-seven-nation-army.ogg",
+      "order": 9,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/the-white-stripes-seven-nation-army.json",
+      "local_audio": "dataset/data/the-white-stripes-seven-nation-army.ogg"
+    },
+    {
+      "id": "bohemian-rhapsody",
+      "name": "Queen — Bohemian Rhapsody",
+      "short_name": "Bohemian Rhapsody",
+      "group": "Canciones",
+      "aliases": [
+        "bohemian rhapsody",
+        "queen bohemian"
+      ],
+      "dataset_repo": "Anne-Charlotte/reachy-songs",
+      "dataset_folder": "Anne-Charlotte__reachy-songs",
+      "source_json": "data/bohemian-rhapsody.json",
+      "source_audio": "data/bohemian-rhapsody.ogg",
+      "order": 10,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/bohemian-rhapsody.json",
+      "local_audio": "dataset/data/bohemian-rhapsody.ogg"
+    },
+    {
+      "id": "happy-birthday",
+      "name": "Cumpleaños feliz",
+      "short_name": "Cumpleaños feliz",
+      "group": "Celebración",
+      "aliases": [
+        "happy birthday",
+        "cumpleaños",
+        "cumpleanos"
+      ],
+      "dataset_repo": "Anne-Charlotte/reachy-songs",
+      "dataset_folder": "Anne-Charlotte__reachy-songs",
+      "source_json": "data/happy-birthday.json",
+      "source_audio": "data/happy-birthday.ogg",
+      "order": 11,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/happy-birthday.json",
+      "local_audio": "dataset/data/happy-birthday.ogg"
+    },
+    {
+      "id": "harry-potter",
+      "name": "Harry Potter",
+      "short_name": "Harry Potter",
+      "group": "Bandas sonoras",
+      "aliases": [
+        "harry potter"
+      ],
+      "dataset_repo": "Anne-Charlotte/reachy-songs",
+      "dataset_folder": "Anne-Charlotte__reachy-songs",
+      "source_json": "data/harry-potter.json",
+      "source_audio": "data/harry-potter.ogg",
+      "order": 12,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/harry-potter.json",
+      "local_audio": "dataset/data/harry-potter.ogg"
+    },
+    {
+      "id": "star-wars",
+      "name": "Star Wars",
+      "short_name": "Star Wars",
+      "group": "Bandas sonoras",
+      "aliases": [
+        "star wars",
+        "guerra de las galaxias"
+      ],
+      "dataset_repo": "Anne-Charlotte/reachy-songs",
+      "dataset_folder": "Anne-Charlotte__reachy-songs",
+      "source_json": "data/star-wars.json",
+      "source_audio": "data/star-wars.ogg",
+      "order": 13,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/star-wars.json",
+      "local_audio": "dataset/data/star-wars.ogg"
+    },
+    {
+      "id": "the-lion-king",
+      "name": "El rey león",
+      "short_name": "El rey león",
+      "group": "Bandas sonoras",
+      "aliases": [
+        "the lion king",
+        "rey león",
+        "rey leon"
+      ],
+      "dataset_repo": "Anne-Charlotte/reachy-songs",
+      "dataset_folder": "Anne-Charlotte__reachy-songs",
+      "source_json": "data/the-lion-king.json",
+      "source_audio": "data/the-lion-king.ogg",
+      "order": 14,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/the-lion-king.json",
+      "local_audio": "dataset/data/the-lion-king.ogg"
+    },
+    {
+      "id": "titanic",
+      "name": "Titanic",
+      "short_name": "Titanic",
+      "group": "Bandas sonoras",
+      "aliases": [
+        "titanic"
+      ],
+      "dataset_repo": "Anne-Charlotte/reachy-songs",
+      "dataset_folder": "Anne-Charlotte__reachy-songs",
+      "source_json": "data/titanic.json",
+      "source_audio": "data/titanic.ogg",
+      "order": 15,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/titanic.json",
+      "local_audio": "dataset/data/titanic.ogg"
+    },
+    {
+      "id": "secret-dance",
+      "name": "Baile secreto",
+      "short_name": "Baile secreto",
+      "group": "Sorpresa",
+      "aliases": [
+        "secret dance",
+        "baile secreto",
+        "sorpresa"
+      ],
+      "dataset_repo": "apirrone/marionette-moves",
+      "dataset_folder": "apirrone__marionette-moves",
+      "source_json": "data/secret-dance.json",
+      "source_audio": "data/secret-dance.wav",
+      "order": 16,
+      "enabled": true,
+      "has_audio": true,
+      "local_json": "dataset/data/secret-dance.json",
+      "local_audio": "dataset/data/secret-dance.wav"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "activity_id": "vamos_a_bailar",
+  "title": "Vamos a bailar",
+  "language": "es-ES",
+  "phase": 5,
+  "state": "local_resources_prepared_not_connected_to_conversation",
+  "description": "Selección local de 16 movimientos con audio para la futura actividad conversacional Vamos a bailar.",
+  "catalog_file": "catalogo_bailes.json",
+  "dataset_directory": "dataset",
+  "selected_moves": 16,
+  "runtime_dependency_on_huggingface_cache": false,
+  "runtime_tools_planned_for_phase_6": [
+    "list_ahootsa_dances",
+    "play_ahootsa_dance",
+    "stop_ahootsa_dance"
+  ],
+  "safety": {
+    "autoplay": false,
+    "idle_autoplay": false,
+    "requires_explicit_user_choice": true,
+    "allow_stop": true,
+    "one_move_at_a_time": true
+  },
+  "local_loader": "local_recorded_moves.py",
+  "sdk_loading_strategy": "LocalRecordedMoves loads local JSON/audio and constructs SDK RecordedMove objects",
+  "recorded_moves_hf_loader_used_for_local_path": false
+}

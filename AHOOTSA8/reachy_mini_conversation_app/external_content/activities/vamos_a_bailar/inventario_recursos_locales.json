@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-07-11T10:54:16.699891+00:00",
+  "source_root": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf",
+  "activity_root": "D:\\RITXI\\AHOOTSA8\\reachy_mini_conversation_app\\external_content\\activities\\vamos_a_bailar",
+  "move_count": 16,
+  "file_count": 32,
+  "files": [
+    {
+      "move_id": "dance1",
+      "kind": "movement",
+      "source_dataset": "pollen-robotics/reachy-mini-emotions-library",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\pollen-robotics__reachy-mini-emotions-library\\dance1.json",
+      "local_file": "dataset\\data\\dance1.json",
+      "bytes": 37292,
+      "sha256": "b22453a3c11f96b1764c985409f50176111d56fa002f64d828b3244837ba9579",
+      "action": "copied"
+    },
+    {
+      "move_id": "dance1",
+      "kind": "audio",
+      "source_dataset": "pollen-robotics/reachy-mini-emotions-library",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\pollen-robotics__reachy-mini-emotions-library\\dance1.ogg",
+      "local_file": "dataset\\data\\dance1.ogg",
+      "bytes": 7210,
+      "sha256": "7d34a438c1aa73efd6569009ee4af80ec57715397ece9bb744a5a26301677cc7",
+      "action": "copied"
+    },
+    {
+      "move_id": "dance2",
+      "kind": "movement",
+      "source_dataset": "pollen-robotics/reachy-mini-emotions-library",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\pollen-robotics__reachy-mini-emotions-library\\dance2.json",
+      "local_file": "dataset\\data\\dance2.json",
+      "bytes": 195967,
+      "sha256": "6a3f55057e4f39b3ab5fbcad515815b822ca594ccca0fc3692f83c490c06c2c8",
+      "action": "copied"
+    },
+    {
+      "move_id": "dance2",
+      "kind": "audio",
+      "source_dataset": "pollen-robotics/reachy-mini-emotions-library",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\pollen-robotics__reachy-mini-emotions-library\\dance2.ogg",
+      "local_file": "dataset\\data\\dance2.ogg",
+      "bytes": 67999,
+      "sha256": "85cf54c8525f2cd459d21bd7d6e563bed5d21ba7ef5cbf1d6ccaec3a5397b327",
+      "action": "copied"
+    },
+    {
+      "move_id": "dance3",
+      "kind": "movement",
+      "source_dataset": "pollen-robotics/reachy-mini-emotions-library",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\pollen-robotics__reachy-mini-emotions-library\\dance3.json",
+      "local_file": "dataset\\data\\dance3.json",
+      "bytes": 209793,
+      "sha256": "9166e63daa3b2a60b30bf317ba189bbc91c285838bcee27a05359e4f75a1d463",
+      "action": "copied"
+    },
+    {
+      "move_id": "dance3",
+      "kind": "audio",
+      "source_dataset": "pollen-robotics/reachy-mini-emotions-library",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\pollen-robotics__reachy-mini-emotions-library\\dance3.ogg",
+      "local_file": "dataset\\data\\dance3.ogg",
+      "bytes": 78425,
+      "sha256": "0b2eba84f61e6928abba7b00495e7ae1ce31286f220a6f717c33cebcdf75f0c4",
+      "action": "copied"
+    },
+    {
+      "move_id": "las-ketchup",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\las-ketchup.json",
+      "local_file": "dataset\\data\\las-ketchup.json",
+      "bytes": 167959,
+      "sha256": "4ad9b36911cd52ab7e984764600ae1b62ec18079611826a0406c4d806b2a73a9",
+      "action": "copied"
+    },
+    {
+      "move_id": "las-ketchup",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\las-ketchup.ogg",
+      "local_file": "dataset\\data\\las-ketchup.ogg",
+      "bytes": 41671,
+      "sha256": "f8070d87e6b52ace836a1887fc2665d58d0f8a2370c4fd45204a18bfaad72c21",
+      "action": "copied"
+    },
+    {
+      "move_id": "michael-jackson-thriller",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\michael-jackson-thriller.json",
+      "local_file": "dataset\\data\\michael-jackson-thriller.json",
+      "bytes": 1003207,
+      "sha256": "e1f2b67bb5fdc9a28b3df729e29431e3fd9ff2a62f3615d7fb1e54093857e68c",
+      "action": "copied"
+    },
+    {
+      "move_id": "michael-jackson-thriller",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\michael-jackson-thriller.ogg",
+      "local_file": "dataset\\data\\michael-jackson-thriller.ogg",
+      "bytes": 359762,
+      "sha256": "d7889dcdf36f51acc73c41a4179c64442bcb5ae7beabd65365eb91b74b1501da",
+      "action": "copied"
+    },
+    {
+      "move_id": "spice-girls",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\spice-girls.json",
+      "local_file": "dataset\\data\\spice-girls.json",
+      "bytes": 104569,
+      "sha256": "e44f5aa2d9d4ef878b456ee5a4ed6f5f1a61f0d8f03671ddac1b22707799b69d",
+      "action": "copied"
+    },
+    {
+      "move_id": "spice-girls",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\spice-girls.ogg",
+      "local_file": "dataset\\data\\spice-girls.ogg",
+      "bytes": 26904,
+      "sha256": "dd99f860283e11f1684b82fc68295a782fe85900a3db32a28b8c7faca101d585",
+      "action": "copied"
+    },
+    {
+      "move_id": "pharrell-williams-happy",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\pharrell-williams-happy.json",
+      "local_file": "dataset\\data\\pharrell-williams-happy.json",
+      "bytes": 1991604,
+      "sha256": "d43c199617b0a9582f4f2f7721dec097e25e8173d2c8f5502cb861347104517c",
+      "action": "copied"
+    },
+    {
+      "move_id": "pharrell-williams-happy",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\pharrell-williams-happy.ogg",
+      "local_file": "dataset\\data\\pharrell-williams-happy.ogg",
+      "bytes": 748895,
+      "sha256": "aeff772cec005ba1dd695d56bc74446423c9bc3eadcf3418621473582d57c4a0",
+      "action": "copied"
+    },
+    {
+      "move_id": "queen-we-will-rock-you",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\queen-we-will-rock-you.json",
+      "local_file": "dataset\\data\\queen-we-will-rock-you.json",
+      "bytes": 1497506,
+      "sha256": "7f008538c49089a3af8974e423fe7757680908f19465c5f8a8dc6ed684333155",
+      "action": "copied"
+    },
+    {
+      "move_id": "queen-we-will-rock-you",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\queen-we-will-rock-you.ogg",
+      "local_file": "dataset\\data\\queen-we-will-rock-you.ogg",
+      "bytes": 553305,
+      "sha256": "10de614b7cb5e51868460c86795155ef733b5865305545b78112789f06781ce4",
+      "action": "copied"
+    },
+    {
+      "move_id": "the-white-stripes-seven-nation-army",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\the-white-stripes-seven-nation-army.json",
+      "local_file": "dataset\\data\\the-white-stripes-seven-nation-army.json",
+      "bytes": 832811,
+      "sha256": "2c1957ee97fbf8006455c4a4c5519e487134b8da179bbd25b71e80f7bfdfb71f",
+      "action": "copied"
+    },
+    {
+      "move_id": "the-white-stripes-seven-nation-army",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/music",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__music\\data\\the-white-stripes-seven-nation-army.ogg",
+      "local_file": "dataset\\data\\the-white-stripes-seven-nation-army.ogg",
+      "bytes": 326639,
+      "sha256": "93e927c5e7f5b5a7897624ad00da0c59835b81472cd2ff79f622c7ca7d87d8c3",
+      "action": "copied"
+    },
+    {
+      "move_id": "bohemian-rhapsody",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\bohemian-rhapsody.json",
+      "local_file": "dataset\\data\\bohemian-rhapsody.json",
+      "bytes": 1467193,
+      "sha256": "d3c25f4d1474d1c32debf716b5e5e9e3b7be9a55ada89cfc950f4181ffa4e8fd",
+      "action": "copied"
+    },
+    {
+      "move_id": "bohemian-rhapsody",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\bohemian-rhapsody.ogg",
+      "local_file": "dataset\\data\\bohemian-rhapsody.ogg",
+      "bytes": 234312,
+      "sha256": "f9cf0c3d9b5847d6f09ce2dc0028a2a6915ae58f350a732fbf2fd243b44b4512",
+      "action": "copied"
+    },
+    {
+      "move_id": "happy-birthday",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\happy-birthday.json",
+      "local_file": "dataset\\data\\happy-birthday.json",
+      "bytes": 582097,
+      "sha256": "d753e3b57ded2d4e704d9e57d1239e8cd744849109c9f0259ebe02ca182069e7",
+      "action": "copied"
+    },
+    {
+      "move_id": "happy-birthday",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\happy-birthday.ogg",
+      "local_file": "dataset\\data\\happy-birthday.ogg",
+      "bytes": 74672,
+      "sha256": "4ae159d7386d573be312f177b179423f9046ffd8c30b8b85ad629288ae5a37af",
+      "action": "copied"
+    },
+    {
+      "move_id": "harry-potter",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\harry-potter.json",
+      "local_file": "dataset\\data\\harry-potter.json",
+      "bytes": 1025109,
+      "sha256": "821de57916e359231d1302a1048c4219ce5e0974612b783c298c882483b08c63",
+      "action": "copied"
+    },
+    {
+      "move_id": "harry-potter",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\harry-potter.ogg",
+      "local_file": "dataset\\data\\harry-potter.ogg",
+      "bytes": 162191,
+      "sha256": "60bc15cfd729a9f794cefea480a6690a528ead4306b1d343e12f7d3885244601",
+      "action": "copied"
+    },
+    {
+      "move_id": "star-wars",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\star-wars.json",
+      "local_file": "dataset\\data\\star-wars.json",
+      "bytes": 820438,
+      "sha256": "5d977a5cf0c1c2d39a853734f05ad4b778a73f8db29ada7e3c2766f510dc0cac",
+      "action": "copied"
+    },
+    {
+      "move_id": "star-wars",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\star-wars.ogg",
+      "local_file": "dataset\\data\\star-wars.ogg",
+      "bytes": 116299,
+      "sha256": "d3027055ef9bc0b7d2865b2c499295ebd9246ebd984d55e49ed4541ec2c7e64e",
+      "action": "copied"
+    },
+    {
+      "move_id": "the-lion-king",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\the-lion-king.json",
+      "local_file": "dataset\\data\\the-lion-king.json",
+      "bytes": 1343390,
+      "sha256": "8f130a7f71679ff16dbec4ef4551082a4e639f2875cee4d853f407efbd3bcbb0",
+      "action": "copied"
+    },
+    {
+      "move_id": "the-lion-king",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\the-lion-king.ogg",
+      "local_file": "dataset\\data\\the-lion-king.ogg",
+      "bytes": 218309,
+      "sha256": "02bcee17f52c1949e646c0bd50f63c6e5ac45c4dfaf04d4d2ddf8ed710a41938",
+      "action": "copied"
+    },
+    {
+      "move_id": "titanic",
+      "kind": "movement",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\titanic.json",
+      "local_file": "dataset\\data\\titanic.json",
+      "bytes": 1746198,
+      "sha256": "80244e558b85e4f50cab0b3da281dff212f96ae51d35ac6c5da3c2874c7257d9",
+      "action": "copied"
+    },
+    {
+      "move_id": "titanic",
+      "kind": "audio",
+      "source_dataset": "Anne-Charlotte/reachy-songs",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\Anne-Charlotte__reachy-songs\\data\\titanic.ogg",
+      "local_file": "dataset\\data\\titanic.ogg",
+      "bytes": 287990,
+      "sha256": "b44f5b27cd050bb3f2a14d29e28772a9cf0ab017d29d924699258806afceab40",
+      "action": "copied"
+    },
+    {
+      "move_id": "secret-dance",
+      "kind": "movement",
+      "source_dataset": "apirrone/marionette-moves",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\apirrone__marionette-moves\\data\\secret-dance.json",
+      "local_file": "dataset\\data\\secret-dance.json",
+      "bytes": 449544,
+      "sha256": "59f8a1f918db82de52decffbb51c6e37307074fc08313218d54eecbb7e94d831",
+      "action": "copied"
+    },
+    {
+      "move_id": "secret-dance",
+      "kind": "audio",
+      "source_dataset": "apirrone/marionette-moves",
+      "source_file": "D:\\RITXI\\AHOOTSA8\\recursos_bailes\\datasets_hf\\apirrone__marionette-moves\\data\\secret-dance.wav",
+      "local_file": "dataset\\data\\secret-dance.wav",
+      "bytes": 3548914,
+      "sha256": "ff520c001bf39fa2579c37497b9713866b50a3e839ebc33c974b9421b75f3100",
+      "action": "copied"
+    }
+  ]
+}
