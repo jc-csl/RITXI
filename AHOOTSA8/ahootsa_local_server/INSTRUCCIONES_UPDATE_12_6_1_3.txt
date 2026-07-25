@@ -1,0 +1,39 @@
+AHOOTSA UPDATE 12.6.1.3
+Corrección del código de salida al verificar ReportLab
+
+CAUSA
+
+ReportLab se instaló correctamente con uv.
+La función PowerShell devolvía dos cosas:
+- el texto REPORTLAB_OK;
+- el código de salida 0.
+
+PowerShell lo convertía en System.Object[] y la comparación con 0 marcaba
+incorrectamente la verificación como fallida.
+
+INSTALACIÓN
+
+Descomprimir en:
+
+D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_6_1_3_CORRECCION_CODIGO_SALIDA_REPORTLAB
+
+Comprobar sintaxis:
+
+cd D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_6_1_3_CORRECCION_CODIGO_SALIDA_REPORTLAB
+.\COMPROBAR_PAQUETE_12_6_1_3.ps1
+
+Instalar:
+
+.\APLICAR_UPDATE_12_6_1_3.ps1
+
+ReportLab ya está instalado. El instalador debe mostrar:
+
+ReportLab ya estaba instalado.
+Verificando ReportLab...
+REPORTLAB_OK 4.5.1
+
+RESULTADO FINAL
+
+UPDATE 12.6.1 instalado correctamente.
+Version del servidor: 0.12.6.1
+Las sesiones identificadas incluiran informe_sesion.pdf.

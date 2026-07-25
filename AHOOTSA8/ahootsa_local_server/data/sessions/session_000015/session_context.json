@@ -1,0 +1,50 @@
+{
+  "context_version": "1.1",
+  "generated_at": "2026-07-25T20:48:53.545789+00:00",
+  "session": {
+    "id": 15,
+    "started_by": "Monitor/a",
+    "status": "prepared",
+    "profile_name": "ahootsa_session"
+  },
+  "user": {
+    "external_id": "usuario_prueba_01",
+    "name": "Usuario de prueba",
+    "preferred_name": "Álex",
+    "language": "es",
+    "notes": "Usuario creado para probar Ahootsa"
+  },
+  "profile": {
+    "communication_style": "simple",
+    "speech_speed": "normal",
+    "response_wait_seconds": 5.0,
+    "preferred_interaction_mode": "mixed",
+    "preferred_reinforcement": null,
+    "interests": null,
+    "avoid_topics": null,
+    "accessibility_notes": null,
+    "max_instructions_per_turn": 1
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "description": "Actividad comunicativa guiada para elegir, explicar y conversar sobre preferencias.",
+    "level": "intermediate",
+    "level_title": "Intermedio",
+    "objective": "Expresar una preferencia y explicar brevemente el motivo.",
+    "max_options": 3,
+    "rules": [
+      "Formula preguntas abiertas sencillas.",
+      "Permite respuestas de varias palabras.",
+      "Realiza una pregunta de seguimiento breve.",
+      "Ofrece una pista solo cuando sea necesario.",
+      "Mantén intercambios de dos o tres turnos."
+    ],
+    "first_prompt": "¿Qué actividad prefieres hacer y por qué?"
+  },
+  "professional_control": {
+    "system_may_recommend_level": false,
+    "professional_confirms_level_change": true,
+    "evaluation_mode": "manual_quick_marks"
+  }
+}

@@ -1,0 +1,21 @@
+AHOOTSA UPDATE 12.7.1
+Corrección visual del panel
+
+INSTALAR
+
+cd D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_7_1_CORRECCION_CACHE_Y_TRES_COLUMNAS
+.\APLICAR_UPDATE_12_7_1.ps1
+
+ARRANCAR
+
+cd D:\RITXI\AHOOTSA8\ahootsa_local_server
+.\3_lanzar_ahootsa_server.ps1
+
+Cerrar la pestaña anterior y abrir una nueva:
+
+http://127.0.0.1:8100/panel
+
+COMPROBAR
+
+cd D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_7_1_CORRECCION_CACHE_Y_TRES_COLUMNAS
+.\COMPROBAR_PANEL_12_7_1.ps1

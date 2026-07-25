@@ -1,0 +1,36 @@
+{
+  "session_id": 6,
+  "status": "finished",
+  "user": {
+    "external_id": "usuario_prueba_01",
+    "name": "Usuario de prueba",
+    "preferred_name": "Álex"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-07-25T07:19:53.309824",
+  "finished_at": null,
+  "duration_seconds": 995.9,
+  "duration_minutes": 16.6,
+  "duration_source": "running",
+  "prepared_at": "2026-07-25T07:19:53.338300+00:00",
+  "running_at": "2026-07-25T07:20:56.543960+00:00",
+  "conversation_app_running": false,
+  "file_status": "running",
+  "counts": {
+    "adequate": 0,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 0,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 0,
+  "professional_decision": "no_decision",
+  "summary": "Sesión técnica 6 cerrada antes de ejecutar la prueba automática 12.4."
+}

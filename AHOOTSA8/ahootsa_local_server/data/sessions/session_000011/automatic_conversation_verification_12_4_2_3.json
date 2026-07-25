@@ -1,0 +1,327 @@
+﻿{
+    "test_name":  "conversacion_automatica_12_4_2_3",
+    "api_listing_missing_ids":  [
+
+                                ],
+    "summary":  {
+                    "session_id":  11,
+                    "user_external_id":  "AUTO-CONVERSACION-01",
+                    "user_name":  "Alex",
+                    "status":  "finished",
+                    "started_at":  "2026-07-25T08:18:58.008093",
+                    "finished_at":  "2026-07-25T08:19:00.195915",
+                    "duration_seconds":  2.19,
+                    "duration_minutes":  0.04,
+                    "total_events":  15,
+                    "activities_started":  1,
+                    "activities_completed":  1,
+                    "user_responses":  3,
+                    "correct_responses":  3,
+                    "incorrect_responses":  0,
+                    "unanswered_responses":  0,
+                    "success_rate_percent":  100.0,
+                    "hints_given":  1,
+                    "silences_detected":  1,
+                    "errors_detected":  0,
+                    "average_response_time_seconds":  2.77,
+                    "activities":  [
+                                       {
+                                           "activity":  "express_preferences",
+                                           "starts":  1,
+                                           "completions":  1,
+                                           "responses":  3,
+                                           "correct_responses":  3,
+                                           "incorrect_responses":  0,
+                                           "hints":  1,
+                                           "silences":  1,
+                                           "errors":  0,
+                                           "average_response_time_seconds":  2.77,
+                                           "completed_successfully":  null
+                                       },
+                                       {
+                                           "activity":  "sin_actividad",
+                                           "starts":  0,
+                                           "completions":  0,
+                                           "responses":  0,
+                                           "correct_responses":  0,
+                                           "incorrect_responses":  0,
+                                           "hints":  0,
+                                           "silences":  0,
+                                           "errors":  0,
+                                           "average_response_time_seconds":  null,
+                                           "completed_successfully":  null
+                                       }
+                                   ],
+                    "automatic_observations":  [
+                                                   "La mayoría de las respuestas evaluadas fueron correctas.",
+                                                   "Se ofrecieron 1 pista(s) durante la sesión.",
+                                                   "Se detectaron 1 silencio(s) prolongado(s).",
+                                                   "El tiempo medio de respuesta fue ágil."
+                                               ],
+                    "automatic_summary_text":  "Usuario: Alex\nDuración: 0.0 minutos\nActividades iniciadas: 1\nActividades completadas: 1\nRespuestas registradas: 3\nRespuestas correctas: 3\nRespuestas incorrectas: 0\nPorcentaje de acierto: 100.0%\nTiempo medio de respuesta: 2.77 segundos\nObservaciones:\n- La mayoría de las respuestas evaluadas fueron correctas.\n- Se ofrecieron 1 pista(s) durante la sesión.\n- Se detectaron 1 silencio(s) prolongado(s).\n- El tiempo medio de respuesta fue ágil."
+                },
+    "sqlite_before":  {
+                          "db_path":  "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\ahootsa.db",
+                          "session_id":  11,
+                          "requested_ids":  [
+                                                115,
+                                                116,
+                                                117,
+                                                118,
+                                                119,
+                                                120,
+                                                121,
+                                                122,
+                                                123
+                                            ],
+                          "found_count":  9,
+                          "missing_ids":  [
+
+                                          ],
+                          "wrong_session":  [
+
+                                            ],
+                          "rows":  [
+                                       {
+                                           "id":  115,
+                                           "session_id":  11,
+                                           "event_type":  "user_response",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "Música.",
+                                           "success":  true,
+                                           "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"response_time_seconds\": 2.4, \"sequence\": 1, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"user\"}",
+                                           "occurred_at":  "2026-07-25 08:18:58.050438"
+                                       },
+                                       {
+                                           "id":  116,
+                                           "session_id":  11,
+                                           "event_type":  "robot_message",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "Muy bien. Has elegido música. ¿Prefieres bailar o escuchar canciones?",
+                                           "success":  null,
+                                           "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 2, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"assistant\"}",
+                                           "occurred_at":  "2026-07-25 08:18:58.272434"
+                                       },
+                                       {
+                                           "id":  117,
+                                           "session_id":  11,
+                                           "event_type":  "silence_detected",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "La persona no responde durante cinco segundos.",
+                                           "success":  null,
+                                           "metadata_json":  "{\"test_name\": \"conversacion_automatica_12_4_2_3\", \"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 3, \"silence_seconds\": 5.0, \"role\": \"system\"}",
+                                           "occurred_at":  "2026-07-25 08:18:58.491260"
+                                       },
+                                       {
+                                           "id":  118,
+                                           "session_id":  11,
+                                           "event_type":  "hint_given",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "Puedes decir bailar o escuchar canciones.",
+                                           "success":  null,
+                                           "metadata_json":  "{\"test_name\": \"conversacion_automatica_12_4_2_3\", \"support\": \"verbal_hint\", \"sequence\": 4, \"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"role\": \"assistant\"}",
+                                           "occurred_at":  "2026-07-25 08:18:58.723065"
+                                       },
+                                       {
+                                           "id":  119,
+                                           "session_id":  11,
+                                           "event_type":  "robot_message",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "Puedes elegir: bailar o escuchar canciones.",
+                                           "success":  null,
+                                           "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 5, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"assistant\"}",
+                                           "occurred_at":  "2026-07-25 08:18:58.956477"
+                                       },
+                                       {
+                                           "id":  120,
+                                           "session_id":  11,
+                                           "event_type":  "user_response",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "Bailar.",
+                                           "success":  true,
+                                           "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"response_time_seconds\": 3.1, \"sequence\": 6, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"user\"}",
+                                           "occurred_at":  "2026-07-25 08:18:59.174887"
+                                       },
+                                       {
+                                           "id":  121,
+                                           "session_id":  11,
+                                           "event_type":  "robot_message",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "Gracias. ¿Prefieres bailar a solas o con otras personas?",
+                                           "success":  null,
+                                           "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 7, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"assistant\"}",
+                                           "occurred_at":  "2026-07-25 08:18:59.390028"
+                                       },
+                                       {
+                                           "id":  122,
+                                           "session_id":  11,
+                                           "event_type":  "user_response",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "Con otras personas.",
+                                           "success":  true,
+                                           "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"response_time_seconds\": 2.8, \"sequence\": 8, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"user\"}",
+                                           "occurred_at":  "2026-07-25 08:18:59.623115"
+                                       },
+                                       {
+                                           "id":  123,
+                                           "session_id":  11,
+                                           "event_type":  "robot_message",
+                                           "source":  "conversation_app",
+                                           "activity":  "express_preferences",
+                                           "value_text":  "Perfecto. Gracias por contarme lo que prefieres.",
+                                           "success":  null,
+                                           "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 9, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"assistant\"}",
+                                           "occurred_at":  "2026-07-25 08:18:59.855670"
+                                       }
+                                   ],
+                          "ok":  true
+                      },
+    "verified_at":  "2026-07-25T08:19:00.5841286Z",
+    "session_id":  11,
+    "server_version":  "0.12.3",
+    "test_run_id":  "b785adf1-2c0a-4deb-a205-93ef297b7463",
+    "sqlite_after":  {
+                         "db_path":  "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\ahootsa.db",
+                         "session_id":  11,
+                         "requested_ids":  [
+                                               115,
+                                               116,
+                                               117,
+                                               118,
+                                               119,
+                                               120,
+                                               121,
+                                               122,
+                                               123
+                                           ],
+                         "found_count":  9,
+                         "missing_ids":  [
+
+                                         ],
+                         "wrong_session":  [
+
+                                           ],
+                         "rows":  [
+                                      {
+                                          "id":  115,
+                                          "session_id":  11,
+                                          "event_type":  "user_response",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "Música.",
+                                          "success":  true,
+                                          "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"response_time_seconds\": 2.4, \"sequence\": 1, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"user\"}",
+                                          "occurred_at":  "2026-07-25 08:18:58.050438"
+                                      },
+                                      {
+                                          "id":  116,
+                                          "session_id":  11,
+                                          "event_type":  "robot_message",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "Muy bien. Has elegido música. ¿Prefieres bailar o escuchar canciones?",
+                                          "success":  null,
+                                          "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 2, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"assistant\"}",
+                                          "occurred_at":  "2026-07-25 08:18:58.272434"
+                                      },
+                                      {
+                                          "id":  117,
+                                          "session_id":  11,
+                                          "event_type":  "silence_detected",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "La persona no responde durante cinco segundos.",
+                                          "success":  null,
+                                          "metadata_json":  "{\"test_name\": \"conversacion_automatica_12_4_2_3\", \"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 3, \"silence_seconds\": 5.0, \"role\": \"system\"}",
+                                          "occurred_at":  "2026-07-25 08:18:58.491260"
+                                      },
+                                      {
+                                          "id":  118,
+                                          "session_id":  11,
+                                          "event_type":  "hint_given",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "Puedes decir bailar o escuchar canciones.",
+                                          "success":  null,
+                                          "metadata_json":  "{\"test_name\": \"conversacion_automatica_12_4_2_3\", \"support\": \"verbal_hint\", \"sequence\": 4, \"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"role\": \"assistant\"}",
+                                          "occurred_at":  "2026-07-25 08:18:58.723065"
+                                      },
+                                      {
+                                          "id":  119,
+                                          "session_id":  11,
+                                          "event_type":  "robot_message",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "Puedes elegir: bailar o escuchar canciones.",
+                                          "success":  null,
+                                          "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 5, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"assistant\"}",
+                                          "occurred_at":  "2026-07-25 08:18:58.956477"
+                                      },
+                                      {
+                                          "id":  120,
+                                          "session_id":  11,
+                                          "event_type":  "user_response",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "Bailar.",
+                                          "success":  true,
+                                          "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"response_time_seconds\": 3.1, \"sequence\": 6, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"user\"}",
+                                          "occurred_at":  "2026-07-25 08:18:59.174887"
+                                      },
+                                      {
+                                          "id":  121,
+                                          "session_id":  11,
+                                          "event_type":  "robot_message",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "Gracias. ¿Prefieres bailar a solas o con otras personas?",
+                                          "success":  null,
+                                          "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 7, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"assistant\"}",
+                                          "occurred_at":  "2026-07-25 08:18:59.390028"
+                                      },
+                                      {
+                                          "id":  122,
+                                          "session_id":  11,
+                                          "event_type":  "user_response",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "Con otras personas.",
+                                          "success":  true,
+                                          "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"response_time_seconds\": 2.8, \"sequence\": 8, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"user\"}",
+                                          "occurred_at":  "2026-07-25 08:18:59.623115"
+                                      },
+                                      {
+                                          "id":  123,
+                                          "session_id":  11,
+                                          "event_type":  "robot_message",
+                                          "source":  "conversation_app",
+                                          "activity":  "express_preferences",
+                                          "value_text":  "Perfecto. Gracias por contarme lo que prefieres.",
+                                          "success":  null,
+                                          "metadata_json":  "{\"test_run_id\": \"b785adf1-2c0a-4deb-a205-93ef297b7463\", \"sequence\": 9, \"test_name\": \"conversacion_automatica_12_4_2_3\", \"role\": \"assistant\"}",
+                                          "occurred_at":  "2026-07-25 08:18:59.855670"
+                                      }
+                                  ],
+                         "ok":  true
+                     },
+    "session_directory":  "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000011",
+    "registered_event_ids":  [
+                                 115,
+                                 116,
+                                 117,
+                                 118,
+                                 119,
+                                 120,
+                                 121,
+                                 122,
+                                 123
+                             ]
+}

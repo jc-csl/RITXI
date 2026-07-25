@@ -1,0 +1,15 @@
+{
+  "session_id": 15,
+  "status": "finished",
+  "prepared_at": "2026-07-25T20:48:53.560967+00:00",
+  "profile_name": "ahootsa_session",
+  "conversation_app_started": false,
+  "conversation_app_running": false,
+  "active_profile_directory": "D:\\RITXI\\AHOOTSA8\\reachy_mini_conversation_app\\external_content\\external_profiles\\ahootsa_session",
+  "session_directory": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000015",
+  "log_file": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000015\\conversation_app.log",
+  "finished_at": "2026-07-25T20:51:27.888949+00:00",
+  "professional_decision": "no_decision",
+  "active_profile_reset": true,
+  "profile_reset_at": "2026-07-25T20:51:28.180958+00:00"
+}

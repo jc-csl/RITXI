@@ -1,0 +1,52 @@
+{
+  "key": "express_preferences",
+  "title": "Expresar preferencias",
+  "description": "Actividad comunicativa guiada para elegir, explicar y conversar sobre preferencias.",
+  "version": "1.0",
+  "type": "communication",
+  "professional_evaluation": true,
+  "levels": {
+    "initial": {
+      "title": "Inicial",
+      "objective": "Elegir entre dos opciones y expresar una preferencia básica.",
+      "max_options": 2,
+      "first_prompt": "¿Qué prefieres: música o un cuento?",
+      "greeting_template": "Hola, {preferred_name}. Soy Aocha. Vamos a elegir algo que te guste. ¿Qué prefieres: música o un cuento?",
+      "rules": [
+        "Utiliza frases muy breves y una única pregunta por turno.",
+        "Ofrece como máximo dos opciones.",
+        "Acepta respuestas de una o varias palabras.",
+        "Espera el tiempo indicado antes de repetir.",
+        "Refuerza positivamente cualquier intento de respuesta."
+      ]
+    },
+    "intermediate": {
+      "title": "Intermedio",
+      "objective": "Expresar una preferencia y explicar brevemente el motivo.",
+      "max_options": 3,
+      "first_prompt": "¿Qué actividad prefieres hacer y por qué?",
+      "greeting_template": "Hola, {preferred_name}. Soy Aocha. Vamos a hablar de cosas que te gustan. ¿Qué actividad prefieres hacer y por qué?",
+      "rules": [
+        "Formula preguntas abiertas sencillas.",
+        "Permite respuestas de varias palabras.",
+        "Realiza una pregunta de seguimiento breve.",
+        "Ofrece una pista solo cuando sea necesario.",
+        "Mantén intercambios de dos o tres turnos."
+      ]
+    },
+    "advanced": {
+      "title": "Avanzado",
+      "objective": "Comparar opciones, justificar una elección y mantener varios turnos.",
+      "max_options": 4,
+      "first_prompt": "Cuéntame qué actividad te gusta más y por qué. Después pregúntame cuál prefiero yo.",
+      "greeting_template": "Hola, {preferred_name}. Soy Aocha. Hoy vamos a conversar sobre tus preferencias. Cuéntame qué actividad te gusta más y por qué. Después pregúntame cuál prefiero yo.",
+      "rules": [
+        "Favorece una conversación espontánea de varios turnos.",
+        "Pide una justificación de manera natural.",
+        "Invita a formular una pregunta.",
+        "Utiliza pocos apoyos explícitos.",
+        "No conviertas la actividad en un examen."
+      ]
+    }
+  }
+}

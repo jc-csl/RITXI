@@ -1,0 +1,121 @@
+{
+  "test": "AHOOTSA_SMOKE_TEST_12_5_2",
+  "success": true,
+  "verified_at": "2026-07-25T08:53:45.927956+00:00",
+  "server_version": "0.12.5",
+  "session_id": 13,
+  "session_directory": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000013",
+  "profile": {
+    "choices": [
+      "(built-in default)",
+      "ahootsa",
+      "ahootsa_session",
+      "starter_profile"
+    ],
+    "current": "ahootsa_session",
+    "startup": "ahootsa_session",
+    "locked": false,
+    "locked_to": null
+  },
+  "voice": "Serena",
+  "greeting": "Hola, Álex. Soy Aocha. Vamos a elegir algo que te guste. ¿Qué prefieres: música o un cuento?",
+  "services": {
+    "before_conversation": {
+      "daemon_8000": true,
+      "conversation_app_7860": true,
+      "local_server_8100": true
+    },
+    "during_conversation": {
+      "daemon_8000": true,
+      "conversation_app_7860": true,
+      "local_server_8100": true
+    }
+  },
+  "conversation": {
+    "user": "Prefiero la música.",
+    "assistant": "Muy bien. Te gusta más cantar o bailar?",
+    "log_file": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000013\\conversation_app.log"
+  },
+  "registered_event_ids": [
+    136,
+    137,
+    138
+  ],
+  "verification": {
+    "api_event_count": 9,
+    "sqlite_rows": [
+      {
+        "id": 136,
+        "session_id": 13,
+        "event_type": "user_response",
+        "value_text": "Prefiero la música."
+      },
+      {
+        "id": 137,
+        "session_id": 13,
+        "event_type": "robot_message",
+        "value_text": "Muy bien. Te gusta más cantar o bailar?"
+      },
+      {
+        "id": 138,
+        "session_id": 13,
+        "event_type": "technical_metric",
+        "value_text": "Prueba final con servicios 8000, 7860 y 8100 activos."
+      }
+    ],
+    "summary": {
+      "session_id": 13,
+      "user_external_id": "SMOKE-TEST-01",
+      "user_name": "Álex",
+      "status": "finished",
+      "started_at": "2026-07-25T08:52:39.689589",
+      "finished_at": "2026-07-25T08:53:45.531750",
+      "duration_seconds": 65.84,
+      "duration_minutes": 1.1,
+      "total_events": 9,
+      "activities_started": 1,
+      "activities_completed": 1,
+      "user_responses": 1,
+      "correct_responses": 0,
+      "incorrect_responses": 0,
+      "unanswered_responses": 1,
+      "success_rate_percent": null,
+      "hints_given": 0,
+      "silences_detected": 0,
+      "errors_detected": 0,
+      "average_response_time_seconds": null,
+      "activities": [
+        {
+          "activity": "express_preferences",
+          "starts": 1,
+          "completions": 1,
+          "responses": 1,
+          "correct_responses": 0,
+          "incorrect_responses": 0,
+          "hints": 0,
+          "silences": 0,
+          "errors": 0,
+          "average_response_time_seconds": null,
+          "completed_successfully": null
+        },
+        {
+          "activity": "sin_actividad",
+          "starts": 0,
+          "completions": 0,
+          "responses": 0,
+          "correct_responses": 0,
+          "incorrect_responses": 0,
+          "hints": 0,
+          "silences": 0,
+          "errors": 0,
+          "average_response_time_seconds": null,
+          "completed_successfully": null
+        }
+      ],
+      "automatic_observations": [
+        "La sesión se desarrolló sin incidencias destacables."
+      ],
+      "automatic_summary_text": "Usuario: Álex\nDuración: 1.1 minutos\nActividades iniciadas: 1\nActividades completadas: 1\nRespuestas registradas: 1\nRespuestas correctas: 0\nRespuestas incorrectas: 0\nObservaciones:\n- La sesión se desarrolló sin incidencias destacables."
+    }
+  }
+}

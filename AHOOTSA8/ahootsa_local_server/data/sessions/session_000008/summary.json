@@ -1,0 +1,36 @@
+{
+  "session_id": 8,
+  "status": "finished",
+  "user": {
+    "external_id": "AUTO-CONVERSACION-01",
+    "name": "Persona de prueba automatica",
+    "preferred_name": "Alex"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-07-25T07:45:46.237962",
+  "finished_at": null,
+  "duration_seconds": 2.5,
+  "duration_minutes": 0.04,
+  "duration_source": "prepared",
+  "prepared_at": "2026-07-25T07:45:46.267390+00:00",
+  "running_at": null,
+  "conversation_app_running": false,
+  "file_status": "prepared",
+  "counts": {
+    "adequate": 3,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 1,
+    "hint": 1,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 3,
+  "professional_decision": "no_decision",
+  "summary": "Prueba automatica 12.4.1 abortada: No se recupera desde SQLite el evento id=70."
+}

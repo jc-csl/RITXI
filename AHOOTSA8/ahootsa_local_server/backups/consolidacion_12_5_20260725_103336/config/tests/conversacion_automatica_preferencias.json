@@ -1,0 +1,150 @@
+{
+  "test_name": "conversacion_automatica_preferencias_inicial",
+  "description": "Conversacion determinista para comprobar el registro persistente de turnos y metricas.",
+  "user": {
+    "external_id": "AUTO-CONVERSACION-01",
+    "name": "Persona de prueba automatica",
+    "preferred_name": "Alex",
+    "language": "es",
+    "notes": "Usuario tecnico dedicado a pruebas automaticas. No representa una persona real."
+  },
+  "session": {
+    "activity": "express_preferences",
+    "level": "initial",
+    "started_by": "Prueba automatica 12.4"
+  },
+  "expected": {
+    "scripted_events": 9,
+    "user_responses": 3,
+    "correct_responses": 3,
+    "incorrect_responses": 0,
+    "hints_given": 1,
+    "silences_detected": 1,
+    "activities_started": 1,
+    "activities_completed": 1
+  },
+  "events": [
+    {
+      "event_type": "user_response",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Musica.",
+      "success": true,
+      "metadata": {
+        "role": "user",
+        "turn": 1,
+        "sequence": 1,
+        "response_time_seconds": 2.4,
+        "automatic_test": true
+      }
+    },
+    {
+      "event_type": "robot_message",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Muy bien. Has elegido musica. Prefieres bailar o escuchar canciones?",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "turn": 2,
+        "sequence": 2,
+        "automatic_test": true
+      }
+    },
+    {
+      "event_type": "silence_detected",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "La persona no responde durante cinco segundos.",
+      "success": null,
+      "metadata": {
+        "role": "system",
+        "turn": 2,
+        "sequence": 3,
+        "silence_seconds": 5.0,
+        "automatic_test": true
+      }
+    },
+    {
+      "event_type": "hint_given",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Puedes decir bailar o escuchar canciones.",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "turn": 2,
+        "sequence": 4,
+        "support": "verbal_hint",
+        "automatic_test": true
+      }
+    },
+    {
+      "event_type": "robot_message",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Puedes elegir: bailar o escuchar canciones.",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "turn": 3,
+        "sequence": 5,
+        "automatic_test": true
+      }
+    },
+    {
+      "event_type": "user_response",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Bailar.",
+      "success": true,
+      "metadata": {
+        "role": "user",
+        "turn": 3,
+        "sequence": 6,
+        "response_time_seconds": 3.1,
+        "automatic_test": true
+      }
+    },
+    {
+      "event_type": "robot_message",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Gracias. Prefieres bailar a solas o con otras personas?",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "turn": 4,
+        "sequence": 7,
+        "automatic_test": true
+      }
+    },
+    {
+      "event_type": "user_response",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Con otras personas.",
+      "success": true,
+      "metadata": {
+        "role": "user",
+        "turn": 4,
+        "sequence": 8,
+        "response_time_seconds": 2.8,
+        "automatic_test": true
+      }
+    },
+    {
+      "event_type": "robot_message",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Perfecto. Gracias por contarme lo que prefieres.",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "turn": 5,
+        "sequence": 9,
+        "automatic_test": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahootsa · Panel profesional MVP</title>
+  <link rel="stylesheet" href="/panel-static/panel.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">AHOOTSA 8</p>
+      <h1>Panel profesional · inicio de sesión</h1>
+      <p class="subtitle">Perfil individual, actividad por nivel y seguimiento básico sin modificar la aplicación oficial.</p>
+    </div>
+    <div class="version">Servidor <strong id="version">—</strong></div>
+  </header>
+
+  <main class="layout">
+    <section class="card span-2">
+      <div class="card-heading">
+        <div>
+          <p class="step">1 · Estado</p>
+          <h2>Servicios</h2>
+        </div>
+        <button class="button ghost" id="refreshButton">Actualizar</button>
+      </div>
+      <div class="service-grid">
+        <div class="service"><span id="serverDot" class="dot"></span><div><strong>Servidor profesional</strong><small>Puerto 8100</small></div></div>
+        <div class="service"><span id="daemonDot" class="dot"></span><div><strong>Daemon / MuJoCo</strong><small>Puerto 8000</small></div></div>
+        <div class="service"><span id="appDot" class="dot"></span><div><strong>Conversation App</strong><small>Puerto 7860</small></div></div>
+      </div>
+      <div class="actions compact">
+        <button class="button secondary" id="launchDaemonButton">Lanzar daemon MuJoCo</button>
+        <button class="button secondary" id="openOfficialButton">Abrir interfaz oficial</button>
+        <button class="button ghost" id="openDocsButton">Abrir API del servidor</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="step">2 · Persona</p>
+      <h2>Usuario activo</h2>
+      <label for="userSelect">Persona usuaria</label>
+      <select id="userSelect"></select>
+      <label for="professionalInput">Profesional</label>
+      <input id="professionalInput" value="Monitor/a" maxlength="120">
+      <button class="button ghost full" id="exampleUserButton">Crear usuario de ejemplo</button>
+      <p class="help">Solo se muestra este botón como apoyo cuando no existen usuarios o para una prueba controlada.</p>
+    </section>
+
+    <section class="card">
+      <p class="step">3 · Actividad</p>
+      <h2>Actividad y nivel</h2>
+      <label for="activitySelect">Actividad</label>
+      <select id="activitySelect"></select>
+      <label>Nivel</label>
+      <div class="level-selector" id="levelSelector">
+        <button data-level="initial" class="level active">Inicial</button>
+        <button data-level="intermediate" class="level">Intermedio</button>
+        <button data-level="advanced" class="level">Avanzado</button>
+      </div>
+      <div id="levelDescription" class="info-box"></div>
+    </section>
+
+    <section class="card span-2 emphasis">
+      <div class="card-heading">
+        <div>
+          <p class="step">4 · Preparación</p>
+          <h2>Crear contexto de sesión</h2>
+        </div>
+        <span id="sessionBadge" class="badge neutral">Sin sesión</span>
+      </div>
+      <p>Genera un perfil temporal con el usuario, la actividad y el nivel. El perfil base Ahootsa y el código oficial permanecen intactos.</p>
+      <div class="actions">
+        <button class="button primary" id="prepareButton">Preparar sesión</button>
+        <button class="button primary" id="launchAppButton" disabled>Lanzar Ahootsa personalizada</button>
+      </div>
+      <div id="preparedDetails" class="details hidden"></div>
+    </section>
+
+    <section class="card span-2" id="trackingCard">
+      <p class="step">5 · Seguimiento</p>
+      <h2>Registro rápido del profesional</h2>
+      <label for="eventNote">Nota opcional para la siguiente marca</label>
+      <input id="eventNote" placeholder="Ejemplo: respondió después de una repetición">
+      <div class="tracking-grid">
+        <button data-action="adequate" class="track adequate">Respuesta adecuada</button>
+        <button data-action="partial" class="track partial">Respuesta parcial</button>
+        <button data-action="incorrect" class="track incorrect">Incorrecta</button>
+        <button data-action="no_response" class="track neutral-track">Sin respuesta</button>
+        <button data-action="hint" class="track support">Dar pista</button>
+        <button data-action="repeat" class="track support">Repetir</button>
+        <button data-action="example" class="track support">Dar ejemplo</button>
+      </div>
+      <div id="liveCounters" class="counters"></div>
+    </section>
+
+    <section class="card span-2">
+      <p class="step">6 · Finalización</p>
+      <h2>Observación y decisión profesional</h2>
+      <label for="finalNote">Observación final</label>
+      <textarea id="finalNote" rows="3" placeholder="Observación breve de la sesión"></textarea>
+      <label for="decisionSelect">Decisión</label>
+      <select id="decisionSelect">
+        <option value="no_decision">Sin decisión por ahora</option>
+        <option value="maintain">Mantener nivel</option>
+        <option value="raise">Proponer subida</option>
+        <option value="lower_temporarily">Bajar temporalmente</option>
+        <option value="repeat_session">Repetir otra sesión</option>
+      </select>
+      <button class="button danger" id="finishButton" disabled>Finalizar sesión</button>
+      <div id="finalSummary" class="summary hidden"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/panel-static/panel.js"></script>
+</body>
+</html>

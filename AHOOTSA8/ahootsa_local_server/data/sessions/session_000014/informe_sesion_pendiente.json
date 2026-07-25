@@ -1,0 +1,6 @@
+{
+  "generated_at": "2026-07-25T20:26:48.833796+00:00",
+  "session_id": 14,
+  "error": "No se puede conectar con http://127.0.0.1:8100/sessions/14/events: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión",
+  "log_file": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000014\\conversation_app.log"
+}

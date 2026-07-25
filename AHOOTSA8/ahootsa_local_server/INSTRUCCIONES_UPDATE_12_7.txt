@@ -1,0 +1,51 @@
+AHOOTSA UPDATE 12.7
+Panel compacto, usuarios y finalización completa
+
+INSTALACIÓN
+
+Descomprimir en:
+
+D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_7_PANEL_COMPACTO_USUARIOS_Y_CIERRE_COMPLETO
+
+Ejecutar:
+
+cd D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_7_PANEL_COMPACTO_USUARIOS_Y_CIERRE_COMPLETO
+.\APLICAR_UPDATE_12_7.ps1
+
+ARRANQUE
+
+cd D:\RITXI\AHOOTSA8\ahootsa_local_server
+.\3_lanzar_ahootsa_server.ps1
+
+Abrir:
+
+http://127.0.0.1:8100/panel
+
+USO DE PERSONAS
+
+- Nuevo: crea una persona real.
+- Ejemplo: conserva Álex solo para pruebas.
+- Borrar: elimina la ficha sin sesiones o la oculta si tiene historial.
+- Doble clic sobre un cuadro: editar.
+- Guardar: confirma el cambio.
+- Vaciar: borra un dato opcional.
+- Cancelar: descarta el cambio.
+
+SESIONES BLOQUEADAS
+
+Pulsar Liberar en la barra superior.
+
+FINALIZACIÓN
+
+Pulsar:
+
+Finalizar, cerrar conversación y generar informe
+
+Debe:
+- cerrar la Conversation App;
+- finalizar la sesión;
+- liberar la siguiente sesión;
+- crear informe_sesion.pdf;
+- crear informe_sesion.html;
+- crear informe_sesion.json;
+- crear transcripcion_sesion.txt.

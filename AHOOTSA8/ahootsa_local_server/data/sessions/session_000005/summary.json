@@ -1,0 +1,36 @@
+{
+  "session_id": 5,
+  "status": "finished",
+  "user": {
+    "external_id": "usuario_prueba_01",
+    "name": "Usuario de prueba",
+    "preferred_name": "Álex"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-07-25T06:54:25.504211",
+  "finished_at": null,
+  "duration_seconds": 1512.5,
+  "duration_minutes": 25.21,
+  "duration_source": "prepared",
+  "prepared_at": "2026-07-25T06:54:25.532670+00:00",
+  "running_at": null,
+  "conversation_app_running": false,
+  "file_status": "prepared",
+  "counts": {
+    "adequate": 0,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 0,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 0,
+  "professional_decision": "no_decision",
+  "summary": "Sesión anterior utilizada para validar el seguimiento del panel."
+}

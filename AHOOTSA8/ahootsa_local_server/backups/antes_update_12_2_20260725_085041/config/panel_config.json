@@ -1,0 +1,15 @@
+{
+  "project_root": "..",
+  "official_app_directory": "../reachy_mini_conversation_app",
+  "base_profile_directory": "../reachy_mini_conversation_app/external_content/external_profiles/ahootsa",
+  "external_tools_directory": "../reachy_mini_conversation_app/external_content/external_tools",
+  "daemon_script": "../1_lanzar_daemon_mujoco.ps1",
+  "manual_app_script": "../2_lanzar_app_ahootsa.ps1",
+  "runtime_directory": "../runtime",
+  "conversation_app_host": "127.0.0.1",
+  "conversation_app_port": 7860,
+  "daemon_host": "127.0.0.1",
+  "daemon_port": 8000,
+  "server_url": "http://127.0.0.1:8100",
+  "profile_prefix": "ahootsa_session"
+}

@@ -1,0 +1,128 @@
+{
+  "test_name": "conversacion_automatica_12_4_2",
+  "user": {
+    "external_id": "AUTO-CONVERSACION-01",
+    "name": "Persona de prueba automática",
+    "preferred_name": "Álex",
+    "language": "es",
+    "notes": "Usuario técnico para pruebas automáticas; no representa una persona real."
+  },
+  "session": {
+    "activity": "express_preferences",
+    "level": "initial",
+    "started_by": "Prueba automática 12.4.2"
+  },
+  "events": [
+    {
+      "event_type": "user_response",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Música.",
+      "success": true,
+      "metadata": {
+        "role": "user",
+        "sequence": 1,
+        "response_time_seconds": 2.4
+      }
+    },
+    {
+      "event_type": "robot_message",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Muy bien. Has elegido música. ¿Prefieres bailar o escuchar canciones?",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "sequence": 2
+      }
+    },
+    {
+      "event_type": "silence_detected",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "La persona no responde durante cinco segundos.",
+      "success": null,
+      "metadata": {
+        "role": "system",
+        "sequence": 3,
+        "silence_seconds": 5.0
+      }
+    },
+    {
+      "event_type": "hint_given",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Puedes decir bailar o escuchar canciones.",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "sequence": 4,
+        "support": "verbal_hint"
+      }
+    },
+    {
+      "event_type": "robot_message",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Puedes elegir: bailar o escuchar canciones.",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "sequence": 5
+      }
+    },
+    {
+      "event_type": "user_response",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Bailar.",
+      "success": true,
+      "metadata": {
+        "role": "user",
+        "sequence": 6,
+        "response_time_seconds": 3.1
+      }
+    },
+    {
+      "event_type": "robot_message",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Gracias. ¿Prefieres bailar a solas o con otras personas?",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "sequence": 7
+      }
+    },
+    {
+      "event_type": "user_response",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Con otras personas.",
+      "success": true,
+      "metadata": {
+        "role": "user",
+        "sequence": 8,
+        "response_time_seconds": 2.8
+      }
+    },
+    {
+      "event_type": "robot_message",
+      "source": "conversation_app",
+      "activity": "express_preferences",
+      "value_text": "Perfecto. Gracias por contarme lo que prefieres.",
+      "success": null,
+      "metadata": {
+        "role": "assistant",
+        "sequence": 9
+      }
+    }
+  ],
+  "expected": {
+    "scripted_events": 9,
+    "user_responses": 3,
+    "correct_responses": 3,
+    "hints_given": 1,
+    "silences_detected": 1
+  }
+}

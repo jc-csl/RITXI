@@ -1,0 +1,50 @@
+{
+  "context_version": "1.1",
+  "generated_at": "2026-07-25T07:59:54.114015+00:00",
+  "session": {
+    "id": 9,
+    "started_by": "Prueba automatica 12.4.2",
+    "status": "prepared",
+    "profile_name": "ahootsa_session"
+  },
+  "user": {
+    "external_id": "AUTO-CONVERSACION-01",
+    "name": "Persona de prueba automatica",
+    "preferred_name": "Alex",
+    "language": "es",
+    "notes": "Usuario tecnico dedicado a pruebas automaticas. No representa una persona real."
+  },
+  "profile": {
+    "communication_style": "simple",
+    "speech_speed": "normal",
+    "response_wait_seconds": 5.0,
+    "preferred_interaction_mode": "mixed",
+    "preferred_reinforcement": "refuerzo verbal positivo",
+    "interests": "musica y baile",
+    "avoid_topics": null,
+    "accessibility_notes": "Una pregunta por turno y un maximo de dos opciones.",
+    "max_instructions_per_turn": 1
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "description": "Actividad comunicativa guiada para elegir, explicar y conversar sobre preferencias.",
+    "level": "initial",
+    "level_title": "Inicial",
+    "objective": "Elegir entre dos opciones y expresar una preferencia básica.",
+    "max_options": 2,
+    "rules": [
+      "Utiliza frases muy breves y una única pregunta por turno.",
+      "Ofrece como máximo dos opciones.",
+      "Acepta respuestas de una o varias palabras.",
+      "Espera el tiempo indicado antes de repetir.",
+      "Refuerza positivamente cualquier intento de respuesta."
+    ],
+    "first_prompt": "¿Qué prefieres: música o un cuento?"
+  },
+  "professional_control": {
+    "system_may_recommend_level": false,
+    "professional_confirms_level_change": true,
+    "evaluation_mode": "manual_quick_marks"
+  }
+}

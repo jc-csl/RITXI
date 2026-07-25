@@ -1,0 +1,41 @@
+AHOOTSA UPDATE 12.6
+Ejecución anónima o sesión identificada con informe
+
+INSTALACIÓN
+
+Descomprimir en:
+
+D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_6_EJECUCION_ANONIMA_O_SESION_CON_INFORME
+
+Ejecutar:
+
+cd D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_6_EJECUCION_ANONIMA_O_SESION_CON_INFORME
+.\APLICAR_UPDATE_12_6.ps1
+
+EJECUCIÓN NORMAL
+
+cd D:\RITXI\AHOOTSA8
+.\INICIAR_AHOOTSA.ps1
+
+SIN SESIÓN ACTIVA
+
+- perfil ahootsa;
+- conversación sin identificación;
+- no se crea informe de usuario.
+
+CON SESIÓN PREPARADA DESDE EL PANEL
+
+- perfil ahootsa_session;
+- contexto del usuario;
+- registro de conversación;
+- al cerrar la app se genera:
+  informe_sesion.html
+  informe_sesion.json
+  transcripcion_sesion.txt
+
+FINALIZACIÓN MANUAL
+
+Si el informe queda pendiente:
+
+cd D:\RITXI\AHOOTSA8
+.\FINALIZAR_SESION_AHOOTSA.ps1

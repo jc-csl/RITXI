@@ -1,0 +1,36 @@
+{
+  "session_id": 15,
+  "status": "finished",
+  "user": {
+    "external_id": "usuario_prueba_01",
+    "name": "Usuario de prueba",
+    "preferred_name": "Álex"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "intermediate",
+    "level_title": "Intermedio"
+  },
+  "started_at": "2026-07-25T20:48:53.537485",
+  "finished_at": "2026-07-25T20:51:17.608222+00:00",
+  "duration_seconds": 144.0,
+  "duration_minutes": 2.4,
+  "duration_source": "prepared",
+  "prepared_at": "2026-07-25T20:48:53.560967+00:00",
+  "running_at": null,
+  "conversation_app_running": false,
+  "file_status": "finished",
+  "counts": {
+    "adequate": 2,
+    "partial": 2,
+    "incorrect": 2,
+    "no_response": 2,
+    "hint": 2,
+    "repeat": 2,
+    "example": 2
+  },
+  "evaluated_responses": 6,
+  "professional_decision": "no_decision",
+  "summary": "kk"
+}

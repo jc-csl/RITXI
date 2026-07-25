@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Ahootsa · Panel profesional</title>
+  <link rel="stylesheet" href="/panel-static/panel_12_7_1.css?v=1271">
+
+  <style id="ahootsa-critical-layout">
+    html, body { width: 100%; height: 100%; margin: 0; }
+    body { overflow: hidden; background: #f3f5f9; color: #202737; }
+    .dashboard {
+      height: calc(100vh - 58px);
+      padding: 8px;
+      display: grid;
+      grid-template-columns:
+        minmax(420px, 1.22fr)
+        minmax(360px, 1fr)
+        minmax(350px, .95fr);
+      gap: 8px;
+    }
+    .panel-card {
+      min-width: 0;
+      min-height: 0;
+      overflow: auto;
+      background: #fff;
+      border: 1px solid #dfe3ea;
+      border-radius: 11px;
+      padding: 11px;
+    }
+    .user-panel { grid-column: 1; }
+    .setup-panel { grid-column: 2; }
+    .finish-panel { grid-column: 3; }
+    .panel-title h1 {
+      margin: 1px 0 0;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+    @media (max-width: 1150px) {
+      body { overflow: auto; }
+      .dashboard {
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+      }
+      .user-panel, .setup-panel { grid-column: auto; }
+      .finish-panel { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">A</span>
+      <div>
+        <strong>AHOOTSA 8</strong>
+        <small>Panel profesional local</small>
+      </div>
+    </div>
+
+    <div class="services" aria-label="Estado de servicios">
+      <button class="service-pill" id="serverService" title="Servidor local 8100">
+        <span id="serverDot" class="dot"></span>Servidor
+      </button>
+      <button class="service-pill" id="daemonService" title="Daemon o MuJoCo 8000">
+        <span id="daemonDot" class="dot"></span>Robot
+      </button>
+      <button class="service-pill" id="appService" title="Conversation App 7860">
+        <span id="appDot" class="dot"></span>Conversación
+      </button>
+    </div>
+
+    <div class="top-actions">
+      <span class="version">v <strong id="version">—</strong></span>
+      <button class="mini-button" id="refreshButton">Actualizar</button>
+      <button class="mini-button" id="launchDaemonButton">Robot</button>
+      <button class="mini-button" id="openOfficialButton">App</button>
+      <button class="mini-button" id="recoverButton">Liberar</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="panel-card user-panel">
+      <div class="panel-title">
+        <div>
+          <span class="step">1 · PERSONA</span>
+          <h1>Ficha de usuario</h1>
+        </div>
+        <div class="toolbar">
+          <button class="tiny primary" id="newUserButton">Nuevo</button>
+          <button class="tiny" id="exampleUserButton">Ejemplo</button>
+          <button class="tiny danger-outline" id="deleteUserButton">Borrar</button>
+        </div>
+      </div>
+
+      <div class="selector-row">
+        <select id="userSelect" aria-label="Persona usuaria"></select>
+      </div>
+
+      <p class="inline-help">
+        Doble clic en cualquier cuadro para editar. Usa Guardar, Vaciar o Cancelar.
+      </p>
+
+      <div id="userFields" class="field-grid"></div>
+    </section>
+
+    <section class="panel-card setup-panel">
+      <div class="panel-title">
+        <div>
+          <span class="step">2 · SESIÓN</span>
+          <h1>Actividad y preparación</h1>
+        </div>
+        <span id="sessionBadge" class="badge neutral">Sin sesión</span>
+      </div>
+
+      <div class="compact-form two-columns">
+        <label>
+          <span>Profesional</span>
+          <input id="professionalInput" value="Monitor/a" maxlength="120">
+        </label>
+        <label>
+          <span>Actividad</span>
+          <select id="activitySelect"></select>
+        </label>
+      </div>
+
+      <div class="level-row" id="levelSelector">
+        <button data-level="initial" class="level active">Inicial</button>
+        <button data-level="intermediate" class="level">Intermedio</button>
+        <button data-level="advanced" class="level">Avanzado</button>
+      </div>
+
+      <div id="levelDescription" class="level-description"></div>
+
+      <div class="session-actions">
+        <button class="small-button primary" id="prepareButton">Preparar</button>
+        <button class="small-button secondary" id="launchAppButton" disabled>Iniciar conversación</button>
+      </div>
+
+      <div id="preparedDetails" class="session-info muted-box">
+        No hay una sesión preparada.
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="panel-title compact-title">
+        <div>
+          <span class="step">3 · SEGUIMIENTO</span>
+          <h1>Marcas rápidas</h1>
+        </div>
+      </div>
+
+      <input
+        id="eventNote"
+        class="compact-note"
+        placeholder="Nota opcional para la siguiente marca"
+      >
+
+      <div class="tracking-grid">
+        <button data-action="adequate" class="track adequate">Adecuada</button>
+        <button data-action="partial" class="track partial">Parcial</button>
+        <button data-action="incorrect" class="track incorrect">Incorrecta</button>
+        <button data-action="no_response" class="track neutral-track">Sin respuesta</button>
+        <button data-action="hint" class="track support">Pista</button>
+        <button data-action="repeat" class="track support">Repetir</button>
+        <button data-action="example" class="track support">Ejemplo</button>
+      </div>
+
+      <div id="liveCounters" class="counters"></div>
+    </section>
+
+    <section class="panel-card finish-panel">
+      <div class="panel-title">
+        <div>
+          <span class="step">4 · CONTROL</span>
+          <h1>Finalización e informe</h1>
+        </div>
+      </div>
+
+      <label class="compact-label">
+        <span>Observación profesional</span>
+        <textarea id="finalNote" rows="4" placeholder="Escribe una observación breve"></textarea>
+      </label>
+
+      <label class="compact-label">
+        <span>Decisión</span>
+        <select id="decisionSelect">
+          <option value="no_decision">Sin decisión</option>
+          <option value="maintain">Mantener nivel</option>
+          <option value="raise">Proponer subida</option>
+          <option value="lower_temporarily">Bajar temporalmente</option>
+          <option value="repeat_session">Repetir sesión</option>
+        </select>
+      </label>
+
+      <button class="finish-button" id="finishButton" disabled>
+        Finalizar, cerrar conversación y generar informe
+      </button>
+
+      <div id="finalSummary" class="final-summary">
+        Al finalizar se cerrará la Conversation App, se liberará la sesión y se
+        crearán PDF, HTML, JSON y transcripción.
+      </div>
+
+      <div id="reportActions" class="report-actions hidden">
+        <button class="small-button primary" data-report="pdf">Abrir PDF</button>
+        <button class="small-button" data-report="html">Abrir HTML</button>
+        <button class="small-button" data-report="json">Abrir JSON</button>
+        <button class="small-button" data-report="transcript">Transcripción</button>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="system-box">
+        <strong>Estado de bloqueo</strong>
+        <span id="blockingStatus">Comprobando…</span>
+        <button class="tiny" id="openDocsButton">API</button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="newUserDialog">
+    <form method="dialog" id="newUserForm">
+      <div class="dialog-title">
+        <h2>Nueva persona</h2>
+        <button class="icon-button" value="cancel" aria-label="Cerrar">×</button>
+      </div>
+
+      <div class="dialog-grid">
+        <label>
+          <span>Nombre completo *</span>
+          <input id="newName" required maxlength="120">
+        </label>
+        <label>
+          <span>Nombre que usará Aocha</span>
+          <input id="newPreferredName" maxlength="120">
+        </label>
+        <label>
+          <span>Identificador opcional</span>
+          <input id="newExternalId" maxlength="50" placeholder="Se genera automáticamente">
+        </label>
+        <label>
+          <span>Idioma</span>
+          <input id="newLanguage" value="es" maxlength="10">
+        </label>
+        <label class="span-dialog">
+          <span>Notas</span>
+          <textarea id="newNotes" rows="3"></textarea>
+        </label>
+      </div>
+
+      <div class="dialog-actions">
+        <button class="small-button" value="cancel">Cancelar</button>
+        <button class="small-button primary" id="saveNewUserButton" value="default">
+          Guardar persona
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/panel-static/panel_12_7_1.js?v=1271"></script>
+</body>
+</html>

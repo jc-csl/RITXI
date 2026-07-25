@@ -1,0 +1,152 @@
+{
+  "context_version": "1.0",
+  "generated_at": "2026-07-24T22:46:10.624313+00:00",
+  "session": {
+    "id": 1,
+    "status": "active",
+    "started_at": "2026-07-24T21:22:33.826422+00:00",
+    "finished_at": null,
+    "started_by": "prueba_manual"
+  },
+  "user": {
+    "id": 1,
+    "external_id": "usuario_prueba_01",
+    "name": "Usuario de prueba",
+    "preferred_name": "Álex",
+    "language": "es",
+    "active": true
+  },
+  "profile": {
+    "communication_level": null,
+    "reading_level": null,
+    "speech_speed": "normal",
+    "response_wait_seconds": 5.0,
+    "uses_pictograms": null,
+    "preferred_topics": null,
+    "avoid_topics": null,
+    "support_notes": null
+  },
+  "memory": [
+    {
+      "id": 1,
+      "category": "interest",
+      "content": "Le gusta escuchar música. Prueba creada el 2026-07-24 23:35:22.",
+      "source": "manual",
+      "importance": 4,
+      "updated_at": "2026-07-24T21:35:22.790850+00:00"
+    }
+  ],
+  "activity": {
+    "key": "emotions",
+    "step": 2,
+    "last_action": "ask",
+    "last_robot_text": "Correcto. Una persona ha perdido algo importante y está llorando. ¿Está alegre, triste o enfadada?"
+  },
+  "conversation_state": {
+    "state": "in_activity",
+    "recent_errors": 0,
+    "recent_silences": 0,
+    "recent_hints": 0
+  },
+  "recent_events": [
+    {
+      "id": 1,
+      "event_type": "session_started",
+      "source": "panel",
+      "activity": null,
+      "value_text": "Sesión iniciada por prueba_manual",
+      "value_number": null,
+      "success": null,
+      "metadata": {},
+      "occurred_at": "2026-07-24T21:22:33.833422+00:00"
+    },
+    {
+      "id": 2,
+      "event_type": "technical_metric",
+      "source": "system",
+      "activity": "prueba_rutas",
+      "value_text": "Prueba automática de la corrección 0.7.1",
+      "value_number": 1.0,
+      "success": true,
+      "metadata": {
+        "version": "0.7.1",
+        "test": "route_order"
+      },
+      "occurred_at": "2026-07-24T21:29:47.985676+00:00"
+    },
+    {
+      "id": 3,
+      "event_type": "activity_started",
+      "source": "system",
+      "activity": "emotions",
+      "value_text": "Actividad iniciada: emotions",
+      "value_number": null,
+      "success": null,
+      "metadata": {
+        "step": 1
+      },
+      "occurred_at": "2026-07-24T21:55:17.039892+00:00"
+    },
+    {
+      "id": 4,
+      "event_type": "robot_message",
+      "source": "system",
+      "activity": "emotions",
+      "value_text": "Una persona sonríe porque ha recibido una buena noticia. ¿Está alegre, triste o enfadada?",
+      "value_number": null,
+      "success": null,
+      "metadata": {
+        "step": 1,
+        "action": "ask",
+        "completed": false,
+        "expected_answer": "alegre",
+        "choices": [
+          "alegre",
+          "triste",
+          "enfadada"
+        ]
+      },
+      "occurred_at": "2026-07-24T21:55:17.039892+00:00"
+    },
+    {
+      "id": 5,
+      "event_type": "user_response",
+      "source": "conversation_app",
+      "activity": "emotions",
+      "value_text": "alegre",
+      "value_number": null,
+      "success": true,
+      "metadata": {
+        "step": 1,
+        "evaluated_by": "activity_engine"
+      },
+      "occurred_at": "2026-07-24T21:55:17.069823+00:00"
+    },
+    {
+      "id": 6,
+      "event_type": "robot_message",
+      "source": "system",
+      "activity": "emotions",
+      "value_text": "Correcto. Una persona ha perdido algo importante y está llorando. ¿Está alegre, triste o enfadada?",
+      "value_number": null,
+      "success": true,
+      "metadata": {
+        "step": 2,
+        "action": "ask",
+        "completed": false,
+        "expected_answer": "triste",
+        "choices": [
+          "alegre",
+          "triste",
+          "enfadada"
+        ]
+      },
+      "occurred_at": "2026-07-24T21:55:17.069823+00:00"
+    }
+  ],
+  "counters": {
+    "total_events": 6,
+    "recent_events": 6,
+    "active_memories": 1
+  }
+}

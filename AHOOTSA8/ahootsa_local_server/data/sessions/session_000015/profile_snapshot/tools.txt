@@ -1,0 +1,29 @@
+# Movimiento sencillo
+move_head
+
+# Emociones
+#play_emotion
+#stop_emotion
+
+# Inactividad
+idle_do_nothing
+
+# Bailes
+# dance
+# stop_dance
+
+# Cámara
+# camera
+
+# Memoria
+remember
+forget
+
+# Cierre explícito
+go_to_sleep
+
+# Actividad vamos a bailar
+ahootsa_dances
+
+# Pendiente de validación completa con robot físico
+# head_tracking

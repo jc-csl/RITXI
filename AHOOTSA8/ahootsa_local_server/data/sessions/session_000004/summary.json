@@ -1,0 +1,36 @@
+{
+  "session_id": 4,
+  "status": "finished",
+  "user": {
+    "external_id": "usuario_prueba_01",
+    "name": "Usuario de prueba",
+    "preferred_name": "Álex"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-07-25T06:51:42.016976",
+  "finished_at": null,
+  "duration_seconds": 0.2,
+  "duration_minutes": 0.0,
+  "duration_source": "prepared",
+  "prepared_at": "2026-07-25T06:51:42.042828+00:00",
+  "running_at": null,
+  "conversation_app_running": false,
+  "file_status": "prepared",
+  "counts": {
+    "adequate": 1,
+    "partial": 1,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 1,
+    "repeat": 1,
+    "example": 0
+  },
+  "evaluated_responses": 2,
+  "professional_decision": "no_decision",
+  "summary": "Update 12.2 technical validation."
+}

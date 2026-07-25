@@ -1,0 +1,5 @@
+.\reachy_mini_conversation_app\.venv\Scripts\Activate.ps1
+
+reachy-mini-conversation-app --ui 
+
+# --debug opcional

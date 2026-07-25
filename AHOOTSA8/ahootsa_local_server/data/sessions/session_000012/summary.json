@@ -1,0 +1,36 @@
+{
+  "session_id": 12,
+  "status": "finished",
+  "user": {
+    "external_id": "SMOKE-TEST-01",
+    "name": "Persona de prueba final",
+    "preferred_name": "Álex"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-07-25T08:36:12.423293",
+  "finished_at": null,
+  "duration_seconds": 175.5,
+  "duration_minutes": 2.92,
+  "duration_source": "running",
+  "prepared_at": "2026-07-25T08:36:12.441844+00:00",
+  "running_at": "2026-07-25T08:36:43.801315+00:00",
+  "conversation_app_running": true,
+  "file_status": "running",
+  "counts": {
+    "adequate": 0,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 0,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 0,
+  "professional_decision": "no_decision",
+  "summary": "Prueba final 12.5 abortada: No se detectó en el log una intervención del usuario seguida de una respuesta de Aocha."
+}

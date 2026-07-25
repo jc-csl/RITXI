@@ -1,0 +1,104 @@
+{
+  "report_version": "1.1",
+  "generated_at": "2026-07-25T20:51:30.042562+00:00",
+  "mode": "identified_session",
+  "session_id": 15,
+  "status": "finished",
+  "user": {
+    "external_id": "usuario_prueba_01",
+    "name": "Usuario de prueba",
+    "preferred_name": "Álex",
+    "language": "es",
+    "notes": "Usuario creado para probar Ahootsa"
+  },
+  "profile": {
+    "communication_style": "simple",
+    "speech_speed": "normal",
+    "response_wait_seconds": 5.0,
+    "preferred_interaction_mode": "mixed",
+    "preferred_reinforcement": null,
+    "interests": null,
+    "avoid_topics": null,
+    "accessibility_notes": null,
+    "max_instructions_per_turn": 1
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "description": "Actividad comunicativa guiada para elegir, explicar y conversar sobre preferencias.",
+    "level": "intermediate",
+    "level_title": "Intermedio",
+    "objective": "Expresar una preferencia y explicar brevemente el motivo.",
+    "max_options": 3,
+    "rules": [
+      "Formula preguntas abiertas sencillas.",
+      "Permite respuestas de varias palabras.",
+      "Realiza una pregunta de seguimiento breve.",
+      "Ofrece una pista solo cuando sea necesario.",
+      "Mantén intercambios de dos o tres turnos."
+    ],
+    "first_prompt": "¿Qué actividad prefieres hacer y por qué?"
+  },
+  "timing": {
+    "prepared_at": "2026-07-25T20:48:53.560967+00:00",
+    "running_at": null,
+    "finished_at": "2026-07-25T20:51:27.888949+00:00",
+    "duration_seconds": 154.35,
+    "duration_minutes": 2.57
+  },
+  "professional_control": {
+    "decision": "no_decision",
+    "automatic_level_change": false,
+    "automatic_clinical_evaluation": false
+  },
+  "counts": {
+    "total_events": 26,
+    "user_responses": 6,
+    "correct_responses": 2,
+    "incorrect_responses": 2,
+    "unanswered_responses": 2,
+    "hints_given": 2,
+    "silences_detected": 2,
+    "errors_detected": 0
+  },
+  "automatic_observations": [
+    "Se ofrecieron 2 pista(s) durante la sesión.",
+    "Se detectaron 2 silencio(s) prolongado(s)."
+  ],
+  "automatic_summary_text": "Usuario: Álex\nDuración: 2.6 minutos\nActividades iniciadas: 1\nActividades completadas: 3\nRespuestas registradas: 6\nRespuestas correctas: 2\nRespuestas incorrectas: 2\nPorcentaje de acierto: 50.0%\nObservaciones:\n- Se ofrecieron 2 pista(s) durante la sesión.\n- Se detectaron 2 silencio(s) prolongado(s).",
+  "transcription": {
+    "log_file": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000015\\conversation_app.log",
+    "final_roles_detected": 0,
+    "dialogue_roles_imported_or_existing": 0,
+    "created_event_ids_this_run": [],
+    "turns": []
+  },
+  "event_ids": [
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189
+  ]
+}

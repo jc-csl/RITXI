@@ -1,0 +1,6 @@
+{
+  "test": "AHOOTSA_SMOKE_TEST_12_5",
+  "success": false,
+  "verified_at": "2026-07-25T08:39:39.353598+00:00",
+  "error": "No se detectó en el log una intervención del usuario seguida de una respuesta de Aocha."
+}
