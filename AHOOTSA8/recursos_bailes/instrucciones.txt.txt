@@ -1,0 +1,44 @@
+HOOTSA8\recursos_bailes: no se utiliza durante la ejecución normal
+
+La carpeta contiene las descargas originales de distintos datasets de Hugging Face y los inventarios de la antigua Fase 4. Actualmente, la herramienta ahootsa_dances.py carga el catálogo, los movimientos y los audios desde:
+
+D:\RITXI\AHOOTSA8\
+└── reachy_mini_conversation_app
+    └── external_content
+        └── activities
+            └── vamos_a_bailar
+                ├── catalogo_bailes.json
+                └── dataset
+                    └── data
+
+La herramienta define expresamente external_content/activities/vamos_a_bailar como su carpeta de recursos y no consulta AHOOTSA8\recursos_bailes.
+
+recursos_bailes solo se utiliza como fuente para reconstruir la biblioteca local mediante:
+
+preparar_biblioteca_local.py
+
+Ese script está descrito como una utilidad de preparación de una sola vez, copia 16 movimientos y sus audios desde recursos_bailes\datasets_hf, y confirma que después la actividad ya no necesita esa caché durante la ejecución.
+
+Recomendación
+No es necesaria para usar Ahootsa.
+Conviene conservarla como material de desarrollo, recuperación y trazabilidad de fuentes.
+En un PC operativo nuevo se puede omitir para ahorrar espacio, siempre que la carpeta local de la actividad tenga todos los recursos.
+
+Compruébalo con:
+
+$datos = "D:\RITXI\AHOOTSA8\reachy_mini_conversation_app\external_content\activities\vamos_a_bailar\dataset\data"
+
+$json = (Get-ChildItem $datos -File -Filter *.json).Count
+
+$audio = (
+    Get-ChildItem $datos -File |
+    Where-Object { $_.Extension -in ".ogg", ".wav" }
+).Count
+
+"Movimientos JSON: $json"
+"Archivos de audio: $audio"
+
+Resultado esperado:
+
+Movimientos JSON: 16
+Archivos de audio: 16
