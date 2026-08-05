@@ -6,7 +6,7 @@
     "active_session_profile_directory":  "../reachy_mini_conversation_app/external_content/external_profiles/ahootsa_session",
     "external_tools_directory":  "../reachy_mini_conversation_app/external_content/external_tools",
     "daemon_script":  "../scripts/iniciar_daemon_mujoco.ps1",
-    "manual_app_script":  "../scripts/iniciar_conversation_sesion.ps1",
+    "manual_app_script":  "../scripts/iniciar_conversation_app.ps1",
     "session_data_directory":  "./data/sessions",
     "active_session_file":  "./data/active_session.json",
     "conversation_app_host":  "127.0.0.1",

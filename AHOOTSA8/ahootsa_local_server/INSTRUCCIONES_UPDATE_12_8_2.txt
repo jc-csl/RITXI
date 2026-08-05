@@ -1,0 +1,63 @@
+AHOOTSA UPDATE 12.8.2
+Dos modos de arranque independientes
+
+IMPORTANTE
+
+No ejecutar archivos dentro de payload.
+
+INSTALAR
+
+1. Extraer el ZIP dentro de:
+
+D:\RITXI\AHOOTSA8
+
+2. Entrar en:
+
+D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_8_2_DOS_MODOS_DE_ARRANQUE
+
+3. Comprobar:
+
+.\COMPROBAR_PAQUETE_12_8_2.ps1
+
+4. Instalar:
+
+.\APLICAR_UPDATE_12_8_2.ps1
+
+MODO 1: ANÓNIMO
+
+cd D:\RITXI\AHOOTSA8
+.\INICIAR_AHOOTSA_ANONIMO.ps1
+
+- cierra procesos anteriores;
+- inicia daemon 8000;
+- inicia Conversation App 7860;
+- no inicia servidor 8100;
+- no abre panel;
+- usa el perfil general ahootsa;
+- no identifica usuario;
+- no crea sesión ni informe personal.
+
+MODO 2: SESIÓN LOCAL
+
+cd D:\RITXI\AHOOTSA8
+.\INICIAR_AHOOTSA_SESION.ps1
+
+- cierra procesos anteriores;
+- inicia servidor 8100;
+- inicia daemon 8000;
+- abre el panel;
+- no inicia Conversation App todavía.
+
+En el panel:
+1. crear o seleccionar persona;
+2. elegir actividad y nivel;
+3. pulsar Preparar;
+4. pulsar Iniciar conversación.
+
+FINALIZAR
+
+.\FINALIZAR_SESION_AHOOTSA.ps1
+
+DETENER TODO
+
+.\FINALIZAR_SESION_AHOOTSA.ps1 -DetenerTodo

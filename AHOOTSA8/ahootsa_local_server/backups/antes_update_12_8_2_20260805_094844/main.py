@@ -57,7 +57,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Ahootsa Local Server",
     description="Servidor local independiente para usuarios, perfiles, sesiones, eventos y resúmenes.",
-    version="0.12.8.2",
+    version="0.12.8.1",
     lifespan=lifespan,
 )
 
@@ -407,7 +407,7 @@ def health_check() -> dict[str, str]:
     return {
         "status": "ok",
         "service": "ahootsa-local-server",
-        "version": "0.12.8.2",
+        "version": "0.12.8.1",
     }
 
 

@@ -1,0 +1,36 @@
+{
+  "session_id": 17,
+  "status": "finished",
+  "user": {
+    "external_id": "SICO",
+    "name": "SICO",
+    "preferred_name": "SICO"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-08-05T07:56:28.600153",
+  "finished_at": null,
+  "duration_seconds": 134.1,
+  "duration_minutes": 2.23,
+  "duration_source": "running",
+  "prepared_at": "2026-08-05T07:56:28.626905+00:00",
+  "running_at": "2026-08-05T07:56:57.969401+00:00",
+  "conversation_app_running": false,
+  "file_status": "running",
+  "counts": {
+    "adequate": 0,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 0,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 0,
+  "professional_decision": "no_decision",
+  "summary": "Actividad express_preferences; adecuadas=0; parciales=0; incorrectas=0; sin respuesta=0; pistas=0; decisión=no_decision."
+}

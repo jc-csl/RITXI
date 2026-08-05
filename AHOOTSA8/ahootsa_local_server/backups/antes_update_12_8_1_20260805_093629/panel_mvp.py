@@ -377,7 +377,7 @@ def panel_bootstrap(db: Session = Depends(get_db)) -> dict[str, Any]:
     stale = _stale_state()
 
     return {
-        "version": "0.12.8.2",
+        "version": "0.12.7.2",
         "users": [_user_dict(user) for user in users],
         "activities": session_preparation_service.list_activities(),
         "services": services,
@@ -756,111 +756,6 @@ def get_panel_session_summary(
 
     return _panel_summary(session)
 
-
-
-@router.post("/panel/api/sessions/{session_id}/finalize-record")
-def finalize_session_record_only(
-    session_id: int,
-    payload: PanelFinishRequest,
-    db: Session = Depends(get_db),
-) -> dict[str, Any]:
-    session = db.get(models.SessionRecord, session_id)
-
-    if session is None:
-        raise HTTPException(
-            status_code=404,
-            detail="Sesión no encontrada.",
-        )
-
-    if session.status != "active":
-        return _panel_summary(session)
-
-    activity = _current_activity(session)
-    activity_key = activity["key"] if activity else None
-
-    db.add(
-        models.SessionEvent(
-            session_id=session.id,
-            event_type="activity_completed",
-            source="panel",
-            activity=activity_key,
-            value_text=(
-                "Actividad finalizada desde el cierre operativo."
-            ),
-            metadata_json=json.dumps(
-                {
-                    "level": (
-                        activity.get("level")
-                        if activity
-                        else None
-                    ),
-                    "record_only": True,
-                },
-                ensure_ascii=False,
-            ),
-        )
-    )
-    db.add(
-        models.SessionEvent(
-            session_id=session.id,
-            event_type="professional_decision",
-            source="panel",
-            activity=activity_key,
-            value_text=(
-                payload.note.strip()
-                if payload.note
-                else None
-            ),
-            metadata_json=json.dumps(
-                {
-                    "decision": payload.decision,
-                    "record_only": True,
-                },
-                ensure_ascii=False,
-            ),
-        )
-    )
-
-    session.status = "finished"
-    session.finished_at = datetime.utcnow()
-    db.flush()
-
-    summary = _panel_summary(session)
-    session.summary = (
-        payload.note.strip()
-        if payload.note
-        else (
-            f"Actividad {activity_key or 'sin actividad'}; "
-            f"adecuadas={summary['counts']['adequate']}; "
-            f"parciales={summary['counts']['partial']}; "
-            f"incorrectas={summary['counts']['incorrect']}; "
-            f"sin respuesta={summary['counts']['no_response']}; "
-            f"pistas={summary['counts']['hint']}; "
-            f"decisión={payload.decision}."
-        )
-    )
-
-    db.add(
-        models.SessionEvent(
-            session_id=session.id,
-            event_type="session_finished",
-            source="panel",
-            value_text=session.summary,
-        )
-    )
-    db.commit()
-    db.refresh(session)
-
-    result = _panel_summary(session)
-
-    session_preparation_service.finalize_session_files(
-        session.id,
-        finished_at=session.finished_at,
-        decision=payload.decision,
-        summary=result,
-    )
-
-    return result
 
 def _complete_session(
     *,

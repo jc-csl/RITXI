@@ -377,7 +377,7 @@ def panel_bootstrap(db: Session = Depends(get_db)) -> dict[str, Any]:
     stale = _stale_state()
 
     return {
-        "version": "0.12.8.2",
+        "version": "0.12.8.1",
         "users": [_user_dict(user) for user in users],
         "activities": session_preparation_service.list_activities(),
         "services": services,

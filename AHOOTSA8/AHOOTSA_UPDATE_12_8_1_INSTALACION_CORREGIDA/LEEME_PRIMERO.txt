@@ -1,0 +1,14 @@
+AHOOTSA 12.8.1 — LEER ANTES DE EJECUTAR
+
+NO ENTRE EN LA CARPETA payload.
+NO EJECUTE LIMPIAR_PROCESOS_AHOOTSA.ps1 DESDE payload.
+
+Ejecute únicamente:
+
+1) COMPROBAR_PAQUETE_12_8_1.ps1
+2) APLICAR_UPDATE_12_8_1.ps1
+
+desde esta misma carpeta de actualización.
+
+El instalador archivará automáticamente la carpeta
+D:\RITXI\AHOOTSA8\payload que quedó de la extracción anterior.

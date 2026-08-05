@@ -1,0 +1,55 @@
+AHOOTSA UPDATE 12.8
+Arranque completo y scripts limpios
+
+1. DESCOMPRIMIR
+
+D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_8_ARRANQUE_Y_SCRIPTS_LIMPIOS
+
+2. COMPROBAR EL PAQUETE
+
+cd D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_8_ARRANQUE_Y_SCRIPTS_LIMPIOS
+.\COMPROBAR_PAQUETE_12_8.ps1
+
+3. INSTALAR
+
+.\APLICAR_UPDATE_12_8.ps1
+
+4. ARRANQUE COMPLETO
+
+cd D:\RITXI\AHOOTSA8
+.\INICIAR_AHOOTSA.ps1
+
+El script:
+- cierra procesos anteriores;
+- libera 7860, 8100 y 8000;
+- inicia servidor;
+- inicia daemon;
+- abre el panel;
+- espera la preparación de la sesión;
+- inicia la Conversation App.
+
+5. ANÓNIMO INMEDIATO
+
+.\INICIAR_AHOOTSA.ps1 -Anonimo
+
+6. FINALIZAR SESIÓN
+
+.\FINALIZAR_SESION_AHOOTSA.ps1
+
+7. FINALIZAR Y DETENER TODO
+
+.\FINALIZAR_SESION_AHOOTSA.ps1 -DetenerTodo
+
+8. COMPROBAR
+
+.\COMPROBAR_AHOOTSA.ps1
+
+9. CERRAR PROCESOS Y LIBERAR PUERTOS
+
+.\LIMPIAR_PROCESOS_AHOOTSA.ps1
+
+PUERTOS
+
+8000 daemon
+8100 servidor local
+7860 Conversation App

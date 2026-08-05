@@ -1,0 +1,53 @@
+AHOOTSA UPDATE 12.8.1
+Instalación corregida y reparación de la extracción anterior
+
+IMPORTANTE
+
+No ejecutar ningún script de la carpeta payload.
+payload es una carpeta interna del instalador.
+
+FORMA CORRECTA DE DESCOMPRIMIR
+
+1. Abrir el ZIP.
+2. Extraerlo dentro de:
+
+D:\RITXI\AHOOTSA8
+
+3. Debe crearse esta carpeta:
+
+D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_8_1_INSTALACION_CORREGIDA
+
+4. Dentro de ella deben verse directamente:
+
+APLICAR_UPDATE_12_8_1.ps1
+COMPROBAR_PAQUETE_12_8_1.ps1
+LEEME_PRIMERO.txt
+payload
+docs
+
+COMPROBAR
+
+cd D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_8_1_INSTALACION_CORREGIDA
+.\COMPROBAR_PAQUETE_12_8_1.ps1
+
+INSTALAR
+
+.\APLICAR_UPDATE_12_8_1.ps1
+
+EL INSTALADOR REPARA AUTOMÁTICAMENTE
+
+- D:\RITXI\AHOOTSA8\payload creado por la extracción anterior;
+- APLICAR_UPDATE_12_8.ps1 dejado en la raíz;
+- COMPROBAR_PAQUETE_12_8.ps1 dejado en la raíz;
+- INSTRUCCIONES_UPDATE_12_8.txt dejado en la raíz;
+- scripts operativos antiguos;
+- procesos que ocupen 7860, 8100 y 8000.
+
+No elimina esos archivos sin copia. Los mueve al backup:
+
+D:\RITXI\AHOOTSA8\ahootsa_local_server\backups\antes_update_12_8_1_FECHA
+
+DESPUÉS DE INSTALAR
+
+cd D:\RITXI\AHOOTSA8
+.\INICIAR_AHOOTSA.ps1

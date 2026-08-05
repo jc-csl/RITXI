@@ -1,0 +1,11 @@
+AHOOTSA 12.8.2
+
+Hay dos arranques diferentes:
+
+INICIAR_AHOOTSA_ANONIMO.ps1
+  No utiliza servidor local ni panel.
+
+INICIAR_AHOOTSA_SESION.ps1
+  Inicia servidor, daemon y panel para crear una sesión identificada.
+
+No ejecutar ningún archivo dentro de payload.

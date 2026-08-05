@@ -200,7 +200,7 @@ function Stop-AhootsaPortProcess {
 
     if ($ProcessIds.Count -eq 0) {
         Write-Host (
-            "${ServiceName}: puerto $Port libre."
+            "$ServiceName: puerto $Port libre."
         ) -ForegroundColor DarkGray
 
         return $false
@@ -215,7 +215,7 @@ function Stop-AhootsaPortProcess {
             -ProcessId $ProcessId
 
         Write-Host (
-            "${ServiceName}: cerrando PID $ProcessId " +
+            "$ServiceName: cerrando PID $ProcessId " +
             "($($Description.Name)) en el puerto $Port..."
         ) -ForegroundColor Yellow
 
@@ -226,7 +226,7 @@ function Stop-AhootsaPortProcess {
                 -ErrorAction Stop
         } catch {
             Write-Host (
-                "${ServiceName}: no se pudo cerrar el PID $ProcessId."
+                "$ServiceName: no se pudo cerrar el PID $ProcessId."
             ) -ForegroundColor Yellow
         }
     }
@@ -242,7 +242,7 @@ function Stop-AhootsaPortProcess {
     }
 
     Write-Host (
-        "${ServiceName}: puerto $Port liberado."
+        "$ServiceName: puerto $Port liberado."
     ) -ForegroundColor Green
 
     return $true
@@ -292,7 +292,7 @@ function Stop-AhootsaCommandProcesses {
         }
 
         Write-Host (
-            "${ServiceName}: cerrando proceso residual PID $ProcessId..."
+            "$ServiceName: cerrando proceso residual PID $ProcessId..."
         ) -ForegroundColor Yellow
 
         try {
@@ -302,7 +302,7 @@ function Stop-AhootsaCommandProcesses {
                 -ErrorAction Stop
         } catch {
             Write-Host (
-                "${ServiceName}: no se pudo cerrar el PID $ProcessId."
+                "$ServiceName: no se pudo cerrar el PID $ProcessId."
             ) -ForegroundColor Yellow
         }
     }

@@ -1,4 +1,4 @@
-# ARQUITECTURA Y FUNCIONALIDAD — AHOOTSA 0.12.8
+# ARQUITECTURA Y FUNCIONALIDAD — AHOOTSA 0.12.8.1
 
 ## Arquitectura principal
 
@@ -77,3 +77,18 @@ La limpieza de procesos no elimina:
 - informes;
 - logs;
 - actividades.
+
+
+## Procedimiento de actualización
+
+La carpeta `payload` pertenece exclusivamente al paquete de actualización.
+Nunca debe copiarse ni ejecutarse manualmente desde la raíz del proyecto.
+
+El único punto de entrada de instalación es:
+
+```text
+APLICAR_UPDATE_12_8_1.ps1
+```
+
+La estructura final operativa no contiene una carpeta `payload` en
+`D:\RITXI\AHOOTSA8`.

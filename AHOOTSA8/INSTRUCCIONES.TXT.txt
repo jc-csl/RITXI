@@ -1,0 +1,135 @@
+He separado completamente los dos modos de inicio:
+
+[Descargar AHOOTSA_UPDATE_12_8_2_DOS_MODOS_DE_ARRANQUE.zip](sandbox:/mnt/data/AHOOTSA_UPDATE_12_8_2_DOS_MODOS_DE_ARRANQUE.zip)
+
+## 1. Inicio anónimo
+
+```powershell
+cd D:\RITXI\AHOOTSA8
+.\INICIAR_AHOOTSA_ANONIMO.ps1
+```
+
+Este modo:
+
+* cierra procesos anteriores;
+* libera los puertos 8000, 8100 y 7860;
+* inicia únicamente el daemon y MuJoCo en `8000`;
+* inicia la Conversation App en `7860`;
+* no inicia el servidor local `8100`;
+* no abre el panel;
+* no identifica a ninguna persona;
+* no crea una sesión;
+* no genera informe personal;
+* utiliza el perfil general `ahootsa`, nunca `ahootsa_session`.
+
+## 2. Inicio con sesión local
+
+```powershell
+cd D:\RITXI\AHOOTSA8
+.\INICIAR_AHOOTSA_SESION.ps1
+```
+
+Este modo:
+
+* cierra procesos anteriores;
+* libera los tres puertos;
+* inicia el servidor local en `8100`;
+* inicia el daemon y MuJoCo en `8000`;
+* abre el panel profesional;
+* todavía no inicia la Conversation App.
+
+En el panel se realiza:
+
+```text
+Crear o seleccionar persona
+→ elegir actividad
+→ elegir nivel
+→ pulsar Preparar
+→ pulsar Iniciar conversación
+```
+
+En ese momento se inicia la Conversation App en `7860` con:
+
+```text
+ahootsa_session
+```
+
+y se guarda la sesión identificada para generar sus informes.
+
+## Estructura final
+
+En la raíz quedarán:
+
+```text
+D:\RITXI\AHOOTSA8
+├── INICIAR_AHOOTSA_ANONIMO.ps1
+├── INICIAR_AHOOTSA_SESION.ps1
+├── FINALIZAR_SESION_AHOOTSA.ps1
+├── COMPROBAR_AHOOTSA.ps1
+└── LIMPIAR_PROCESOS_AHOOTSA.ps1
+```
+
+El antiguo:
+
+```text
+INICIAR_AHOOTSA.ps1
+```
+
+se archiva para evitar confusiones.
+
+## Instalación
+
+Extrae el ZIP dentro de:
+
+```text
+D:\RITXI\AHOOTSA8
+```
+
+Se creará:
+
+```text
+D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_8_2_DOS_MODOS_DE_ARRANQUE
+```
+
+No ejecutes ningún archivo dentro de `payload`.
+
+Primero comprueba:
+
+```powershell
+cd D:\RITXI\AHOOTSA8\AHOOTSA_UPDATE_12_8_2_DOS_MODOS_DE_ARRANQUE
+.\COMPROBAR_PAQUETE_12_8_2.ps1
+```
+
+Después instala:
+
+```powershell
+.\APLICAR_UPDATE_12_8_2.ps1
+```
+
+El instalador también detecta y archiva la carpeta incorrecta:
+
+```text
+D:\RITXI\AHOOTSA8\payload
+```
+
+que quedó de la extracción anterior, junto con los scripts antiguos. No los elimina sin copia: los mueve al directorio de backups del servidor local.
+
+## Finalizar
+
+Para terminar una conversación o sesión:
+
+```powershell
+cd D:\RITXI\AHOOTSA8
+.\FINALIZAR_SESION_AHOOTSA.ps1
+```
+
+El script detecta automáticamente el modo:
+
+* anónimo: cierra la Conversation App sin arrancar el servidor local ni generar informe;
+* sesión local: cierra la conversación, finaliza la sesión y genera PDF, HTML, JSON y transcripción.
+
+Para detener además servidor y daemon:
+
+```powershell
+.\FINALIZAR_SESION_AHOOTSA.ps1 -DetenerTodo
+```
