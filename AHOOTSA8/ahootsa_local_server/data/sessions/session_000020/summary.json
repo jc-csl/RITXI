@@ -1,0 +1,36 @@
+{
+  "session_id": 20,
+  "status": "finished",
+  "user": {
+    "external_id": "SICO",
+    "name": "SICO",
+    "preferred_name": "SICO"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-08-05T10:24:45.748395",
+  "finished_at": null,
+  "duration_seconds": 39.9,
+  "duration_minutes": 0.66,
+  "duration_source": "prepared",
+  "prepared_at": "2026-08-05T10:24:45.774497+00:00",
+  "running_at": null,
+  "conversation_app_running": false,
+  "file_status": "launching",
+  "counts": {
+    "adequate": 0,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 0,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 0,
+  "professional_decision": "no_decision",
+  "summary": "Sesión finalizada al cerrar la Conversation App. La transcripción se ha importado automáticamente. La evaluación y el cambio de nivel corresponden al profesional."
+}

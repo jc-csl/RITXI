@@ -1,0 +1,32 @@
+Usuario: Hola Mimi, ¿qué sabes hacer?
+Usuario: Hola Mimi, ¿qué sabes hacer?
+Aocha: Puedo hablar contigo y hacer actividades sencillas. Por ejemplo, podemos hablar de MITOLOGIA EN EUSKAL HERRIA o expresar preferencias. Qué prefieres?
+Usuario: Sabes bailar.
+Aocha: Sí, puedo bailar. Si quieres, puedo hacer Baile 1 o Las Ketchup. Cuál prefieres?
+Usuario: Prefiero fecha.
+Aocha: No lo he entendido bien. Quieres decir fiesta?
+Usuario: no, elige tú.
+Aocha: Prefiero empezar con Las Ketchup. Quieres verlo?
+Usuario: See
+Aocha: Vamos a bailar!
+Aocha: �️ U sed tool play_ahootsa_dance with args {"dance_id":"las-ketchup"}. The tool is now running. Tool ID: play_ahootsa_dance-call_4a884727ce254fe6a24a2d245ff192da-19176.5
+Aocha: {"status": "completed", " activity": "vamos_a_bailar", "dance_id": "las-ketchup", "name": "Las Ketchup", "duration_seconds": 15.014, "movement_duration_seconds": 14.999, "audio_duration_seconds": 15.014, "audio": true, "audio_mode": "shared_appsrc", "microphone_preserved": true, "replaced_previous": false, "auto_stopped": true, "follow_up_instruction": "El baile ya ha terminado. Di una frase breve como 'Ya hemos terminado el baile' y haz una sola pregunta sencilla para continuar, por ejemplo si l…
+Aocha: Ya hemos terminado el baile. Te ha gustado?
+Usuario: Sí, habla de lo que me gusta.
+Aocha: Claro. Te gusta la MITOLO GIA EN EUSKAL HERRIA. Quieres hablar de un ser mitológico o de una leyenda?
+Usuario: Si dime tú una leyenda.
+Aocha: Claro. Una leyenda muy conocida es la de Mari. Mari es una figura muy importante en la mitología vasca.
+Aocha: Se dice que vive en cuevas y montes, y que puede traer tormentas o buen tiempo. Quieres que te cuente un poco más de Mari?
+Usuario: A ver sí.
+Aocha: Sí. Mari es una dama poderosa de la naturaleza. A veces aparece peinándose con un peine de oro.
+Aocha: Quieres saber dónde dicen que vive?
+Usuario: si cuenta todo lo que sepas.
+Aocha: Mari es uno de los seresmás importantes de la mitología vasca. Se la ve como una gran señora de la naturaleza, unida a la tierra, las cuevas, las montañas y el tiempo. La tradición dice que vive en cuevas de montes como Anboto, aunque también aparece en otros lugares.
+Aocha: No siempre está en el mismo sitio. A veces se cuenta que se traslada de una montaña a otra, y que cuando cambia de lugar puede cambiar también el tiempo. Muchas historias la describen como una mujer muy bella y fuerte.
+Aocha: A veces aparece peinándose con un peine de oro. Otras veces se presenta rodeada de luz, fuego o aire. En algunos relatos cruza el cielo como unallama.
+Aocha: Mari no suele ser un personaje malo sin más. Representa fuerza, orden y poder natural. En muchas leyendas castiga la mentira, el robo, la falta de respeto o la soberbia.
+Aocha: En cambio, valora la verdad y la palabra dada. Alrededor de Mari aparecen otros seres y personajes. Uno de los más conocidos es Sugaar, que en algunas tradiciones se relaciona con ella.
+Aocha: Sugaar suele aparecer con forma de serpiente o de ser luminoso. También están las lamias, que son otros seres míticos muy famosos del País Vasco. Las cuevas son muy importantes en estas leyendas.
+Aocha: No son solo un lugar físico. También parecen una puerta a un mundo misterioso, profundo y sagrado. Por eso Mari está tan unida a montes y grutas.
+Aocha: Estas historias se contaban de forma oral. Por eso cambian un poco según el pueblo o la zona. No hay una sola versión exacta.
+Aocha: Eso hace que la mitología vasca sea muy rica y muy viva. Si quieres, puedo contarte ahora una historia concreta de Mari en Anboto.

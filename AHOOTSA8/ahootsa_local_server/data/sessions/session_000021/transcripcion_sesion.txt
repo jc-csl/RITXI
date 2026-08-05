@@ -1,0 +1,14 @@
+Usuario: Hola, ¿sabes quién soy?
+Aocha: Sí. Eres FULANITO. Quieres música o un cuento?
+Usuario: y sabes que cosas me gustan ono o no me gustan
+Aocha: Ahora mismo no tengo másinformación sobre tus gustos. Si quieres, me puedes decir una cosa que te guste.
+Usuario: Me gusta hacer su locus.
+Aocha: Gracias por decírmelo. No he entendido bien "su locus". Me lo repites con otras palabras?
+Usuario: Sudoku.
+Aocha: Vale, gracias.
+Aocha: �️ U sed tool remember with args {"fact":"Le gusta hacer sudokus."}. The tool is now running. Tool ID: remember-call_7a98a126c88d40fba5cfeb9beb1a 21ae-14771.156
+Aocha: Te gusta hacer sudokus. Muy bien. Prefieres música o un cuento?
+Usuario: saber lo que es un sudoku.
+Aocha: Sí. Un sudoku es un juego de números. Hay que colocar números sin repetirlos.
+Usuario: y dime, ¿podrías hablar un español de España muy natural sin ese acento liri que tienes?
+Aocha: Sí, claro. Hablaré en unespañol de España lo más natural posible. Quieres que siga así?

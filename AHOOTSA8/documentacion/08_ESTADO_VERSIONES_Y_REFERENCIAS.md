@@ -4,7 +4,7 @@
 
 ```text
 Fecha de revisión: 5 de agosto de 2026
-Servidor Ahootsa: 0.12.8.2
+Servidor Ahootsa: 0.12.8.6
 Aplicación incluida: 0.9.0
 SDK: 1.9.0
 MuJoCo: 3.3.0
@@ -97,3 +97,13 @@ Se han revisado especialmente:
 
 Los documentos históricos siguen siendo útiles para conocer decisiones, pero
 no sustituyen este manual operativo.
+
+
+## Cambios funcionales de 0.12.8.6
+
+- saludo literal con nombre en sesiones identificadas;
+- uso de intereses registrados en el saludo inicial;
+- saludo por defecto cuando no existen intereses;
+- finalización automática de bailes;
+- continuación hablada tras terminar un baile;
+- documentación detallada del ciclo `ahootsa_default → ahootsa_session`.

@@ -29,7 +29,7 @@ lenguaje debe ser adulto, claro, respetuoso y no infantilizante.
 ## 2. Estado técnico de referencia
 
 ```text
-Ahootsa Local Server: 0.12.8.2
+Ahootsa Local Server: 0.12.8.6
 Reachy Mini Conversation App incluida: 0.9.0
 Reachy Mini SDK: 1.9.0
 MuJoCo: 3.3.0
@@ -38,7 +38,7 @@ Sistema: Windows 10/11
 PowerShell: compatible con 5.1
 Backend: Hugging Face realtime deployed
 Transcripción: español
-Voz: Serena
+Voz: Sohee
 ```
 
 Ruta principal:
@@ -191,10 +191,10 @@ scripts\iniciar_conversation_sesion.ps1
 Panel actual:
 
 ```text
-http://127.0.0.1:8100/panel-12-7-2
+http://127.0.0.1:8100/panel-12-8-5
 ```
 
-No cambiar esta ruta solo porque el servidor sea 0.12.8.2; está referenciada
+No cambiar esta ruta solo porque el servidor sea 0.12.8.6; está referenciada
 por scripts.
 
 ## 9. Perfiles
@@ -314,3 +314,16 @@ Documentación revisada el 5 de agosto de 2026:
 La instalación descrita utiliza las versiones fijadas por el repositorio
 AHOOTSA8. No debe sustituirse automáticamente por la última versión del
 repositorio oficial de Pollen Robotics.
+
+
+## 14. Reglas incorporadas en 0.12.8.6
+
+- Crear una persona solo modifica SQLite.
+- Pulsar `Preparar` reconstruye el perfil fijo `ahootsa_session` desde
+  `ahootsa_default`.
+- El saludo de sesión debe decir literalmente el nombre preferido.
+- Si hay intereses registrados, el saludo debe mencionarlos y ofrecer hablar
+  de ellos.
+- `play_ahootsa_dance` debe finalizar automáticamente y provocar una respuesta
+  hablada breve al terminar.
+- No debe modificarse `src` para implementar estas funciones.

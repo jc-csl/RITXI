@@ -1,0 +1,83 @@
+{
+  "report_version": "1.1",
+  "generated_at": "2026-08-05T10:25:25.996023+00:00",
+  "mode": "identified_session",
+  "session_id": 20,
+  "status": "finished",
+  "user": {
+    "external_id": "SICO",
+    "name": "SICO",
+    "preferred_name": "SICO",
+    "language": "es",
+    "notes": "prueba"
+  },
+  "profile": {
+    "communication_style": "simple",
+    "speech_speed": "normal",
+    "response_wait_seconds": 5.0,
+    "preferred_interaction_mode": "mixed",
+    "preferred_reinforcement": "refuerzo verbal positivo",
+    "interests": "DEPORTE",
+    "avoid_topics": "ESCUELA",
+    "accessibility_notes": null,
+    "max_instructions_per_turn": 2
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "description": "Actividad comunicativa guiada para elegir, explicar y conversar sobre preferencias.",
+    "level": "initial",
+    "level_title": "Inicial",
+    "objective": "Elegir entre dos opciones y expresar una preferencia básica.",
+    "max_options": 2,
+    "rules": [
+      "Utiliza frases muy breves y una única pregunta por turno.",
+      "Ofrece como máximo dos opciones.",
+      "Acepta respuestas de una o varias palabras.",
+      "Espera el tiempo indicado antes de repetir.",
+      "Refuerza positivamente cualquier intento de respuesta."
+    ],
+    "first_prompt": "¿Qué prefieres: música o un cuento?"
+  },
+  "timing": {
+    "prepared_at": "2026-08-05T10:24:45.774497+00:00",
+    "running_at": null,
+    "finished_at": "2026-08-05T10:25:25.661081+00:00",
+    "duration_seconds": 39.91,
+    "duration_minutes": 0.67
+  },
+  "professional_control": {
+    "decision": "no_decision",
+    "automatic_level_change": false,
+    "automatic_clinical_evaluation": false
+  },
+  "counts": {
+    "total_events": 6,
+    "user_responses": 0,
+    "correct_responses": 0,
+    "incorrect_responses": 0,
+    "unanswered_responses": 0,
+    "hints_given": 0,
+    "silences_detected": 0,
+    "errors_detected": 0
+  },
+  "automatic_observations": [
+    "No se registraron respuestas del usuario."
+  ],
+  "automatic_summary_text": "Usuario: SICO\nDuración: 0.7 minutos\nActividades iniciadas: 1\nActividades completadas: 1\nRespuestas registradas: 0\nRespuestas correctas: 0\nRespuestas incorrectas: 0\nObservaciones:\n- No se registraron respuestas del usuario.",
+  "transcription": {
+    "log_file": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000020\\conversation_app.log",
+    "final_roles_detected": 0,
+    "dialogue_roles_imported_or_existing": 0,
+    "created_event_ids_this_run": [],
+    "turns": []
+  },
+  "event_ids": [
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+  ]
+}

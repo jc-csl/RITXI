@@ -1,0 +1,18 @@
+Usuario: Uno, dos.
+Usuario: Uno, dos. Hola.
+Aocha: Hola. Qué prefieres: música o un cuento?
+Usuario: Hola, ¿sabes quién soy?
+Aocha: Sí. Eres FULANITO. Quieres música o un cuento?
+Usuario: Dime qué cosas sabes de mi.
+Aocha: Sé que te gusta hacer sudokus y andar en bici. También prefieres hablar en español. Quieres música o un cuento?
+Usuario: Puedes hablar más rápido.
+Aocha: Sí, puedo hablar un pocomás rápido. Qué prefieres: música o un cuento?
+Usuario: ¿Qué música sabes?
+Aocha: Puedo hacer Las Ketchup o Thriller. Cuál prefieres?
+Usuario: Prefiero thriller.
+Aocha: Vamos a bailar!
+Aocha: �️ U sed tool play_ahootsa_dance with args {"dance_id":"michael-jackson-thriller"}. The tool is now running. Tool ID: play_ahootsa_dance-call_d99be506b6394197a2c520c700fc9d9e-16422.593
+Usuario: Hola, si yo sé.
+Aocha: Hola. Si quieres, puedo parar el baile.
+Usuario: sí, claro, para lo ir.
+Aocha: Vale, lo paro.

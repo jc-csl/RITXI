@@ -1,0 +1,120 @@
+{
+  "report_version": "1.1",
+  "generated_at": "2026-08-05T10:21:54.741583+00:00",
+  "mode": "identified_session",
+  "session_id": 19,
+  "status": "finished",
+  "user": {
+    "external_id": "SICO",
+    "name": "SICO",
+    "preferred_name": "SICO",
+    "language": "es",
+    "notes": "prueba"
+  },
+  "profile": {
+    "communication_style": "simple",
+    "speech_speed": "normal",
+    "response_wait_seconds": 5.0,
+    "preferred_interaction_mode": "mixed",
+    "preferred_reinforcement": "refuerzo verbal positivo",
+    "interests": "DEPORTE",
+    "avoid_topics": "ESCUELA",
+    "accessibility_notes": null,
+    "max_instructions_per_turn": 2
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "description": "Actividad comunicativa guiada para elegir, explicar y conversar sobre preferencias.",
+    "level": "initial",
+    "level_title": "Inicial",
+    "objective": "Elegir entre dos opciones y expresar una preferencia básica.",
+    "max_options": 2,
+    "rules": [
+      "Utiliza frases muy breves y una única pregunta por turno.",
+      "Ofrece como máximo dos opciones.",
+      "Acepta respuestas de una o varias palabras.",
+      "Espera el tiempo indicado antes de repetir.",
+      "Refuerza positivamente cualquier intento de respuesta."
+    ],
+    "first_prompt": "¿Qué prefieres: música o un cuento?"
+  },
+  "timing": {
+    "prepared_at": "2026-08-05T10:10:18.746055+00:00",
+    "running_at": "2026-08-05T10:10:42.498746+00:00",
+    "finished_at": "2026-08-05T10:12:06.809410+00:00",
+    "duration_seconds": 108.09,
+    "duration_minutes": 1.8
+  },
+  "professional_control": {
+    "decision": "no_decision",
+    "automatic_level_change": false,
+    "automatic_clinical_evaluation": false
+  },
+  "counts": {
+    "total_events": 12,
+    "user_responses": 3,
+    "correct_responses": 0,
+    "incorrect_responses": 0,
+    "unanswered_responses": 3,
+    "hints_given": 0,
+    "silences_detected": 0,
+    "errors_detected": 0
+  },
+  "automatic_observations": [
+    "La sesión se desarrolló sin incidencias destacables."
+  ],
+  "automatic_summary_text": "Usuario: SICO\nDuración: 1.8 minutos\nActividades iniciadas: 1\nActividades completadas: 1\nRespuestas registradas: 3\nRespuestas correctas: 0\nRespuestas incorrectas: 0\nObservaciones:\n- La sesión se desarrolló sin incidencias destacables.",
+  "transcription": {
+    "log_file": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000019\\conversation_app.log",
+    "final_roles_detected": 7,
+    "dialogue_roles_imported_or_existing": 6,
+    "created_event_ids_this_run": [],
+    "turns": [
+      {
+        "source_index": 1,
+        "role": "user",
+        "content": "Hola, ¿sabes quién soy?"
+      },
+      {
+        "source_index": 2,
+        "role": "assistant",
+        "content": "Sí. Eres SICO. Quieres hablar de música o de deporte?"
+      },
+      {
+        "source_index": 3,
+        "role": "user",
+        "content": "Hola, dime qué cosas sabes demí."
+      },
+      {
+        "source_index": 4,
+        "role": "assistant",
+        "content": "Sé que te llamas SICO y que te gusta el deporte. Quieres hablar de deporte o de música?"
+      },
+      {
+        "source_index": 5,
+        "role": "user",
+        "content": "¿Sabes si hay algo que no me gusta?"
+      },
+      {
+        "source_index": 6,
+        "role": "assistant",
+        "content": "Sí. Ahora mismo prefieroevitar hablar de la escuela. Quieres hablar de deporte o de música?"
+      }
+    ]
+  },
+  "event_ids": [
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266
+  ]
+}

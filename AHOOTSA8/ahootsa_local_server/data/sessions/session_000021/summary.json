@@ -1,0 +1,36 @@
+{
+  "session_id": 21,
+  "status": "finished",
+  "user": {
+    "external_id": "FULANITO",
+    "name": "FULANITO",
+    "preferred_name": "FULANITO"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-08-05T10:29:18.796265",
+  "finished_at": null,
+  "duration_seconds": 122.8,
+  "duration_minutes": 2.05,
+  "duration_source": "running",
+  "prepared_at": "2026-08-05T10:29:18.821801+00:00",
+  "running_at": "2026-08-05T10:29:41.492868+00:00",
+  "conversation_app_running": true,
+  "file_status": "running",
+  "counts": {
+    "adequate": 0,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 0,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 0,
+  "professional_decision": "no_decision",
+  "summary": "Actividad express_preferences; adecuadas=0; parciales=0; incorrectas=0; sin respuesta=0; pistas=0; decisión=no_decision."
+}

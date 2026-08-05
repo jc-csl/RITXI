@@ -1,0 +1,6 @@
+Usuario: Hola, ¿sabes quién soy?
+Aocha: Sí. Eres SICO. Quieres hablar de música o de deporte?
+Usuario: Hola, dime qué cosas sabes demí.
+Aocha: Sé que te llamas SICO y que te gusta el deporte. Quieres hablar de deporte o de música?
+Usuario: ¿Sabes si hay algo que no me gusta?
+Aocha: Sí. Ahora mismo prefieroevitar hablar de la escuela. Quieres hablar de deporte o de música?

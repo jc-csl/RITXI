@@ -1,0 +1,6 @@
+{
+  "generated_at": "2026-08-05T10:08:12.301144+00:00",
+  "session_id": 18,
+  "error": "HTTP 409 en http://127.0.0.1:8100/sessions/18/events: {\"detail\":\"No se pueden añadir eventos a una sesión finalizada.\"}",
+  "log_file": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000018\\conversation_app.log"
+}

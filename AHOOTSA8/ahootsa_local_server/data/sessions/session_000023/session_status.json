@@ -1,0 +1,17 @@
+{
+  "session_id": 23,
+  "status": "finished",
+  "prepared_at": "2026-08-05T11:41:39.704294+00:00",
+  "profile_name": "ahootsa_session",
+  "conversation_app_started": true,
+  "conversation_app_running": false,
+  "active_profile_directory": "D:\\RITXI\\AHOOTSA8\\reachy_mini_conversation_app\\external_content\\external_profiles\\ahootsa_session",
+  "session_directory": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000023",
+  "log_file": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000023\\conversation_app.log",
+  "launch_requested_at": "2026-08-05T11:41:42.899949+00:00",
+  "running_at": "2026-08-05T11:42:01.896034+00:00",
+  "finished_at": "2026-08-05T11:53:38.216015+00:00",
+  "professional_decision": "no_decision",
+  "active_profile_reset": true,
+  "profile_reset_at": "2026-08-05T11:53:38.498020+00:00"
+}

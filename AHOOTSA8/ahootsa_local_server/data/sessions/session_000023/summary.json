@@ -1,0 +1,36 @@
+{
+  "session_id": 23,
+  "status": "finished",
+  "user": {
+    "external_id": "MENGANITO",
+    "name": "MENGANITO",
+    "preferred_name": "MENGANITO"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "initial",
+    "level_title": "Inicial"
+  },
+  "started_at": "2026-08-05T11:41:39.676689",
+  "finished_at": null,
+  "duration_seconds": 696.3,
+  "duration_minutes": 11.61,
+  "duration_source": "running",
+  "prepared_at": "2026-08-05T11:41:39.704294+00:00",
+  "running_at": "2026-08-05T11:42:01.896034+00:00",
+  "conversation_app_running": false,
+  "file_status": "running",
+  "counts": {
+    "adequate": 0,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 0,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 0,
+  "professional_decision": "no_decision",
+  "summary": "Sesión finalizada al cerrar la Conversation App. La transcripción se ha importado automáticamente. La evaluación y el cambio de nivel corresponden al profesional."
+}

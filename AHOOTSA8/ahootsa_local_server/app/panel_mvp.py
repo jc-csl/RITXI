@@ -87,6 +87,15 @@ class ExampleUserRequest(BaseModel):
     name: str = Field(default="Álex", min_length=1, max_length=120)
 
 
+class PanelTranscriptEventRequest(BaseModel):
+    event_type: Literal["user_response", "robot_message"]
+    source: Literal["conversation_app"]
+    activity: str | None = Field(default=None, max_length=120)
+    value_text: str = Field(min_length=1, max_length=20000)
+    success: bool | None = None
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
 REPORT_FILES = {
     "pdf": ("informe_sesion.pdf", "application/pdf"),
     "html": ("informe_sesion.html", "text/html"),
@@ -97,7 +106,7 @@ REPORT_FILES = {
 
 def _panel_response() -> FileResponse:
     return FileResponse(
-        PANEL_STATIC_DIR / "panel_inline_12_7_2.html",
+        PANEL_STATIC_DIR / "panel_inline_12_8_5.html",
         media_type="text/html",
         headers={
             "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
@@ -114,6 +123,16 @@ def panel_page() -> FileResponse:
 
 @router.get("/panel-12-7-2", include_in_schema=False)
 def panel_page_12_7_2() -> FileResponse:
+    return _panel_response()
+
+
+@router.get("/panel-12-8-4", include_in_schema=False)
+def panel_page_12_8_4() -> FileResponse:
+    return _panel_response()
+
+
+@router.get("/panel-12-8-5", include_in_schema=False)
+def panel_page_12_8_5() -> FileResponse:
     return _panel_response()
 
 
@@ -377,7 +396,7 @@ def panel_bootstrap(db: Session = Depends(get_db)) -> dict[str, Any]:
     stale = _stale_state()
 
     return {
-        "version": "0.12.8.2",
+        "version": "0.12.8.7",
         "users": [_user_dict(user) for user in users],
         "activities": session_preparation_service.list_activities(),
         "services": services,
@@ -736,6 +755,83 @@ def register_quick_event(
         "event_id": event.id,
         "action": payload.action,
         "summary": _panel_summary(session),
+    }
+
+
+@router.post(
+    "/panel/api/sessions/{session_id}/conversation-events",
+    status_code=201,
+)
+def import_final_conversation_event(
+    session_id: int,
+    payload: PanelTranscriptEventRequest,
+    db: Session = Depends(get_db),
+) -> dict[str, Any]:
+    session = db.get(models.SessionRecord, session_id)
+
+    if session is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Sesión no encontrada.",
+        )
+
+    metadata = dict(payload.metadata)
+    importer = metadata.get("importer")
+    import_key = metadata.get("import_key")
+
+    if importer != "ahootsa_session_report_12_6_1":
+        raise HTTPException(
+            status_code=422,
+            detail="Importador de transcripción no autorizado.",
+        )
+
+    if not isinstance(import_key, str) or not import_key.strip():
+        raise HTTPException(
+            status_code=422,
+            detail="Falta la clave idempotente de importación.",
+        )
+
+    existing_events = list(
+        db.scalars(
+            select(models.SessionEvent).where(
+                models.SessionEvent.session_id == session_id
+            )
+        ).all()
+    )
+
+    for existing in existing_events:
+        existing_metadata = _event_metadata(existing)
+
+        if (
+            existing_metadata.get("importer") == importer
+            and existing_metadata.get("import_key") == import_key
+        ):
+            return {
+                "id": existing.id,
+                "created": False,
+                "session_status": session.status,
+            }
+
+    event = models.SessionEvent(
+        session_id=session.id,
+        event_type=payload.event_type,
+        source=payload.source,
+        activity=payload.activity,
+        value_text=payload.value_text,
+        success=payload.success,
+        metadata_json=json.dumps(
+            metadata,
+            ensure_ascii=False,
+        ),
+    )
+    db.add(event)
+    db.commit()
+    db.refresh(event)
+
+    return {
+        "id": event.id,
+        "created": True,
+        "session_status": session.status,
     }
 
 

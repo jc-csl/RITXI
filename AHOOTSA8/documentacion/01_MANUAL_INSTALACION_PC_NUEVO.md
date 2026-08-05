@@ -1,6 +1,6 @@
 # Manual de instalación de AHOOTSA8 en un PC nuevo
 
-**Versión de referencia:** 0.12.8.2  
+**Versión de referencia:** 0.12.8.6  
 **Fecha:** 5 de agosto de 2026  
 **Sistema:** Windows 10 u 11 de 64 bits  
 **Ruta de trabajo recomendada:** `D:\RITXI\AHOOTSA8`
@@ -288,7 +288,7 @@ Finalizar:
 Abrir o comprobar:
 
 ```text
-http://127.0.0.1:8100/panel-12-7-2
+http://127.0.0.1:8100/panel-12-8-5
 ```
 
 En el panel:

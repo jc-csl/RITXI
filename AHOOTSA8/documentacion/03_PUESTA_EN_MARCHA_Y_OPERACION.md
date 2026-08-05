@@ -66,7 +66,7 @@ El script:
 Panel:
 
 ```text
-http://127.0.0.1:8100/panel-12-7-2
+http://127.0.0.1:8100/panel-12-8-5
 ```
 
 ## 3. Preparar una sesión
@@ -87,7 +87,20 @@ La aplicación cambia al perfil `ahootsa_session` y abre:
 http://127.0.0.1:7860
 ```
 
-## 4. Seguimiento durante la sesión
+## 4. Comprobar el saludo personalizado
+
+Después de pulsar `Preparar`, puede revisarse antes de iniciar:
+
+```powershell
+Get-Content `
+    D:\RITXI\AHOOTSA8\reachy_mini_conversation_app\external_content\external_profiles\ahootsa_session\greeting.txt `
+    -Raw
+```
+
+El texto debe ordenar decir el nombre completo. Si la ficha contiene
+intereses, también debe mencionarlos y ofrecer hablar de ellos.
+
+## 5. Seguimiento durante la sesión
 
 Utilizar las marcas profesionales cuando corresponda:
 
@@ -104,7 +117,7 @@ Ejemplo
 Las marcas no se deducen clínicamente de la conversación. Son observaciones
 del profesional.
 
-## 5. Finalizar desde el panel
+## 6. Finalizar desde el panel
 
 El botón de cierre debe:
 
@@ -118,7 +131,7 @@ cerrar Conversation App
 → liberar la siguiente sesión
 ```
 
-## 6. Finalizar mediante script
+## 7. Finalizar mediante script
 
 Método operativo alternativo:
 
@@ -136,7 +149,7 @@ Para detener también servidor y daemon:
 El script detecta si se trata de una conversación anónima o de una sesión
 identificada.
 
-## 7. Comprobar el resultado
+## 8. Comprobar el resultado
 
 ```powershell
 .\COMPROBAR_AHOOTSA.ps1
@@ -158,13 +171,13 @@ $sesion.FullName
 Get-ChildItem $sesion.FullName
 ```
 
-## 8. Abrir el informe
+## 9. Abrir el informe
 
 ```powershell
 Start-Process "$($sesion.FullName)\informe_sesion.pdf"
 ```
 
-## 9. Cierre de jornada
+## 10. Cierre de jornada
 
 ```powershell
 .\LIMPIAR_PROCESOS_AHOOTSA.ps1
@@ -173,7 +186,25 @@ Start-Process "$($sesion.FullName)\informe_sesion.pdf"
 
 Los tres puertos deben aparecer libres.
 
-## 10. Advertencias normales en simulación
+## 11. Comportamiento esperado al terminar un baile
+
+Al terminar la música y el movimiento, Aocha debe detener automáticamente el
+baile y continuar hablando sin esperar una nueva intervención de la persona.
+
+Respuesta esperada aproximada:
+
+```text
+Ya hemos terminado el baile. ¿Te ha gustado?
+```
+
+En el log debe aparecer:
+
+```text
+Ahootsa local dance completed and auto-stopped
+status": "completed"
+```
+
+## 12. Advertencias normales en simulación
 
 Pueden aparecer avisos como:
 

@@ -203,7 +203,7 @@ evita duplicados mediante claves SHA-256 e importa eventos en el servidor.
 - SQLite;
 - ReportLab;
 - backend Hugging Face `deployed`;
-- voz Serena;
+- voz Sohee;
 - transcripción española.
 
 ## 10. Evolución futura
@@ -230,3 +230,11 @@ Documentación revisada el 5 de agosto de 2026:
 La instalación descrita utiliza las versiones fijadas por el repositorio
 AHOOTSA8. No debe sustituirse automáticamente por la última versión del
 repositorio oficial de Pollen Robotics.
+
+
+## 11. Saludo y continuación tras actividades largas
+
+El servicio de sesión crea un saludo literal usando el nombre preferido. Si el
+perfil contiene intereses, los incluye y ofrece conversar sobre ellos. La
+herramienta de baile no devuelve su resultado final al comenzar, sino al
+terminar, permitiendo que el backend genere la frase de continuación.

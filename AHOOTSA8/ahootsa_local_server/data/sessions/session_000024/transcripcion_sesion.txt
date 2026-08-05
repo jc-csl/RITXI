@@ -1,0 +1,33 @@
+Usuario: Hola, repite el mes.
+Usuario: Hola, repíteme eso.
+Usuario: esta sería el video repíteme eso estas dos ya está de hacerlo sería solo estas dos uno de primero y tres segundos para ver cómo es
+Usuario: esta sería el video repíteme sería solo estas dos uno el primero y tres segundos para ver cómo es porque esta la emoción necesita la motivación
+Usuario: esta sería el video repíteme estas dos esto de hacerlo sería solo estas dos uno el primero y tres segundos para ver cómo es porque esta la emoción necesita la motivación
+Aocha: No te he entendido del todo. Quieres que repita solo dos pasos?
+Usuario: No, repite el saludo inicial.
+Aocha: Hola, MENGANITO. Soy Aocha. Entre las cosas que te gustan tengo anotado: MITOLOGIA EN EUSKAL HERRIA.
+Aocha: Te apetece hablar de esoo prefieres empezar con expresar preferencias?
+Usuario: So you're going to see upright .
+Aocha: No lo he entendido bien. Puedes repetirlo en español, por favor?
+Usuario: Háblame de la mías.
+Aocha: Claro. La mitología en Euskal Herria tiene seres y leyendas muy conocidos, como Mari, que es una figura muy importante. Quieres que te cuente unpoco sobre Mari?
+Usuario: Habla más rápido.
+Aocha: Vale, hablaré un poco más rápido. Quieres que siga con Mari?
+Usuario: Yo creo que estas dos, estas dos.
+Usuario: Yo creo que estas dos, estas dos, sí.
+Usuario: yo creo que estas dos, estas dos, sí, estas dos
+Usuario: Yo creo que estas dos, estas dos. Sí. Estas dos.
+Usuario: Yo creo que estas dos. Estas dos. Sí. Estas dos. Ah, pues también. Es que no estoy quedando sin batería más. 4% lo voy a decir.
+Aocha: Entiendo. Te queda poca batería. Quieres seguir un poco o prefieres terminar?
+Usuario: Quiero que me cuentes algo.
+Aocha: Claro. Mari es un ser muy importante en la mitología vasca y se relaciona con la naturaleza, las montañas y las cuevas. Quieres que te cuente dónde dicen que vive?
+Usuario: Porque está
+Usuario: porque eso está sería
+Aocha: No lo he entendido bien. Quieres que te lo explique de otra manera?
+Usuario: Adelante.
+Aocha: Dicen que Mari vive en cuevas de montañas como Anboto. En muchas historias aparece y desaparece, y su presencia se relaciona con el tiempo y la fuerza de la naturaleza. Quieres otra parte?
+Usuario: No, quiero que hagas un bailede thriller.
+Aocha: Quieres verlo? Quieres verlo?
+Usuario: Yeah.
+Aocha: Vamos a bailar!
+Aocha: Ya hemos terminado el baile. Te ha gustado?

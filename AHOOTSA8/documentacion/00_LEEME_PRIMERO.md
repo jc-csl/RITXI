@@ -1,6 +1,6 @@
 # AHOOTSA8 - Documentación principal
 
-**Estado documentado:** Ahootsa Local Server 0.12.8.2  
+**Estado documentado:** Ahootsa Local Server 0.12.8.6  
 **Fecha:** 5 de agosto de 2026  
 **Sistema objetivo:** Windows 10/11, PowerShell y Python 3.12  
 **Ruta recomendada:** `D:\RITXI\AHOOTSA8`
@@ -18,6 +18,8 @@ reducido de manuales operativos.
 6. `06_CONTEXTO_PARA_AGENTE_IA_CHATGPT.md`
 7. `07_CHECKLIST_INSTALACION_Y_VALIDACION.md`
 8. `08_ESTADO_VERSIONES_Y_REFERENCIAS.md`
+9. `10_CAMBIOS_12_8_6_BAILES_Y_SALUDOS.md`
+9. `09_CAMBIOS_DOCUMENTACION_PERFILES_Y_SESIONES.md`
 
 También se incluye `MANUAL_COMPLETO_AHOOTSA8.docx`, que reúne el contenido
 principal en un único documento imprimible.
