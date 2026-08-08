@@ -1,0 +1,95 @@
+{
+  "diagnostic_version": "1.0",
+  "generated_at": "2026-08-05T13:26:09.059410+00:00",
+  "mode": "identified_session",
+  "state": "historical",
+  "session_id": 25,
+  "run_id": null,
+  "profile": "ahootsa_session",
+  "voice": null,
+  "backend_mode": null,
+  "paths": {
+    "central_log": "D:\\RITXI\\AHOOTSA8\\logs\\sessions\\session_000025\\conversation_app.log",
+    "source_log": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000025\\conversation_app.log",
+    "source_session_directory": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000025"
+  },
+  "timing": {
+    "transcript_started_at": "2026-08-05T14:42:55",
+    "transcript_finished_at": null,
+    "duration_seconds": null
+  },
+  "counts": {
+    "final_interactions": 40,
+    "user_turns": 19,
+    "assistant_turns": 21,
+    "partial_user_transcripts": 4,
+    "user_interventions": 21,
+    "tool_calls": 4,
+    "warnings": 7,
+    "errors": 2
+  },
+  "audio": {
+    "reachy_audio_usb_missing": true,
+    "default_audio_source_used": true,
+    "default_audio_sink_used": true,
+    "echo_cancellation_enabled": true,
+    "startup_config_not_applied": true,
+    "last_pipeline_latency": null
+  },
+  "dance": {
+    "spoken_start_promises": 3,
+    "tool_calls": 4,
+    "delayed_or_missing_calls": [
+      {
+        "promise_at": "2026-08-05 14:55:07,959",
+        "tool_call_at": "2026-08-05 14:55:39,654",
+        "dance_id": "dance2",
+        "delay_seconds": 31.695,
+        "missing_tool_call": false
+      },
+      {
+        "promise_at": "2026-08-05 14:56:07,411",
+        "tool_call_at": "2026-08-05 14:56:48,347",
+        "dance_id": "dance2",
+        "delay_seconds": 40.936,
+        "missing_tool_call": false
+      }
+    ],
+    "duplicate_calls": [
+      {
+        "dance_id": "dance2",
+        "first_call_at": "2026-08-05 14:56:48,347",
+        "duplicate_call_at": "2026-08-05 14:56:51,740",
+        "interval_seconds": 3.393
+      }
+    ],
+    "possible_orchestration_issue": true
+  },
+  "terminal": {
+    "last_role": "assistant",
+    "last_turn_at": "2026-08-05 14:57:41,087",
+    "transcript_finished_at": null,
+    "terminal_silence_seconds": null,
+    "possible_listening_stall": false,
+    "observation": null
+  },
+  "last_interaction": {
+    "source_index": 55,
+    "timestamp": "2026-08-05 14:57:41,087",
+    "role": "assistant",
+    "content": "Puedo contarte algo corto sobre los sudokus. Son un juego de l?gica y ayudan a pensar con calma. Quieres que te cuente m?s?"
+  },
+  "warnings": [
+    "2026-08-05 14:43:00,632 WARNING reachy_mini.media.camera_gstreamer:127 | Cannot change resolution of Mujoco simulated ca",
+    "2026-08-05 14:43:05,503 WARNING reachy_mini.media.device_detection:395 | No Reachy Mini Audio Source card found.",
+    "2026-08-05 14:43:05,503 WARNING reachy_mini.media.audio_gstreamer:152 | No specific audio card found, using default audi",
+    "2026-08-05 14:43:07,509 WARNING reachy_mini.media.device_detection:395 | No Reachy Mini Audio Sink card found.",
+    "2026-08-05 14:43:07,509 WARNING reachy_mini.media.audio_gstreamer:234 | No specific audio card found, using default audi",
+    "2026-08-05 14:43:10,740 WARNING reachy_mini.media.audio_gstreamer:202 | ReSpeaker device not found.",
+    "2026-08-05 14:43:10,744 WARNING reachy_mini_conversation_app.console:58 | Reachy audio startup config was not applied."
+  ],
+  "errors": [
+    "2026-08-05 14:43:02,860 ERROR reachy_mini.media.audio_control_utils:550 | No Reachy Mini Audio USB device found!",
+    "2026-08-05 14:43:10,740 ERROR reachy_mini.media.audio_control_utils:550 | No Reachy Mini Audio USB device found!"
+  ]
+}

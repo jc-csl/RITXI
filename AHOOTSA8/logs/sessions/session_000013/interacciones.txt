@@ -1,0 +1,8 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 13
+
+[2026-07-25 10:53:18,047] Aocha: Hola. Qué prefieres: música o un cuento?
+[2026-07-25 10:53:26,461] Persona usuaria: Prefiero la música.
+[2026-07-25 10:53:27,962] Aocha: Muy bien. Te gusta más cantar o bailar?

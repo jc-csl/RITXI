@@ -35,3 +35,22 @@ cierre técnico sea interpretado como finalización de la sesión.
 La versión 1.2 incorpora `audio_diagnostics` y puede advertir de un posible
 bloqueo de escucha cuando el último turno es de Aocha y no se registra una
 respuesta antes de un cierre muy posterior.
+
+
+## Registro centralizado 0.12.8.8
+
+Los scripts de conversación consolidan los registros bajo `AHOOTSA8\logs`.
+
+Cada ejecución genera tres archivos: el log técnico completo, la conversación
+limpia y un diagnóstico JSON. Las sesiones identificadas mantienen además el
+log original dentro de la carpeta del informe.
+
+
+## Orquestación de bailes 0.12.8.9
+
+Una elección clara de baile debe producir la llamada a
+`play_ahootsa_dance` dentro del mismo turno y antes del anuncio hablado.
+
+La herramienta 1.5 contiene además una defensa idempotente: una segunda
+llamada al mismo baile mientras continúa activo devuelve `already_running`
+y no reinicia el movimiento ni el audio.

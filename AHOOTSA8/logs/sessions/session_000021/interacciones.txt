@@ -1,0 +1,20 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 21
+
+[2026-08-05 12:29:41,093] Aocha: Hola. Qué prefieres: música o un cuento?
+[2026-08-05 12:29:48,439] Persona usuaria: Hola, ¿sabes quién soy?
+[2026-08-05 12:29:49,371] Aocha: Sí. Eres FULANITO. Quieres música o un cuento?
+[2026-08-05 12:29:57,599] Persona usuaria: y sabes que cosas me gustan ono o no me gustan
+[2026-08-05 12:29:58,480] Aocha: Ahora mismo no tengo másinformación sobre tus gustos. Si quieres, me puedes decir una cosa que te guste.
+[2026-08-05 12:30:09,208] Persona usuaria: Me gusta hacer su locus.
+[2026-08-05 12:30:10,308] Aocha: Gracias por decírmelo. No he entendido bien "su locus". Me lo repites con otras palabras?
+[2026-08-05 12:30:21,652] Persona usuaria: Sudoku.
+[2026-08-05 12:30:22,620] Aocha: Vale, gracias.
+[2026-08-05 12:30:22,651] Aocha: {"saved": "Le gusta hacer sudokus.", "memory_id": "m_1785925822637_rtr6qt"}
+[2026-08-05 12:30:24,848] Aocha: Te gusta hacer sudokus. Muy bien. Prefieres música o un cuento?
+[2026-08-05 12:30:33,466] Persona usuaria: saber lo que es un sudoku.
+[2026-08-05 12:30:34,394] Aocha: Sí. Un sudoku es un juego de números. Hay que colocar números sin repetirlos.
+[2026-08-05 12:30:50,398] Persona usuaria: y dime, ¿podrías hablar un español de España muy natural sin ese acento liri que tienes?
+[2026-08-05 12:30:51,399] Aocha: Sí, claro. Hablaré en unespañol de España lo más natural posible. Quieres que siga así?

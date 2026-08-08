@@ -1,0 +1,73 @@
+{
+  "diagnostic_version": "1.0",
+  "generated_at": "2026-08-05T13:26:08.942915+00:00",
+  "mode": "identified_session",
+  "state": "historical",
+  "session_id": 13,
+  "run_id": null,
+  "profile": "ahootsa_session",
+  "voice": null,
+  "backend_mode": null,
+  "paths": {
+    "central_log": "D:\\RITXI\\AHOOTSA8\\logs\\sessions\\session_000013\\conversation_app.log",
+    "source_log": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000013\\conversation_app.log",
+    "source_session_directory": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000013"
+  },
+  "timing": {
+    "transcript_started_at": "2026-07-25T10:52:58",
+    "transcript_finished_at": "2026-07-25T10:53:43",
+    "duration_seconds": 45.0
+  },
+  "counts": {
+    "final_interactions": 3,
+    "user_turns": 1,
+    "assistant_turns": 2,
+    "partial_user_transcripts": 1,
+    "user_interventions": 1,
+    "tool_calls": 0,
+    "warnings": 7,
+    "errors": 2
+  },
+  "audio": {
+    "reachy_audio_usb_missing": true,
+    "default_audio_source_used": true,
+    "default_audio_sink_used": true,
+    "echo_cancellation_enabled": true,
+    "startup_config_not_applied": true,
+    "last_pipeline_latency": null
+  },
+  "dance": {
+    "spoken_start_promises": 0,
+    "tool_calls": 0,
+    "delayed_or_missing_calls": [],
+    "duplicate_calls": [],
+    "possible_orchestration_issue": false
+  },
+  "terminal": {
+    "last_role": "assistant",
+    "last_turn_at": "2026-07-25 10:53:27,962",
+    "transcript_finished_at": "2026-07-25T10:53:43",
+    "terminal_silence_seconds": 15.04,
+    "possible_listening_stall": false,
+    "observation": null
+  },
+  "last_interaction": {
+    "source_index": 3,
+    "timestamp": "2026-07-25 10:53:27,962",
+    "role": "assistant",
+    "content": "Muy bien. Te gusta más cantar o bailar?"
+  },
+  "warnings": [
+    "2026-07-25 10:53:03,956 WARNING reachy_mini.media.camera_gstreamer:127 | Cannot change resolution of Mujoco simulated ca",
+    "2026-07-25 10:53:10,013 WARNING reachy_mini.media.device_detection:395 | No Reachy Mini Audio Source card found.",
+    "2026-07-25 10:53:10,013 WARNING reachy_mini.media.audio_gstreamer:152 | No specific audio card found, using default audi",
+    "2026-07-25 10:53:13,708 WARNING reachy_mini.media.device_detection:395 | No Reachy Mini Audio Sink card found.",
+    "2026-07-25 10:53:13,708 WARNING reachy_mini.media.audio_gstreamer:234 | No specific audio card found, using default audi",
+    "2026-07-25 10:53:17,162 WARNING reachy_mini.media.audio_gstreamer:202 | ReSpeaker device not found.",
+    "2026-07-25 10:53:17,163 WARNING reachy_mini_conversation_app.console:58 | Reachy audio startup config was not applied."
+  ],
+  "errors": [
+    "2026-07-25 10:53:06,148 ERROR reachy_mini.media.audio_control_utils:550 | No Reachy Mini Audio USB device found!",
+    "2026-07-25 10:53:17,161 ERROR reachy_mini.media.audio_control_utils:550 | No Reachy Mini Audio USB device found!"
+  ]
+}

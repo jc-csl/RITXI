@@ -1,0 +1,92 @@
+{
+  "diagnostic_version": "1.0",
+  "generated_at": "2026-08-05T13:26:09.018943+00:00",
+  "mode": "identified_session",
+  "state": "historical",
+  "session_id": 14,
+  "run_id": null,
+  "profile": "ahootsa_session",
+  "voice": null,
+  "backend_mode": null,
+  "paths": {
+    "central_log": "D:\\RITXI\\AHOOTSA8\\logs\\sessions\\session_000014\\conversation_app.log",
+    "source_log": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000014\\conversation_app.log",
+    "source_session_directory": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000014"
+  },
+  "timing": {
+    "transcript_started_at": "2026-07-25T21:58:46",
+    "transcript_finished_at": "2026-07-25T21:59:06",
+    "duration_seconds": 20.0
+  },
+  "counts": {
+    "final_interactions": 65,
+    "user_turns": 39,
+    "assistant_turns": 26,
+    "partial_user_transcripts": 44,
+    "user_interventions": 45,
+    "tool_calls": 3,
+    "warnings": 8,
+    "errors": 20
+  },
+  "audio": {
+    "reachy_audio_usb_missing": true,
+    "default_audio_source_used": true,
+    "default_audio_sink_used": true,
+    "echo_cancellation_enabled": true,
+    "startup_config_not_applied": true,
+    "last_pipeline_latency": null
+  },
+  "dance": {
+    "spoken_start_promises": 2,
+    "tool_calls": 2,
+    "delayed_or_missing_calls": [],
+    "duplicate_calls": [],
+    "possible_orchestration_issue": false
+  },
+  "terminal": {
+    "last_role": "assistant",
+    "last_turn_at": "2026-07-25 22:15:48,111",
+    "transcript_finished_at": "2026-07-25T21:59:06",
+    "terminal_silence_seconds": 0.0,
+    "possible_listening_stall": false,
+    "observation": null
+  },
+  "last_interaction": {
+    "source_index": 114,
+    "timestamp": "2026-07-25 22:15:48,111",
+    "role": "assistant",
+    "content": "Parece una historia personal sobre una relación. Si quieres, puedo ayudarte a resumirla o a decirla de forma más clara."
+  },
+  "warnings": [
+    "2026-07-25 22:07:57,168 WARNING reachy_mini.media.camera_gstreamer:127 | Cannot change resolution of Mujoco simulated ca",
+    "2026-07-25 22:08:02,792 WARNING reachy_mini.media.device_detection:395 | No Reachy Mini Audio Source card found.",
+    "2026-07-25 22:08:02,792 WARNING reachy_mini.media.audio_gstreamer:152 | No specific audio card found, using default audi",
+    "2026-07-25 22:08:04,953 WARNING reachy_mini.media.device_detection:395 | No Reachy Mini Audio Sink card found.",
+    "2026-07-25 22:08:04,953 WARNING reachy_mini.media.audio_gstreamer:234 | No specific audio card found, using default audi",
+    "2026-07-25 22:08:12,391 WARNING reachy_mini.media.audio_gstreamer:202 | ReSpeaker device not found.",
+    "2026-07-25 22:08:12,391 WARNING reachy_mini_conversation_app.console:58 | Reachy audio startup config was not applied.",
+    "2026-07-25 22:26:35,032 WARNING reachy_mini.media.camera_gstreamer:220 | GStreamer pipeline error (domain=gst-stream-err"
+  ],
+  "errors": [
+    "2026-07-25 21:59:05,752 ERROR reachy_mini_conversation_app.utils:147 | Connection failed: Unable to establish connection",
+    "2026-07-25 21:59:05,752 ERROR reachy_mini_conversation_app.utils:80 | Troubleshooting steps:",
+    "2026-07-25 21:59:05,752 ERROR reachy_mini_conversation_app.utils:81 |   1. Verify reachy-mini-daemon is running",
+    "2026-07-25 21:59:05,752 ERROR reachy_mini_conversation_app.utils:86 |   2. If daemon uses --robot-name, add the same fla",
+    "2026-07-25 21:59:05,752 ERROR reachy_mini_conversation_app.utils:88 |   3. For wireless: check network connectivity",
+    "2026-07-25 21:59:05,752 ERROR reachy_mini_conversation_app.utils:89 |   4. Review daemon logs",
+    "2026-07-25 21:59:05,752 ERROR reachy_mini_conversation_app.utils:90 |   5. Restart the daemon",
+    "2026-07-25 22:07:59,302 ERROR reachy_mini.media.audio_control_utils:550 | No Reachy Mini Audio USB device found!",
+    "2026-07-25 22:08:12,389 ERROR reachy_mini.media.audio_control_utils:550 | No Reachy Mini Audio USB device found!",
+    "2026-07-25 22:26:34,634 ERROR reachy_mini_conversation_app.moves:563 | Failed to set robot target: received 1012 (servic",
+    "2026-07-25 22:26:35,640 ERROR reachy_mini_conversation_app.moves:563 | Failed to set robot target: received 1012 (servic",
+    "2026-07-25 22:26:36,649 ERROR reachy_mini_conversation_app.moves:563 | Failed to set robot target: Lost connection with",
+    "2026-07-25 22:26:37,008 ERROR reachy_mini.media.audio_gstreamer:45 | Error: gst-resource-error-quark: Failed to write to",
+    "2026-07-25 22:26:37,647 ERROR reachy_mini_conversation_app.moves:563 | Failed to set robot target: Lost connection with",
+    "2026-07-25 22:26:38,639 ERROR reachy_mini_conversation_app.moves:563 | Failed to set robot target: Lost connection with",
+    "2026-07-25 22:26:39,648 ERROR reachy_mini_conversation_app.moves:563 | Failed to set robot target: Lost connection with",
+    "2026-07-25 22:26:40,642 ERROR reachy_mini_conversation_app.moves:563 | Failed to set robot target: Lost connection with",
+    "2026-07-25 22:26:41,652 ERROR reachy_mini_conversation_app.moves:563 | Failed to set robot target: Lost connection with",
+    "2026-07-25 22:26:42,051 ERROR reachy_mini_conversation_app.utils:240 | Failed to move Reachy Mini to sleep pose: Lost co",
+    "2026-07-25 22:26:46,089 ERROR reachy_mini_conversation_app.utils:32 | Failed to request current app stop via http://loca"
+  ]
+}

@@ -1,0 +1,45 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 25
+
+[2026-08-05 14:43:12,982] Aocha: Hola, FULANITO. Soy Aocha . Entre las cosas que te gustan tengo anotado: HACER SUDOKUS Y ANDAR EN BICI.
+[2026-08-05 14:43:13,108] Aocha: Te apetece hablar de esoo prefieres empezar con expresar preferencias?
+[2026-08-05 14:43:31,901] Persona usuaria: Yeah.
+[2026-08-05 14:43:32,961] Aocha: No lo he entendido bien. Prefieres hablar de tus gustos o expresar preferencias?
+[2026-08-05 14:43:39,191] Persona usuaria: This is
+[2026-08-05 14:43:40,153] Aocha: No lo he entendido bien. Prefieres hablar de tus gustos o expresar preferencias?
+[2026-08-05 14:53:32,023] Persona usuaria: Hola, un dos tres.
+[2026-08-05 14:53:32,359] Persona usuaria: Hola, un dos tres. ?Hola?
+[2026-08-05 14:53:33,461] Aocha: Hola. S?, te escucho. Qu? te apetece hacer?
+[2026-08-05 14:53:42,525] Persona usuaria: ?Qu? conoces de mi?
+[2026-08-05 14:53:43,653] Aocha: S? que te gusta hacer sudokus y andar en bici. Quieres hablar de eso?
+[2026-08-05 14:53:51,666] Persona usuaria: Expl?came que es un sudoku.
+[2026-08-05 14:53:52,683] Aocha: Un sudoku es un juego den?meros y l?gica. Tienes que llenar las casillas sin repetir n?meros en cada fila, en cada columna y en cada cuadro. Quieres que te lo explique con un ejemplo?
+[2026-08-05 14:54:16,233] Persona usuaria: ?Sabes hacer un baile?
+[2026-08-05 14:54:17,184] Aocha: S?, puedo hacer un baile. Puedo hacer Baile 1, Las Ketchup o Thriller. Cu?l prefieres?
+[2026-08-05 14:54:25,648] Persona usuaria: Baile uno.
+[2026-08-05 14:54:27,653] Aocha: Vamos a bailar!
+[2026-08-05 14:54:34,090] Aocha: Ya hemos terminado el baile. Te ha gustado?
+[2026-08-05 14:54:40,281] Persona usuaria: tiene su nombre largo.
+[2026-08-05 14:54:41,329] Aocha: No lo he entendido bien. Hablas del nombre del baile?
+[2026-08-05 14:54:49,036] Persona usuaria: quiero trabajar.
+[2026-08-05 14:54:50,076] Aocha: Muy bien. Prefieres m?sica o un cuento?
+[2026-08-05 14:54:56,191] Persona usuaria: Quiero que bailes.
+[2026-08-05 14:54:57,116] Aocha: Claro. Puedo hacer Baile 2 o Happy. Cu?l prefieres?
+[2026-08-05 14:55:07,027] Persona usuaria: Baile dos.
+[2026-08-05 14:55:07,959] Aocha: Vamos a bailar!
+[2026-08-05 14:55:38,798] Persona usuaria: Uh
+[2026-08-05 14:55:59,031] Aocha: Ya hemos terminado el baile. Qu? te apetece hacer ahora?
+[2026-08-05 14:56:06,411] Persona usuaria: Vuelve a hacer el mismo baile.
+[2026-08-05 14:56:07,411] Aocha: Vamos a bailar!
+[2026-08-05 14:56:47,022] Persona usuaria: Uno, dos, tres.
+[2026-08-05 14:56:50,807] Persona usuaria: ?Por qu? tardas tanto?
+[2026-08-05 14:56:53,042] Aocha: Perd?n por la espera. Yaest? hecho. Quieres otro baile o prefieres hablar?
+[2026-08-05 14:57:11,161] Aocha: Ya hemos terminado el baile. Te ha gustado?
+[2026-08-05 14:57:19,110] Persona usuaria: Ha sido lento.
+[2026-08-05 14:57:20,135] Aocha: Gracias por dec?rmelo. Intentar? ir m?s r?pido. Quieres otro baile?
+[2026-08-05 14:57:29,479] Persona usuaria: No quiero una actividad.
+[2026-08-05 14:57:29,962] Aocha: Vale. Podemos solo hablar . De qu? te apetece hablar?
+[2026-08-05 14:57:36,996] Persona usuaria: No, cu?ntame t? en cuanto.
+[2026-08-05 14:57:41,087] Aocha: Puedo contarte algo corto sobre los sudokus. Son un juego de l?gica y ayudan a pensar con calma. Quieres que te cuente m?s?

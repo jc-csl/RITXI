@@ -1,0 +1,37 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 23
+
+[2026-08-05 13:42:05,343] Aocha: Hola, MENGANITO. Soy Aocha. Entre las cosas que te gustan tengo anotado: MITOLOGIA EN EUSKAL HERRIA.
+[2026-08-05 13:42:06,348] Aocha: Te apetece hablar de esoo prefieres empezar con expresar preferencias?
+[2026-08-05 13:42:53,034] Persona usuaria: Hola Mimi, ¿qué sabes hacer?
+[2026-08-05 13:42:54,669] Persona usuaria: Hola Mimi, ¿qué sabes hacer?
+[2026-08-05 13:42:55,631] Aocha: Puedo hablar contigo y hacer actividades sencillas. Por ejemplo, podemos hablar de MITOLOGIA EN EUSKAL HERRIA o expresar preferencias. Qué prefieres?
+[2026-08-05 13:43:17,461] Persona usuaria: Sabes bailar.
+[2026-08-05 13:43:20,199] Aocha: Sí, puedo bailar. Si quieres, puedo hacer Baile 1 o Las Ketchup. Cuál prefieres?
+[2026-08-05 13:43:30,627] Persona usuaria: Prefiero fecha.
+[2026-08-05 13:43:31,587] Aocha: No lo he entendido bien. Quieres decir fiesta?
+[2026-08-05 13:43:38,513] Persona usuaria: no, elige tú.
+[2026-08-05 13:43:39,447] Aocha: Prefiero empezar con Las Ketchup. Quieres verlo?
+[2026-08-05 13:43:46,971] Persona usuaria: See
+[2026-08-05 13:43:47,924] Aocha: Vamos a bailar!
+[2026-08-05 13:44:05,142] Aocha: Ya hemos terminado el baile. Te ha gustado?
+[2026-08-05 13:44:13,422] Persona usuaria: Sí, habla de lo que me gusta.
+[2026-08-05 13:44:15,073] Aocha: Claro. Te gusta la MITOLO GIA EN EUSKAL HERRIA. Quieres hablar de un ser mitológico o de una leyenda?
+[2026-08-05 13:44:27,896] Persona usuaria: Si dime tú una leyenda.
+[2026-08-05 13:44:28,831] Aocha: Claro. Una leyenda muy conocida es la de Mari. Mari es una figura muy importante en la mitología vasca.
+[2026-08-05 13:44:29,066] Aocha: Se dice que vive en cuevas y montes, y que puede traer tormentas o buen tiempo. Quieres que te cuente un poco más de Mari?
+[2026-08-05 13:45:22,336] Persona usuaria: A ver sí.
+[2026-08-05 13:45:28,915] Aocha: Sí. Mari es una dama poderosa de la naturaleza. A veces aparece peinándose con un peine de oro.
+[2026-08-05 13:45:29,006] Aocha: Quieres saber dónde dicen que vive?
+[2026-08-05 13:45:49,116] Persona usuaria: si cuenta todo lo que sepas.
+[2026-08-05 13:45:50,748] Aocha: Mari es uno de los seresmás importantes de la mitología vasca. Se la ve como una gran señora de la naturaleza, unida a la tierra, las cuevas, las montañas y el tiempo. La tradición dice que vive en cuevas de montes como Anboto, aunque también aparece en otros lugares.
+[2026-08-05 13:45:51,337] Aocha: No siempre está en el mismo sitio. A veces se cuenta que se traslada de una montaña a otra, y que cuando cambia de lugar puede cambiar también el tiempo. Muchas historias la describen como una mujer muy bella y fuerte.
+[2026-08-05 13:45:51,960] Aocha: A veces aparece peinándose con un peine de oro. Otras veces se presenta rodeada de luz, fuego o aire. En algunos relatos cruza el cielo como unallama.
+[2026-08-05 13:45:52,469] Aocha: Mari no suele ser un personaje malo sin más. Representa fuerza, orden y poder natural. En muchas leyendas castiga la mentira, el robo, la falta de respeto o la soberbia.
+[2026-08-05 13:45:53,132] Aocha: En cambio, valora la verdad y la palabra dada. Alrededor de Mari aparecen otros seres y personajes. Uno de los más conocidos es Sugaar, que en algunas tradiciones se relaciona con ella.
+[2026-08-05 13:45:53,797] Aocha: Sugaar suele aparecer con forma de serpiente o de ser luminoso. También están las lamias, que son otros seres míticos muy famosos del País Vasco. Las cuevas son muy importantes en estas leyendas.
+[2026-08-05 13:45:54,359] Aocha: No son solo un lugar físico. También parecen una puerta a un mundo misterioso, profundo y sagrado. Por eso Mari está tan unida a montes y grutas.
+[2026-08-05 13:45:54,697] Aocha: Estas historias se contaban de forma oral. Por eso cambian un poco según el pueblo o la zona. No hay una sola versión exacta.
+[2026-08-05 13:45:54,975] Aocha: Eso hace que la mitología vasca sea muy rica y muy viva. Si quieres, puedo contarte ahora una historia concreta de Mari en Anboto.

@@ -1,0 +1,38 @@
+Usuario: Yeah.
+Aocha: No lo he entendido bien. Prefieres hablar de tus gustos o expresar preferencias?
+Usuario: This is
+Aocha: No lo he entendido bien. Prefieres hablar de tus gustos o expresar preferencias?
+Usuario: Hola, un dos tres.
+Usuario: Hola, un dos tres. ?Hola?
+Aocha: Hola. S?, te escucho. Qu? te apetece hacer?
+Usuario: ?Qu? conoces de mi?
+Aocha: S? que te gusta hacer sudokus y andar en bici. Quieres hablar de eso?
+Usuario: Expl?came que es un sudoku.
+Aocha: Un sudoku es un juego den?meros y l?gica. Tienes que llenar las casillas sin repetir n?meros en cada fila, en cada columna y en cada cuadro. Quieres que te lo explique con un ejemplo?
+Usuario: ?Sabes hacer un baile?
+Aocha: S?, puedo hacer un baile. Puedo hacer Baile 1, Las Ketchup o Thriller. Cu?l prefieres?
+Usuario: Baile uno.
+Aocha: Vamos a bailar!
+Aocha: Ya hemos terminado el baile. Te ha gustado?
+Usuario: tiene su nombre largo.
+Aocha: No lo he entendido bien. Hablas del nombre del baile?
+Usuario: quiero trabajar.
+Aocha: Muy bien. Prefieres m?sica o un cuento?
+Usuario: Quiero que bailes.
+Aocha: Claro. Puedo hacer Baile 2 o Happy. Cu?l prefieres?
+Usuario: Baile dos.
+Aocha: Vamos a bailar!
+Usuario: Uh
+Aocha: Ya hemos terminado el baile. Qu? te apetece hacer ahora?
+Usuario: Vuelve a hacer el mismo baile.
+Aocha: Vamos a bailar!
+Usuario: Uno, dos, tres.
+Usuario: ?Por qu? tardas tanto?
+Aocha: Perd?n por la espera. Yaest? hecho. Quieres otro baile o prefieres hablar?
+Aocha: Ya hemos terminado el baile. Te ha gustado?
+Usuario: Ha sido lento.
+Aocha: Gracias por dec?rmelo. Intentar? ir m?s r?pido. Quieres otro baile?
+Usuario: No quiero una actividad.
+Aocha: Vale. Podemos solo hablar . De qu? te apetece hablar?
+Usuario: No, cu?ntame t? en cuanto.
+Aocha: Puedo contarte algo corto sobre los sudokus. Son un juego de l?gica y ayudan a pensar con calma. Quieres que te cuente m?s?

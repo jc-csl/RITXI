@@ -1,0 +1,116 @@
+AHOOTSA LOCAL - INTEGRACION REACHY MINI + MUJOCO
+Baseline: 07/08/2026
+
+ESTADO VALIDADO ANTES DE MUJOCO
+- llama.cpp + Qwen3-1.7B Q4: OK
+- speech-to-speech 0.2.12: OK
+- Parakeet TDT 0.6B v3 CPU: OK
+- Kokoro-82M / ef_dora / español: OK
+- speech-to-speech local: conversa por micro/altavoces del PC: OK
+
+CAMBIO CLAVE PARA REACHY
+NO dejar ejecutándose:
+    speech-to-speech local ...
+
+Ese modo crea su propio cliente de audio y ocupa el pipeline 0.
+Para Reachy se utiliza:
+    speech-to-speech serve ...
+
+En la CLI actual los subcomandos son `serve`, `talk` y `local`.
+`serve` levanta únicamente el servidor Realtime; no ocupa el pipeline con
+el cliente de micrófono/altavoz local.
+
+Así el servidor queda esperando a que Reachy Mini Conversation App se conecte a:
+    ws://127.0.0.1:8765/v1/realtime
+
+1) INSTALAR MUJOCO UNA SOLA VEZ
+Copiar estos scripts a:
+    D:\RITXI\AHOOTSA_LOCAL
+
+Ejecutar:
+    0_INSTALAR_MUJOCO_AHOOTSA_LOCAL.cmd
+
+La instalación conserva la versión de reachy-mini que ya tenga el entorno.
+
+Prueba manual opcional:
+    D:\RITXI\AHOOTSA_LOCAL\reachy_mini_conversation_app\.venv\Scripts\reachy-mini-daemon.exe --sim --scene minimal
+
+Resultado:
+- Debe abrirse una ventana 3D de MuJoCo.
+- Debe responder http://127.0.0.1:8000/
+- Cerrar con Ctrl+C antes del arranque completo.
+
+2) ARRANQUE COMPLETO
+Asegurarse de cerrar cualquier prueba anterior:
+- speech-to-speech local
+- reachy-mini-daemon
+- reachy-mini-conversation-app
+
+Ejecutar:
+    LANZAR_AHOOTSA_LOCAL_COMPLETO_MUJOCO.cmd
+
+El script arranca en orden:
+1. Qwen3 / llama.cpp                    :8080
+2. speech-to-speech SERVE / Realtime    :8765
+3. Reachy Mini daemon + MuJoCo          :8000
+4. Reachy Mini Conversation App --ui    :7860
+
+La app se fuerza a:
+    HF_REALTIME_CONNECTION_MODE=local
+    HF_REALTIME_WS_URL=ws://127.0.0.1:8765/v1/realtime
+    REALTIME_TRANSCRIPTION_LANGUAGE=es
+
+3) PRUEBA COMPLETA
+A. MuJoCo:
+   - Debe verse Reachy Mini 3D.
+
+B. Backend:
+   - En la ventana speech-to-speech debe aparecer una conexión WebSocket
+     cuando arranque Conversation App.
+
+C. Conversación:
+   - Decir: "Hola, preséntate brevemente en español."
+   - Debe transcribir, responder con Qwen y hablar con Kokoro.
+
+D. Movimiento por tool call:
+   - "Mira a la izquierda y luego al frente."
+   - Observar el movimiento en MuJoCo.
+
+E. Emoción:
+   - "Haz una emoción alegre."
+   - La primera vez puede necesitar descargar/cargar contenido de movimientos.
+
+F. Baile:
+   - "Baila un poco."
+   - Observar la coreografía en MuJoCo.
+
+4) CAMARA
+La versión base arranca Conversation App con:
+    --no-camera
+
+Esto es deliberado:
+- Qwen3-1.7B usado aquí es un LLM de texto.
+- La cámara requiere una ruta de visión separada o un backend multimodal.
+- Primero se valida voz + conversación + tools + movimientos.
+- La visión local será una fase independiente.
+
+5) PARADA
+Ejecutar:
+    PARAR_AHOOTSA_LOCAL.cmd
+
+El launcher guarda los PIDs de las terminales que crea y el script de parada
+cierra únicamente esos árboles de procesos.
+
+PUERTOS
+8080  llama.cpp / Qwen
+8765  speech-to-speech Realtime
+8000  Reachy Mini daemon
+7860  Conversation App
+
+NOTAS
+- No modificar src/ de reachy_mini_conversation_app.
+- No usar Ollama en este proyecto.
+- No arrancar speech-to-speech local al mismo tiempo que Reachy.
+- En simulación, el daemon utiliza el micrófono y los altavoces del PC; la
+  documentación oficial indica que el eco se trata por software mediante
+  GStreamer cuando no existe la tarjeta de audio USB de Reachy.

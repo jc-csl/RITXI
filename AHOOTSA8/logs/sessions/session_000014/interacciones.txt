@@ -1,0 +1,70 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 14
+
+[2026-07-25 22:08:13,725] Aocha: Prefiero música.
+[2026-07-25 22:08:22,986] Persona usuaria: hola, repite lo que has dicho.
+[2026-07-25 22:08:23,949] Aocha: Hola. Vamos a elegir algo que te guste. Qué prefieres: música o un cuento?
+[2026-07-25 22:08:39,931] Persona usuaria: Prefiero música.
+[2026-07-25 22:08:41,452] Aocha: Muy bien. Te gusta más escuchar música o bailar?
+[2026-07-25 22:08:48,965] Persona usuaria: escuchar
+[2026-07-25 22:08:50,323] Aocha: Muy bien. Gracias por decírmelo.
+[2026-07-25 22:08:57,224] Persona usuaria: de abuso sexual a menores. Serecomienda responsabilidad.
+[2026-07-25 22:09:00,656] Aocha: Si hablas de una situación real o de riesgo, hay que pedir ayuda inmediata a una persona de confianza o a emergencias. Si quieres, puedo ayudarte a decirlo con una frase clara.
+[2026-07-25 22:09:20,861] Persona usuaria: Adelante.
+[2026-07-25 22:09:23,211] Aocha: Puedes decir: "Necesito ayuda ahora. Quiero contar una situación grave sobre un menor."
+[2026-07-25 22:09:36,350] Persona usuaria: que necesito ayudar.
+[2026-07-25 22:09:37,524] Aocha: Puedes decir: "Necesito ayudar a un menor. Es una situación grave y hace falta apoyo ahora."
+[2026-07-25 22:09:50,955] Persona usuaria: Hace falta ayuda.
+[2026-07-25 22:09:52,141] Aocha: Sí. Hace falta ayuda inmediata. Busca ahora a una persona adulta de confianza o llama a emergencias.
+[2026-07-25 22:10:16,542] Persona usuaria: It's important that's what you keep possible.
+[2026-07-25 22:10:21,276] Persona usuaria: Y el hecho de que estuviera en una serie con un montón de niños me preocupaba mucho.
+[2026-07-25 22:10:22,707] Aocha: Entiendo tu preocupación. Si crees que puede haber riesgo para menores, díselo hoy mismo a una persona responsable o a emergencias.
+[2026-07-25 22:10:30,936] Persona usuaria: Hope it's all that's right.
+[2026-07-25 22:10:32,284] Aocha: No lo he entendido bien. Quieres que lo repita de forma más clara?
+[2026-07-25 22:10:34,946] Persona usuaria: a muchas sabes hacer algo
+[2026-07-25 22:10:36,284] Aocha: Sí. Puedo hablar contigoy ayudarte a elegir entre opciones. Por ejemplo, podemos hablar de música o de cuentos.
+[2026-07-25 22:10:48,239] Persona usuaria: Conoces alguna actividad.
+[2026-07-25 22:10:49,704] Aocha: Sí. Podemos hacer una actividad sencilla. Prefieres hablar de música o hacer otra elección?
+[2026-07-25 22:11:05,545] Persona usuaria: ¿Sabes conocer la actividad de baile?
+[2026-07-25 22:11:07,280] Aocha: Sí. Puedo hacer una actividad de baile. Si quieres, te digo algunas opciones.
+[2026-07-25 22:11:16,723] Persona usuaria: Yeah.
+[2026-07-25 22:11:18,693] Aocha: Puedo hacer Baile 1 o Las Ketchup. Cuál prefieres?
+[2026-07-25 22:11:25,778] Persona usuaria: A SketchUp.
+[2026-07-25 22:11:27,716] Aocha: No lo he entendido bien. Quieres Baile 1 o Las Ketchup?
+[2026-07-25 22:11:54,914] Persona usuaria: ¿Conoces a Sergio?
+[2026-07-25 22:11:56,728] Aocha: No, no conozco a Sergio en persona. Si quieres, me puedes decir quién es Sergio.
+[2026-07-25 22:12:07,922] Persona usuaria: ¿Conoces el baile de ketchup?
+[2026-07-25 22:12:09,976] Aocha: Sí. Si quieres verlo, puedo poner Las Ketchup.
+[2026-07-25 22:12:16,699] Persona usuaria: Adelante.
+[2026-07-25 22:12:18,134] Aocha: Vamos a bailar!
+[2026-07-25 22:12:43,299] Persona usuaria: Susurraba con una intensidad extendida.
+[2026-07-25 22:12:47,062] Aocha: No lo he entendido bien. Quieres que pare el baile?
+[2026-07-25 22:12:56,507] Persona usuaria: Que era un baile de Michael Jackson.
+[2026-07-25 22:12:57,839] Aocha: Vale.
+[2026-07-25 22:13:15,030] Persona usuaria: Oh, chame escuchas.
+[2026-07-25 22:13:19,611] Aocha: Sí, te escucho. Qué te apetece hacer?
+[2026-07-25 22:13:25,505] Persona usuaria: Quiero que bailes Michael Jackson
+[2026-07-25 22:13:27,088] Aocha: Vamos a bailar!
+[2026-07-25 22:14:01,182] Persona usuaria: Se permitir si fora, se ne vaa ser.
+[2026-07-25 22:14:03,035] Persona usuaria: So that's just points in the car.
+[2026-07-25 22:14:04,763] Persona usuaria: So I think it's just not likeit's no one.
+[2026-07-25 22:14:07,962] Aocha: No lo he entendido bien. Quieres que pare el baile?
+[2026-07-25 22:14:41,054] Persona usuaria: Yeah, we just went to it on that.
+[2026-07-25 22:14:44,320] Aocha: No lo he entendido bien. Quieres que pare el baile?
+[2026-07-25 22:14:45,971] Persona usuaria: Entonces apareció feita.
+[2026-07-25 22:14:48,998] Persona usuaria: Entonces apareció feina, todos pensamos la venía.
+[2026-07-25 22:15:02,850] Persona usuaria: Entonces apareció Feira. Todos pensamos la mía. Era como si hubiera salido de las páginas de Miguel. En una escena dice. Si no me abrazas, creo que voy a romperme en pedazos. En ese momento él la agarra.
+[2026-07-25 22:15:04,502] Persona usuaria: Entonces apareció Faina. Todos pensamos la línea. Era como si hubiera salido de las páginas de Miguel. En una escena dice... Si no me abrazas, creo que voy a romperme en pedazos. En ese momento él la agarra. Miré a Steve, Susan.
+[2026-07-25 22:15:08,226] Persona usuaria: In this moment, Susan puso una cara.
+[2026-07-25 22:15:13,521] Persona usuaria: In this moment in the garden, Steve used a cara.
+[2026-07-25 22:15:16,986] Aocha: No lo he entendido bien. Quieres que pare el baile?
+[2026-07-25 22:15:18,239] Persona usuaria: How do you call it?
+[2026-07-25 22:15:23,659] Persona usuaria: Corte. Y ese fue el momento.
+[2026-07-25 22:15:28,247] Persona usuaria: Y ese fue el momento. Despuésde ese abrazo, supe que me iba a casar con él.
+[2026-07-25 22:15:38,891] Persona usuaria: Y ese fue el momento. Becauseme iba a casar con él. Nunca hablaba mucho de su vida personal.
+[2026-07-25 22:15:41,734] Persona usuaria: Y ese fue el momento. Because I was a casual cone. No es una differencia de edad excessive. Nunca hablaba mucho de su vida personal. No supe, hasta más tarde.
+[2026-07-25 22:15:43,482] Persona usuaria: Before this, I suppe that I was a casual. Nunca hablaba mucho of your personality. No supe, hasta más tarde.
+[2026-07-25 22:15:44,932] Persona usuaria: Y ese fue el momento. Despuésde ese abrazo, supe que me iba a casar con él. Cuando estuve conociendo, él had 35 years and ella 25. No es una diferencia de edad excessive. Nunca hablaba mucho de su vida personal. No supe, hasta más tarde he estado casado y que se habíadivorciado.
+[2026-07-25 22:15:48,111] Aocha: Parece una historia personal sobre una relación. Si quieres, puedo ayudarte a resumirla o a decirla de forma más clara.

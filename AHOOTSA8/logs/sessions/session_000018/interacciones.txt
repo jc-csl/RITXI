@@ -1,0 +1,14 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 18
+
+[2026-08-05 12:00:42,769] Aocha: Hola. Qué prefieres: música o un cuento?
+[2026-08-05 12:00:50,843] Persona usuaria: Hola. ¿Sabes quién soy?
+[2026-08-05 12:00:51,809] Aocha: No lo sé todavía. Cómo quieres que te llame?
+[2026-08-05 12:01:03,895] Persona usuaria: Dime quién eres.
+[2026-08-05 12:01:04,862] Aocha: Soy Aocha. Soy una asistente digital para hablar contigoy acompañarte.
+[2026-08-05 12:02:35,343] Persona usuaria: Hola dime ¿quién eres?
+[2026-08-05 12:02:36,279] Aocha: Hola. Soy Aocha. Qué te apetece hacer?
+[2026-08-05 12:02:43,588] Persona usuaria: Dime quién soy yo.
+[2026-08-05 12:02:44,539] Aocha: No lo sé aún. Cómo quieres que te llame?

@@ -1,0 +1,73 @@
+{
+  "diagnostic_version": "1.0",
+  "generated_at": "2026-08-05T13:26:09.027809+00:00",
+  "mode": "identified_session",
+  "state": "historical",
+  "session_id": 17,
+  "run_id": null,
+  "profile": "ahootsa_session",
+  "voice": null,
+  "backend_mode": null,
+  "paths": {
+    "central_log": "D:\\RITXI\\AHOOTSA8\\logs\\sessions\\session_000017\\conversation_app.log",
+    "source_log": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000017\\conversation_app.log",
+    "source_session_directory": "D:\\RITXI\\AHOOTSA8\\ahootsa_local_server\\data\\sessions\\session_000017"
+  },
+  "timing": {
+    "transcript_started_at": "2026-08-05T09:56:37",
+    "transcript_finished_at": "2026-08-05T09:59:08",
+    "duration_seconds": 151.0
+  },
+  "counts": {
+    "final_interactions": 5,
+    "user_turns": 2,
+    "assistant_turns": 3,
+    "partial_user_transcripts": 0,
+    "user_interventions": 2,
+    "tool_calls": 0,
+    "warnings": 7,
+    "errors": 2
+  },
+  "audio": {
+    "reachy_audio_usb_missing": true,
+    "default_audio_source_used": true,
+    "default_audio_sink_used": true,
+    "echo_cancellation_enabled": true,
+    "startup_config_not_applied": true,
+    "last_pipeline_latency": null
+  },
+  "dance": {
+    "spoken_start_promises": 0,
+    "tool_calls": 0,
+    "delayed_or_missing_calls": [],
+    "duplicate_calls": [],
+    "possible_orchestration_issue": false
+  },
+  "terminal": {
+    "last_role": "assistant",
+    "last_turn_at": "2026-08-05 09:57:37,637",
+    "transcript_finished_at": "2026-08-05T09:59:08",
+    "terminal_silence_seconds": 90.36,
+    "possible_listening_stall": true,
+    "observation": "Posible incidencia de escucha: no se registró una intervención final de la persona durante 1.5 minutos antes del cierre."
+  },
+  "last_interaction": {
+    "source_index": 4,
+    "timestamp": "2026-08-05 09:57:37,637",
+    "role": "assistant",
+    "content": "Sí. Eres SICO. Quieres música o un cuento?"
+  },
+  "warnings": [
+    "2026-08-05 09:56:43,609 WARNING reachy_mini.media.camera_gstreamer:127 | Cannot change resolution of Mujoco simulated ca",
+    "2026-08-05 09:56:48,329 WARNING reachy_mini.media.device_detection:395 | No Reachy Mini Audio Source card found.",
+    "2026-08-05 09:56:48,329 WARNING reachy_mini.media.audio_gstreamer:152 | No specific audio card found, using default audi",
+    "2026-08-05 09:56:50,204 WARNING reachy_mini.media.device_detection:395 | No Reachy Mini Audio Sink card found.",
+    "2026-08-05 09:56:50,205 WARNING reachy_mini.media.audio_gstreamer:234 | No specific audio card found, using default audi",
+    "2026-08-05 09:56:53,470 WARNING reachy_mini.media.audio_gstreamer:202 | ReSpeaker device not found.",
+    "2026-08-05 09:56:53,473 WARNING reachy_mini_conversation_app.console:58 | Reachy audio startup config was not applied."
+  ],
+  "errors": [
+    "2026-08-05 09:56:45,750 ERROR reachy_mini.media.audio_control_utils:550 | No Reachy Mini Audio USB device found!",
+    "2026-08-05 09:56:53,466 ERROR reachy_mini.media.audio_control_utils:550 | No Reachy Mini Audio USB device found!"
+  ]
+}

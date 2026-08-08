@@ -1,0 +1,12 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 19
+
+[2026-08-05 12:10:43,735] Aocha: Hola. Qué prefieres: música o un cuento?
+[2026-08-05 12:10:49,973] Persona usuaria: Hola, ¿sabes quién soy?
+[2026-08-05 12:10:50,928] Aocha: Sí. Eres SICO. Quieres hablar de música o de deporte?
+[2026-08-05 12:11:05,303] Persona usuaria: Hola, dime qué cosas sabes demí.
+[2026-08-05 12:11:06,289] Aocha: Sé que te llamas SICO y que te gusta el deporte. Quieres hablar de deporte o de música?
+[2026-08-05 12:11:15,051] Persona usuaria: ¿Sabes si hay algo que no me gusta?
+[2026-08-05 12:11:16,005] Aocha: Sí. Ahora mismo prefieroevitar hablar de la escuela. Quieres hablar de deporte o de música?

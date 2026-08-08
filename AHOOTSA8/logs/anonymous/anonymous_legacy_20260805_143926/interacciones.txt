@@ -1,0 +1,11 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: anonymous
+Ejecución: anonymous_legacy_20260805_143926
+
+[2026-08-05 11:45:44,389] Aocha: Hola, soy Aocha. Cómo estás?
+[2026-08-05 11:46:12,966] Persona usuaria: Es como que hay que rellenar, eh.
+[2026-08-05 11:46:13,884] Aocha: Creo que no te he entendido bien. Me lo puedes repetir con otras palabras?
+[2026-08-05 11:46:36,170] Persona usuaria: A ver, no se escucha, creo.
+[2026-08-05 11:46:37,903] Persona usuaria: A ver, no se escucha, creo.
+[2026-08-05 11:46:38,820] Aocha: Vaya. Si no se escucha bien, podemos probar otra vez con calma. Ahora me oyes?

@@ -1,0 +1,40 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 24
+
+[2026-08-05 14:14:58,946] Aocha: Hola, MENGANITO. Soy Aocha. Entre las cosas que te gustan tengo anotado: MITOLOGIA EN EUSKAL HERRIA.
+[2026-08-05 14:14:59,065] Aocha: Te apetece hablar de esoo prefieres empezar con expresar preferencias?
+[2026-08-05 14:15:12,732] Persona usuaria: Hola, repite el mes.
+[2026-08-05 14:15:16,413] Persona usuaria: Hola, repíteme eso.
+[2026-08-05 14:15:20,940] Persona usuaria: esta sería el video repíteme eso estas dos ya está de hacerlo sería solo estas dos uno de primero y tres segundos para ver cómo es
+[2026-08-05 14:15:27,385] Persona usuaria: esta sería el video repíteme sería solo estas dos uno el primero y tres segundos para ver cómo es porque esta la emoción necesita la motivación
+[2026-08-05 14:15:29,124] Persona usuaria: esta sería el video repíteme estas dos esto de hacerlo sería solo estas dos uno el primero y tres segundos para ver cómo es porque esta la emoción necesita la motivación
+[2026-08-05 14:15:30,863] Aocha: No te he entendido del todo. Quieres que repita solo dos pasos?
+[2026-08-05 14:15:39,768] Persona usuaria: No, repite el saludo inicial.
+[2026-08-05 14:15:40,692] Aocha: Hola, MENGANITO. Soy Aocha. Entre las cosas que te gustan tengo anotado: MITOLOGIA EN EUSKAL HERRIA.
+[2026-08-05 14:15:40,770] Aocha: Te apetece hablar de esoo prefieres empezar con expresar preferencias?
+[2026-08-05 14:15:52,933] Persona usuaria: So you're going to see upright .
+[2026-08-05 14:15:53,864] Aocha: No lo he entendido bien. Puedes repetirlo en español, por favor?
+[2026-08-05 14:16:02,787] Persona usuaria: Háblame de la mías.
+[2026-08-05 14:16:04,147] Aocha: Claro. La mitología en Euskal Herria tiene seres y leyendas muy conocidos, como Mari, que es una figura muy importante. Quieres que te cuente unpoco sobre Mari?
+[2026-08-05 14:16:21,397] Persona usuaria: Habla más rápido.
+[2026-08-05 14:16:22,829] Aocha: Vale, hablaré un poco más rápido. Quieres que siga con Mari?
+[2026-08-05 14:16:30,429] Persona usuaria: Yo creo que estas dos, estas dos.
+[2026-08-05 14:16:31,640] Persona usuaria: Yo creo que estas dos, estas dos, sí.
+[2026-08-05 14:16:33,157] Persona usuaria: yo creo que estas dos, estas dos, sí, estas dos
+[2026-08-05 14:16:37,890] Persona usuaria: Yo creo que estas dos, estas dos. Sí. Estas dos.
+[2026-08-05 14:16:40,352] Persona usuaria: Yo creo que estas dos. Estas dos. Sí. Estas dos. Ah, pues también. Es que no estoy quedando sin batería más. 4% lo voy a decir.
+[2026-08-05 14:16:41,805] Aocha: Entiendo. Te queda poca batería. Quieres seguir un poco o prefieres terminar?
+[2026-08-05 14:16:54,027] Persona usuaria: Quiero que me cuentes algo.
+[2026-08-05 14:16:55,244] Aocha: Claro. Mari es un ser muy importante en la mitología vasca y se relaciona con la naturaleza, las montañas y las cuevas. Quieres que te cuente dónde dicen que vive?
+[2026-08-05 14:16:58,302] Persona usuaria: Porque está
+[2026-08-05 14:16:59,801] Persona usuaria: porque eso está sería
+[2026-08-05 14:17:00,734] Aocha: No lo he entendido bien. Quieres que te lo explique de otra manera?
+[2026-08-05 14:17:11,132] Persona usuaria: Adelante.
+[2026-08-05 14:17:12,508] Aocha: Dicen que Mari vive en cuevas de montañas como Anboto. En muchas historias aparece y desaparece, y su presencia se relaciona con el tiempo y la fuerza de la naturaleza. Quieres otra parte?
+[2026-08-05 14:17:32,368] Persona usuaria: No, quiero que hagas un bailede thriller.
+[2026-08-05 14:17:33,344] Aocha: Quieres verlo? Quieres verlo?
+[2026-08-05 14:17:38,951] Persona usuaria: Yeah.
+[2026-08-05 14:17:39,890] Aocha: Vamos a bailar!
+[2026-08-05 14:19:12,688] Aocha: Ya hemos terminado el baile. Te ha gustado?

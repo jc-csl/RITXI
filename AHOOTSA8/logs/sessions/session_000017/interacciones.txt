@@ -1,0 +1,10 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 17
+
+[2026-08-05 09:56:55,972] Aocha: Hola. Qué prefieres: música o un cuento?
+[2026-08-05 09:57:26,547] Persona usuaria: Hristo.
+[2026-08-05 09:57:27,493] Aocha: No lo he entendido bien. Prefieres música o un cuento?
+[2026-08-05 09:57:36,260] Persona usuaria: Hola, ¿sabes quién soy?
+[2026-08-05 09:57:37,637] Aocha: Sí. Eres SICO. Quieres música o un cuento?

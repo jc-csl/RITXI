@@ -1,0 +1,23 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 22
+
+[2026-08-05 12:56:35,801] Aocha: Qué prefieres: música o un cuento?
+[2026-08-05 12:56:50,525] Persona usuaria: Uno, dos.
+[2026-08-05 12:56:52,292] Persona usuaria: Uno, dos. Hola.
+[2026-08-05 12:56:53,226] Aocha: Hola. Qué prefieres: música o un cuento?
+[2026-08-05 12:57:00,835] Persona usuaria: Hola, ¿sabes quién soy?
+[2026-08-05 12:57:01,752] Aocha: Sí. Eres FULANITO. Quieres música o un cuento?
+[2026-08-05 12:57:10,380] Persona usuaria: Dime qué cosas sabes de mi.
+[2026-08-05 12:57:11,313] Aocha: Sé que te gusta hacer sudokus y andar en bici. También prefieres hablar en español. Quieres música o un cuento?
+[2026-08-05 12:57:33,582] Persona usuaria: Puedes hablar más rápido.
+[2026-08-05 12:57:34,499] Aocha: Sí, puedo hablar un pocomás rápido. Qué prefieres: música o un cuento?
+[2026-08-05 12:57:42,176] Persona usuaria: ¿Qué música sabes?
+[2026-08-05 12:57:43,226] Aocha: Puedo hacer Las Ketchup o Thriller. Cuál prefieres?
+[2026-08-05 12:57:53,051] Persona usuaria: Prefiero thriller.
+[2026-08-05 12:57:54,035] Aocha: Vamos a bailar!
+[2026-08-05 12:59:35,386] Persona usuaria: Hola, si yo sé.
+[2026-08-05 12:59:36,351] Aocha: Hola. Si quieres, puedo parar el baile.
+[2026-08-05 12:59:44,014] Persona usuaria: sí, claro, para lo ir.
+[2026-08-05 12:59:44,898] Aocha: Vale, lo paro.

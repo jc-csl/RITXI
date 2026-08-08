@@ -1,0 +1,15 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 26
+
+[2026-08-05 15:34:17,837] Aocha: Hola, FULANITO. Soy Aocha . Entre las cosas que te gustan tengo anotado: HACER SUDOKUS Y ANDAR EN BICI.
+[2026-08-05 15:34:17,922] Aocha: Te apetece hablar de esoo prefieres empezar con expresar preferencias?
+[2026-08-05 15:34:58,140] Persona usuaria: In fact.
+[2026-08-05 15:34:59,086] Aocha: No te he entendido bien. Puedes repetirlo?
+[2026-08-05 15:35:33,916] Persona usuaria: de disponible de una cosa y la otra y tener los cojones de llamarle y decir, oye, esto me est? pasando y no te molestar?, pero como est? todo el ladomolest?ndote.
+[2026-08-05 15:35:49,996] Persona usuaria: Y no te molestar?, pero como est? todo el lado molest?ndote, porque si t? te has dicho, bueno, pero te hace septiembre. Te sigues llamando y te da igual, but if you are as? todo el puto verano, pues entonces yo prefiero que hagas otra cosa, oye, quiero hablar con este. ?Por qu?? Porque he hablado con el Luis y no ha hecho nada.
+[2026-08-05 15:36:05,055] Persona usuaria: hora de distribuir una cosa yla otra y en los cojones de llamarle y decir, oye, esto me est? pasando. Y no te molestar?, pero como est? todo el ladomolest?ndote, porque si t? te has dicho, bueno, pero te hace septiembre. Te sigues llamando y te da igual, pero si vas a estar as? todo el puto verano, pues entonces yo prefiero que hagas otra cosa, decir, oye, quiero hablar con este. ?Porqu?? Porque he hablado con el Luis y no ha hecho nada. As? de claro. De aqu? a septiembre y hasta que lo hag?i?
+[2026-08-05 15:36:09,164] Persona usuaria: es hora de distribuir una cosa y la otra y en los cojones de llamarle y decir, oye, esto me est? pasando. Y no te molestar?, pero como est? todo el lado molest?ndote, porque si t? te has dicho, bueno, pero te hace septiembre. Te sigues llamando y te da igual, pero si vas a estar as? todo el puto verano, pues entonces yo prefiero que hagas otra cosa. Quiero hablar con este. ?Por qu?? Porque he hablado con el Luis y no ha hecho nada. As? de claro. De aqu? a septiembre y hasta que lo hag?is, es muc?
+[2026-08-05 15:36:13,575] Persona usuaria: es hora de distribuir una cosa y la otra y en los cojones de llamarle y decir, oye, esto me est? pasando. Y no te molestar?, pero como est? todo el lado molest?ndote, porque si t? te has dicho, bueno, pero ya se hace septiembre. Te sigues llamando y te da igual, pero si vas a estar as? todo el puto verano, pues entonces yo prefiero que hagas otra cosa. Es decir, oye, quiero hablar con este. ?Por qu?? Porque ha hablado con el Luis y no ha hecho nada. As? de claro. De aqu? a septiembre y hasta que?
+[2026-08-05 15:36:14,615] Aocha: Parece un problema muy pesado. Quieres que te ayude a decirlo de forma clara y tranquila?

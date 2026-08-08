@@ -1,0 +1,25 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 12
+
+[2026-07-25 10:37:01,351] Aocha: Hola. Qué prefieres: música o un cuento?
+[2026-07-25 10:37:16,264] Persona usuaria: Prefiero la música.
+[2026-07-25 10:37:17,181] Aocha: Muy bien. Te gusta música tranquila o música para bailar?
+[2026-07-25 10:37:28,973] Persona usuaria: Benítez, vamos
+[2026-07-25 10:37:29,913] Aocha: No lo he entendido bien. Quieres música tranquila o música para bailar?
+[2026-07-25 10:37:38,787] Persona usuaria: por todas partes, aquí es donde acomodaría, vale, ven a sacar
+[2026-07-25 10:37:40,457] Persona usuaria: Por todas partes, aquí es donde hago mi área. Vale, ven a sacarlo. Me recuerda un poco los colores de...
+[2026-07-25 10:37:41,523] Aocha: No te he entendido bien. Prefieres música tranquila o música para bailar?
+[2026-07-25 10:37:57,533] Persona usuaria: Vené chicas, cercaos con tu amarga. Vamos a empezar por el principio. Dime qué está buscando. No lo sé, no lo contigo.
+[2026-07-25 10:38:00,740] Persona usuaria: Vené chicas, cercaos con tu amarga. Vamos a empezar por el principio. Dime qué está buscando. No lo sé, no lo contiene.
+[2026-07-25 10:38:05,003] Persona usuaria: Vení chicas, cercaos junto a Marta. Vamos a empezar por el principio. Dime qué está buscando. No lo sé, no lo contiene. Vamos a centrarnos primero enel corte del vestido.
+[2026-07-25 10:38:06,065] Aocha: No te sigo bien. Prefieres música tranquila o música para bailar?
+[2026-07-25 10:38:08,958] Persona usuaria: Creo que podría gustar de un corte en ar.
+[2026-07-25 10:38:27,120] Persona usuaria: I think I would have a coat. In front of the part of the vestige with a scotch. A vestibular. I think I want much adorns in the vestibular. I've given it. And I can have the spalder.
+[2026-07-25 10:38:28,604] Persona usuaria: I think I would have a coat. In front of the part of the river, I want a vestige with a scotch. A vestibular. I've given any ador. And I can have thespalder.
+[2026-07-25 10:38:29,579] Aocha: No te entiendo bien. Prefieres música tranquila o música para bailar?
+[2026-07-25 10:38:38,356] Persona usuaria: Vaya, algo así en la cabeza. Me gusta mucho, la verdad.
+[2026-07-25 10:38:40,633] Persona usuaria: Fazit.
+[2026-07-25 10:38:43,188] Persona usuaria: Así, hay cola, no hay detonado .
+[2026-07-25 10:38:44,347] Aocha: Gracias por intentarlo. No te entiendo bien todavía. Prefieres música tranquila o música para bailar?
