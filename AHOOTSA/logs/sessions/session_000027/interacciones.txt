@@ -1,0 +1,8 @@
+AHOOTSA - INTERACCIONES DE CONVERSACIÓN
+=======================================
+Modo: identified_session
+Sesión: 27
+
+[2026-08-16 15:47:54,959] Aocha: Hola, FULANITO. Soy Aocha . Entre las cosas que te gustan tengo anotado: HACER SUDOKUS Y ANDAR EN BICI. Te apetece hablar de eso o prefieres empezar con expresar preferencias?
+[2026-08-16 15:48:12,085] Persona usuaria: mucho riesgo, dejar la pruebaen un sitio de Morningside Park y yo la recoger?.
+[2026-08-16 15:48:14,382] Aocha: No entiendo bien a qu? te refieres con "la prueba". Me lo puedes decir de otra forma?

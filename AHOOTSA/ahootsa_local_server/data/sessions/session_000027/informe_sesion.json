@@ -1,0 +1,109 @@
+{
+  "report_version": "1.2",
+  "generated_at": "2026-08-16T13:49:05.907261+00:00",
+  "mode": "identified_session",
+  "session_id": 27,
+  "status": "finished",
+  "user": {
+    "external_id": "FULANITO",
+    "name": "FULANITO",
+    "preferred_name": "FULANITO",
+    "language": "es",
+    "notes": null
+  },
+  "profile": {
+    "communication_style": "simple",
+    "speech_speed": "normal",
+    "response_wait_seconds": 5.0,
+    "preferred_interaction_mode": "mixed",
+    "preferred_reinforcement": "refuerzo verbal positivo",
+    "interests": "HACER SUDOKUS Y ANDAR EN BICI",
+    "avoid_topics": "IR AL COLEGIO",
+    "accessibility_notes": null,
+    "max_instructions_per_turn": 1
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "description": "Actividad comunicativa guiada para elegir, explicar y conversar sobre preferencias.",
+    "level": "intermediate",
+    "level_title": "Intermedio",
+    "objective": "Expresar una preferencia y explicar brevemente el motivo.",
+    "max_options": 3,
+    "rules": [
+      "Formula preguntas abiertas sencillas.",
+      "Permite respuestas de varias palabras.",
+      "Realiza una pregunta de seguimiento breve.",
+      "Ofrece una pista solo cuando sea necesario.",
+      "Mantén intercambios de dos o tres turnos."
+    ],
+    "first_prompt": "¿Qué actividad prefieres hacer y por qué?"
+  },
+  "timing": {
+    "prepared_at": "2026-08-16T12:54:07.569459+00:00",
+    "running_at": "2026-08-16T13:47:50.474630+00:00",
+    "finished_at": "2026-08-16T13:49:05.554978+00:00",
+    "duration_seconds": 3298.01,
+    "duration_minutes": 54.97
+  },
+  "professional_control": {
+    "decision": "no_decision",
+    "automatic_level_change": false,
+    "automatic_clinical_evaluation": false
+  },
+  "counts": {
+    "total_events": 8,
+    "user_responses": 1,
+    "correct_responses": 0,
+    "incorrect_responses": 0,
+    "unanswered_responses": 1,
+    "hints_given": 0,
+    "silences_detected": 0,
+    "errors_detected": 0
+  },
+  "automatic_observations": [
+    "La sesión se desarrolló sin incidencias destacables."
+  ],
+  "audio_diagnostics": {
+    "last_role": "assistant",
+    "last_turn_at": "2026-08-16 15:48:14,382",
+    "transcript_finished_at": null,
+    "terminal_silence_seconds": null,
+    "possible_listening_stall": false,
+    "observation": null
+  },
+  "automatic_summary_text": "Usuario: FULANITO\nDuración: 55.0 minutos\nActividades iniciadas: 1\nActividades completadas: 1\nRespuestas registradas: 1\nRespuestas correctas: 0\nRespuestas incorrectas: 0\nObservaciones:\n- La sesión se desarrolló sin incidencias destacables.",
+  "transcription": {
+    "log_file": "D:\\RITXI\\AHOOTSA\\ahootsa_local_server\\data\\sessions\\session_000027\\conversation_app.log",
+    "final_roles_detected": 3,
+    "dialogue_roles_imported_or_existing": 2,
+    "created_event_ids_this_run": [
+      479,
+      480
+    ],
+    "turns": [
+      {
+        "source_index": 1,
+        "timestamp": "2026-08-16 15:48:12,085",
+        "role": "user",
+        "content": "mucho riesgo, dejar la pruebaen un sitio de Morningside Park y yo la recoger?."
+      },
+      {
+        "source_index": 2,
+        "timestamp": "2026-08-16 15:48:14,382",
+        "role": "assistant",
+        "content": "No entiendo bien a qu? te refieres con \"la prueba\". Me lo puedes decir de otra forma?"
+      }
+    ]
+  },
+  "event_ids": [
+    476,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    483
+  ]
+}

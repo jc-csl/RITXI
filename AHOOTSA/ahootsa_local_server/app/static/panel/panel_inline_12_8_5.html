@@ -1,0 +1,2409 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Ahootsa · Panel profesional</title>
+  <style id="ahootsa-panel-style">
+:root {
+  color-scheme: light;
+  --navy: #17294b;
+  --blue: #315fbd;
+  --blue-dark: #24488f;
+  --blue-soft: #eef3ff;
+  --pink: #ce3d83;
+  --green: #268557;
+  --amber: #9a6500;
+  --red: #b83a43;
+  --red-soft: #fdebed;
+  --ink: #202737;
+  --muted: #6c7482;
+  --line: #dfe3ea;
+  --surface: #ffffff;
+  --background: #f3f5f9;
+  --shadow: 0 4px 14px rgba(23, 41, 75, .08);
+  --topbar-height: 72px;
+  --workflow-height: 118px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.topbar {
+  height: var(--topbar-height);
+  padding: 10px 16px;
+  background: var(--navy);
+  color: white;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto minmax(340px, 1fr);
+  align-items: center;
+  gap: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: var(--pink);
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand small {
+  color: #cdd8ef;
+  font-size: .8rem;
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.service-pill,
+.mini-button,
+.tiny,
+.small-button,
+.track,
+.level,
+.finish-button,
+.icon-button {
+  border: 0;
+  border-radius: 7px;
+  font-weight: 750;
+  transition: transform .1s ease, opacity .1s ease, background .1s ease;
+}
+
+.service-pill:hover,
+.mini-button:hover,
+.tiny:hover,
+.small-button:hover,
+.track:hover,
+.level:hover,
+.finish-button:hover {
+  transform: translateY(-1px);
+}
+
+.service-pill {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, .1);
+  color: white;
+  font-size: .84rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a9afb9;
+}
+
+.dot.ok { background: #43d18c; }
+.dot.off { background: #ff6b75; }
+
+.top-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.version {
+  color: #cdd8ef;
+  font-size: .82rem;
+  margin-right: 4px;
+}
+
+.mini-button {
+  padding: 8px 12px;
+  background: #edf1f8;
+  color: var(--navy);
+  font-size: .84rem;
+}
+
+.dashboard {
+  height: calc(100vh - var(--topbar-height) - var(--workflow-height));
+  min-height: 0;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: minmax(440px, 1.28fr) minmax(380px, 1fr) minmax(380px, 1fr);
+  gap: 12px;
+}
+
+.panel-card {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 15px;
+}
+
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.panel-title h1 {
+  margin: 1px 0 0;
+  font-size: 1.15rem;
+  color: var(--navy);
+}
+
+.step {
+  color: var(--pink);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+
+.toolbar {
+  display: flex;
+  gap: 4px;
+}
+
+.tiny {
+  padding: 4px 7px;
+  background: #edf0f5;
+  color: var(--navy);
+  font-size: .68rem;
+}
+
+.tiny.primary,
+.small-button.primary {
+  background: var(--blue);
+  color: white;
+}
+
+.danger-outline {
+  color: var(--red);
+  background: var(--red-soft);
+}
+
+.selector-row select,
+.compact-form input,
+.compact-form select,
+.compact-note,
+.compact-label input,
+.compact-label select,
+.compact-label textarea,
+.dialog-grid input,
+.dialog-grid textarea,
+.field-editor input,
+.field-editor textarea,
+.field-editor select {
+  width: 100%;
+  border: 1px solid #cbd1dc;
+  border-radius: 7px;
+  padding: 6px 8px;
+  color: var(--ink);
+  background: white;
+}
+
+.selector-row select {
+  height: 32px;
+  font-weight: 700;
+}
+
+.inline-help {
+  margin: 6px 1px;
+  color: var(--muted);
+  font-size: .67rem;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.field-card {
+  min-height: 48px;
+  padding: 6px 7px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfe;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3px;
+  cursor: default;
+}
+
+.field-card:hover {
+  border-color: #aeb9cb;
+  background: white;
+}
+
+.field-label {
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.field-value {
+  min-height: 17px;
+  font-size: .76rem;
+  line-height: 1.25;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.field-value.empty {
+  color: #9aa1ac;
+  font-style: italic;
+}
+
+.field-actions,
+.field-editor-actions {
+  display: flex;
+  gap: 3px;
+  justify-content: flex-end;
+}
+
+.field-actions button,
+.field-editor-actions button {
+  padding: 2px 5px;
+  border: 0;
+  border-radius: 5px;
+  background: #edf0f5;
+  color: var(--navy);
+  font-size: .6rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.field-actions button.clear-field {
+  color: var(--red);
+  background: var(--red-soft);
+}
+
+.field-editor {
+  display: grid;
+  gap: 4px;
+}
+
+.field-editor textarea {
+  min-height: 46px;
+  resize: vertical;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.compact-form label,
+.compact-label {
+  display: grid;
+  gap: 3px;
+  color: var(--navy);
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.compact-form input,
+.compact-form select {
+  height: 31px;
+  padding: 5px 7px;
+}
+
+.level-row {
+  margin-top: 7px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.level {
+  padding: 6px;
+  background: #edf0f5;
+  color: var(--navy);
+  font-size: .7rem;
+}
+
+.level.active {
+  background: var(--pink);
+  color: white;
+}
+
+.level-description {
+  min-height: 54px;
+  margin-top: 6px;
+  padding: 7px;
+  border-radius: 8px;
+  background: var(--blue-soft);
+  color: var(--navy);
+  font-size: .7rem;
+  line-height: 1.35;
+}
+
+.session-actions {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.small-button {
+  padding: 7px 9px;
+  background: #edf0f5;
+  color: var(--navy);
+  font-size: .72rem;
+}
+
+.small-button.secondary {
+  background: var(--navy);
+  color: white;
+}
+
+.small-button:disabled,
+.track:disabled,
+.finish-button:disabled,
+.level:disabled,
+.tiny:disabled,
+.mini-button:disabled,
+button:disabled {
+  opacity: .38;
+  cursor: not-allowed;
+  transform: none;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  background: #f4f6f9;
+}
+
+.session-info,
+.final-summary {
+  margin-top: 6px;
+  padding: 7px;
+  border-radius: 8px;
+  font-size: .69rem;
+  line-height: 1.35;
+}
+
+.muted-box {
+  background: #f2f4f7;
+  color: var(--muted);
+}
+
+.section-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 9px 0 7px;
+}
+
+.compact-title {
+  margin-bottom: 5px;
+}
+
+.compact-note {
+  height: 31px;
+  padding: 5px 7px;
+  font-size: .72rem;
+}
+
+.tracking-grid {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.track {
+  min-height: 30px;
+  padding: 4px 5px;
+  font-size: .66rem;
+}
+
+.adequate { background: #dff4e8; color: #17633f; }
+.partial { background: #fff1cd; color: #785100; }
+.incorrect { background: #f8dfe2; color: #8e2830; }
+.neutral-track { background: #eceff3; color: #4d5664; }
+.support { background: #e5ecfb; color: #244c9b; }
+
+.counters {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.counter {
+  padding: 3px 5px;
+  border-radius: 999px;
+  background: #f0f2f6;
+  font-size: .62rem;
+}
+
+.badge {
+  padding: 4px 7px;
+  border-radius: 999px;
+  font-size: .65rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.badge.neutral { background: #e8ebef; color: #59606d; }
+.badge.active { background: #dff4e8; color: #17633f; }
+.badge.finished { background: #e8ecf8; color: var(--navy); }
+
+.finish-panel textarea {
+  resize: vertical;
+  min-height: 86px;
+}
+
+.finish-panel .compact-label + .compact-label {
+  margin-top: 7px;
+}
+
+.finish-button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 9px 10px;
+  background: var(--red);
+  color: white;
+  font-size: .76rem;
+}
+
+.final-summary {
+  min-height: 88px;
+  background: #f4f6fa;
+  color: var(--muted);
+}
+
+.report-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.system-box {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 6px;
+  align-items: center;
+  font-size: .68rem;
+  color: var(--muted);
+}
+
+.system-box strong {
+  color: var(--navy);
+}
+
+dialog {
+  width: min(560px, calc(100vw - 30px));
+  border: 0;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .28);
+}
+
+dialog::backdrop {
+  background: rgba(23, 41, 75, .48);
+}
+
+dialog form {
+  padding: 15px;
+}
+
+.dialog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog-title h2 {
+  margin: 0;
+  color: var(--navy);
+}
+
+.icon-button {
+  width: 30px;
+  height: 30px;
+  background: #edf0f5;
+  color: var(--navy);
+  font-size: 1.1rem;
+}
+
+.dialog-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.dialog-grid label {
+  display: grid;
+  gap: 4px;
+  color: var(--navy);
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+.span-dialog {
+  grid-column: span 2;
+}
+
+.dialog-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.toast {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  max-width: 430px;
+  padding: 9px 11px;
+  background: var(--navy);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  font-size: .76rem;
+  z-index: 50;
+}
+
+.toast.error {
+  background: var(--red);
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 1150px) {
+  body {
+    overflow: auto;
+  }
+
+  .topbar {
+    grid-template-columns: 1fr auto;
+    height: auto;
+  }
+
+  .services {
+    order: 3;
+    grid-column: span 2;
+  }
+
+  .dashboard {
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .finish-panel {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .finish-panel {
+    grid-column: span 1;
+  }
+
+  .topbar {
+    grid-template-columns: 1fr;
+  }
+
+  .services {
+    grid-column: span 1;
+  }
+
+  .top-actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .field-grid,
+  .two-columns,
+  .dialog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .span-dialog {
+    grid-column: span 1;
+  }
+}
+
+
+/* ============================================================
+   AHOOTSA 12.7.2 — SINGLE-FILE PANEL
+   ============================================================ */
+
+html,
+body {
+  min-width: 1180px;
+}
+
+body {
+  overflow: hidden !important;
+}
+
+.dashboard {
+  display: grid !important;
+  grid-template-columns:
+    minmax(430px, 1.25fr)
+    minmax(370px, 1fr)
+    minmax(360px, .95fr) !important;
+  grid-template-rows: minmax(0, 1fr) !important;
+  height: calc(100vh - 58px - 92px) !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  align-items: stretch !important;
+}
+
+.user-panel {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.setup-panel {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+.finish-panel {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+}
+
+.panel-card {
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  border-top: 4px solid var(--blue);
+}
+
+.user-panel {
+  border-top-color: var(--pink);
+}
+
+.finish-panel {
+  border-top-color: var(--red);
+}
+
+.panel-title h1,
+.compact-title h1 {
+  margin: 1px 0 0 !important;
+  font-size: 1rem !important;
+  line-height: 1.15 !important;
+}
+
+.topbar {
+  position: relative;
+  z-index: 10;
+}
+
+.frontend-status {
+  padding: 4px 7px;
+  border-radius: 999px;
+  font-size: .64rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.frontend-status.waiting {
+  background: #fff1cd;
+  color: #785100;
+}
+
+.frontend-status.ready {
+  background: #dff4e8;
+  color: #17633f;
+}
+
+.frontend-status.error {
+  background: #f8dfe2;
+  color: #8e2830;
+}
+
+.new-user-panel {
+  margin-top: 7px;
+  padding: 9px;
+  border: 1px solid #b9c8e5;
+  border-radius: 9px;
+  background: #f7f9ff;
+  box-shadow: 0 4px 12px rgba(23, 41, 75, .08);
+}
+
+.new-user-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+  color: var(--navy);
+}
+
+.new-user-heading strong {
+  display: block;
+  margin-top: 1px;
+  font-size: .86rem;
+}
+
+.new-user-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.new-user-form label {
+  display: grid;
+  gap: 3px;
+  color: var(--navy);
+  font-size: .66rem;
+  font-weight: 800;
+}
+
+.new-user-form input,
+.new-user-form textarea {
+  width: 100%;
+  border: 1px solid #cbd1dc;
+  border-radius: 7px;
+  padding: 6px 7px;
+  color: var(--ink);
+  background: white;
+}
+
+.new-user-form textarea {
+  resize: vertical;
+}
+
+.new-user-wide,
+.new-user-actions {
+  grid-column: 1 / -1;
+}
+
+.new-user-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.toolbar button,
+.top-actions button,
+.session-actions button,
+.tracking-grid button,
+.report-actions button,
+.field-actions button,
+.field-editor-actions button {
+  min-height: 27px;
+}
+
+.panel-card {
+  scrollbar-width: thin;
+  scrollbar-color: #b9c3d3 transparent;
+}
+
+.panel-card::-webkit-scrollbar {
+  width: 7px;
+}
+
+.panel-card::-webkit-scrollbar-thumb {
+  background: #b9c3d3;
+  border-radius: 999px;
+}
+
+.field-card.editing {
+  position: relative;
+  z-index: 3;
+  border-color: #315fbd;
+  box-shadow: 0 0 0 2px rgba(49, 95, 189, .16);
+}
+
+.field-card.editing textarea,
+.field-card.editing input,
+.field-card.editing select {
+  background: #fff;
+}
+
+@media (max-width: 1179px) {
+  html,
+  body {
+    min-width: 0;
+  }
+
+  body {
+    overflow: auto !important;
+  }
+
+  .dashboard {
+    height: auto !important;
+    grid-template-columns: 1fr !important;
+    overflow: visible !important;
+  }
+
+  .user-panel,
+  .setup-panel,
+  .finish-panel {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    height: auto !important;
+  }
+}
+
+.workflow-bar {
+  padding: 8px 12px 7px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.workflow-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.workflow-step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f4f6fa;
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 750;
+  transition: background .15s ease, border-color .15s ease, color .15s ease, box-shadow .15s ease;
+}
+
+.workflow-step .step-number {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #dde3ee;
+  color: var(--navy);
+  font-size: .62rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.workflow-step .step-copy {
+  min-width: 0;
+}
+
+.workflow-step .step-copy strong {
+  display: block;
+  color: var(--ink);
+  font-size: .7rem;
+  line-height: 1.15;
+}
+
+.workflow-step .step-copy small {
+  display: block;
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: .58rem;
+  line-height: 1.2;
+}
+
+.workflow-step.is-done {
+  background: #eef8f2;
+  border-color: #b8dfc8;
+  color: #17633f;
+}
+
+.workflow-step.is-done .step-number {
+  background: var(--green);
+  color: white;
+}
+
+.workflow-step.is-current {
+  background: #fff8ec;
+  border-color: #f0c56d;
+  box-shadow: 0 0 0 2px rgba(240, 197, 109, .22);
+  color: #785100;
+}
+
+.workflow-step.is-current .step-number {
+  background: var(--amber);
+  color: white;
+}
+
+.workflow-step.is-locked {
+  opacity: .72;
+}
+
+.workflow-hint {
+  margin: 6px 0 0;
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: var(--blue-soft);
+  color: var(--navy);
+  font-size: .72rem;
+  line-height: 1.35;
+}
+
+.workflow-hint strong {
+  color: var(--blue-dark);
+}
+
+.panel-card.step-muted {
+  opacity: .58;
+}
+
+.panel-card.step-muted .step-muted-overlay {
+  display: block;
+}
+
+.panel-card.step-current {
+  box-shadow: 0 0 0 2px rgba(49, 95, 189, .14), var(--shadow);
+}
+
+.step-muted-overlay {
+  display: none;
+  margin: 0 0 8px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: #eef2f8;
+  color: var(--muted);
+  font-size: .67rem;
+  line-height: 1.35;
+}
+
+.panel-card.step-muted input,
+.panel-card.step-muted select,
+.panel-card.step-muted textarea,
+.panel-card.step-muted button {
+  pointer-events: none;
+}
+
+.panel-card:not(.step-muted) .step-muted-overlay {
+  display: none !important;
+}
+
+.field-actions {
+  opacity: .45;
+  transition: opacity .12s ease;
+}
+
+.field-card:hover .field-actions,
+.field-card.editing .field-actions {
+  opacity: 1;
+}
+
+.tracking-section.step-muted .step-muted-overlay,
+.finish-section-body.step-muted .step-muted-overlay {
+  display: block;
+}
+
+.tracking-section.step-muted input,
+.tracking-section.step-muted button,
+.finish-section-body.step-muted input,
+.finish-section-body.step-muted select,
+.finish-section-body.step-muted textarea,
+.finish-section-body.step-muted button {
+  pointer-events: none;
+}
+
+.dashboard {
+  height: calc(100vh - 58px - 92px) !important;
+}
+
+@media (max-width: 1179px) {
+  .workflow-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">A</span>
+      <div>
+        <strong>AHOOTSA 8</strong>
+        <small>Panel profesional local</small>
+      </div>
+    </div>
+
+    <div class="services" aria-label="Estado de servicios">
+      <button class="service-pill" id="serverService" title="Servidor local 8100">
+        <span id="serverDot" class="dot"></span>Servidor
+      </button>
+      <button class="service-pill" id="daemonService" title="Daemon o MuJoCo 8000">
+        <span id="daemonDot" class="dot"></span>Robot
+      </button>
+      <button class="service-pill" id="appService" title="Conversation App 7860">
+        <span id="appDot" class="dot"></span>Conversación
+      </button>
+    </div>
+
+    <div class="top-actions">
+      <span class="version">v <strong id="version">—</strong></span>
+
+      <span id="frontendStatus" class="frontend-status waiting">
+        Interfaz 12.8.5 cargando
+      </span>
+      <button class="mini-button" id="refreshButton">Actualizar</button>
+      <button class="mini-button" id="launchDaemonButton" title="Arrancar robot (puerto 8000)">Robot</button>
+      <button class="mini-button" id="openOfficialButton" title="Abrir Conversation App (puerto 7860)">Conversación</button>
+      <button class="mini-button" id="recoverButton" title="Cerrar app y liberar bloqueo">Liberar</button>
+    </div>
+  </header>
+
+  <nav class="workflow-bar" aria-label="Guía de pasos">
+    <ol class="workflow-steps" id="workflowSteps">
+      <li class="workflow-step is-current" data-step="1">
+        <span class="step-number">1</span>
+        <span class="step-copy">
+          <strong>Persona</strong>
+          <small>Seleccionar o crear ficha</small>
+        </span>
+      </li>
+      <li class="workflow-step is-locked" data-step="2">
+        <span class="step-number">2</span>
+        <span class="step-copy">
+          <strong>Preparar</strong>
+          <small>Actividad, nivel y sesión</small>
+        </span>
+      </li>
+      <li class="workflow-step is-locked" data-step="3">
+        <span class="step-number">3</span>
+        <span class="step-copy">
+          <strong>Seguimiento</strong>
+          <small>Marcas durante la conversación</small>
+        </span>
+      </li>
+      <li class="workflow-step is-locked" data-step="4">
+        <span class="step-number">4</span>
+        <span class="step-copy">
+          <strong>Finalizar</strong>
+          <small>Informe y decisión</small>
+        </span>
+      </li>
+    </ol>
+    <p id="workflowHint" class="workflow-hint">
+      <strong>Siguiente paso:</strong> selecciona una persona o crea una ficha nueva.
+    </p>
+  </nav>
+
+  <main class="dashboard">
+    <section class="panel-card user-panel step-current" id="userPanel">
+      <div class="step-muted-overlay" id="userPanelOverlay">
+        Completa el paso anterior antes de editar otra ficha.
+      </div>
+      <div class="panel-title">
+        <div>
+          <span class="step">1 · PERSONA</span>
+          <h1>Ficha de usuario</h1>
+        </div>
+        <div class="toolbar">
+          <button class="tiny primary" id="newUserButton">Nuevo</button>
+          <button class="tiny" id="exampleUserButton">Ejemplo</button>
+          <button class="tiny danger-outline" id="deleteUserButton">Borrar</button>
+        </div>
+      </div>
+
+      <div class="selector-row">
+        <select id="userSelect" aria-label="Persona usuaria"></select>
+      </div>
+
+      <section id="newUserPanel" class="new-user-panel hidden" aria-label="Nueva persona">
+        <div class="new-user-heading">
+          <div>
+            <span class="step">ALTA DE PERSONA</span>
+            <strong>Nueva ficha</strong>
+          </div>
+          <button type="button" class="icon-button" id="closeNewUserButton" aria-label="Cerrar">×</button>
+        </div>
+
+        <form id="newUserForm" class="new-user-form">
+          <label>
+            <span>Nombre completo *</span>
+            <input id="newName" required maxlength="120">
+          </label>
+          <label>
+            <span>Nombre usado por Aocha</span>
+            <input id="newPreferredName" maxlength="120">
+          </label>
+          <label>
+            <span>Identificador opcional</span>
+            <input id="newExternalId" maxlength="50" placeholder="Se genera automáticamente">
+          </label>
+          <label>
+            <span>Idioma</span>
+            <input id="newLanguage" value="es" maxlength="10">
+          </label>
+          <label class="new-user-wide">
+            <span>Notas</span>
+            <textarea id="newNotes" rows="2"></textarea>
+          </label>
+
+          <div class="new-user-actions">
+            <button type="button" class="small-button" id="cancelNewUserButton">Cancelar</button>
+            <button type="submit" class="small-button primary" id="saveNewUserButton">
+              Guardar persona
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <p class="inline-help">
+        Paso 1: elige una persona arriba. Doble clic en un campo para editarlo.
+      </p>
+
+      <div id="userFields" class="field-grid"></div>
+    </section>
+
+    <section class="panel-card setup-panel step-muted" id="setupPanel">
+      <div class="step-muted-overlay" id="setupPanelOverlay">
+        Selecciona primero una persona en el paso 1.
+      </div>
+      <div class="panel-title">
+        <div>
+          <span class="step">2 · SESIÓN</span>
+          <h1>Actividad y preparación</h1>
+        </div>
+        <span id="sessionBadge" class="badge neutral">Sin sesión</span>
+      </div>
+
+      <div class="compact-form two-columns">
+        <label>
+          <span>Profesional</span>
+          <input id="professionalInput" value="Monitor/a" maxlength="120">
+        </label>
+        <label>
+          <span>Actividad</span>
+          <select id="activitySelect"></select>
+        </label>
+      </div>
+
+      <div class="level-row" id="levelSelector">
+        <button data-level="initial" class="level active">Inicial</button>
+        <button data-level="intermediate" class="level">Intermedio</button>
+        <button data-level="advanced" class="level">Avanzado</button>
+      </div>
+
+      <div id="levelDescription" class="level-description"></div>
+
+      <div class="session-actions">
+        <button class="small-button primary" id="prepareButton">Preparar sesión</button>
+        <button class="small-button secondary" id="launchAppButton" disabled>Iniciar conversación</button>
+      </div>
+
+      <div id="preparedDetails" class="session-info muted-box">
+        No hay una sesión preparada.
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="tracking-section step-muted" id="trackingSection">
+        <div class="step-muted-overlay" id="trackingOverlay">
+          Disponible cuando haya una sesión activa. Prepara e inicia la conversación antes.
+        </div>
+
+      <div class="panel-title compact-title">
+        <div>
+          <span class="step">3 · SEGUIMIENTO</span>
+          <h1>Marcas rápidas</h1>
+        </div>
+      </div>
+
+      <input
+        id="eventNote"
+        class="compact-note"
+        placeholder="Nota opcional para la siguiente marca"
+      >
+
+      <div class="tracking-grid">
+        <button data-action="adequate" class="track adequate">Adecuada</button>
+        <button data-action="partial" class="track partial">Parcial</button>
+        <button data-action="incorrect" class="track incorrect">Incorrecta</button>
+        <button data-action="no_response" class="track neutral-track">Sin respuesta</button>
+        <button data-action="hint" class="track support">Pista</button>
+        <button data-action="repeat" class="track support">Repetir</button>
+        <button data-action="example" class="track support">Ejemplo</button>
+      </div>
+
+      <div id="liveCounters" class="counters"></div>
+      </div>
+    </section>
+
+    <section class="panel-card finish-panel step-muted" id="finishPanel">
+      <div class="step-muted-overlay" id="finishPanelOverlay">
+        Disponible al final de la sesión activa.
+      </div>
+      <div class="panel-title">
+        <div>
+          <span class="step">4 · CONTROL</span>
+          <h1>Finalización e informe</h1>
+        </div>
+      </div>
+
+      <div class="finish-section-body step-muted" id="finishSectionBody">
+      <label class="compact-label">
+        <span>Observación profesional</span>
+        <textarea id="finalNote" rows="4" placeholder="Escribe una observación breve"></textarea>
+      </label>
+
+      <label class="compact-label">
+        <span>Decisión</span>
+        <select id="decisionSelect">
+          <option value="no_decision">Sin decisión</option>
+          <option value="maintain">Mantener nivel</option>
+          <option value="raise">Proponer subida</option>
+          <option value="lower_temporarily">Bajar temporalmente</option>
+          <option value="repeat_session">Repetir sesión</option>
+        </select>
+      </label>
+
+      <button class="finish-button" id="finishButton" disabled>
+        Finalizar, cerrar conversación y generar informe
+      </button>
+
+      <div id="finalSummary" class="final-summary">
+        Al finalizar se cerrará la Conversation App, se liberará la sesión y se
+        crearán PDF, HTML, JSON y transcripción.
+      </div>
+
+      <div id="reportActions" class="report-actions hidden">
+        <button class="small-button primary" data-report="pdf">Abrir PDF</button>
+        <button class="small-button" data-report="html">Abrir HTML</button>
+        <button class="small-button" data-report="json">Abrir JSON</button>
+        <button class="small-button" data-report="transcript">Transcripción</button>
+      </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="system-box">
+        <strong>Estado de bloqueo</strong>
+        <span id="blockingStatus">Comprobando…</span>
+        <button class="tiny" id="openDocsButton">API</button>
+      </div>
+    </section>
+  </main>
+
+
+  <div id="toast" class="toast hidden"></div>
+  <script id="ahootsa-panel-script">
+const state = {
+  bootstrap: null,
+  selectedLevel: "initial",
+  selectedUserId: null,
+  selectedUser: null,
+  latestReportUrls: null,
+  refreshTimer: null,
+};
+
+const $ = (id) => document.getElementById(id);
+
+function panelHasUnsavedChanges() {
+  const fieldEditor = document.querySelector(
+    ".field-card.editing [data-editor]",
+  );
+  const newUserPanel = $("newUserPanel");
+  const newUserOpen =
+    newUserPanel && !newUserPanel.classList.contains("hidden");
+
+  return Boolean(fieldEditor) || Boolean(newUserOpen);
+}
+
+function setEditingStatus(active) {
+  const status = $("frontendStatus");
+  if (!status) return;
+
+  if (active) {
+    status.textContent = "Edición activa · actualización pausada";
+    status.className = "frontend-status waiting";
+  } else {
+    status.textContent = "Interfaz 12.8.5 activa";
+    status.className = "frontend-status ready";
+  }
+}
+
+const fieldDefinitions = [
+  { key: "name", label: "Nombre completo", scope: "user", required: true },
+  { key: "preferred_name", label: "Nombre usado por Aocha", scope: "user" },
+  { key: "external_id", label: "Identificador", scope: "user", required: true },
+  { key: "language", label: "Idioma", scope: "user", required: true },
+  { key: "notes", label: "Notas", scope: "user", multiline: true },
+  {
+    key: "communication_style",
+    label: "Estilo",
+    scope: "profile",
+    options: [
+      ["simple", "Sencillo"],
+      ["standard", "Estándar"],
+    ],
+  },
+  {
+    key: "speech_speed",
+    label: "Velocidad",
+    scope: "profile",
+    options: [
+      ["slow", "Lenta"],
+      ["normal", "Normal"],
+      ["fast", "Rápida"],
+    ],
+  },
+  {
+    key: "response_wait_seconds",
+    label: "Espera en segundos",
+    scope: "profile",
+    type: "number",
+    min: 1,
+    max: 30,
+    step: 0.5,
+  },
+  {
+    key: "preferred_interaction_mode",
+    label: "Interacción",
+    scope: "profile",
+    options: [
+      ["voice", "Voz"],
+      ["touch", "Táctil"],
+      ["mixed", "Mixta"],
+    ],
+  },
+  {
+    key: "preferred_reinforcement",
+    label: "Refuerzo preferido",
+    scope: "profile",
+  },
+  { key: "interests", label: "Intereses", scope: "profile", multiline: true },
+  {
+    key: "avoid_topics",
+    label: "Temas que evitar",
+    scope: "profile",
+    multiline: true,
+  },
+  {
+    key: "accessibility_notes",
+    label: "Apoyos y accesibilidad",
+    scope: "profile",
+    multiline: true,
+  },
+  {
+    key: "max_instructions_per_turn",
+    label: "Instrucciones por turno",
+    scope: "profile",
+    type: "number",
+    min: 1,
+    max: 5,
+    step: 1,
+  },
+];
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function showToast(message, error = false) {
+  const toast = $("toast");
+  toast.textContent = message;
+  toast.classList.remove("hidden", "error");
+  if (error) toast.classList.add("error");
+  window.setTimeout(() => toast.classList.add("hidden"), 4500);
+}
+
+async function api(path, options = {}) {
+  const response = await fetch(path, {
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {}),
+    },
+    ...options,
+  });
+  const contentType = response.headers.get("content-type") || "";
+  const body = contentType.includes("application/json")
+    ? await response.json()
+    : await response.text();
+
+  if (!response.ok) {
+    const detail = body?.detail || body || `HTTP ${response.status}`;
+    throw new Error(detail);
+  }
+
+  return body;
+}
+
+function setDot(id, running) {
+  const dot = $(id);
+  dot.classList.toggle("ok", Boolean(running));
+  dot.classList.toggle("off", !running);
+}
+
+function selectedActivity() {
+  const key = $("activitySelect").value;
+  return state.bootstrap?.activities?.find((item) => item.key === key);
+}
+
+function renderLevelDescription() {
+  const activity = selectedActivity();
+  const level = activity?.levels?.[state.selectedLevel];
+
+  $("levelDescription").innerHTML = level
+    ? `<strong>${escapeHtml(level.title)}</strong><br>${escapeHtml(level.objective)}<br><small>Máximo de opciones: ${escapeHtml(level.max_options)}</small>`
+    : "Selecciona una actividad y un nivel.";
+}
+
+function getWorkflowState() {
+  const blocking = state.bootstrap?.blocking_state;
+  const services = state.bootstrap?.services || {};
+  const active = state.bootstrap?.active_session;
+  const hasUser = Boolean(state.selectedUserId);
+  const sessionActive = active?.status === "active";
+  const sessionPrepared = Boolean(active?.profile_prepared);
+  const canPrepare = Boolean(blocking?.can_prepare && hasUser);
+  const isBlocked = Boolean(
+    blocking &&
+      !blocking.can_prepare &&
+      !sessionActive,
+  );
+  const daemonRunning = Boolean(services.daemon?.running);
+  const appRunning = Boolean(services.conversation_app?.running);
+
+  let currentStep = 1;
+  let hint = "Selecciona una persona o pulsa Nuevo / Ejemplo.";
+  let setupOverlay =
+    "Selecciona primero una persona en el paso 1.";
+  let trackingOverlay =
+    "Disponible cuando haya una sesión activa.";
+  let finishOverlay =
+    "Disponible al final de la sesión activa.";
+
+  if (isBlocked) {
+    currentStep = 1;
+    hint =
+      "Hay un bloqueo del sistema. Pulsa Liberar bloqueo arriba a la derecha.";
+    setupOverlay =
+      "Libera el bloqueo antes de preparar otra sesión.";
+  } else if (!hasUser) {
+    currentStep = 1;
+  } else if (!sessionActive && canPrepare) {
+    currentStep = 2;
+    hint =
+      "Elige actividad y nivel, luego pulsa Preparar sesión.";
+  } else if (sessionActive && sessionPrepared && !appRunning) {
+    currentStep = 2;
+    hint = daemonRunning
+      ? "Sesión preparada. Pulsa Iniciar conversación."
+      : "Sesión preparada. Arranca Robot y después Iniciar conversación.";
+  } else if (sessionActive && appRunning) {
+    currentStep = 3;
+    hint =
+      "Registra marcas durante la conversación. Al terminar, usa el paso 4.";
+    trackingOverlay = "";
+    finishOverlay = "Completa la observación y pulsa Finalizar.";
+  } else if (sessionActive) {
+    currentStep = 2;
+    hint = "Completa el arranque de la conversación para continuar.";
+  }
+
+  return {
+    currentStep,
+    hint,
+    hasUser,
+    canPrepare,
+    sessionActive,
+    sessionPrepared,
+    isBlocked,
+    daemonRunning,
+    appRunning,
+    setupOverlay,
+    trackingOverlay,
+    finishOverlay,
+  };
+}
+
+function applyWorkflowUI() {
+  const workflow = getWorkflowState();
+
+  document.querySelectorAll(".workflow-step").forEach((item) => {
+    const step = Number(item.dataset.step);
+    item.classList.toggle("is-current", step === workflow.currentStep);
+    item.classList.toggle("is-done", step < workflow.currentStep);
+    item.classList.toggle(
+      "is-locked",
+      step > workflow.currentStep,
+    );
+  });
+
+  $("workflowHint").innerHTML =
+    `<strong>Siguiente paso:</strong> ${escapeHtml(workflow.hint)}`;
+
+  const userLocked =
+    workflow.sessionActive || workflow.isBlocked;
+  $("userPanel").classList.toggle("step-current", workflow.currentStep === 1);
+  $("userPanel").classList.toggle("step-muted", userLocked);
+  $("userPanelOverlay").textContent = workflow.sessionActive
+    ? "Hay una sesión activa. Finalízala antes de cambiar de persona."
+    : "Libera el bloqueo del sistema antes de continuar.";
+
+  $("setupPanel").classList.toggle(
+    "step-muted",
+    !workflow.hasUser || workflow.isBlocked,
+  );
+  $("setupPanel").classList.toggle(
+    "step-current",
+    workflow.currentStep === 2,
+  );
+  $("setupPanelOverlay").textContent = workflow.setupOverlay;
+
+  const trackingEnabled =
+    workflow.sessionActive && workflow.appRunning;
+
+  $("trackingSection").classList.toggle(
+    "step-muted",
+    !trackingEnabled,
+  );
+  $("trackingSection").classList.toggle(
+    "step-current",
+    workflow.currentStep === 3,
+  );
+  if (workflow.trackingOverlay) {
+    $("trackingOverlay").textContent = workflow.trackingOverlay;
+  }
+
+  $("finishPanel").classList.toggle(
+    "step-current",
+    workflow.sessionActive &&
+      !workflow.appRunning &&
+      workflow.sessionPrepared,
+  );
+  $("finishPanel").classList.toggle(
+    "step-muted",
+    !workflow.sessionActive,
+  );
+  $("finishSectionBody").classList.toggle(
+    "step-muted",
+    !workflow.sessionActive,
+  );
+  $("finishPanelOverlay").textContent = workflow.sessionActive
+    ? workflow.finishOverlay || "Cierra la sesión y genera el informe."
+    : workflow.finishOverlay;
+
+  const sessionConfigLocked =
+    !workflow.hasUser ||
+    workflow.sessionActive ||
+    workflow.isBlocked;
+
+  $("professionalInput").disabled = sessionConfigLocked;
+  $("activitySelect").disabled = sessionConfigLocked;
+  document.querySelectorAll("#levelSelector .level").forEach((button) => {
+    button.disabled = sessionConfigLocked;
+  });
+
+  $("prepareButton").disabled =
+    !workflow.canPrepare || workflow.sessionActive;
+  $("launchAppButton").disabled =
+    !workflow.sessionActive || !workflow.sessionPrepared;
+
+  $("eventNote").disabled = !trackingEnabled;
+  document.querySelectorAll(".track").forEach((button) => {
+    button.disabled = !trackingEnabled;
+  });
+
+  $("finalNote").disabled = !workflow.sessionActive;
+  $("decisionSelect").disabled = !workflow.sessionActive;
+  $("finishButton").disabled = !workflow.sessionActive;
+
+  $("userSelect").disabled = userLocked;
+  $("newUserButton").disabled = userLocked;
+  $("exampleUserButton").disabled = userLocked;
+  $("deleteUserButton").disabled = userLocked || !workflow.hasUser;
+
+  $("launchDaemonButton").disabled =
+    workflow.isBlocked ||
+    workflow.daemonRunning ||
+    (!workflow.sessionPrepared && !workflow.canPrepare);
+  $("launchDaemonButton").title = workflow.daemonRunning
+    ? "Robot ya activo (puerto 8000)"
+    : "Arrancar robot (puerto 8000)";
+
+  $("openOfficialButton").disabled =
+    !workflow.appRunning && !workflow.sessionPrepared;
+  $("openOfficialButton").title = workflow.appRunning
+    ? "Abrir Conversation App (puerto 7860)"
+    : "Disponible tras preparar e iniciar la conversación";
+
+  const blocking = state.bootstrap?.blocking_state;
+  const needsRecover = Boolean(
+    workflow.isBlocked ||
+      (blocking?.conversation_app_running && !workflow.sessionActive) ||
+      (
+        blocking?.active_session_file_exists &&
+        !workflow.sessionActive &&
+        !blocking?.can_prepare
+      ),
+  );
+
+  $("recoverButton").disabled = !needsRecover;
+  $("recoverButton").title = needsRecover
+    ? "Cerrar app y liberar bloqueo"
+    : "No hay bloqueo que liberar";
+
+  if (workflow.sessionActive) {
+    $("sessionBadge").textContent = workflow.appRunning
+      ? "Conversación activa"
+      : "Sesión preparada";
+    $("sessionBadge").className = "badge active";
+  } else if ($("sessionBadge").textContent !== "Sesión finalizada") {
+    $("sessionBadge").textContent = "Sin sesión";
+    $("sessionBadge").className = "badge neutral";
+  }
+}
+
+function setSessionControls(active, prepared = false) {
+  applyWorkflowUI();
+}
+
+function renderCounters(summary) {
+  const counts = summary?.counts || {};
+  const labels = [
+    ["Adecuada", counts.adequate || 0],
+    ["Parcial", counts.partial || 0],
+    ["Incorrecta", counts.incorrect || 0],
+    ["Sin resp.", counts.no_response || 0],
+    ["Pista", counts.hint || 0],
+    ["Repetir", counts.repeat || 0],
+    ["Ejemplo", counts.example || 0],
+  ];
+
+  $("liveCounters").innerHTML = labels
+    .map(
+      ([label, value]) =>
+        `<span class="counter" title="${escapeHtml(label)}">${escapeHtml(label)}: <strong>${value}</strong></span>`,
+    )
+    .join("");
+}
+
+function renderBlockingStatus() {
+  const blocking = state.bootstrap?.blocking_state;
+  if (!blocking) {
+    $("blockingStatus").textContent = "Sin datos";
+    applyWorkflowUI();
+    return;
+  }
+
+  if (blocking.can_prepare) {
+    $("blockingStatus").textContent = "Libre para preparar otra sesión";
+  } else if (blocking.database_active_session) {
+    $("blockingStatus").textContent =
+      `Sesión ${blocking.database_active_session} activa`;
+  } else if (blocking.conversation_app_running) {
+    $("blockingStatus").textContent =
+      "Conversation App activa; ciérrala o pulsa Liberar bloqueo";
+  } else {
+    $("blockingStatus").textContent =
+      "Hay datos pendientes; pulsa Liberar bloqueo";
+  }
+
+  applyWorkflowUI();
+}
+
+function getFieldValue(definition) {
+  if (!state.selectedUser) return null;
+  if (definition.scope === "profile") {
+    return state.selectedUser.profile?.[definition.key] ?? null;
+  }
+  return state.selectedUser[definition.key] ?? null;
+}
+
+function optionLabel(definition, value) {
+  if (!definition.options) return value;
+  const option = definition.options.find(([key]) => key === value);
+  return option ? option[1] : value;
+}
+
+function renderUserFields() {
+  const container = $("userFields");
+  container.innerHTML = "";
+
+  if (!state.selectedUser) {
+    container.innerHTML =
+      '<div class="muted-box session-info">Crea o selecciona una persona.</div>';
+    return;
+  }
+
+  fieldDefinitions.forEach((definition) => {
+    const value = getFieldValue(definition);
+    const displayValue = optionLabel(definition, value);
+    const card = document.createElement("article");
+    card.className = "field-card";
+    card.dataset.key = definition.key;
+    card.dataset.scope = definition.scope;
+
+    card.innerHTML = `
+      <span class="field-label">${escapeHtml(definition.label)}</span>
+      <div class="field-value ${value === null || value === "" ? "empty" : ""}">
+        ${value === null || value === "" ? "Sin información" : escapeHtml(displayValue)}
+      </div>
+      <div class="field-actions">
+        <button type="button" class="edit-field">Editar</button>
+        ${
+          definition.required
+            ? ""
+            : '<button type="button" class="clear-field">Vaciar</button>'
+        }
+      </div>
+    `;
+
+    card.addEventListener("dblclick", (event) => {
+      if (!event.target.closest("button")) beginFieldEdit(card, definition);
+    });
+
+    card.querySelector(".edit-field").addEventListener("click", () => {
+      beginFieldEdit(card, definition);
+    });
+
+    card.querySelector(".clear-field")?.addEventListener("click", () => {
+      clearField(definition);
+    });
+
+    container.appendChild(card);
+  });
+}
+
+function editorControl(definition, value) {
+  if (definition.options) {
+    const options = definition.options
+      .map(
+        ([key, label]) =>
+          `<option value="${escapeHtml(key)}" ${key === value ? "selected" : ""}>${escapeHtml(label)}</option>`,
+      )
+      .join("");
+    return `<select data-editor>${options}</select>`;
+  }
+
+  if (definition.multiline) {
+    return `<textarea data-editor rows="3">${escapeHtml(value ?? "")}</textarea>`;
+  }
+
+  const type = definition.type || "text";
+  const min = definition.min !== undefined ? `min="${definition.min}"` : "";
+  const max = definition.max !== undefined ? `max="${definition.max}"` : "";
+  const step = definition.step !== undefined ? `step="${definition.step}"` : "";
+
+  return `<input data-editor type="${type}" value="${escapeHtml(value ?? "")}" ${min} ${max} ${step}>`;
+}
+
+function beginFieldEdit(card, definition) {
+  if (card.classList.contains("editing")) return;
+
+  const value = getFieldValue(definition);
+  card.classList.add("editing");
+  setEditingStatus(true);
+  card.innerHTML = `
+    <span class="field-label">${escapeHtml(definition.label)}</span>
+    <div class="field-editor">
+      ${editorControl(definition, value)}
+      <div class="field-editor-actions">
+        <button type="button" class="save-field">Guardar</button>
+        ${
+          definition.required
+            ? ""
+            : '<button type="button" class="clear-field">Vaciar</button>'
+        }
+        <button type="button" class="cancel-field">Cancelar</button>
+      </div>
+    </div>
+  `;
+
+  const editor = card.querySelector("[data-editor]");
+  editor.focus();
+  if (editor.select) editor.select();
+
+  card.querySelector(".save-field").addEventListener("click", () => {
+    saveField(definition, editor.value);
+  });
+  card.querySelector(".cancel-field").addEventListener("click", () => {
+    renderUserFields();
+    setEditingStatus(false);
+  });
+  card.querySelector(".clear-field")?.addEventListener("click", () => {
+    clearField(definition);
+  });
+
+  editor.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      renderUserFields();
+      setEditingStatus(false);
+    }
+
+    if (event.key === "Enter" && !definition.multiline) {
+      event.preventDefault();
+      saveField(definition, editor.value);
+    }
+  });
+}
+
+async function saveField(definition, rawValue) {
+  if (!state.selectedUserId) return;
+
+  let value = rawValue;
+  if (definition.type === "number") {
+    value = Number(rawValue);
+  } else {
+    value = rawValue.trim();
+  }
+
+  if (definition.required && (value === "" || value === null)) {
+    showToast(`${definition.label} no puede quedar vacío.`, true);
+    return;
+  }
+
+  const oldId = state.selectedUserId;
+
+  try {
+    const path =
+      definition.scope === "profile"
+        ? `/panel/api/users/${encodeURIComponent(oldId)}/profile`
+        : `/panel/api/users/${encodeURIComponent(oldId)}`;
+
+    const result = await api(path, {
+      method: "PUT",
+      body: JSON.stringify({ [definition.key]: value }),
+    });
+
+    state.selectedUserId = result.user.external_id;
+    showToast(`${definition.label} guardado.`);
+    await loadBootstrap(state.selectedUserId, { forceUserRender: true });
+  } catch (error) {
+    showToast(error.message, true);
+    setEditingStatus(true);
+  }
+}
+
+async function clearField(definition) {
+  if (!state.selectedUserId || definition.required) return;
+  if (!window.confirm(`¿Vaciar el campo "${definition.label}"?`)) return;
+
+  try {
+    const path =
+      definition.scope === "profile"
+        ? `/panel/api/users/${encodeURIComponent(state.selectedUserId)}/profile`
+        : `/panel/api/users/${encodeURIComponent(state.selectedUserId)}`;
+
+    await api(path, {
+      method: "PUT",
+      body: JSON.stringify({ [definition.key]: null }),
+    });
+
+    showToast(`${definition.label} vaciado.`);
+    await loadBootstrap(state.selectedUserId, { forceUserRender: true });
+  } catch (error) {
+    showToast(error.message, true);
+  }
+}
+
+function populateUsers(preferredId = null) {
+  const userSelect = $("userSelect");
+  const users = state.bootstrap?.users || [];
+  const target =
+    preferredId ||
+    state.selectedUserId ||
+    userSelect.value ||
+    users[0]?.external_id ||
+    null;
+
+  userSelect.innerHTML = users.length
+    ? users
+        .map(
+          (user) =>
+            `<option value="${escapeHtml(user.external_id)}">${escapeHtml(user.preferred_name)} · ${escapeHtml(user.external_id)}</option>`,
+        )
+        .join("")
+    : '<option value="">No hay personas</option>';
+
+  if (target && users.some((user) => user.external_id === target)) {
+    userSelect.value = target;
+  }
+
+  state.selectedUserId = userSelect.value || null;
+  state.selectedUser =
+    users.find((user) => user.external_id === state.selectedUserId) || null;
+
+  renderUserFields();
+  applyWorkflowUI();
+}
+
+function populateActivities() {
+  const activitySelect = $("activitySelect");
+  const activities = state.bootstrap?.activities || [];
+  const previous = activitySelect.value;
+
+  activitySelect.innerHTML = activities
+    .map(
+      (activity) =>
+        `<option value="${escapeHtml(activity.key)}">${escapeHtml(activity.title)}</option>`,
+    )
+    .join("");
+
+  if (previous && activities.some((item) => item.key === previous)) {
+    activitySelect.value = previous;
+  }
+
+  renderLevelDescription();
+}
+
+function renderActiveSession(active) {
+  if (!active) {
+    setSessionControls(false, false);
+    renderCounters(null);
+    $("preparedDetails").textContent = "No hay una sesión preparada.";
+    return;
+  }
+
+  setSessionControls(active.status === "active", Boolean(active.profile_prepared));
+  renderCounters(active);
+
+  const activity = active.activity || {};
+  $("preparedDetails").innerHTML = `
+    <strong>Sesión ${active.session_id}</strong><br>
+    ${escapeHtml(active.user.preferred_name)} ·
+    ${escapeHtml(activity.title || activity.key || "Sin actividad")} ·
+    ${escapeHtml(activity.level_title || activity.level || "Sin nivel")}
+  `;
+
+  if (active.user?.external_id) {
+    state.selectedUserId = active.user.external_id;
+  }
+}
+
+async function loadBootstrap(
+  preferredUserId = null,
+  options = {},
+) {
+  const preserveUserEditor =
+    panelHasUnsavedChanges() && !options.forceUserRender;
+
+  try {
+    const data = await api("/panel/api/bootstrap");
+    state.bootstrap = data;
+
+    $("version").textContent = data.version;
+    setDot("serverDot", data.services.local_server.running);
+    setDot("daemonDot", data.services.daemon.running);
+    setDot("appDot", data.services.conversation_app.running);
+
+    renderActiveSession(data.active_session);
+
+    if (!preserveUserEditor) {
+      populateUsers(preferredUserId);
+    }
+
+    populateActivities();
+    renderBlockingStatus();
+
+    if (preserveUserEditor) {
+      setEditingStatus(true);
+    } else {
+      setEditingStatus(false);
+    }
+  } catch (error) {
+    showToast(error.message, true);
+  }
+}
+
+async function createUser() {
+  const name = $("newName").value.trim();
+  if (!name) {
+    showToast("Escribe el nombre de la persona.", true);
+    return;
+  }
+
+  try {
+    const result = await api("/panel/api/users", {
+      method: "POST",
+      body: JSON.stringify({
+        name,
+        preferred_name: $("newPreferredName").value.trim() || null,
+        external_id: $("newExternalId").value.trim() || null,
+        language: $("newLanguage").value.trim() || "es",
+        notes: $("newNotes").value.trim() || null,
+      }),
+    });
+
+    $("newUserPanel").classList.add("hidden");
+    $("newUserForm").reset();
+    $("newLanguage").value = "es";
+    showToast("Persona creada correctamente.");
+    await loadBootstrap(result.user.external_id);
+  } catch (error) {
+    showToast(error.message, true);
+  }
+}
+
+async function deleteCurrentUser() {
+  if (!state.selectedUserId) {
+    showToast("No hay una persona seleccionada.", true);
+    return;
+  }
+
+  const name = state.selectedUser?.preferred_name || state.selectedUserId;
+  if (!window.confirm(`¿Borrar u ocultar la ficha de ${name}?`)) return;
+
+  try {
+    const result = await api(
+      `/panel/api/users/${encodeURIComponent(state.selectedUserId)}`,
+      { method: "DELETE" },
+    );
+
+    showToast(result.message);
+    state.selectedUserId = null;
+    await loadBootstrap();
+  } catch (error) {
+    showToast(error.message, true);
+  }
+}
+
+async function prepareSession() {
+  const user = $("userSelect").value;
+  const activity = $("activitySelect").value;
+  const startedBy = $("professionalInput").value.trim() || "Monitor/a";
+
+  if (!user) {
+    showToast("Selecciona o crea una persona.", true);
+    return;
+  }
+
+  try {
+    const result = await api("/panel/api/session/prepare", {
+      method: "POST",
+      body: JSON.stringify({
+        user_external_id: user,
+        activity,
+        level: state.selectedLevel,
+        started_by: startedBy,
+      }),
+    });
+
+    $("preparedDetails").innerHTML = `
+      <strong>Sesión ${result.session_id} preparada</strong><br>
+      ${escapeHtml(result.preferred_name)} · ${escapeHtml(result.activity_title)} ·
+      ${escapeHtml(result.level_title)}<br>
+      <em>Saludo:</em> ${escapeHtml(result.greeting || "—")}
+    `;
+    showToast("Sesión preparada.");
+    await loadBootstrap(user);
+  } catch (error) {
+    showToast(error.message, true);
+  }
+}
+
+async function launch(path, label) {
+  try {
+    const result = await api(path, {
+      method: "POST",
+      body: "{}",
+    });
+    showToast(result.message || label);
+    window.setTimeout(() => loadBootstrap(), 1800);
+  } catch (error) {
+    showToast(error.message, true);
+  }
+}
+
+async function quickEvent(action) {
+  try {
+    const note = $("eventNote").value.trim() || null;
+    const result = await api("/panel/api/session/event", {
+      method: "POST",
+      body: JSON.stringify({ action, note }),
+    });
+
+    $("eventNote").value = "";
+    renderCounters(result.summary);
+  } catch (error) {
+    showToast(error.message, true);
+  }
+}
+
+function renderFinalResult(result) {
+  const report = result.report || {};
+  const reportOk = Boolean(report.generated);
+  state.latestReportUrls = report.urls || null;
+
+  $("sessionBadge").textContent = "Sesión finalizada";
+  $("sessionBadge").className = "badge finished";
+  $("finalSummary").innerHTML = `
+    <strong>Sesión ${result.session_id} finalizada</strong><br>
+    Duración: ${escapeHtml(result.duration_minutes)} min ·
+    Adecuadas: ${escapeHtml(result.counts?.adequate || 0)} ·
+    Parciales: ${escapeHtml(result.counts?.partial || 0)} ·
+    Incorrectas: ${escapeHtml(result.counts?.incorrect || 0)}<br>
+    ${
+      reportOk
+        ? "Informe PDF, HTML, JSON y transcripción generados."
+        : `Sesión liberada. Aviso del informe: ${escapeHtml(report.error || report.stderr || "no completado")}`
+    }
+  `;
+
+  $("reportActions").classList.toggle("hidden", !reportOk);
+  applyWorkflowUI();
+}
+
+async function finishSession() {
+  if (!window.confirm(
+    "Se cerrará la Conversation App, se finalizará la sesión y se generará el informe. ¿Continuar?",
+  )) return;
+
+  $("finishButton").disabled = true;
+  $("finishButton").textContent = "Finalizando…";
+
+  try {
+    const result = await api("/panel/api/session/finish", {
+      method: "POST",
+      body: JSON.stringify({
+        note: $("finalNote").value.trim() || null,
+        decision: $("decisionSelect").value,
+      }),
+    });
+
+    renderFinalResult(result);
+    showToast(
+      result.report?.generated
+        ? "Sesión finalizada e informe generado."
+        : "Sesión finalizada; revisa el aviso del informe.",
+      !result.report?.generated,
+    );
+
+    await loadBootstrap();
+  } catch (error) {
+    showToast(error.message, true);
+  } finally {
+    $("finishButton").textContent =
+      "Finalizar, cerrar conversación y generar informe";
+    renderBlockingStatus();
+  }
+}
+
+async function recoverSession() {
+  if (!window.confirm(
+    "Se cerrará la Conversation App y se limpiará cualquier sesión bloqueada. ¿Continuar?",
+  )) return;
+
+  try {
+    const result = await api("/panel/api/session/recover", {
+      method: "POST",
+      body: "{}",
+    });
+
+    if (result.session_id) {
+      renderFinalResult(result);
+    }
+
+    showToast("Bloqueo liberado. Ya se puede preparar otra sesión.");
+    await loadBootstrap();
+  } catch (error) {
+    showToast(error.message, true);
+  }
+}
+
+function openReport(type) {
+  const url = state.latestReportUrls?.[type];
+  if (!url) {
+    showToast("Ese informe todavía no está disponible.", true);
+    return;
+  }
+  window.open(url, "_blank");
+}
+
+$("refreshButton").addEventListener("click", () => {
+  if (panelHasUnsavedChanges()) {
+    showToast(
+      "Guarda o cancela la edición antes de actualizar.",
+      true,
+    );
+    return;
+  }
+
+  loadBootstrap();
+});
+$("userSelect").addEventListener("change", () => {
+  state.selectedUserId = $("userSelect").value || null;
+  state.selectedUser =
+    state.bootstrap?.users?.find(
+      (user) => user.external_id === state.selectedUserId,
+    ) || null;
+  renderUserFields();
+  applyWorkflowUI();
+});
+
+$("activitySelect").addEventListener("change", renderLevelDescription);
+
+$("levelSelector").addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-level]");
+  if (!button || button.disabled) return;
+
+  state.selectedLevel = button.dataset.level;
+  document.querySelectorAll(".level").forEach((item) => {
+    item.classList.toggle("active", item === button);
+  });
+  renderLevelDescription();
+  applyWorkflowUI();
+});
+
+function closeNewUserPanel() {
+  $("newUserPanel").classList.add("hidden");
+  $("newUserForm").reset();
+  $("newLanguage").value = "es";
+  setEditingStatus(false);
+}
+
+$("newUserButton").addEventListener("click", () => {
+  $("newUserPanel").classList.remove("hidden");
+  setEditingStatus(true);
+  $("newName").focus();
+});
+
+$("closeNewUserButton").addEventListener("click", closeNewUserPanel);
+$("cancelNewUserButton").addEventListener("click", closeNewUserPanel);
+
+$("newUserForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+  createUser();
+});
+
+$("deleteUserButton").addEventListener("click", deleteCurrentUser);
+
+$("exampleUserButton").addEventListener("click", async () => {
+  try {
+    const result = await api("/panel/api/example-user", {
+      method: "POST",
+      body: JSON.stringify({}),
+    });
+    showToast(
+      result.created
+        ? "Usuario de ejemplo creado."
+        : "El usuario de ejemplo ya existía.",
+    );
+    await loadBootstrap(result.external_id);
+  } catch (error) {
+    showToast(error.message, true);
+  }
+});
+
+$("prepareButton").addEventListener("click", prepareSession);
+$("launchDaemonButton").addEventListener("click", () =>
+  launch("/panel/api/launch/daemon", "Daemon iniciado"),
+);
+$("launchAppButton").addEventListener("click", () =>
+  launch("/panel/api/launch/conversation-app", "Conversation App iniciada"),
+);
+$("openOfficialButton").addEventListener("click", () =>
+  window.open("http://127.0.0.1:7860", "_blank"),
+);
+$("openDocsButton").addEventListener("click", () =>
+  window.open("http://127.0.0.1:8100/docs", "_blank"),
+);
+$("recoverButton").addEventListener("click", recoverSession);
+
+document.querySelectorAll(".track").forEach((button) => {
+  button.addEventListener("click", () => quickEvent(button.dataset.action));
+});
+
+$("finishButton").addEventListener("click", finishSession);
+
+document.querySelectorAll("[data-report]").forEach((button) => {
+  button.addEventListener("click", () => openReport(button.dataset.report));
+});
+
+setSessionControls(false, false);
+applyWorkflowUI();
+
+try {
+  $("frontendStatus").textContent = "Interfaz 12.8.5 activa";
+  $("frontendStatus").className = "frontend-status ready";
+  document.documentElement.dataset.ahootsaPanel = "12.8.5";
+  loadBootstrap();
+
+  state.refreshTimer = window.setInterval(() => {
+    if (panelHasUnsavedChanges()) {
+      setEditingStatus(true);
+      return;
+    }
+
+    loadBootstrap();
+  }, 7000);
+} catch (error) {
+  const status = $("frontendStatus");
+  if (status) {
+    status.textContent = "Error al activar la interfaz";
+    status.className = "frontend-status error";
+  }
+  console.error(error);
+}
+
+</script>
+</body>
+</html>

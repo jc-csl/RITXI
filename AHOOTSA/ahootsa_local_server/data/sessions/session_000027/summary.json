@@ -1,0 +1,36 @@
+{
+  "session_id": 27,
+  "status": "finished",
+  "user": {
+    "external_id": "FULANITO",
+    "name": "FULANITO",
+    "preferred_name": "FULANITO"
+  },
+  "activity": {
+    "key": "express_preferences",
+    "title": "Expresar preferencias",
+    "level": "intermediate",
+    "level_title": "Intermedio"
+  },
+  "started_at": "2026-08-16T12:54:07.549682",
+  "finished_at": null,
+  "duration_seconds": 75.1,
+  "duration_minutes": 1.25,
+  "duration_source": "running",
+  "prepared_at": "2026-08-16T12:54:07.569459+00:00",
+  "running_at": "2026-08-16T13:47:50.474630+00:00",
+  "conversation_app_running": false,
+  "file_status": "running",
+  "counts": {
+    "adequate": 0,
+    "partial": 0,
+    "incorrect": 0,
+    "no_response": 0,
+    "hint": 0,
+    "repeat": 0,
+    "example": 0
+  },
+  "evaluated_responses": 0,
+  "professional_decision": "no_decision",
+  "summary": "Sesión finalizada al cerrar la Conversation App. La transcripción se ha importado automáticamente. La evaluación y el cambio de nivel corresponden al profesional."
+}
